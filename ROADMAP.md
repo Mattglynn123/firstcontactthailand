@@ -1,8 +1,34 @@
 # First Contact Thailand — Rebuild Roadmap
 
-**Live site (old):** https://firstcontactthailand.com (WordPress — kept running untouched as safety net)
+**Live site (old):** <https://firstcontactthailand.com> (WordPress — kept running untouched as safety net)
 **New site (this repo):** `web/` — Astro 6 + TypeScript + Tailwind CSS 4 + MDX
 **Why this stack:** see `docs/ADR-001-stack-choice.md` (built to be edited by AI agents: Codex, Claude Code)
+
+## Staging — the WordPress-free copy, live on the web ✅
+
+**<https://firstcontactthailand.com/staging/>** — a faithful static replica of the
+current site (102 pages, 659 files), served from the IONOS webspace with **zero
+WordPress/PHP/database behind it**. Set to `noindex` so search engines ignore it.
+Regenerate it any time with:
+
+```bash
+cd web
+node scripts/mirror-site.mjs      # crawl live site -> mirror/ (root-relative)
+node scripts/make-relative.mjs    # -> mirror-rel/ (portable, any base path)
+node scripts/fix-fake-assets.mjs  # repair assets WP served as HTML pages
+node scripts/sweep-mirror.mjs     # QA: load every page headless, report issues
+```
+
+### Known defects INHERITED from the live site (verified identical on live)
+
+- 9 media files return an HTML page instead of the image on the live site
+  (deleted from the media library but still referenced). Visible as broken
+  images on `/hire/` and a few others: `car-scaled.jpg`, `bike-scaled.jpg`,
+  `cleaning-scaled.jpg`, `write-593333_1920.jpg`, `beach-background.jpg` (x2),
+  `beach-cta-background.jpg`, 2 plugin icons. **Fix by re-adding real images.**
+- 1 inline script has a JavaScript syntax error sitewide (also broken on live).
+- The events calendar embed is a third-party iframe (live-website.com) that
+  loads its assets from the old WordPress site — keep in mind at cutover.
 
 ## Status — done ✅
 
