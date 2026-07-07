@@ -18,6 +18,12 @@ history.md
 history.txt
 .playwright-mcp/
 
+# Local static mirror of the live WordPress site (212MB — regenerate with web/scripts/mirror-site.mjs)
+/mirror/
+# QA sweep output and ad-hoc screenshots
+/sweep-report.json
+/*.png
+
 # WordPress/database backups and raw exports
 *.sql
 *.sql.gz

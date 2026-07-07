@@ -22,6 +22,8 @@ const OUT = {
 const td = new TurndownService({ headingStyle: 'atx', codeBlockStyle: 'fenced' });
 // keep iframes (maps, videos) as-is so nothing is silently lost
 td.keep(['iframe']);
+// WP pages embed inline <style>/<script> blocks — drop them, they are not content
+td.remove(['style', 'script', 'noscript']);
 
 /** WP responses are prefixed with BOM/zero-width junk by a plugin — strip to first JSON char. */
 async function wpJson(url) {
