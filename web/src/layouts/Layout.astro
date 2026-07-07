@@ -1,0 +1,39 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'First Contact Thailand — business network community for expats and locals on Koh Samui & Koh Phangan.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-white text-slate-800 antialiased">
+    <header class="border-b border-slate-200">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between p-4">
+        <a href="/" class="text-lg font-bold tracking-tight">First Contact Thailand</a>
+        <div class="flex gap-6 text-sm">
+          <a href="/pages" class="hover:text-teal-600">Pages</a>
+          <a href="/about-us" class="hover:text-teal-600">About</a>
+          <a href="/contact-link" class="hover:text-teal-600">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <main class="mx-auto max-w-6xl p-4">
+      <slot />
+    </main>
+    <footer class="mt-16 border-t border-slate-200 py-8 text-center text-sm text-slate-500">
+      © {new Date().getFullYear()} First Contact Thailand — Business Network Community
+    </footer>
+  </body>
+</html>

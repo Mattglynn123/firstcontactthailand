@@ -1,0 +1,43 @@
+# Local secrets and access files (never push — repo is public)
+/CLAUDE.md
+/shared-codex-opus/
+/scripts/
+first-contact-thailand.code-workspace
+IONOS_SFTP_SSH_CREDENTIALS_LOCAL_ONLY.txt
+WORDPRESS LOGIN.txt
+*.local-only.txt
+.env
+.env.*
+!.env.example
+private/
+secrets/
+.claude/settings.local.json
+
+# Local run logs and raw session histories
+history.md
+history.txt
+.playwright-mcp/
+
+# WordPress/database backups and raw exports
+*.sql
+*.sql.gz
+*.dump
+*.wpress
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+backups/
+exports/raw/
+
+# Runtime/build output
+node_modules/
+dist/
+build/
+.cache/
+.next/
+.astro/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
