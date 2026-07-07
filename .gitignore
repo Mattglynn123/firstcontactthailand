@@ -20,6 +20,7 @@ history.txt
 
 # Local static mirror of the live WordPress site (212MB — regenerate with web/scripts/mirror-site.mjs)
 /mirror/
+/mirror-rel/
 # QA sweep output and ad-hoc screenshots
 /sweep-report.json
 /*.png
