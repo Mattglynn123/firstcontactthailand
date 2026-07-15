@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PriorityPage from '../components/PriorityPage.astro';
+import { priorityPages } from '../data/priorityPages';
+
+const page = priorityPages['contact-link'];
+---
+
+<Layout title={page.seoTitle} description={page.description}>
+  <PriorityPage page={page} />
+</Layout>

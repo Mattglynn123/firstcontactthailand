@@ -1,0 +1,31 @@
+---
+import PageHero from './PageHero.astro';
+import SectionHeading from './SectionHeading.astro';
+import ContentCard from './ContentCard.astro';
+import EventCard from './EventCard.astro';
+import CTASection from './CTASection.astro';
+import type { PriorityPage as Page } from '../data/priorityPages';
+
+interface Props {
+  page: Page;
+}
+
+const { page } = Astro.props;
+---
+
+<PageHero
+  eyebrow={page.eyebrow}
+  title={page.heroTitle}
+  text={page.heroText}
+  image={page.heroImage}
+  primaryAction={page.primaryAction}
+  secondaryAction={page.secondaryAction}
+/>
+
+<section class="content-section">
+  <SectionHeading title={page.introTitle} text={page.introText} />
+  {page.cards && <div class="card-grid">{page.cards.map((card) => <ContentCard card={card} />)}</div>}
+  {page.events && <div class="event-grid">{page.events.map((event) => <EventCard event={event} />)}</div>}
+</section>
+
+<CTASection title={page.ctaTitle} text={page.ctaText} href={page.ctaHref} label={page.ctaLabel} />

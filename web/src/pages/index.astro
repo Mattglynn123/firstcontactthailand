@@ -1,26 +1,47 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ContentCard from '../components/ContentCard.astro';
+import CTASection from '../components/CTASection.astro';
+import { homePage } from '../data/priorityPages';
 ---
 
-<Layout title="First Contact Thailand — Business Network Community">
-  <section class="py-16 text-center">
-    <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">
-      Business Network <span class="text-teal-600">with Limitless Potential</span>
-    </h1>
-    <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-      Over 300+ local businesses in our network across Koh Samui &amp; Koh Phangan.
-      Whatever service you need, we point you in the right direction.
-    </p>
-    <div class="mt-8 flex justify-center gap-4">
-      <a href="/pages" class="rounded-lg bg-teal-600 px-6 py-3 font-semibold text-white hover:bg-teal-700">
-        Browse the network
-      </a>
-      <a href="/contact-link" class="rounded-lg border border-slate-300 px-6 py-3 font-semibold hover:bg-slate-50">
-        Contact us
-      </a>
+<Layout title={homePage.seoTitle} description={homePage.description}>
+  <PageHero
+    eyebrow="Community first"
+    title="First Contact Thailand"
+    text="Trusted local connections for business services, events, tours, property, hire and local deals across Thailand."
+    image={homePage.heroImage}
+    primaryAction={{ label: 'Find Local Support', href: '/local-business-network/' }}
+    secondaryAction={{ label: 'Contact Us', href: '/contact-link/' }}
+  />
+
+  <section class="content-section">
+    <SectionHeading
+      eyebrow="Launch MVP"
+      title="Clear routes into the network"
+      text="The first Astro release focuses on the pages people need most, rebuilt as clean responsive pages instead of imported WordPress layouts."
+    />
+    <div class="card-grid">
+      {homePage.sections.map((section) => (
+        <ContentCard
+          card={{
+            title: section.title,
+            text: section.description,
+            image: section.heroImage,
+            href: `/${section.slug}/`,
+            action: `Open ${section.title}`,
+          }}
+        />
+      ))}
     </div>
   </section>
-  <p class="text-center text-sm text-slate-400">
-    🚧 New site under construction — content migrated from WordPress, redesign in progress.
-  </p>
+
+  <CTASection
+    title="Need help finding the right person?"
+    text="Tell us what you need and we will connect you with a trusted local partner or community contact."
+    href="/contact-link/"
+    label="Contact First Contact"
+  />
 </Layout>

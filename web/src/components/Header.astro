@@ -1,0 +1,23 @@
+---
+const navItems = [
+  { label: 'Business', href: '/local-business-network/' },
+  { label: 'Events', href: '/events/' },
+  { label: 'Tours', href: '/tours/' },
+  { label: 'Property', href: '/property/' },
+  { label: 'Hire', href: '/hire/' },
+  { label: 'Deals', href: '/local-deals/' },
+  { label: 'Contact', href: '/contact-link/' },
+];
+---
+
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="brand" href="/" aria-label="First Contact Thailand home">
+      <span class="brand-mark">FC</span>
+      <span>First Contact Thailand</span>
+    </a>
+    <div class="nav-links">
+      {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,26 @@
+---
+import type { EventItem } from '../data/priorityPages';
+
+interface Props {
+  event: EventItem;
+}
+
+const { event } = Astro.props;
+---
+
+<article class="event-card">
+  <p class="event-date">{event.date}</p>
+  <h3>{event.title}</h3>
+  <dl>
+    <div>
+      <dt>Time</dt>
+      <dd>{event.time}</dd>
+    </div>
+    <div>
+      <dt>Venue</dt>
+      <dd>{event.venue}</dd>
+    </div>
+  </dl>
+  <p>{event.text}</p>
+  <a href={event.href}>Ask about this event</a>
+</article>

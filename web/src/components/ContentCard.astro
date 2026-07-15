@@ -1,0 +1,18 @@
+---
+import type { Card } from '../data/priorityPages';
+
+interface Props {
+  card: Card;
+}
+
+const { card } = Astro.props;
+---
+
+<article class="content-card">
+  {card.image && <img src={card.image} alt="" loading="lazy" decoding="async" />}
+  <div class="card-body">
+    <h3>{card.title}</h3>
+    <p>{card.text}</p>
+    {card.href && <a href={card.href}>{card.action ?? 'Learn more'}</a>}
+  </div>
+</article>

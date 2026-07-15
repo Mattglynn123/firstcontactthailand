@@ -3,7 +3,20 @@ import { getCollection, render } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 
 export async function getStaticPaths() {
-  const pages = await getCollection('pages', ({ data }) => !data.draft);
+  const explicitPageSlugs = new Set([
+    'community-events',
+    'contact-link',
+    'hire',
+    'local-business-network',
+    'local-deals',
+    'property',
+    'tours',
+    'tours-2',
+  ]);
+  const pages = await getCollection(
+    'pages',
+    ({ data }) => !data.draft && !explicitPageSlugs.has(data.slug),
+  );
   return pages.map((page) => ({
     params: { slug: page.data.slug },
     props: { page },
