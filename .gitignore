@@ -45,6 +45,7 @@ build/
 .cache/
 .next/
 .astro/
+.server-tools/
 
 # Generated visual QA artifacts (the report stays versioned)
 /docs/qa/screenshots/

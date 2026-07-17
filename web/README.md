@@ -1,8 +1,10 @@
-# First Contact Thailand Standalone Site
+# First Contact Thailand standalone site
 
 This directory contains the WordPress-free First Contact Thailand website. Astro generates a fully static site from the code, content and media stored in this repository.
 
-## Project Commands
+## Local development
+
+Use Node.js 22.12 or newer.
 
 ```sh
 npm ci
@@ -12,53 +14,49 @@ npm run build:staging
 npm run qa
 ```
 
-- `npm run dev` starts local development.
+- `npm run dev` starts the development server.
 - `npm run build` creates the production-root build in `dist/`.
 - `npm run build:staging` creates the isolated IONOS `/staging/` package in `dist-staging/`.
 - `npm run qa` audits every route and captures priority pages at desktop, tablet and mobile widths.
 
-See `../docs/STAGING-DEPLOYMENT.md` for the controlled staging and rollback procedure.
+## IONOS server workspace
 
-## Original Astro Reference
-
-```sh
-npm create astro@latest -- --template minimal
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+The standalone server checkout is:
 
 ```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+/homepages/31/d4299444035/htdocs/firstcontactthailand-standalone
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+It tracks the GitHub branch `codex/standalone-rebuild`. The legacy `first-contact-thailand-code-repo` checkout is WordPress history and must not be used for standalone changes.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+The IONOS account does not provide a system Node.js runtime. A verified, unprivileged runtime is therefore installed in the ignored `.server-tools/node` directory. Run project commands through the wrapper from the repository root:
 
-Any static assets, like images, can be placed in the `public/` directory.
+```sh
+./web/scripts/server-node.sh node --version
+./web/scripts/server-node.sh npm --prefix web ci
+./web/scripts/server-node.sh npm --prefix web run build
+./web/scripts/server-node.sh npm --prefix web run dev -- --host 127.0.0.1
+```
 
-## 🧞 Commands
+Use VS Code or Codex SSH port forwarding to view the development server. Do not point the public domain at a development process.
 
-All commands are run from the root of the project, from a terminal:
+## Git workflow
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Before editing on the server:
 
-## 👀 Want to learn more?
+```sh
+git fetch origin
+git checkout codex/standalone-rebuild
+git pull --ff-only
+git status
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+After verified changes:
+
+```sh
+git add <files>
+git commit -m "Describe the verified change"
+git push origin codex/standalone-rebuild
+```
+
+GitHub is the canonical source. Staging deployment remains a separate controlled step with a retained rollback directory. See `../docs/STAGING-DEPLOYMENT.md` and `../docs/STAGING-DEPLOYMENT-2026-07-17.md`.
