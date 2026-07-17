@@ -43,6 +43,9 @@ jobs:
       - name: Audit routes and responsive layouts
         run: QA_BASE_URL=http://127.0.0.1:4323 npm run qa
 
+      - name: Prepare IONOS staging package
+        run: npm run build:staging
+
       - name: Upload QA evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -52,3 +55,4 @@ jobs:
             docs/qa/report.json
             docs/qa/design-qa.md
             docs/qa/screenshots/
+            web/dist-staging/

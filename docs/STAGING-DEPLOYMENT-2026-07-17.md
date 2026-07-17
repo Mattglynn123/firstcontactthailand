@@ -37,4 +37,6 @@ The report is stored in `docs/qa/report.json`. Production WordPress and its docu
 
 The canonical source is GitHub. Mat can open the server checkout over SSH and work only in `firstcontactthailand-standalone`. Before editing, he should fetch and fast-forward the current branch. Changes should be committed and pushed to GitHub before a new staging build is deployed.
 
+IONOS limits SSH processes to 768 MB of virtual memory, which is insufficient for a reliable Astro/Vite build. The server checkout is therefore used for source editing and Git operations. GitHub Actions or a development workstation performs builds and QA, and the generated staging package is deployed separately.
+
 The legacy server repository `first-contact-thailand-code-repo` remains untouched and must not be used for standalone site changes.

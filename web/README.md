@@ -29,16 +29,7 @@ The standalone server checkout is:
 
 It tracks the GitHub branch `codex/standalone-rebuild`. The legacy `first-contact-thailand-code-repo` checkout is WordPress history and must not be used for standalone changes.
 
-The IONOS account does not provide a system Node.js runtime and limits SSH processes to 768 MB of virtual memory. A verified, unprivileged runtime is therefore installed in the ignored `.server-tools/node` directory. The wrapper also applies the V8 memory profile required by IONOS. Run project commands through it from the repository root:
-
-```sh
-./web/scripts/server-node.sh node --version
-./web/scripts/server-node.sh npm --prefix web ci
-./web/scripts/server-node.sh npm --prefix web run build
-./web/scripts/server-node.sh npm --prefix web run dev -- --host 127.0.0.1
-```
-
-Use VS Code or Codex SSH port forwarding to view the development server. Do not point the public domain at a development process.
+IONOS limits SSH processes to 768 MB of virtual memory. This is not sufficient for a reliable Astro/Vite build, so the server checkout is for source editing and Git operations only. Builds, responsive QA and staging packages run on GitHub Actions or a development workstation. Do not try to run the Astro development server from this shared hosting account.
 
 ## Git workflow
 
@@ -60,3 +51,5 @@ git push origin codex/standalone-rebuild
 ```
 
 GitHub is the canonical source. Staging deployment remains a separate controlled step with a retained rollback directory. See `../docs/STAGING-DEPLOYMENT.md` and `../docs/STAGING-DEPLOYMENT-2026-07-17.md`.
+
+See `../docs/MAT-SERVER-WORKFLOW.md` for Mat's exact server and Codex workflow.
