@@ -1,0 +1,842 @@
+[
+  {
+    "slug": "local-business-network",
+    "body": {
+      "h": 20054,
+      "w": 1440
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Local Business Network"
+      },
+      {
+        "tag": "H2",
+        "text": "Ai Community"
+      },
+      {
+        "tag": "H2",
+        "text": "Affiliate Marketing"
+      },
+      {
+        "tag": "H2",
+        "text": "Business Done 4 U"
+      },
+      {
+        "tag": "H2",
+        "text": "Weddings"
+      },
+      {
+        "tag": "H2",
+        "text": "Co Working Spaces"
+      },
+      {
+        "tag": "H2",
+        "text": "Insurance"
+      },
+      {
+        "tag": "H2",
+        "text": "Crypto Education & Business"
+      },
+      {
+        "tag": "H2",
+        "text": "Legal Services"
+      },
+      {
+        "tag": "H2",
+        "text": "Marketing & Media"
+      },
+      {
+        "tag": "H2",
+        "text": "Nanny Services"
+      },
+      {
+        "tag": "H2",
+        "text": "Remote & Online Work"
+      },
+      {
+        "tag": "H2",
+        "text": "Solar"
+      },
+      {
+        "tag": "H2",
+        "text": "Visas"
+      },
+      {
+        "tag": "H2",
+        "text": "Water - Drink Healthy"
+      },
+      {
+        "tag": "H2",
+        "text": "Property Support"
+      },
+      {
+        "tag": "H2",
+        "text": "Tours & Entertainment"
+      },
+      {
+        "tag": "H2",
+        "text": "Quick Links"
+      },
+      {
+        "tag": "H2",
+        "text": "Contact Us"
+      }
+    ],
+    "images": [
+      {
+        "alt": "First Contact Thailand",
+        "height": 1778,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-firstcontact.png",
+        "width": 1440
+      },
+      {
+        "alt": "Ai Community",
+        "height": 393,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2026/05/ai-community-local-business-network-20260530.jpeg",
+        "width": 588
+      },
+      {
+        "alt": "Affiliate Marketing",
+        "height": 1369,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/12/Marketing-scaled.jpg",
+        "width": 2560
+      },
+      {
+        "alt": "Business Done 4 U",
+        "height": 1369,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/12/consulting-scaled.jpg",
+        "width": 2560
+      },
+      {
+        "alt": "Beach destination wedding",
+        "height": 1500,
+        "src": "https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?auto=format&fit=crop&w=1000&q=82",
+        "width": 1000
+      },
+      {
+        "alt": "Co Working Spaces",
+        "height": 1369,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/12/co-working-scaled.jpg",
+        "width": 2560
+      },
+      {
+        "alt": "Insurance",
+        "height": 1369,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/12/insurance-scaled.jpg",
+        "width": 2560
+      },
+      {
+        "alt": "Crypto Education & Business",
+        "height": 1354,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/crypto-scaled.jpg",
+        "width": 2560
+      },
+      {
+        "alt": "Legal Services",
+        "height": 637,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2026/06/legal-house-1.png",
+        "width": 640
+      },
+      {
+        "alt": "Marketing & Media",
+        "height": 1369,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/12/marketing2-scaled.jpg",
+        "width": 2560
+      },
+      {
+        "alt": "Nanny Services",
+        "height": 0,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/12/nanny-scaled.jpg",
+        "width": 0
+      },
+      {
+        "alt": "Remote & Online Work",
+        "height": 0,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/12/remote-scaled.jpg",
+        "width": 0
+      },
+      {
+        "alt": "Solar",
+        "height": 0,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/12/solar-scaled.jpg",
+        "width": 0
+      },
+      {
+        "alt": "Visas",
+        "height": 0,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/12/visias-scaled.jpg",
+        "width": 0
+      },
+      {
+        "alt": "Water - Drink Healthy",
+        "height": 0,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/12/drinking-scaled.jpg",
+        "width": 0
+      },
+      {
+        "alt": "Property Support",
+        "height": 0,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/house-1-scaled.jpg",
+        "width": 0
+      },
+      {
+        "alt": "Tours & Entertainment",
+        "height": 0,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/beach-1-scaled.jpg",
+        "width": 0
+      },
+      {
+        "alt": "First Contact Thailand",
+        "height": 1509,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-firstcontact.png",
+        "width": 1222
+      }
+    ],
+    "links": [
+      {
+        "href": "https://firstcontactthailand.com/contact-link/",
+        "text": "Contact us and we will connect you with our trusted local business partners"
+      }
+    ],
+    "title": "First Contact Thailand",
+    "url": "https://firstcontactthailand.com/local-business-network/",
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "mobile": {
+      "body": {
+        "h": 5200,
+        "w": 375
+      },
+      "overflow": false,
+      "viewport": {
+        "h": 844,
+        "w": 390
+      }
+    }
+  },
+  {
+    "slug": "community-events",
+    "body": {
+      "h": 1415,
+      "w": 1425
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Socialising in Samui"
+      },
+      {
+        "tag": "H2",
+        "text": "Quick Links"
+      },
+      {
+        "tag": "H2",
+        "text": "Contact Us"
+      }
+    ],
+    "images": [
+      {
+        "alt": "First Contact Thailand",
+        "height": 1778,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-firstcontact.png",
+        "width": 1440
+      },
+      {
+        "alt": "First Contact Thailand",
+        "height": 1509,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-firstcontact.png",
+        "width": 1222
+      }
+    ],
+    "links": [
+      {
+        "href": "https://firstcontactthailand.com/past-events/?area=samui",
+        "text": "Check out our previous events"
+      },
+      {
+        "href": "https://firstcontactthailand.com/contact-link/",
+        "text": "Let us know if you have a community event coming up"
+      }
+    ],
+    "title": "First Contact Thailand",
+    "url": "https://firstcontactthailand.com/community-events/",
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "mobile": {
+      "body": {
+        "h": 2638,
+        "w": 390
+      },
+      "overflow": false,
+      "viewport": {
+        "h": 844,
+        "w": 390
+      }
+    }
+  },
+  {
+    "slug": "hire",
+    "body": {
+      "h": 1661,
+      "w": 1425
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Hire Trusted Local Services"
+      },
+      {
+        "tag": "H2",
+        "text": "Airport Transfers"
+      },
+      {
+        "tag": "H2",
+        "text": "Vehicle Hire"
+      },
+      {
+        "tag": "H2",
+        "text": "Local Services"
+      },
+      {
+        "tag": "H2",
+        "text": "Quick Links"
+      },
+      {
+        "tag": "H2",
+        "text": "Contact Us"
+      }
+    ],
+    "images": [
+      {
+        "alt": "First Contact Thailand",
+        "height": 1778,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-firstcontact.png",
+        "width": 1440
+      },
+      {
+        "alt": "Airport transfers",
+        "height": 0,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/car-scaled.jpg",
+        "width": 0
+      },
+      {
+        "alt": "Vehicle hire",
+        "height": 0,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/bike-scaled.jpg",
+        "width": 0
+      },
+      {
+        "alt": "Local services",
+        "height": 0,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cleaning-scaled.jpg",
+        "width": 0
+      },
+      {
+        "alt": "First Contact Thailand",
+        "height": 1509,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-firstcontact.png",
+        "width": 1222
+      }
+    ],
+    "links": [
+      {
+        "href": "https://firstcontactthailand.com/contact-link/?fct_service=hire",
+        "text": "Book our local Thai drivers & hire operators— all fully vetted, reliable, and guaranteed not to overcharge you."
+      }
+    ],
+    "title": "First Contact Thailand",
+    "url": "https://firstcontactthailand.com/hire/",
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "mobile": {
+      "body": {
+        "h": 2982,
+        "w": 390
+      },
+      "overflow": false,
+      "viewport": {
+        "h": 844,
+        "w": 390
+      }
+    }
+  },
+  {
+    "slug": "local-deals",
+    "body": {
+      "h": 1738,
+      "w": 1440
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Local Deals"
+      },
+      {
+        "tag": "H2",
+        "text": "DRINK LIKE A LOCAL"
+      },
+      {
+        "tag": "H2",
+        "text": "EAT LIKE A LOCAL"
+      },
+      {
+        "tag": "H2",
+        "text": "LIVE LIKE A LOCAL"
+      },
+      {
+        "tag": "H2",
+        "text": "Quick Links"
+      },
+      {
+        "tag": "H2",
+        "text": "Contact Us"
+      }
+    ],
+    "images": [
+      {
+        "alt": "First Contact Thailand",
+        "height": 1778,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-firstcontact.png",
+        "width": 1440
+      },
+      {
+        "alt": "DRINK LIKE A LOCAL",
+        "height": 667,
+        "src": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1000&q=80",
+        "width": 1000
+      },
+      {
+        "alt": "EAT LIKE A LOCAL",
+        "height": 750,
+        "src": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80",
+        "width": 1000
+      },
+      {
+        "alt": "LIVE LIKE A LOCAL",
+        "height": 667,
+        "src": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1000&q=80",
+        "width": 1000
+      },
+      {
+        "alt": "First Contact Thailand",
+        "height": 1509,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-firstcontact.png",
+        "width": 1222
+      }
+    ],
+    "links": [
+      {
+        "href": "https://firstcontactthailand.com/contact-link/?fct_service=local-deals",
+        "text": "DRINK LIKE A LOCALHate paying tourist prices? We will guide you straight to the best local happy hours and insider specials.Find local deals"
+      },
+      {
+        "href": "https://firstcontactthailand.com/contact-link/?fct_service=local-deals",
+        "text": "EAT LIKE A LOCALHate paying tourist prices? We will show you where the locals eat, drink, and celebrate.Find local deals"
+      },
+      {
+        "href": "https://firstcontactthailand.com/contact-link/?fct_service=local-deals",
+        "text": "LIVE LIKE A LOCALDiscover how to shop, eat, travel, and enjoy Thailand at local rates with trusted local recommendations.Find local deals"
+      },
+      {
+        "href": "https://firstcontactthailand.com/contact-link/",
+        "text": "Tell us about a local deal"
+      }
+    ],
+    "title": "First Contact Thailand",
+    "url": "https://firstcontactthailand.com/local-deals/",
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "mobile": {
+      "body": {
+        "h": 3642,
+        "w": 390
+      },
+      "overflow": false,
+      "viewport": {
+        "h": 844,
+        "w": 390
+      }
+    }
+  },
+  {
+    "slug": "real-estate",
+    "body": {
+      "h": 2475,
+      "w": 1440
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Property"
+      },
+      {
+        "tag": "H2",
+        "text": "Property Sales"
+      },
+      {
+        "tag": "H2",
+        "text": "Property Management"
+      },
+      {
+        "tag": "H2",
+        "text": "BUILDING CONTRACTORS"
+      },
+      {
+        "tag": "H2",
+        "text": "How to buy property in Thailand"
+      },
+      {
+        "tag": "H2",
+        "text": "Buyers Agent"
+      },
+      {
+        "tag": "H2",
+        "text": "Quick Links"
+      },
+      {
+        "tag": "H2",
+        "text": "Contact Us"
+      }
+    ],
+    "images": [
+      {
+        "alt": "First Contact Thailand",
+        "height": 1778,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-firstcontact.png",
+        "width": 1440
+      },
+      {
+        "alt": "Property Sales",
+        "height": 1369,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/house-scaled.jpg",
+        "width": 2560
+      },
+      {
+        "alt": "Property Management",
+        "height": 1369,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/house-2-scaled.jpg",
+        "width": 2560
+      },
+      {
+        "alt": "Building Contractors",
+        "height": 1369,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/house-1-scaled.jpg",
+        "width": 2560
+      },
+      {
+        "alt": "How to buy property in Thailand",
+        "height": 637,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2026/06/legal-house-1.png",
+        "width": 640
+      },
+      {
+        "alt": "Buyers Agent",
+        "height": 475,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2026/06/buyersagent.png",
+        "width": 715
+      },
+      {
+        "alt": "First Contact Thailand",
+        "height": 1509,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-firstcontact.png",
+        "width": 1222
+      }
+    ],
+    "links": [
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/property-sales/",
+        "text": "Connect with one of our sales agents for property listings all over Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/contact-link/",
+        "text": "Contact us about property management"
+      },
+      {
+        "href": "https://firstcontactthailand.com/contact-link/",
+        "text": "Contact us about building contractors"
+      },
+      {
+        "href": "https://firstcontactthailand.com/contact-link/",
+        "text": "How to buy property in Thailand"
+      },
+      {
+        "href": "https://firstcontactthailand.com/buyers-agent/",
+        "text": "Learn more about buyers agents"
+      }
+    ],
+    "title": "First Contact Thailand",
+    "url": "https://firstcontactthailand.com/real-estate/",
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "mobile": {
+      "body": {
+        "h": 7132,
+        "w": 390
+      },
+      "overflow": false,
+      "viewport": {
+        "h": 844,
+        "w": 390
+      }
+    }
+  },
+  {
+    "slug": "tours",
+    "body": {
+      "h": 2112,
+      "w": 1440
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Tours"
+      },
+      {
+        "tag": "H2",
+        "text": "Customise Your Own Day Trip"
+      },
+      {
+        "tag": "H2",
+        "text": "Full Moon Parties"
+      },
+      {
+        "tag": "H2",
+        "text": "Other Tours"
+      },
+      {
+        "tag": "H2",
+        "text": "Become a Better Tour Guide"
+      },
+      {
+        "tag": "H2",
+        "text": "Quick Links"
+      },
+      {
+        "tag": "H2",
+        "text": "Contact Us"
+      }
+    ],
+    "images": [
+      {
+        "alt": "First Contact Thailand",
+        "height": 1778,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-firstcontact.png",
+        "width": 1440
+      },
+      {
+        "alt": "Customise Your Own Day Trip",
+        "height": 1354,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/Hero-Images-copy-2-scaled.jpg?v=20260609k",
+        "width": 2560
+      },
+      {
+        "alt": "Full Moon Parties",
+        "height": 1369,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/1-scaled.jpg?v=20260609k",
+        "width": 2560
+      },
+      {
+        "alt": "Other Tours",
+        "height": 1369,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/11-scaled.jpg?v=20260609k",
+        "width": 2560
+      },
+      {
+        "alt": "Become a Better Tour Guide",
+        "height": 505,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2026/06/tour-guide-fun-pic-20260609.png?v=20260609k",
+        "width": 616
+      },
+      {
+        "alt": "First Contact Thailand",
+        "height": 1509,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-firstcontact.png",
+        "width": 1222
+      }
+    ],
+    "links": [
+      {
+        "href": "https://firstcontactthailand.com/contact-link/",
+        "text": "Connect with local partners"
+      },
+      {
+        "href": "https://firstcontactthailand.com/full-moon-party-vip-trip/",
+        "text": "Book your Full Moon trip"
+      },
+      {
+        "href": "https://firstcontactthailand.com/other-tours/",
+        "text": "View other tours"
+      },
+      {
+        "href": "https://firstcontactthailand.com/become-a-better-tour-guide/",
+        "text": "Find out more"
+      }
+    ],
+    "title": "First Contact Thailand",
+    "url": "https://firstcontactthailand.com/tours-2/",
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "mobile": {
+      "body": {
+        "h": 3855,
+        "w": 390
+      },
+      "overflow": false,
+      "viewport": {
+        "h": 844,
+        "w": 390
+      }
+    }
+  },
+  {
+    "slug": "contact",
+    "body": {
+      "h": 2030,
+      "w": 1440
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Contact Us"
+      },
+      {
+        "tag": "H3",
+        "text": "We would love to help. Feel free to reach out!"
+      },
+      {
+        "tag": "H2",
+        "text": "Prefer a Personal Touch? Contact Us and we will get in touch!"
+      },
+      {
+        "tag": "H3",
+        "text": "Give us a shout and lets have a chat."
+      },
+      {
+        "tag": "H2",
+        "text": "Quick Links"
+      },
+      {
+        "tag": "H2",
+        "text": "Contact Us"
+      }
+    ],
+    "images": [
+      {
+        "alt": "First Contact Thailand",
+        "height": 1778,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-firstcontact.png",
+        "width": 1440
+      },
+      {
+        "alt": "First Contact Thailand",
+        "height": 1509,
+        "src": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-firstcontact.png",
+        "width": 1222
+      }
+    ],
+    "links": [
+      {
+        "href": "https://www.facebook.com/groups/321622170289599",
+        "text": ""
+      },
+      {
+        "href": "https://www.whatsapp.com/",
+        "text": ""
+      }
+    ],
+    "title": "Contact Us – First Contact Thailand",
+    "url": "https://firstcontactthailand.com/contact-link/",
+    "viewport": {
+      "h": 900,
+      "w": 1440
+    },
+    "mobile": {
+      "body": {
+        "h": 2571,
+        "w": 390
+      },
+      "overflow": false,
+      "viewport": {
+        "h": 844,
+        "w": 390
+      }
+    }
+  }
+]

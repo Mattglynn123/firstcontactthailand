@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SupportPage from '../components/SupportPage.astro';
+---
+
+<Layout title="Property Sales in Thailand | First Contact Thailand" description="Connect with trusted local property sales contacts across Thailand." image="/assets/fct/property-home.jpg">
+  <SupportPage
+    eyebrow="Local property introductions"
+    title="Property Sales"
+    text="Start your property search with practical local knowledge and trusted introductions."
+    image="/assets/fct/property-home.jpg"
+    introTitle="A clearer way to begin your search"
+    introText="First Contact does not replace legal or financial advice. We help you find suitable local contacts and understand the questions to ask before taking the next step."
+    points={[
+      { title: 'Define the location', text: 'Tell us the area, property type, budget and how you plan to use the property.' },
+      { title: 'Meet suitable local contacts', text: 'We introduce you to relevant local sales and property professionals.' },
+      { title: 'Check before committing', text: 'Use independent legal and technical checks before any purchase or deposit.' },
+      { title: 'Stay connected locally', text: 'Ask about management, maintenance, building and other support after the sale.' },
+    ]}
+    ctaLabel="Start a property enquiry"
+  />
+</Layout>

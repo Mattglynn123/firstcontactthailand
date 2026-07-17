@@ -1,52 +1,40 @@
 ---
-title: "community-events"
+title: "Koh Samui Community Events"
 slug: "community-events"
-wpId: 462
 date: 2025-11-26T05:51:31
 modified: 2026-07-01T09:18:18
-originalUrl: "https://firstcontactthailand.com/community-events/"
-wpParent: 0
 menuOrder: 0
-sourceType: pages
 draft: false
 ---
 
-Socialising in Samui
+# Koh Samui Community Events
 
-Check out our community events
+Check out our community events on Samui.
 
-## Upcoming Events
-
-[Wednesday 3 June
-
-### AI Meet Up
-
-Weekly Wednesdays, 4:00 pm – 6:00 pm at Nature Bar, Maenam.
-
-](https://firstcontactthailand.com/event/ai-weekly-nature-bar-maenam-beach/)[Wednesday 3 June
-
-### Crypto Community Gathering
-
-Weekly Wednesdays, 4:00 pm – 6:00 pm at Nature Bar, Maenam.
-
-](https://firstcontactthailand.com/contact-link/?fct_event=crypto-community-gathering)[Thursday 4 June
-
-### Pub Quiz
-
-Weekly Thursdays, 7:00 pm – 9:45 pm at Nature Bar, Maenam.
-
-](https://firstcontactthailand.com/event/pub-quiz-nature-bar-maenam-beach-every-thursday/)[Friday 5 June
-
-### Business Lunch
-
-Weekly Fridays, 3:00 pm – 5:00 pm at Nature Bar, Maenam.
-
-](https://firstcontactthailand.com/event/business-networking-lunch-every-friday-3pm/)[Saturday 6 June
-
-### Beach Walk
-
-Weekly Saturdays, 4:00 pm – 6:00 pm.
-
-](https://firstcontactthailand.com/event/beach-walk-every-saturday-4pm/)
-
-[Check out our previous events](https://firstcontactthailand.com/past-events/) [let us know if you have a community event coming up](https://firstcontactthailand.com/contact-link/)
+<section class="service-card-grid service-card-grid-three" aria-label="Koh Samui upcoming events">
+  <article class="service-card">
+    <h2>AI Meet Up</h2>
+    <p>Wednesday 3 June, 4:00 pm to 6:00 pm at Nature Bar, Maenam.</p>
+    <a href="/contact-link/?fct_event=ai-meet-up">Ask about this event</a>
+  </article>
+  <article class="service-card">
+    <h2>Crypto Community Gathering</h2>
+    <p>Wednesday 3 June, 4:00 pm to 6:00 pm at Nature Bar, Maenam.</p>
+    <a href="/contact-link/?fct_event=crypto-community-gathering">Ask about this event</a>
+  </article>
+  <article class="service-card">
+    <h2>Pub Quiz</h2>
+    <p>Thursday 4 June, 7:00 pm to 9:45 pm at Nature Bar, Maenam.</p>
+    <a href="/contact-link/?fct_event=pub-quiz">Ask about this event</a>
+  </article>
+  <article class="service-card">
+    <h2>Business Lunch</h2>
+    <p>Friday 5 June, 3:00 pm to 5:00 pm at Nature Bar, Maenam.</p>
+    <a href="/contact-link/?fct_event=business-lunch">Ask about this event</a>
+  </article>
+  <article class="service-card">
+    <h2>Beach Walk</h2>
+    <p>Saturday 6 June, 4:00 pm to 6:00 pm.</p>
+    <a href="/contact-link/?fct_event=beach-walk">Ask about this event</a>
+  </article>
+</section>

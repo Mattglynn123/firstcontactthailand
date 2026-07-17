@@ -1,13 +1,9 @@
 ---
 title: "Contact Us"
 slug: "contact-link"
-wpId: 1014
 date: 2025-12-02T10:04:18
 modified: 2026-06-23T13:28:54
-originalUrl: "https://firstcontactthailand.com/contact-link/"
-wpParent: 0
 menuOrder: 0
-sourceType: pages
 draft: false
 ---
 

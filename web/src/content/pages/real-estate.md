@@ -1,13 +1,9 @@
 ---
 title: "real-estate"
 slug: "real-estate"
-wpId: 467
 date: 2025-11-26T05:52:58
 modified: 2026-07-01T15:39:50
-originalUrl: "https://firstcontactthailand.com/real-estate/"
-wpParent: 0
 menuOrder: 0
-sourceType: pages
 draft: false
 ---
 
@@ -17,8 +13,4 @@ Connect with trusted property support across Thailand.
 
 Property Services
 
-[Property Sales Overview](https://firstcontactthailand.com/property-sales/) [Property Management](https://firstcontactthailand.com/property-management/) [Building Contractors](https://firstcontactthailand.com/building-contractors/) [Buyers Agent](https://firstcontactthailand.com/buyers-agent/)
-
-Property Sales Areas
-
-[Koh Samui](https://firstcontactthailand.com/property-sales/koh-samui/) [Koh Phangan](https://firstcontactthailand.com/property-sales/koh-phangan/) [Bangkok](https://firstcontactthailand.com/property-sales/bangkok/) [Pattaya](https://firstcontactthailand.com/property-sales/pattaya/) [Phuket](https://firstcontactthailand.com/property-sales/phuket/) [Krabi](https://firstcontactthailand.com/property-sales/krabi/) [Chiang Mai](https://firstcontactthailand.com/property-sales/chiang-mai/) [Hua Hin](https://firstcontactthailand.com/property-sales/hua-hin/)
+[Property Sales Overview](/property-sales/) [Property Management](/property-management/) [Building Contractors](/building-contractors/) [Buyers Agent](/buyers-agent/)

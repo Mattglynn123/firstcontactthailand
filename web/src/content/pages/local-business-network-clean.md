@@ -15,37 +15,37 @@ draft: false
 
 Our collective network includes over 500 businesses, bringing together locals and expats to connect people with trusted services throughout Thailand.
 
-![AI Community](https://firstcontactthailand.com/wp-content/uploads/2026/05/ai-community-local-business-network-20260530.jpeg)
+![AI Community](/assets/fct/ai-community-local-business-network-20260530.jpeg)
 
 ## AI Community
 
 Connect with local founders, operators, and business owners using practical tools to work smarter.
 
-![Affiliate Marketing](https://firstcontactthailand.com/wp-content/uploads/2025/12/Marketing-scaled.jpg)
+![Affiliate Marketing](/assets/fct/Marketing-scaled.jpg)
 
 ## Affiliate Marketing
 
 Build trusted referral partnerships across Thailand and connect with businesses that can help your customers.
 
-![Co Working](https://firstcontactthailand.com/wp-content/uploads/2025/12/co-working-scaled.jpg)
+![Co Working](/assets/fct/co-working-scaled.jpg)
 
 ## Co Working
 
 Find flexible workspaces, meeting places, and local business hubs.
 
-![Legal Advice](https://firstcontactthailand.com/wp-content/uploads/2025/12/legal-scaled.jpg)
+![Legal Advice](/assets/fct/legal-scaled.jpg)
 
 ## Legal Advice
 
 Connect with advisers for company setup, contracts, property checks, and business structure.
 
-![Insurance](https://firstcontactthailand.com/wp-content/uploads/2025/12/insurance-scaled.jpg)
+![Insurance](/assets/fct/insurance-scaled.jpg)
 
 ## Insurance
 
 Speak with trusted partners about personal, business, health, vehicle, property, and travel insurance.
 
-![Visas](https://firstcontactthailand.com/wp-content/uploads/2025/12/visias-scaled.jpg)
+![Visas](/assets/fct/visias-scaled.jpg)
 
 ## Visas
 

@@ -17,15 +17,11 @@ We support several Koh Samui and Koh Phangan charities, primarily via the Rotary
 
 We also work with many other charity groups and would love to hear from others so we can support your charity.
 
-[
-
 ## Koh Samui Surf Lifesaving Club
 
 Supporting ocean safety, lifesaving skills, and swimming confidence for local children and families.
 
-
-
-](https://firstcontactthailand.com/koh-samui-surf-lifesaving-club/)[
+[Learn about the Koh Samui Surf Lifesaving Club](/koh-samui-surf-lifesaving-club/)
 
 ## Think Pink Samui
 
@@ -33,7 +29,9 @@ Supporting breast imaging services, screening days, awareness campaigns, and ear
 
 
 
-](https://rotarysamui-phangan.org/think-pink-samui-project/)[
+](https://rotarysamui-phangan.org/think-pink-samui-project/)
+
+[
 
 ## Support 4 Autism
 
@@ -41,7 +39,9 @@ Helping the Learning Center for Magical Autistic Children with teachers, transpo
 
 
 
-](https://rotarysamui-phangan.org/support-4-autism-project/)[
+](https://rotarysamui-phangan.org/support-4-autism-project/)
+
+[
 
 ## Swim 4 Life
 
@@ -49,7 +49,9 @@ Free water-safety and swimming lessons for local children, helping reduce child 
 
 
 
-](https://rotarysamui-phangan.org/swim-4-life-project/)[
+](https://rotarysamui-phangan.org/swim-4-life-project/)
+
+[
 
 ## Defibs 4 Samui
 
@@ -57,7 +59,9 @@ Supporting public emergency response by helping place AED defibrillators with re
 
 
 
-](https://rotarysamui-phangan.org/defibs-4-samui-project/)[
+](https://rotarysamui-phangan.org/defibs-4-samui-project/)
+
+[
 
 ## Food 4 Life
 

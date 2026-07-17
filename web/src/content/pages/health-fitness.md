@@ -15,7 +15,7 @@ draft: false
 
 ## Caught in the pub circuit a bit too often and ready to shed a few kilos?
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/beach-1-scaled.jpg "Screenshot")
+![](/assets/fct/beach-1-scaled.jpg "Screenshot")
 
 ## FREE BEACH FITNESS MEET UPS
 
@@ -23,7 +23,7 @@ draft: false
 
 Start your midweek with energy and community:??
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/gym-scaled.jpg "Screenshot")
+![](/assets/fct/gym-scaled.jpg "Screenshot")
 
 ## WOMANS HEALTH & WELLNESS
 
@@ -31,7 +31,7 @@ Several amazing events are held weekly to support women?s health ????
 
 Some of our members also offer a range of women?s health products ????
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/gym-copy-scaled.jpg "Screenshot")
+![](/assets/fct/gym-copy-scaled.jpg "Screenshot")
 
 ## MENS HEALTH & WELLNESS
 
@@ -39,7 +39,7 @@ We care about men?s health ????
 
 Our community hosts weekly events ??
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/personal-scaled.jpg "Screenshot")
+![](/assets/fct/personal-scaled.jpg "Screenshot")
 
 ## PERSONAL PRODUCTS
 

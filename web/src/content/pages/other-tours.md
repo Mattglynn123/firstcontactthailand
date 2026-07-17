@@ -11,13 +11,13 @@ sourceType: pages
 draft: false
 ---
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/11-scaled.jpg "Screenshot")
+![](/assets/fct/11-scaled.jpg "Screenshot")
 
 ## ELEPHANTS
 
 Visit ethic Elephant sanctuaries on the island
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/12/pig-island-scaled.jpg "Screenshot")
+![](/assets/fct/pig-island-scaled.jpg "Screenshot")
 
 ## PIG ISLAND
 
@@ -25,13 +25,13 @@ Visit the iconic Pig Island ![🐷](https://static.xx.fbcdn.net/images/emoji.ph
 
 Enjoy a fun day swimming, snorkeling, and relaxing under the tropical sun ![🏝️](https://static.xx.fbcdn.net/images/emoji.php/v9/t2a/2/16/1f3dd.png) — an unforgettable experience awaits!
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/12/national-park-scaled.jpg "Screenshot")
+![](/assets/fct/national-park-scaled.jpg "Screenshot")
 
 ## NATIONAL PARK
 
 The best 360 degree views in the island, Swim, Snorkel, Canoe & Trek on these picturesque day tours.
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/12/atv-scaled.jpg "Screenshot")
+![](/assets/fct/atv-scaled.jpg "Screenshot")
 
 ## ATV
 

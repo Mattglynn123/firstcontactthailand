@@ -1,0 +1,32 @@
+---
+import { contact } from '../data/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <img src="/assets/fct/cropped-firstcontact.png" alt="First Contact Thailand" width="94" height="116" />
+      <p>Connecting locals, expats and visitors with trusted businesses, community events and practical local support.</p>
+    </div>
+    <nav class="site-footer__links" aria-label="Footer links">
+      <h2>Explore</h2>
+      <a href="/local-business-network/">Business Network</a>
+      <a href="/community-events/">Community Events</a>
+      <a href="/tours-2/">Tours</a>
+      <a href="/real-estate/">Property</a>
+      <a href="/local-deals/">Local Deals</a>
+    </nav>
+    <div class="site-footer__contact">
+      <h2>Contact</h2>
+      <a href={contact.whatsapp} target="_blank" rel="noreferrer">WhatsApp {contact.phoneDisplay}</a>
+      <a href={`mailto:${contact.email}`}>{contact.email}</a>
+      <a href={contact.facebook} target="_blank" rel="noreferrer">Facebook Community</a>
+    </div>
+  </div>
+  <div class="site-footer__legal">
+    <p>&copy; {year} First Contact Thailand</p>
+    <a href="/pages/">Site index</a>
+  </div>
+</footer>

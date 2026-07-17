@@ -11,7 +11,7 @@ sourceType: pages
 draft: false
 ---
 
-![](https://firstcontactthailand.com/wp-content/uploads/2026/04/Painting-Class-Event-header-copy.jpg "Painting Class Event header copy")
+![](/assets/fct/Painting-Class-Event-header-copy.jpg "Painting Class Event header copy")
 
 # Pre-registration Is essential
 
@@ -27,8 +27,8 @@ Have You Any Experience Painting
 
 No, This is my first timeYes, a little but not for a whileAs a hobbyI taught Bob Ross everything he knows
 
-![](https://firstcontactthailand.com/wp-content/uploads/2026/04/Untitled-1-300x109.png)
+![](/assets/fct/Untitled-1-300x109.png)
 
-![](https://firstcontactthailand.com/wp-content/uploads/2026/04/S.LS_.C.K.S-Logo-copy-150x150.png "S.LS.C.K.S Logo copy")
+![](/assets/fct/S.LS_.C.K.S-Logo-copy-150x150.png "S.LS.C.K.S Logo copy")
 
-![](https://firstcontactthailand.com/wp-content/uploads/2026/04/Nature-Bar-Logo-copy-300x154.jpg "Nature Bar Logo copy")
+![](/assets/fct/Nature-Bar-Logo-copy-300x154.jpg "Nature Bar Logo copy")

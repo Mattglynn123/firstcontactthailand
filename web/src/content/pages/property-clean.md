@@ -21,4 +21,4 @@ Property Services
 
 Property Sales Areas
 
-[Koh Samui](https://firstcontactthailand.com/property-sales/koh-samui/) [Koh Phangan](https://firstcontactthailand.com/property-sales/koh-phangan/) [Bangkok](https://firstcontactthailand.com/property-sales/bangkok/) [Pattaya](https://firstcontactthailand.com/property-sales/pattaya/) [Phuket](https://firstcontactthailand.com/property-sales/phuket/) [Krabi](https://firstcontactthailand.com/property-sales/krabi/) [Chiang Mai](https://firstcontactthailand.com/property-sales/chiang-mai/) [Hua Hin](https://firstcontactthailand.com/property-sales/hua-hin/)
+[Koh Samui](/property-sales/?area=koh-samui) [Koh Phangan](/property-sales/?area=koh-phangan) [Bangkok](/property-sales/?area=bangkok) [Pattaya](/property-sales/?area=pattaya) [Phuket](/property-sales/?area=phuket) [Krabi](/property-sales/?area=krabi) [Chiang Mai](/property-sales/?area=chiang-mai) [Hua Hin](/property-sales/?area=hua-hin)

@@ -8,7 +8,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:staging": "npm run build && node scripts/prepare-staging.mjs",
     "preview": "astro preview",
+    "qa": "node scripts/qa-site.mjs",
     "astro": "astro"
   },
   "dependencies": {

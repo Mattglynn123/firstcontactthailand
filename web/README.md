@@ -1,4 +1,25 @@
-# Astro Starter Kit: Minimal
+# First Contact Thailand Standalone Site
+
+This directory contains the WordPress-free First Contact Thailand website. Astro generates a fully static site from the code, content and media stored in this repository.
+
+## Project Commands
+
+```sh
+npm ci
+npm run dev
+npm run build
+npm run build:staging
+npm run qa
+```
+
+- `npm run dev` starts local development.
+- `npm run build` creates the production-root build in `dist/`.
+- `npm run build:staging` creates the isolated IONOS `/staging/` package in `dist-staging/`.
+- `npm run qa` audits every route and captures priority pages at desktop, tablet and mobile widths.
+
+See `../docs/STAGING-DEPLOYMENT.md` for the controlled staging and rollback procedure.
+
+## Original Astro Reference
 
 ```sh
 npm create astro@latest -- --template minimal

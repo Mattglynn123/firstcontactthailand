@@ -1,0 +1,87 @@
+---
+import { contact, navigation } from '../data/site';
+---
+
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
+    <a class="site-brand" href="/" aria-label="First Contact Thailand home">
+      <img src="/assets/fct/cropped-firstcontact.png" alt="First Contact Thailand" width="90" height="112" />
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      {navigation.map((item) => item.children ? (
+        <details class="nav-dropdown">
+          <summary>{item.label}</summary>
+          <div class="nav-dropdown__menu">
+            {item.children.map((child) => <a href={child.href}>{child.label}</a>)}
+          </div>
+        </details>
+      ) : (
+        <a href={item.href}>{item.label}</a>
+      ))}
+    </nav>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation" title="Open navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="mobile-nav-layer" data-mobile-nav-layer hidden>
+    <button class="mobile-nav-backdrop" type="button" aria-label="Close navigation" data-menu-close></button>
+    <aside class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation">
+      <div class="mobile-nav__top">
+        <img src="/assets/fct/cropped-firstcontact.png" alt="" width="72" height="89" />
+        <button class="menu-close" type="button" aria-label="Close navigation" title="Close navigation" data-menu-close>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav__links" aria-label="Mobile primary navigation">
+        {navigation.map((item) => item.children ? (
+          <details>
+            <summary>{item.label}</summary>
+            <div>
+              {item.children.map((child) => <a href={child.href}>{child.label}</a>)}
+            </div>
+          </details>
+        ) : (
+          <a href={item.href}>{item.label}</a>
+        ))}
+      </nav>
+
+      <div class="mobile-nav__contact">
+        <p>For all enquiries</p>
+        <a href={contact.whatsapp} target="_blank" rel="noreferrer">WhatsApp {contact.phoneDisplay}</a>
+        <a href={`mailto:${contact.email}`}>{contact.email}</a>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<script is:inline>
+  (() => {
+    const header = document.querySelector('[data-site-header]');
+    if (!header) return;
+
+    const toggle = header.querySelector('.menu-toggle');
+    const layer = header.querySelector('[data-mobile-nav-layer]');
+    const closeButtons = header.querySelectorAll('[data-menu-close]');
+
+    const setOpen = (open) => {
+      toggle?.setAttribute('aria-expanded', String(open));
+      toggle?.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      layer.hidden = !open;
+      document.documentElement.classList.toggle('menu-is-open', open);
+    };
+
+    toggle?.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+    closeButtons.forEach((button) => button.addEventListener('click', () => setOpen(false)));
+    layer.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setOpen(false);
+    });
+  })();
+</script>

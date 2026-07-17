@@ -1,0 +1,282 @@
+[
+  {
+    "file": "web/public/assets/fct/cropped-firstcontact-829x1024.png",
+    "kind": "image",
+    "contentType": "image/png",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-firstcontact-829x1024.png",
+    "sha256": "1cfe5b9bf8d68ef79bb4a5e927dd611c240e62f879e239e7330a4651ac564df3",
+    "usedBy": [
+      "home"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/cropped-Hero-Images-copy-scaled-1-600x360.jpg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-Hero-Images-copy-scaled-1-600x360.jpg",
+    "sha256": "9619d910754f63f8686e8d1bf538e5251c76a0f33de196e6f9228c683093d6a2",
+    "usedBy": [
+      "home"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/hero6-1024x542.jpg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2025/11/hero6-1024x542.jpg",
+    "sha256": "7d676c2de9cc7e401a5dcbf4257ad91c31d8d78b2142141eabb202220916427b",
+    "usedBy": [
+      "home"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/cropped-firstcontact.png",
+    "kind": "image",
+    "contentType": "image/png",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-firstcontact.png",
+    "sha256": "1f42e92c208bc908de19a372ce1f18ee63f626fdf4a02a8f1fe5277eaff91af9",
+    "usedBy": [
+      "home"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/cropped-Hero-Images-copy-scaled-1.jpg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-Hero-Images-copy-scaled-1.jpg",
+    "sha256": "185ae0ddeaa5413c5d74b411f647ee4f34dd56ec4c6e07d03eec74496b947a55",
+    "usedBy": [
+      "home"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+    "kind": "font",
+    "contentType": "font/woff2",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/fonts/inter/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+    "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "usedBy": [
+      "home"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/gNMKW3F-SZuj7xmf-HY.woff2",
+    "kind": "font",
+    "contentType": "font/woff2",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/fonts/onest/gNMKW3F-SZuj7xmf-HY.woff2",
+    "sha256": "67849bcc11e02177442da14ad954bfe1cc709553dad137b5003449b303e83fc3",
+    "usedBy": [
+      "home"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/samui-cta-background-clean.png",
+    "kind": "image",
+    "contentType": "image/png",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2026/05/samui-cta-background-clean.png",
+    "sha256": "9441676ba0e273f724638e974226a2364843ca2fb56d0b58e21d1a2e5265fb9b",
+    "usedBy": [
+      "local-business-network"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/photo-1502635385003-ee1e6a1a742d.avif",
+    "kind": "image",
+    "contentType": "image/avif",
+    "sourceUrl": "https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?auto=format&fit=crop&w=1000&q=82",
+    "sha256": "111dd9ac21a4377594cda354f28222ee3a394a3c97ccceb2355b4de2c373165c",
+    "usedBy": [
+      "local-business-network"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/ai-community-meeting.jpeg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2026/05/ai-community-meeting.jpeg",
+    "sha256": "52501e0a8d593841891fec956f08efafaaa7c43dd6917c4eb14090c98ebd5d04",
+    "usedBy": [
+      "community-events"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/past-event-crypto-community-gathering.jpeg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2026/06/past-event-crypto-community-gathering.jpeg",
+    "sha256": "e63aa0f053d8cf3ca30b9a1c9f71e64c3117a7b7be3ec99d2a95165914d6831e",
+    "usedBy": [
+      "community-events"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/pub-quiz-nature-bar.jpeg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2026/05/pub-quiz-nature-bar.jpeg",
+    "sha256": "52a77b983c190bcef125bd9d2a598a43e49a936a32e2aa7ce54fcf2ce4810064",
+    "usedBy": [
+      "community-events"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/beach-walk-community.jpg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2026/05/beach-walk-community.jpg",
+    "sha256": "6ea5a31a418280a8acb0106cdba8b4ff2af422a73fd04db7663e589c7e8a7714",
+    "usedBy": [
+      "community-events"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/full-moon-party-vip-trip-29-june-2026.jpeg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2026/06/full-moon-party-vip-trip-29-june-2026.jpeg",
+    "sha256": "7e447be4227c78efa6128237f2800992d7ea618157bbe3fcb862310a9f4af66b",
+    "usedBy": [
+      "community-events"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/beach-1-scaled.jpg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2025/11/beach-1-scaled.jpg",
+    "sha256": "6f9727b00fa0e4d8be34f1e8cb3409b5845182e5cc065b16f67d55a8086413e1",
+    "usedBy": [
+      "community-events"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/friday-business-networking-lunch.png",
+    "kind": "image",
+    "contentType": "image/png",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2026/05/friday-business-networking-lunch.png",
+    "sha256": "f2e300738fc673ca50e46018ec88e29bef3607e3980a507c1af2b21f304e964b",
+    "usedBy": [
+      "community-events"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/air-scaled.jpg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2025/11/air-scaled.jpg",
+    "sha256": "1c8b5483b7d2e76fde62825730a66bf5f44f86f176ac30292341383ca7cb84be",
+    "usedBy": [
+      "hire"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/scooter-scaled.jpg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2025/11/scooter-scaled.jpg",
+    "sha256": "d1ab1b0997b3a44ef1fb8cb0481adc7bc7e19762874b62daa644a6b5d11460df",
+    "usedBy": [
+      "hire"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/jet-scaled.jpg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2025/11/jet-scaled.jpg",
+    "sha256": "7b5eb82ad00c514256548e6b78bbb32dfdc8f58b47d7c1b71546d3ae30286543",
+    "usedBy": [
+      "hire"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/photo-1514362545857-3bc16c4c7d1b.avif",
+    "kind": "image",
+    "contentType": "image/avif",
+    "sourceUrl": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1000&q=80",
+    "sha256": "6558a00ce627a5ade29d8facf9359047886b464382720cde2817ca719c281564",
+    "usedBy": [
+      "local-deals"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/photo-1555396273-367ea4eb4db5.avif",
+    "kind": "image",
+    "contentType": "image/avif",
+    "sourceUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80",
+    "sha256": "0f0fb5f30b6832e3cdbb44f21c1579d52a9c58acb61462a313c70d82cbcc1d4e",
+    "usedBy": [
+      "local-deals"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/photo-1504674900247-0877df9cc836.avif",
+    "kind": "image",
+    "contentType": "image/avif",
+    "sourceUrl": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1000&q=80",
+    "sha256": "9df454f549693de8ca5b22e882abddffd8564763f7e956c958c8ca5d3002f034",
+    "usedBy": [
+      "local-deals"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/house-scaled.jpg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2025/11/house-scaled.jpg",
+    "sha256": "54d2af9a8e36ae7b5b873b3bf77705040713739ea74cbcb47f6e438ec0d373a8",
+    "usedBy": [
+      "real-estate"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/house-2-scaled.jpg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2025/11/house-2-scaled.jpg",
+    "sha256": "c966fe7c94796803dea6eabfb5d13ce6604cd9f39a820f320c5f5bcff8573d71",
+    "usedBy": [
+      "real-estate"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/Hero-Images-copy-2-scaled.jpg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2025/11/Hero-Images-copy-2-scaled.jpg?v=20260609k",
+    "sha256": "f1061758ed111380e402102094fc18af489717790dbefc637ceab53abf3a5d50",
+    "usedBy": [
+      "tours"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/1-scaled.jpg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2025/11/1-scaled.jpg?v=20260609k",
+    "sha256": "894f34638771d1bc14fa0bb245ab92119c84eecf0c1a30d162c7c02a2e3ee5e1",
+    "usedBy": [
+      "tours"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/11-scaled.jpg",
+    "kind": "image",
+    "contentType": "image/jpeg",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2025/11/11-scaled.jpg?v=20260609k",
+    "sha256": "1f491cef57e224b4d551bca197648a4deff35363eb10fdcbe8e5207d415811f2",
+    "usedBy": [
+      "tours"
+    ]
+  },
+  {
+    "file": "web/public/assets/fct/tour-guide-fun-pic-20260609.png",
+    "kind": "image",
+    "contentType": "image/png",
+    "sourceUrl": "https://firstcontactthailand.com/wp-content/uploads/2026/06/tour-guide-fun-pic-20260609.png?v=20260609k",
+    "sha256": "f797fd9ef2863008a39cbb49e12d36586ead6e7cbd642dc1de8acff53d293c69",
+    "usedBy": [
+      "tours"
+    ]
+  }
+]

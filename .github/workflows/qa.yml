@@ -1,0 +1,54 @@
+name: Standalone site QA
+
+on:
+  push:
+    branches:
+      - astro-foundation
+      - codex/**
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: web
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run build
+
+      - name: Start production preview
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4323 > /tmp/fct-preview.log 2>&1 &
+          for attempt in {1..30}; do
+            if curl --fail --silent http://127.0.0.1:4323/ > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/fct-preview.log
+          exit 1
+
+      - name: Audit routes and responsive layouts
+        run: QA_BASE_URL=http://127.0.0.1:4323 npm run qa
+
+      - name: Upload QA evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: standalone-site-qa
+          path: |
+            docs/qa/report.json
+            docs/qa/design-qa.md
+            docs/qa/screenshots/

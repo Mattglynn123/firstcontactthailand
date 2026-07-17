@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import type { ServiceCard as Card } from '../data/site';
+
+const events: Card[] = [
+  { title: 'Beach Craft Market', meta: '30 May 2026', text: 'Local makers, crafts and community connections at Nature Bar, Maenam Beach.', image: '/assets/fct/beach-craft-market-nature-bar-maenam-20260530.jpeg', href: '/assets/fct/beach-craft-market-nature-bar-maenam-20260530.jpeg', action: 'View poster' },
+  { title: 'Beach Party', meta: '30 May 2026', text: 'A relaxed community afternoon by the sea at Nature Bar, Maenam Beach.', image: '/assets/fct/beach-party-may.jpeg', href: '/assets/fct/beach-party-may.jpeg', action: 'View poster' },
+  { title: 'Business Networking Lunch', meta: '29 May 2026', text: 'The weekly First Contact business lunch at Nature Bar, Maenam Beach.', image: '/assets/fct/friday-business-networking-lunch.png', href: '/assets/fct/friday-business-networking-lunch.png', action: 'View poster' },
+  { title: 'AI Community Meeting', meta: '27 May 2026', text: 'Practical conversations about AI, local projects and business ideas.', image: '/assets/fct/ai-community-meeting.jpeg', href: '/assets/fct/ai-community-meeting.jpeg', action: 'View poster' },
+  { title: 'Paint & Sip', meta: '3 May 2026', text: 'A creative community afternoon at Nature Bar.', image: '/assets/fct/past-event-paint-and-sip-3-may-4.jpeg', href: '/assets/fct/past-event-paint-and-sip-3-may-4.jpeg', action: 'View poster' },
+  { title: 'Koh Samui ANZAC Day', meta: '25 April 2026', text: 'A community beach commemoration at Nature Bar.', image: '/assets/fct/past-event-anzac-day-25-april.jpeg', href: '/assets/fct/past-event-anzac-day-25-april.jpeg', action: 'View poster' },
+  { title: 'Songkran Family Beach Party', meta: '13 April 2026', text: 'A family Songkran celebration on Maenam Beach.', image: '/assets/fct/past-event-songkran-family-beach-party-13-april.jpeg', href: '/assets/fct/past-event-songkran-family-beach-party-13-april.jpeg', action: 'View poster' },
+  { title: 'Full Moon Party VIP Trip', meta: '2 April 2026', text: 'A supported group trip from Maenam to Koh Phangan.', image: '/assets/fct/past-event-full-moon-party-vip-trip-2-april.jpeg', href: '/assets/fct/past-event-full-moon-party-vip-trip-2-april.jpeg', action: 'View poster' },
+  { title: 'Beach Day Party', meta: '29 March 2026', text: 'A day of music, food and community on Maenam Beach.', image: '/assets/fct/past-event-beach-day-party-maenam-29-march.jpeg', href: '/assets/fct/past-event-beach-day-party-maenam-29-march.jpeg', action: 'View poster' },
+  { title: 'Nature Bar Day Party', meta: 'Community event', text: 'Good tunes and local connections beside the beach.', image: '/assets/fct/past-event-nature-bar-day-party.jpeg', href: '/assets/fct/past-event-nature-bar-day-party.jpeg', action: 'View poster' },
+  { title: 'Speed Dating Night', meta: 'Community event', text: 'A relaxed social evening at Nature Bar, Maenam Beach.', image: '/assets/fct/past-event-speed-dating-night.jpeg', href: '/assets/fct/past-event-speed-dating-night.jpeg', action: 'View poster' },
+  { title: "Samui's Got No Talent", meta: 'Community event', text: 'A community entertainment night for locals and visitors.', image: '/assets/fct/past-event-samuis-got-no-talent-4.jpeg', href: '/assets/fct/past-event-samuis-got-no-talent-4.jpeg', action: 'View poster' },
+  { title: 'Pub Quiz Night', meta: 'Community event', text: "A friendly quiz night at Magical Garden, Fisherman's Village.", image: '/assets/fct/past-event-pub-quiz-night-early.jpeg', href: '/assets/fct/past-event-pub-quiz-night-early.jpeg', action: 'View poster' },
+];
+---
+
+<Layout title="Past Events | First Contact Thailand" description="A visual archive of First Contact Thailand community events." image="/assets/fct/beach-craft-market-nature-bar-maenam-20260530.jpeg">
+  <PageHero
+    eyebrow="First Contact community"
+    title="Past Events"
+    text="A visual archive of the meetups, markets, social events and shared experiences that brought the community together."
+    image="/assets/fct/PHOTO-2025-10-11-09-28-41-2.jpg"
+    primaryLabel="See current events"
+    primaryHref="/community-events/"
+    secondaryLabel="Tell us about an event"
+    secondaryHref="/contact-link/?topic=Community%20event"
+  />
+
+  <section class="section section--soft">
+    <div class="section__inner">
+      <div class="section-heading">
+        <p class="section-kicker">Community memories</p>
+        <h2>Previous First Contact events</h2>
+        <p>Open any card to see the original event poster.</p>
+      </div>
+      <div class="service-grid past-events-grid">
+        {events.map((event) => <ServiceCard card={event} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section final-cta">
+    <div class="section__inner final-cta__inner">
+      <div>
+        <p class="section-kicker">Keep connected</p>
+        <h2>Looking for the next event?</h2>
+        <p>See current community activities or share an event with the First Contact network.</p>
+      </div>
+      <div class="button-group">
+        <a class="button button--primary" href="/community-events/">See current events</a>
+        <a class="button button--outline" href="/contact-link/?topic=Community%20event">List an event</a>
+      </div>
+    </div>
+  </section>
+</Layout>

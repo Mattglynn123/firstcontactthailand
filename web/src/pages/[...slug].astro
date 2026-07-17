@@ -4,7 +4,20 @@ import Layout from '../layouts/Layout.astro';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages', ({ data }) => !data.draft);
-  return pages.map((page) => ({
+  const explicitRoutes = new Set([
+    'about',
+    'community-events',
+    'contact-link',
+    'health-fitness',
+    'hire',
+    'local-business-network',
+    'local-deals',
+    'past-events',
+    'real-estate',
+    'tours-2',
+  ]);
+
+  return pages.filter((page) => !explicitRoutes.has(page.data.slug)).map((page) => ({
     params: { slug: page.data.slug },
     props: { page },
   }));
@@ -12,11 +25,104 @@ export async function getStaticPaths() {
 
 const { page } = Astro.props;
 const { Content } = await render(page);
+const rawBody = (page.body ?? '').trim();
+const isLegacyPlaceholder = /layouts\.siteorigin|Lorem ipsum|John Doe|\[\]\(#\)|live-website\.com|wp-content|wordpress\.com|images\.unsplash\.com|<iframe|u003ciframe|Welcome to WordPress/i.test(rawBody);
+const usesStandardFallback = rawBody.length < 80 || isLegacyPlaceholder;
+const contentHasH1 = /^#\s+/m.test(rawBody);
+const cleanTitle = page.data.title
+  .replace(/&#038;/g, '&')
+  .replace(/&#8211;/g, '-')
+  .replace(/-/g, ' ')
+  .replace(/\s+/g, ' ')
+  .trim();
+const fallbackCopy = {
+  'affiliate-marketing': 'Connect with trusted local partners for affiliate, referral, and practical online income opportunities in Thailand.',
+  'airport-transfers': 'Arrange fair, reliable airport transfer support with trusted local drivers.',
+  'bar-deals': 'Find local bar deals, happy hours, and social places without paying tourist prices.',
+  'building-a-property-in-thailand': 'Connect with trusted building contractors and property support in Thailand.',
+  'business-directory': 'Find trusted local businesses, services, and community contacts across Thailand.',
+  'business-directory-2': 'Find trusted local businesses, services, and community contacts across Thailand.',
+  'business-networking': 'Meet useful local business contacts, community members, and service providers.',
+  'business-set-ups': 'Get connected with practical local support for setting up and running a business in Thailand.',
+  'car-bike-hire': 'Find trusted local car and bike hire support with clear prices and practical help.',
+  'carbikehire': 'Find trusted local car and bike hire support with clear prices and practical help.',
+  'charities': 'Explore local charity programs and community projects supported through First Contact Thailand.',
+  'charity': 'Explore local charity programs and community projects supported through First Contact Thailand.',
+  'charity-work': 'Explore local charity programs and community projects supported through First Contact Thailand.',
+  'co-working-spaces': 'Find practical co-working spaces and local work-friendly places across Thailand.',
+  'crypto-education-business': 'Connect with local crypto education, online business, and digital opportunity support.',
+  'day-trips': 'Plan local day trips with trusted drivers, boat operators, and local partners.',
+  'fitness': 'Find local fitness, wellness, and community activity options in Thailand.',
+  'food-drink-deals': 'Find local food and drink deals, trusted recommendations, and places locals actually use.',
+  'food-drinks': 'Find local food and drink deals, trusted recommendations, and places locals actually use.',
+  'graphic-design': 'Connect with trusted graphic design and creative support for your business or project.',
+  'health-wellbeing': 'Find trusted health, wellbeing, fitness, and community wellness support.',
+  'hire-group': 'Find trusted local hire services, transport, equipment, and practical support.',
+  'insurance': 'Connect with trusted local insurance support for life in Thailand.',
+  'jetski-hire': 'Find trusted local water activity and jetski hire support.',
+  'koh-phangan': 'Find local contacts, events, services, and community support on Koh Phangan.',
+  'koh-samui': 'Find local contacts, events, services, and community support on Koh Samui.',
+  'learn-thai': 'Connect with local language learning, Thai lessons, and English teaching support.',
+  'legal-advice': 'Connect with trusted local legal support and practical guidance in Thailand.',
+  'marketing': 'Connect with trusted marketing, social media, and business promotion support.',
+  'mens-health-wellness': 'Find local men\'s health, wellness, and support options.',
+  'nannies': 'Find trusted local nanny and family support services.',
+  'networking': 'Meet useful local contacts and community members through First Contact Thailand.',
+  'online-jobs': 'Explore remote work, online jobs, and practical income opportunities.',
+  'remote-online-work-opportunities': 'Explore remote work, online jobs, and practical income opportunities.',
+  'restaurant-deals': 'Find local restaurant deals and trusted food recommendations.',
+  'social-events': 'Find local social events, meetups, and community activities.',
+  'social-events-2': 'Find local social events, meetups, and community activities.',
+  'social-media-support': 'Connect with trusted social media support for your business or project.',
+  'solar': 'Connect with local solar and practical home improvement support.',
+  'vehicle-rental': 'Find trusted local vehicle rental support with clear prices and local backup.',
+  'visas': 'Connect with trusted visa support and relocation guidance.',
+  'water': 'Find trusted local water, drinking water, and home supply support.',
+  'welcome-to-samui': 'Start with practical local contacts, services, and community support on Koh Samui.',
+};
+const fallbackDescription = fallbackCopy[page.data.slug] ?? `Connect with trusted local support for ${cleanTitle.toLowerCase()} in Thailand.`;
+const eventPageSlugs = new Set([
+  'bangkok-community-events',
+  'chiang-mai-community-events',
+  'community-events',
+  'hua-hin-community-events',
+  'koh-phangan-community-events',
+  'krabi-community-events',
+  'paint-night-event-registration-page',
+  'pattaya-community-events',
+  'phuket-community-events',
+  'social-events',
+  'social-events-2',
+]);
+const isEventPage = eventPageSlugs.has(page.data.slug);
+const hasLocalDealsBeachCta = page.data.slug === 'local-deals';
 ---
 
 <Layout title={`${page.data.title} — First Contact Thailand`}>
-  <article class="prose prose-slate mx-auto max-w-3xl py-8">
-    <h1>{page.data.title}</h1>
-    <Content />
+  <article class={`content-page ${isEventPage ? 'event-page' : ''} prose prose-slate mx-auto max-w-3xl py-8`}>
+    {(usesStandardFallback || !contentHasH1) && <h1>{page.data.title}</h1>}
+    {usesStandardFallback ? (
+      <>
+        <p>{fallbackDescription}</p>
+        <h2>Trusted Local Support</h2>
+        <p>First Contact Thailand helps connect locals, expats, and visitors with practical support, fair local contacts, and community recommendations.</p>
+        <h2>How We Can Help</h2>
+        <p>Tell us what you need and we will point you towards suitable local partners, events, services, or community contacts.</p>
+        {!isEventPage && <p><a href="/contact-link/">Contact First Contact Thailand</a></p>}
+      </>
+    ) : (
+      <Content />
+    )}
+    {hasLocalDealsBeachCta && (
+      <div class="double-cta beach-only">
+        <a class="beach-cta" href="/contact-link/">Tell us about a local deal</a>
+      </div>
+    )}
+    {isEventPage && (
+      <div class="double-cta">
+        <a href="/past-events/">Check out our previous events</a>
+        <a class="beach-cta" href="/contact-link/">Let us know if you have a community event coming up</a>
+      </div>
+    )}
   </article>
 </Layout>

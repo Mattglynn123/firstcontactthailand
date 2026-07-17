@@ -40,10 +40,16 @@ exports/raw/
 # Runtime/build output
 node_modules/
 dist/
+dist-staging/
 build/
 .cache/
 .next/
 .astro/
+
+# Generated visual QA artifacts (the report stays versioned)
+/docs/qa/screenshots/
+/web/docs/qa-current/
+/docs/design-reference/asset-bundles.json
 
 # OS/editor noise
 .DS_Store

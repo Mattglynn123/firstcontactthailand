@@ -1,0 +1,49 @@
+---
+import type { PriorityPage as Page } from '../data/site';
+import PageHero from './PageHero.astro';
+import ServiceCard from './ServiceCard.astro';
+
+interface Props {
+  page: Page;
+}
+
+const { page } = Astro.props;
+---
+
+<PageHero
+  eyebrow={page.eyebrow}
+  title={page.title}
+  text={page.heroText}
+  image={page.heroImage}
+  primaryLabel={page.ctaLabel}
+  primaryHref={page.ctaHref}
+  secondaryLabel={page.secondaryLabel}
+  secondaryHref={page.secondaryHref}
+/>
+
+<section class="section section--intro">
+  <div class="section__inner section__intro-copy">
+    <p class="section-kicker">First Contact Thailand</p>
+    <h2>{page.introTitle}</h2>
+    <p>{page.introText}</p>
+  </div>
+</section>
+
+<section class="section section--soft">
+  <div class="section__inner">
+    <div class={`service-grid service-grid--${Math.min(page.cards.length, 4)}`}>
+      {page.cards.map((card) => <ServiceCard card={card} />)}
+    </div>
+  </div>
+</section>
+
+<section class="section final-cta">
+  <div class="section__inner final-cta__inner">
+    <div>
+      <p class="section-kicker">A trusted local connection</p>
+      <h2>{page.ctaTitle}</h2>
+      <p>{page.ctaText}</p>
+    </div>
+    <a class="button button--primary" href={page.ctaHref}>{page.ctaLabel}</a>
+  </div>
+</section>

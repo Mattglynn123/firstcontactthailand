@@ -1,0 +1,35 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  text: string;
+  image: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+}
+
+const {
+  eyebrow,
+  title,
+  text,
+  image,
+  primaryLabel = 'Contact First Contact',
+  primaryHref = '/contact-link/',
+  secondaryLabel,
+  secondaryHref,
+} = Astro.props;
+---
+
+<section class="page-hero" style={`--page-hero-image: url('${image}')`}>
+  <div class="page-hero__inner">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    <p class="page-hero__text">{text}</p>
+    <div class="page-hero__actions">
+      <a class="button button--primary" href={primaryHref}>{primaryLabel}</a>
+      {secondaryLabel && secondaryHref && <a class="button button--light" href={secondaryHref}>{secondaryLabel}</a>}
+    </div>
+  </div>
+</section>

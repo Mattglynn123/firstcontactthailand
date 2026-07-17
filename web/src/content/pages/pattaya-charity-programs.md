@@ -31,7 +31,7 @@ Helping provide access to safe drinking water and practical health support for l
 
 
 
-](https://www.rotarypattaya.com/rotary-drinking-water/)[![COVID Protection](https://firstcontactthailand.com/wp-content/uploads/2026/06/pattaya-covid-protection.webp)
+](https://www.rotarypattaya.com/rotary-drinking-water/)[![COVID Protection](/assets/fct/pattaya-covid-protection.webp)
 
 ## COVID Protection
 
@@ -39,7 +39,7 @@ Community protection work supporting safer local health outcomes.
 
 
 
-](https://www.rotarypattaya.com/covid-protection/)[![Promoting Peace](https://firstcontactthailand.com/wp-content/uploads/2026/06/pattaya-promoting-peace.webp)
+](https://www.rotarypattaya.com/covid-protection/)[![Promoting Peace](/assets/fct/pattaya-promoting-peace.webp)
 
 ## Promoting Peace
 
@@ -47,7 +47,7 @@ Children use art to express peace, with proceeds supporting scholarships and loc
 
 
 
-](https://www.rotarypattaya.com/promoting-peace/)[![Shop Local Too](https://firstcontactthailand.com/wp-content/uploads/2026/06/pattaya-shop-local-too.webp)
+](https://www.rotarypattaya.com/promoting-peace/)[![Shop Local Too](/assets/fct/pattaya-shop-local-too.webp)
 
 ## Shop Local Too!
 
@@ -55,7 +55,7 @@ Encouraging local support and community connection through Rotary Pattaya initia
 
 
 
-](https://www.rotarypattaya.com/shop-local-too/)[![Save a Childs Eyes](https://firstcontactthailand.com/wp-content/uploads/2026/06/pattaya-save-a-childs-eyes.webp)
+](https://www.rotarypattaya.com/shop-local-too/)[![Save a Childs Eyes](/assets/fct/pattaya-save-a-childs-eyes.webp)
 
 ## Save a Childs Eyes
 
@@ -63,7 +63,7 @@ Providing eye tests and glasses for underprivileged children who need help to le
 
 
 
-](https://www.rotarypattaya.com/save-a-childs-eyes/)[![LIVE LOVE program](https://firstcontactthailand.com/wp-content/uploads/2026/06/pattaya-live-love-program.webp)
+](https://www.rotarypattaya.com/save-a-childs-eyes/)[![LIVE LOVE program](/assets/fct/pattaya-live-love-program.webp)
 
 ## LIVE LOVE program
 

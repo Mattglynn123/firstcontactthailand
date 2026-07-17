@@ -1,17 +1,13 @@
 ---
 title: "Homepage"
 slug: "homepage"
-wpId: 8
 date: 2025-11-08T07:41:10
 modified: 2026-06-18T06:23:22
-originalUrl: "https://firstcontactthailand.com/"
-wpParent: 0
 menuOrder: 0
-sourceType: pages
 draft: false
 ---
 
-![](https://firstcontactthailand7813.live-website.com/wp-content/uploads/2025/11/cropped-Hero-Images-copy-scaled-1.jpg)
+![](/assets/fct/cropped-Hero-Images-copy-scaled-1.jpg)
 
 FIRST CONTACT THAILAND
 
@@ -31,7 +27,7 @@ We can direct you to reliable providers across a wide range of sectors, includin
 
 First Contact helps people find the right services while supporting the local communities we all care about.
 
-![](https://firstcontactthailand7813.live-website.com/wp-content/uploads/2025/11/hero6-1024x542.jpg)
+![](/assets/fct/hero6-1024x542.jpg)
 
 # FIND LOCAL COMMUNITY u0026amp; BUSINESS EVENTS HAPPENING WEEKLY
 
@@ -39,32 +35,32 @@ u003cstyle scopedu003e iframe\[data-tec-events-ece-iframe=u0022trueu0022\] { wid
 
 ## A few Testimonials from Our Previous Charity Events
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/12/b94ca528-2a38-4526-8eab-e22f8b46daea.jpg)
+![](/assets/fct/b94ca528-2a38-4526-8eab-e22f8b46daea.jpg)
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/12/8b1d32be-1e0e-4506-b3ec-c8cf96fb9cf6.jpg)
+![](/assets/fct/8b1d32be-1e0e-4506-b3ec-c8cf96fb9cf6.jpg)
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/12/b624eb7c-d305-453f-8768-8ff4f94b09b3.jpg)
+![](/assets/fct/b624eb7c-d305-453f-8768-8ff4f94b09b3.jpg)
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/alexandra-tran-VW0bzb90oMA-unsplash-scaled.jpg "Food u0026amp; Beverage")
+![](/assets/fct/alexandra-tran-VW0bzb90oMA-unsplash-scaled.jpg "Food u0026amp; Beverage")
 
 ### Food u0026amp; Beverage
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/Hero-Images-copy-2-scaled.jpg "Tours u0026amp; Entertainment")
+![](/assets/fct/Hero-Images-copy-2-scaled.jpg "Tours u0026amp; Entertainment")
 
 ### Tours u0026amp; Entertainment
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/PHOTO-2025-10-11-09-28-41-2.jpg "Business Networking")
+![](/assets/fct/PHOTO-2025-10-11-09-28-41-2.jpg "Business Networking")
 
 ### Business Networking
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/start-up-scaled.jpg "Marketing u0026amp; Design")
+![](/assets/fct/start-up-scaled.jpg "Marketing u0026amp; Design")
 
 ### Marketing u0026amp; Design
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/scooter-scaled.jpg "Property u0026amp; Vehicle Rental")
+![](/assets/fct/scooter-scaled.jpg "Property u0026amp; Vehicle Rental")
 
 ### Property u0026amp; Vehicle Rental
 
-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/b.networking-scaled.jpg "Legal Services")
+![](/assets/fct/b.networking-scaled.jpg "Legal Services")
 
 ### Legal Services

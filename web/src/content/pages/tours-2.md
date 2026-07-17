@@ -1,48 +1,37 @@
 ---
-title: "tours-2"
+title: "Tours"
 slug: "tours-2"
-wpId: 458
 date: 2025-11-26T05:49:50
 modified: 2026-07-02T10:54:10
-originalUrl: "https://firstcontactthailand.com/tours-2/"
-wpParent: 0
 menuOrder: 0
-sourceType: pages
 draft: false
 ---
 
-# Tours
-
 Connect with trusted local drivers, boat operators, tour guides, and experience providers across Thailand.
 
-![Customise Your Own Day Trip](https://firstcontactthailand.com/wp-content/uploads/2025/11/Hero-Images-copy-2-scaled.jpg?v=20260702b)
-
-## Customise Your Own Day Trip
-
-Explore like a local with trusted drivers, boat operators, and guides who tailor every trip to your needs.
-
-[Connect with local partners](https://firstcontactthailand.com/contact-link/)
-
-![Full Moon Parties](https://firstcontactthailand.com/wp-content/uploads/2025/11/1-scaled.jpg?v=20260702b)
-
-## Full Moon Parties
-
-Safe, stylish Full Moon Party experiences arranged around your group with trusted local support.
-
-[Book your Full Moon trip](https://firstcontactthailand.com/full-moon-party-vip-trip/)
-
-![Other Tours](https://firstcontactthailand.com/wp-content/uploads/2025/11/11-scaled.jpg?v=20260702b)
-
-## Other Tours
-
-Discover hidden gems and authentic local experiences while supporting trusted local partners.
-
-[View other tours](https://firstcontactthailand.com/other-tours/)
-
-![Become a Better Tour Guide](https://firstcontactthailand.com/wp-content/uploads/2026/06/tour-guide-fun-pic-20260609.png?v=20260702b)
-
-## Become a Better Tour Guide
-
-Elevate the way you create guest experiences while learning how to maximise your commissions.
-
-[Find out more](https://firstcontactthailand.com/become-a-better-tour-guide/)
+<section class="service-card-grid" aria-label="Tours">
+  <article class="service-card">
+    <img src="/assets/fct/Hero-Images-copy-2-scaled.jpg" alt="Customise Your Own Day Trip" />
+    <h2>Customise Your Own Day Trip</h2>
+    <p>Explore like a local with trusted drivers, boat operators, and guides who tailor every trip to your needs.</p>
+    <a href="/contact-link/">Connect with local partners</a>
+  </article>
+  <article class="service-card">
+    <img src="/assets/fct/1-scaled.jpg" alt="Full Moon Parties" />
+    <h2>Full Moon Parties</h2>
+    <p>Safe, stylish Full Moon Party experiences arranged around your group with trusted local support.</p>
+    <a href="/full-moon-party-vip-trip/">Book your Full Moon trip</a>
+  </article>
+  <article class="service-card">
+    <img src="/assets/fct/11-scaled.jpg" alt="Other Tours" />
+    <h2>Other Tours</h2>
+    <p>Discover hidden gems and authentic local experiences while supporting trusted local partners.</p>
+    <a href="/other-tours/">View other tours</a>
+  </article>
+  <article class="service-card">
+    <img src="/assets/fct/tour-guide-fun-pic-20260609.png" alt="Become a Better Tour Guide" />
+    <h2>Become a Better Tour Guide</h2>
+    <p>Elevate the way you create guest experiences while learning how to maximise your commissions.</p>
+    <a href="/become-a-better-tour-guide/">Find out more</a>
+  </article>
+</section>

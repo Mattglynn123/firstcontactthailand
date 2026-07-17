@@ -1,0 +1,71 @@
+---
+import PageHero from './PageHero.astro';
+
+type Point = {
+  title: string;
+  text: string;
+};
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  text: string;
+  image: string;
+  introTitle: string;
+  introText: string;
+  points: Point[];
+  ctaLabel?: string;
+}
+
+const {
+  eyebrow,
+  title,
+  text,
+  image,
+  introTitle,
+  introText,
+  points,
+  ctaLabel = 'Contact property support',
+} = Astro.props;
+---
+
+<PageHero
+  eyebrow={eyebrow}
+  title={title}
+  text={text}
+  image={image}
+  primaryLabel={ctaLabel}
+  primaryHref={`/contact-link/?topic=${encodeURIComponent(title)}`}
+  secondaryLabel="Property overview"
+  secondaryHref="/real-estate/"
+/>
+
+<section class="section">
+  <div class="section__inner support-layout">
+    <div class="support-layout__intro">
+      <p class="section-kicker">Trusted local support</p>
+      <h2>{introTitle}</h2>
+      <p>{introText}</p>
+    </div>
+    <div class="support-points">
+      {points.map((point, index) => (
+        <article>
+          <span>{String(index + 1).padStart(2, '0')}</span>
+          <h3>{point.title}</h3>
+          <p>{point.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section final-cta">
+  <div class="section__inner final-cta__inner">
+    <div>
+      <p class="section-kicker">Start with the right questions</p>
+      <h2>Need a trusted local contact?</h2>
+      <p>Tell us the location, timing and type of support you need.</p>
+    </div>
+    <a class="button button--primary" href={`/contact-link/?topic=${encodeURIComponent(title)}`}>{ctaLabel}</a>
+  </div>
+</section>
