@@ -1,0 +1,1611 @@
+﻿diff --git a/web/src/content.config.ts b/web/src/content.config.ts
+index 1e4700b..5d870e2 100644
+--- a/web/src/content.config.ts
++++ b/web/src/content.config.ts
+@@ -1,27 +1,23 @@
+ import { defineCollection, z } from 'astro:content';
+ import { glob } from 'astro/loaders';
+ 
+-const wpSchema = z.object({
++const pageSchema = z.object({
+   title: z.string(),
+   slug: z.string(),
+-  wpId: z.number(),
+   date: z.coerce.date(),
+   modified: z.coerce.date(),
+-  originalUrl: z.string().url(),
+-  wpParent: z.number().default(0),
+   menuOrder: z.number().default(0),
+-  sourceType: z.enum(['pages', 'posts']),
+   draft: z.boolean().default(false),
+ });
+ 
+ const pages = defineCollection({
+   loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
+-  schema: wpSchema,
++  schema: pageSchema,
+ });
+ 
+ const posts = defineCollection({
+   loader: glob({ pattern: '**/*.md', base: './src/content/posts' }),
+-  schema: wpSchema,
++  schema: pageSchema,
+ });
+ 
+ export const collections = { pages, posts };
+diff --git a/web/src/content/pages/community-events.md b/web/src/content/pages/community-events.md
+index a51f5bd..ca33b50 100644
+--- a/web/src/content/pages/community-events.md
++++ b/web/src/content/pages/community-events.md
+@@ -1,52 +1,40 @@
+ ---
+-title: "community-events"
++title: "Koh Samui Community Events"
+ slug: "community-events"
+-wpId: 462
+ date: 2025-11-26T05:51:31
+ modified: 2026-07-01T09:18:18
+-originalUrl: "https://firstcontactthailand.com/community-events/"
+-wpParent: 0
+ menuOrder: 0
+-sourceType: pages
+ draft: false
+ ---
+ 
+-Socialising in Samui
+-
+-Check out our community events
+-
+-## Upcoming Events
+-
+-[Wednesday 3 June
+-
+-### AI Meet Up
+-
+-Weekly Wednesdays, 4:00 pm – 6:00 pm at Nature Bar, Maenam.
+-
+-](https://firstcontactthailand.com/event/ai-weekly-nature-bar-maenam-beach/)[Wednesday 3 June
+-
+-### Crypto Community Gathering
+-
+-Weekly Wednesdays, 4:00 pm – 6:00 pm at Nature Bar, Maenam.
+-
+-](https://firstcontactthailand.com/contact-link/?fct_event=crypto-community-gathering)[Thursday 4 June
+-
+-### Pub Quiz
+-
+-Weekly Thursdays, 7:00 pm – 9:45 pm at Nature Bar, Maenam.
+-
+-](https://firstcontactthailand.com/event/pub-quiz-nature-bar-maenam-beach-every-thursday/)[Friday 5 June
+-
+-### Business Lunch
+-
+-Weekly Fridays, 3:00 pm – 5:00 pm at Nature Bar, Maenam.
+-
+-](https://firstcontactthailand.com/event/business-networking-lunch-every-friday-3pm/)[Saturday 6 June
+-
+-### Beach Walk
+-
+-Weekly Saturdays, 4:00 pm – 6:00 pm.
+-
+-](https://firstcontactthailand.com/event/beach-walk-every-saturday-4pm/)
+-
+-[Check out our previous events](https://firstcontactthailand.com/past-events/) [let us know if you have a community event coming up](https://firstcontactthailand.com/contact-link/)
++# Koh Samui Community Events
++
++Check out our community events on Samui.
++
++<section class="service-card-grid service-card-grid-three" aria-label="Koh Samui upcoming events">
++  <article class="service-card">
++    <h2>AI Meet Up</h2>
++    <p>Wednesday 3 June, 4:00 pm to 6:00 pm at Nature Bar, Maenam.</p>
++    <a href="/contact-link/?fct_event=ai-meet-up">Ask about this event</a>
++  </article>
++  <article class="service-card">
++    <h2>Crypto Community Gathering</h2>
++    <p>Wednesday 3 June, 4:00 pm to 6:00 pm at Nature Bar, Maenam.</p>
++    <a href="/contact-link/?fct_event=crypto-community-gathering">Ask about this event</a>
++  </article>
++  <article class="service-card">
++    <h2>Pub Quiz</h2>
++    <p>Thursday 4 June, 7:00 pm to 9:45 pm at Nature Bar, Maenam.</p>
++    <a href="/contact-link/?fct_event=pub-quiz">Ask about this event</a>
++  </article>
++  <article class="service-card">
++    <h2>Business Lunch</h2>
++    <p>Friday 5 June, 3:00 pm to 5:00 pm at Nature Bar, Maenam.</p>
++    <a href="/contact-link/?fct_event=business-lunch">Ask about this event</a>
++  </article>
++  <article class="service-card">
++    <h2>Beach Walk</h2>
++    <p>Saturday 6 June, 4:00 pm to 6:00 pm.</p>
++    <a href="/contact-link/?fct_event=beach-walk">Ask about this event</a>
++  </article>
++</section>
+diff --git a/web/src/content/pages/contact-link.md b/web/src/content/pages/contact-link.md
+index b06b0bd..2b42940 100644
+--- a/web/src/content/pages/contact-link.md
++++ b/web/src/content/pages/contact-link.md
+@@ -1,13 +1,9 @@
+ ---
+ title: "Contact Us"
+ slug: "contact-link"
+-wpId: 1014
+ date: 2025-12-02T10:04:18
+ modified: 2026-06-23T13:28:54
+-originalUrl: "https://firstcontactthailand.com/contact-link/"
+-wpParent: 0
+ menuOrder: 0
+-sourceType: pages
+ draft: false
+ ---
+ 
+diff --git a/web/src/content/pages/hire.md b/web/src/content/pages/hire.md
+index bdbed2e..3671713 100644
+--- a/web/src/content/pages/hire.md
++++ b/web/src/content/pages/hire.md
+@@ -1,13 +1,9 @@
+ ---
+-title: "hire"
++title: "Hire Trusted Local Services"
+ slug: "hire"
+-wpId: 460
+ date: 2025-11-26T05:50:12
+ modified: 2026-07-02T08:02:58
+-originalUrl: "https://firstcontactthailand.com/hire/"
+-wpParent: 0
+ menuOrder: 0
+-sourceType: pages
+ draft: false
+ ---
+ 
+@@ -15,27 +11,22 @@ draft: false
+ 
+ Avoid overcharging, unreliable providers, and confusing local arrangements. We connect you with trusted local partners who offer fair prices and reliable service.
+ 
+-![Airport transfers](https://firstcontactthailand.com/wp-content/uploads/2025/11/car-scaled.jpg)
+-
+-## Airport Transfers
+-
+-✈️ Airport worries? Not with us.  
+-✅ Reliable local drivers you can trust  
+-✅ Fair, transparent prices with no hidden extras
+-
+-![Vehicle hire](https://firstcontactthailand.com/wp-content/uploads/2025/11/bike-scaled.jpg)
+-
+-## Vehicle Hire
+-
+-Trusted local partners for cars, bikes, and practical transport support.  
+-✅ Clear prices  
+-✅ Local support if something goes wrong
+-
+-![Local services](https://firstcontactthailand.com/wp-content/uploads/2025/11/cleaning-scaled.jpg)
+-
+-## Local Services
+-
+-Trusted Local Partners ✅ | Fair Prices ✅ | Giving Back ❤️  
+-Book our local Thai drivers, fully vetted, reliable, and guaranteed not to overcharge you.
+-
+-[Click here and we’ll connect you with our trusted local partners.](https://firstcontactthailand.com/contact-link/)
++<section class="service-card-grid service-card-grid-three" aria-label="Hire Trusted Local Services">
++  <article class="service-card">
++    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80" alt="Airport transfers" />
++    <h2>Airport Transfers</h2>
++    <p>Airport worries? Not with us. Reliable local drivers, fair transparent prices, and no hidden extras.</p>
++  </article>
++  <article class="service-card">
++    <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1000&q=80" alt="Vehicle hire" />
++    <h2>Vehicle Hire</h2>
++    <p>Trusted local partners for cars, bikes, and practical transport support, with clear prices and local backup.</p>
++  </article>
++  <article class="service-card">
++    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=80" alt="Local services" />
++    <h2>Local Services</h2>
++    <p>Book trusted local partners who are vetted, reliable, fairly priced, and ready to help you get things done.</p>
++  </article>
++</section>
++
++[Click here and we will connect you with our trusted local partners.](/contact-link/)
+diff --git a/web/src/content/pages/homepage.md b/web/src/content/pages/homepage.md
+index f5dd3ab..6badeee 100644
+--- a/web/src/content/pages/homepage.md
++++ b/web/src/content/pages/homepage.md
+@@ -1,17 +1,13 @@
+ ---
+ title: "Homepage"
+ slug: "homepage"
+-wpId: 8
+ date: 2025-11-08T07:41:10
+ modified: 2026-06-18T06:23:22
+-originalUrl: "https://firstcontactthailand.com/"
+-wpParent: 0
+ menuOrder: 0
+-sourceType: pages
+ draft: false
+ ---
+ 
+-![](https://firstcontactthailand7813.live-website.com/wp-content/uploads/2025/11/cropped-Hero-Images-copy-scaled-1.jpg)
++![](/assets/media/firstcontactthailand7813.live-website.com/uploads/2025/11/cropped-Hero-Images-copy-scaled-1.jpg)
+ 
+ FIRST CONTACT THAILAND
+ 
+@@ -31,7 +27,7 @@ We can direct you to reliable providers across a wide range of sectors, includin
+ 
+ First Contact helps people find the right services while supporting the local communities we all care about.
+ 
+-![](https://firstcontactthailand7813.live-website.com/wp-content/uploads/2025/11/hero6-1024x542.jpg)
++![](/assets/media/firstcontactthailand7813.live-website.com/uploads/2025/11/hero6-1024x542.jpg)
+ 
+ # FIND LOCAL COMMUNITY u0026amp; BUSINESS EVENTS HAPPENING WEEKLY
+ 
+@@ -39,32 +35,32 @@ u003cstyle scopedu003e iframe\[data-tec-events-ece-iframe=u0022trueu0022\] { wid
+ 
+ ## A few Testimonials from Our Previous Charity Events
+ 
+-![](https://firstcontactthailand.com/wp-content/uploads/2025/12/b94ca528-2a38-4526-8eab-e22f8b46daea.jpg)
++![](/assets/media/firstcontactthailand.com/uploads/2025/12/b94ca528-2a38-4526-8eab-e22f8b46daea.jpg)
+ 
+-![](https://firstcontactthailand.com/wp-content/uploads/2025/12/8b1d32be-1e0e-4506-b3ec-c8cf96fb9cf6.jpg)
++![](/assets/media/firstcontactthailand.com/uploads/2025/12/8b1d32be-1e0e-4506-b3ec-c8cf96fb9cf6.jpg)
+ 
+-![](https://firstcontactthailand.com/wp-content/uploads/2025/12/b624eb7c-d305-453f-8768-8ff4f94b09b3.jpg)
++![](/assets/media/firstcontactthailand.com/uploads/2025/12/b624eb7c-d305-453f-8768-8ff4f94b09b3.jpg)
+ 
+-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/alexandra-tran-VW0bzb90oMA-unsplash-scaled.jpg "Food u0026amp; Beverage")
++![](/assets/media/firstcontactthailand.com/uploads/2025/11/alexandra-tran-VW0bzb90oMA-unsplash-scaled.jpg "Food u0026amp; Beverage")
+ 
+ ### Food u0026amp; Beverage
+ 
+-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/Hero-Images-copy-2-scaled.jpg "Tours u0026amp; Entertainment")
++![](/assets/media/firstcontactthailand.com/uploads/2025/11/Hero-Images-copy-2-scaled.jpg "Tours u0026amp; Entertainment")
+ 
+ ### Tours u0026amp; Entertainment
+ 
+-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/PHOTO-2025-10-11-09-28-41-2.jpg "Business Networking")
++![](/assets/media/firstcontactthailand.com/uploads/2025/11/PHOTO-2025-10-11-09-28-41-2.jpg "Business Networking")
+ 
+ ### Business Networking
+ 
+-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/start-up-scaled.jpg "Marketing u0026amp; Design")
++![](/assets/media/firstcontactthailand.com/uploads/2025/11/start-up-scaled.jpg "Marketing u0026amp; Design")
+ 
+ ### Marketing u0026amp; Design
+ 
+-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/scooter-scaled.jpg "Property u0026amp; Vehicle Rental")
++![](/assets/media/firstcontactthailand.com/uploads/2025/11/scooter-scaled.jpg "Property u0026amp; Vehicle Rental")
+ 
+ ### Property u0026amp; Vehicle Rental
+ 
+-![](https://firstcontactthailand.com/wp-content/uploads/2025/11/b.networking-scaled.jpg "Legal Services")
++![](/assets/media/firstcontactthailand.com/uploads/2025/11/b.networking-scaled.jpg "Legal Services")
+ 
+ ### Legal Services
+diff --git a/web/src/content/pages/local-business-network.md b/web/src/content/pages/local-business-network.md
+index 8eb6219..ef82e7c 100644
+--- a/web/src/content/pages/local-business-network.md
++++ b/web/src/content/pages/local-business-network.md
+@@ -1,13 +1,9 @@
+ ---
+-title: "local-business-network"
++title: "Local Business Network"
+ slug: "local-business-network"
+-wpId: 452
+ date: 2025-11-26T05:46:08
+-modified: 2026-07-02T00:02:38
+-originalUrl: "https://firstcontactthailand.com/local-business-network/"
+-wpParent: 0
++modified: 2026-07-13T00:00:00
+ menuOrder: 0
+-sourceType: pages
+ draft: false
+ ---
+ 
+@@ -15,40 +11,87 @@ draft: false
+ 
+ Our collective network includes over 500 businesses, bringing together locals and expats to connect people with trusted services throughout Thailand.
+ 
+-![AI Community](https://firstcontactthailand.com/wp-content/uploads/2026/05/ai-community-local-business-network-20260530.jpeg)
+-
+-## AI Community
+-
+-Connect with local founders, operators, and business owners using practical tools to work smarter.
+-
+-![Affiliate Marketing](https://firstcontactthailand.com/wp-content/uploads/2025/12/Marketing-scaled.jpg)
+-
+-## Affiliate Marketing
+-
+-Build trusted referral partnerships across Thailand and connect with businesses that can help your customers.
+-
+-![Co Working](https://firstcontactthailand.com/wp-content/uploads/2025/12/co-working-scaled.jpg)
+-
+-## Co Working
+-
+-Find flexible workspaces, meeting places, and local business hubs.
+-
+-![Legal Advice](https://firstcontactthailand.com/wp-content/uploads/2025/12/legal-scaled.jpg)
+-
+-## Legal Advice
+-
+-Connect with advisers for company setup, contracts, property checks, and business structure.
+-
+-![Insurance](https://firstcontactthailand.com/wp-content/uploads/2025/12/insurance-scaled.jpg)
+-
+-## Insurance
+-
+-Speak with trusted partners about personal, business, health, vehicle, property, and travel insurance.
+-
+-![Visas](https://firstcontactthailand.com/wp-content/uploads/2025/12/visias-scaled.jpg)
+-
+-## Visas
+-
+-Get introduced to local visa support for retirement, business, family, education, and long-stay planning.
+-
+-[Contact us and we will connect you with our trusted local business partners](https://firstcontactthailand.com/contact-link/)
++<section class="service-card-grid local-business-grid" aria-label="Local Business Network">
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/12/Marketing-scaled.jpg" alt="Affiliate Marketing" />
++    <h2>Affiliate Marketing</h2>
++    <p>Build trusted referral partnerships across Thailand and connect with businesses that can help your customers.</p>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2026/05/ai-community-local-business-network-20260530.jpeg" alt="AI Community" />
++    <h2>AI Community</h2>
++    <p>Connect with local founders, operators, and business owners using practical tools to work smarter.</p>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/start-up-scaled.jpg" alt="Business Done 4 U" />
++    <h2>Business Done 4 U</h2>
++    <p>Get practical local support for setting up, improving, and running your business in Thailand.</p>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/12/co-working-scaled.jpg" alt="Co Working Spaces" />
++    <h2>Co Working Spaces</h2>
++    <p>Find flexible workspaces, meeting places, and local business hubs.</p>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/crypto-scaled.jpg" alt="Crypto Education & Business" />
++    <h2>Crypto Education & Business</h2>
++    <p>Connect with local crypto education, online business, and digital opportunity support.</p>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/12/insurance-scaled.jpg" alt="Insurance" />
++    <h2>Insurance</h2>
++    <p>Speak with trusted partners about personal, business, health, vehicle, property, and travel insurance.</p>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/12/legal-scaled.jpg" alt="Legal Services" />
++    <h2>Legal Services</h2>
++    <p>Connect with advisers for company setup, contracts, property checks, and business structure.</p>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/social-media-scaled.jpg" alt="Marketing & Media" />
++    <h2>Marketing & Media</h2>
++    <p>Get introduced to creative, social media, design, and business promotion support.</p>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/nanny-scaled.jpg" alt="Nanny Services" />
++    <h2>Nanny Services</h2>
++    <p>Find trusted family support, child care, and practical help through local contacts.</p>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/b.networking-scaled.jpg" alt="Property Support" />
++    <h2>Property Support</h2>
++    <p>Connect with trusted property sales, management, building, and buyer support.</p>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/online-work-scaled.jpg" alt="Remote & Online Work" />
++    <h2>Remote & Online Work</h2>
++    <p>Explore practical remote work, online job, and income opportunities.</p>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/solar-scaled.jpg" alt="Solar" />
++    <h2>Solar</h2>
++    <p>Connect with local solar and practical home improvement support.</p>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/Hero-Images-copy-2-scaled.jpg" alt="Tours & Entertainment" />
++    <h2>Tours & Entertainment</h2>
++    <p>Find trusted tours, local experiences, entertainment, and event partners.</p>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/12/visias-scaled.jpg" alt="Visas" />
++    <h2>Visas</h2>
++    <p>Get introduced to local visa support for retirement, business, family, education, and long-stay planning.</p>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/water-scaled.jpg" alt="Water - Drink Healthy" />
++    <h2>Water - Drink Healthy</h2>
++    <p>Find trusted water, drinking water, and home supply contacts.</p>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/wedding-scaled.jpg" alt="Weddings" />
++    <h2>Weddings</h2>
++    <p>Connect with local wedding, event, and celebration partners.</p>
++  </article>
++</section>
++
++[Contact us and we will connect you with our trusted local business partners](/contact-link/)
+diff --git a/web/src/content/pages/local-deals.md b/web/src/content/pages/local-deals.md
+index 4ffc3a1..7931755 100644
+--- a/web/src/content/pages/local-deals.md
++++ b/web/src/content/pages/local-deals.md
+@@ -1,13 +1,9 @@
+ ---
+-title: "local-deals"
++title: "Local Deals"
+ slug: "local-deals"
+-wpId: 456
+ date: 2025-11-26T05:49:06
+ modified: 2026-07-02T10:54:08
+-originalUrl: "https://firstcontactthailand.com/local-deals/"
+-wpParent: 0
+ menuOrder: 0
+-sourceType: pages
+ draft: false
+ ---
+ 
+@@ -15,28 +11,22 @@ draft: false
+ 
+ Enjoy our exclusive local deals and live like a true local.
+ 
+-[![Drink like a local](https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1000&q=80)
+-
+-## Drink Like a Local
+-
+-Hate paying tourist prices? We will guide you straight to the best local happy hours and insider specials.
+-
+-Find local deals
+-
+-](https://firstcontactthailand.com/contact-link/?fct_service=local-deals)[![Eat like a local](https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80)
+-
+-## Eat Like a Local
+-
+-Hate paying tourist prices? We will show you where the locals eat, drink, and celebrate.
+-
+-Find local deals
+-
+-](https://firstcontactthailand.com/contact-link/?fct_service=local-deals)[![Live like a local](https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1000&q=80)
+-
+-## Live Like a Local
+-
+-Discover how to shop, eat, travel, and enjoy Thailand at local rates with trusted local recommendations.
+-
+-Find local deals
+-
+-](https://firstcontactthailand.com/contact-link/?fct_service=local-deals)
++<section class="service-card-grid service-card-grid-three" aria-label="Local Deals">
++  <article class="service-card">
++    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1000&q=80" alt="Drink like a local" />
++    <h2>Drink Like a Local</h2>
++    <p>Hate paying tourist prices? We will guide you straight to the best local happy hours and insider specials.</p>
++  </article>
++  <article class="service-card">
++    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80" alt="Eat like a local" />
++    <h2>Eat Like a Local</h2>
++    <p>Hate paying tourist prices? We will show you where the locals eat, drink, and celebrate.</p>
++  </article>
++  <article class="service-card">
++    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1000&q=80" alt="Live like a local" />
++    <h2>Live Like a Local</h2>
++    <p>Discover how to shop, eat, travel, and enjoy Thailand at local rates with trusted local recommendations.</p>
++  </article>
++</section>
++
++[Find local deals](/local-deals/)
+diff --git a/web/src/content/pages/property.md b/web/src/content/pages/property.md
+index e94df16..c114ecb 100644
+--- a/web/src/content/pages/property.md
++++ b/web/src/content/pages/property.md
+@@ -1,13 +1,9 @@
+ ---
+ title: "Property"
+ slug: "property"
+-wpId: 172
+ date: 2025-11-09T15:19:04
+ modified: 2026-07-01T15:39:52
+-originalUrl: "https://firstcontactthailand.com/property/"
+-wpParent: 0
+ menuOrder: 0
+-sourceType: pages
+ draft: false
+ ---
+ 
+@@ -17,8 +13,4 @@ Connect with trusted property support across Thailand.
+ 
+ Property Services
+ 
+-[Property Sales Overview](https://firstcontactthailand.com/property-sales/) [Property Management](https://firstcontactthailand.com/property-management/) [Building Contractors](https://firstcontactthailand.com/building-contractors/) [Buyers Agent](https://firstcontactthailand.com/buyers-agent/)
+-
+-Property Sales Areas
+-
+-[Koh Samui](https://firstcontactthailand.com/property-sales/koh-samui/) [Koh Phangan](https://firstcontactthailand.com/property-sales/koh-phangan/) [Bangkok](https://firstcontactthailand.com/property-sales/bangkok/) [Pattaya](https://firstcontactthailand.com/property-sales/pattaya/) [Phuket](https://firstcontactthailand.com/property-sales/phuket/) [Krabi](https://firstcontactthailand.com/property-sales/krabi/) [Chiang Mai](https://firstcontactthailand.com/property-sales/chiang-mai/) [Hua Hin](https://firstcontactthailand.com/property-sales/hua-hin/)
++[Property Sales Overview](/property-sales/) [Property Management](/property-management/) [Building Contractors](/building-contractors/) [Buyers Agent](/buyers-agent/)
+diff --git a/web/src/content/pages/real-estate.md b/web/src/content/pages/real-estate.md
+index d1b327b..0bf2201 100644
+--- a/web/src/content/pages/real-estate.md
++++ b/web/src/content/pages/real-estate.md
+@@ -1,13 +1,9 @@
+ ---
+ title: "real-estate"
+ slug: "real-estate"
+-wpId: 467
+ date: 2025-11-26T05:52:58
+ modified: 2026-07-01T15:39:50
+-originalUrl: "https://firstcontactthailand.com/real-estate/"
+-wpParent: 0
+ menuOrder: 0
+-sourceType: pages
+ draft: false
+ ---
+ 
+@@ -17,8 +13,4 @@ Connect with trusted property support across Thailand.
+ 
+ Property Services
+ 
+-[Property Sales Overview](https://firstcontactthailand.com/property-sales/) [Property Management](https://firstcontactthailand.com/property-management/) [Building Contractors](https://firstcontactthailand.com/building-contractors/) [Buyers Agent](https://firstcontactthailand.com/buyers-agent/)
+-
+-Property Sales Areas
+-
+-[Koh Samui](https://firstcontactthailand.com/property-sales/koh-samui/) [Koh Phangan](https://firstcontactthailand.com/property-sales/koh-phangan/) [Bangkok](https://firstcontactthailand.com/property-sales/bangkok/) [Pattaya](https://firstcontactthailand.com/property-sales/pattaya/) [Phuket](https://firstcontactthailand.com/property-sales/phuket/) [Krabi](https://firstcontactthailand.com/property-sales/krabi/) [Chiang Mai](https://firstcontactthailand.com/property-sales/chiang-mai/) [Hua Hin](https://firstcontactthailand.com/property-sales/hua-hin/)
++[Property Sales Overview](/property-sales/) [Property Management](/property-management/) [Building Contractors](/building-contractors/) [Buyers Agent](/buyers-agent/)
+diff --git a/web/src/content/pages/tours-2.md b/web/src/content/pages/tours-2.md
+index a9bfba8..28ef5a4 100644
+--- a/web/src/content/pages/tours-2.md
++++ b/web/src/content/pages/tours-2.md
+@@ -1,48 +1,37 @@
+ ---
+-title: "tours-2"
++title: "Tours"
+ slug: "tours-2"
+-wpId: 458
+ date: 2025-11-26T05:49:50
+ modified: 2026-07-02T10:54:10
+-originalUrl: "https://firstcontactthailand.com/tours-2/"
+-wpParent: 0
+ menuOrder: 0
+-sourceType: pages
+ draft: false
+ ---
+ 
+-# Tours
+-
+ Connect with trusted local drivers, boat operators, tour guides, and experience providers across Thailand.
+ 
+-![Customise Your Own Day Trip](https://firstcontactthailand.com/wp-content/uploads/2025/11/Hero-Images-copy-2-scaled.jpg?v=20260702b)
+-
+-## Customise Your Own Day Trip
+-
+-Explore like a local with trusted drivers, boat operators, and guides who tailor every trip to your needs.
+-
+-[Connect with local partners](https://firstcontactthailand.com/contact-link/)
+-
+-![Full Moon Parties](https://firstcontactthailand.com/wp-content/uploads/2025/11/1-scaled.jpg?v=20260702b)
+-
+-## Full Moon Parties
+-
+-Safe, stylish Full Moon Party experiences arranged around your group with trusted local support.
+-
+-[Book your Full Moon trip](https://firstcontactthailand.com/full-moon-party-vip-trip/)
+-
+-![Other Tours](https://firstcontactthailand.com/wp-content/uploads/2025/11/11-scaled.jpg?v=20260702b)
+-
+-## Other Tours
+-
+-Discover hidden gems and authentic local experiences while supporting trusted local partners.
+-
+-[View other tours](https://firstcontactthailand.com/other-tours/)
+-
+-![Become a Better Tour Guide](https://firstcontactthailand.com/wp-content/uploads/2026/06/tour-guide-fun-pic-20260609.png?v=20260702b)
+-
+-## Become a Better Tour Guide
+-
+-Elevate the way you create guest experiences while learning how to maximise your commissions.
+-
+-[Find out more](https://firstcontactthailand.com/become-a-better-tour-guide/)
++<section class="service-card-grid" aria-label="Tours">
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/Hero-Images-copy-2-scaled.jpg?v=20260702b" alt="Customise Your Own Day Trip" />
++    <h2>Customise Your Own Day Trip</h2>
++    <p>Explore like a local with trusted drivers, boat operators, and guides who tailor every trip to your needs.</p>
++    <a href="/contact-link/">Connect with local partners</a>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/1-scaled.jpg?v=20260702b" alt="Full Moon Parties" />
++    <h2>Full Moon Parties</h2>
++    <p>Safe, stylish Full Moon Party experiences arranged around your group with trusted local support.</p>
++    <a href="/full-moon-party-vip-trip/">Book your Full Moon trip</a>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/11-scaled.jpg?v=20260702b" alt="Other Tours" />
++    <h2>Other Tours</h2>
++    <p>Discover hidden gems and authentic local experiences while supporting trusted local partners.</p>
++    <a href="/other-tours/">View other tours</a>
++  </article>
++  <article class="service-card">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2026/06/tour-guide-fun-pic-20260609.png?v=20260702b" alt="Become a Better Tour Guide" />
++    <h2>Become a Better Tour Guide</h2>
++    <p>Elevate the way you create guest experiences while learning how to maximise your commissions.</p>
++    <a href="/become-a-better-tour-guide/">Find out more</a>
++  </article>
++</section>
+diff --git a/web/src/layouts/Layout.astro b/web/src/layouts/Layout.astro
+index 177ce16..596050c 100644
+--- a/web/src/layouts/Layout.astro
++++ b/web/src/layouts/Layout.astro
+@@ -6,7 +6,7 @@ interface Props {
+   description?: string;
+ }
+ 
+-const { title, description = 'First Contact Thailand — business network community for expats and locals on Koh Samui & Koh Phangan.' } = Astro.props;
++const { title, description = 'First Contact Thailand - a business network community in Thailand.' } = Astro.props;
+ ---
+ 
+ <!doctype html>
+@@ -18,22 +18,82 @@ const { title, description = 'First Contact Thailand — business network commun
+     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+     <title>{title}</title>
+   </head>
+-  <body class="min-h-screen bg-white text-slate-800 antialiased">
+-    <header class="border-b border-slate-200">
+-      <nav class="mx-auto flex max-w-6xl items-center justify-between p-4">
+-        <a href="/" class="text-lg font-bold tracking-tight">First Contact Thailand</a>
+-        <div class="flex gap-6 text-sm">
+-          <a href="/pages" class="hover:text-teal-600">Pages</a>
+-          <a href="/about-us" class="hover:text-teal-600">About</a>
+-          <a href="/contact-link" class="hover:text-teal-600">Contact</a>
+-        </div>
+-      </nav>
++  <body class="fct-live-body">
++    <header class="fct-live-header">
++      <div class="fct-live-header__inner">
++        <a class="fct-live-logo" href="/" aria-label="First Contact Thailand home">
++          <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/cropped-firstcontact.png" alt="First Contact Thailand" />
++        </a>
++        <nav class="fct-live-nav" aria-label="Main navigation">
++          <a href="/blog/">Blog</a>
++          <details>
++            <summary>Charity</summary>
++            <div>
++              <a href="/bangkok-charity-programs/">Bangkok</a>
++              <a href="/chiang-mai-charity-programs/">Chiang Mai</a>
++              <a href="/hua-hin-charity-programs/">Hua Hin</a>
++              <a href="/koh-samui-charity-programs/">Koh Samui</a>
++              <a href="/pattaya-charity-programs/">Pattaya</a>
++              <a href="/phuket-charity-programs/">Phuket</a>
++            </div>
++          </details>
++          <details>
++            <summary>Events</summary>
++            <div>
++              <a href="/bangkok-community-events/">Bangkok</a>
++              <a href="/chiang-mai-community-events/">Chiang Mai</a>
++              <a href="/hua-hin-community-events/">Hua Hin</a>
++              <a href="/community-events/">Koh Samui</a>
++              <a href="/pattaya-community-events/">Pattaya</a>
++              <a href="/phuket-community-events/">Phuket</a>
++            </div>
++          </details>
++          <a href="/health-fitness/">Health & Fitness</a>
++          <a href="/hire/">Hire</a>
++          <a href="/local-business-network/">Local Business Network</a>
++          <a href="/local-deals/">Local Deals</a>
++          <details>
++            <summary>Move to Thailand Guide</summary>
++            <div>
++              <a href="/moving-to-bangkok/">Bangkok</a>
++              <a href="/moving-to-chiang-mai/">Chiang Mai</a>
++              <a href="/moving-to-hua-hin/">Hua Hin</a>
++              <a href="/moving-to-samui/">Koh Samui</a>
++              <a href="/moving-to-pattaya/">Pattaya</a>
++              <a href="/moving-to-phuket/">Phuket</a>
++            </div>
++          </details>
++          <details>
++            <summary>Property</summary>
++            <div>
++              <a href="/real-estate/">Overview</a>
++              <span class="fct-nav-group-label">Sales</span>
++              <a href="/koh-samui-property-sales/">Koh Samui</a>
++              <a href="/koh-phangan-property-sales/">Koh Phangan</a>
++              <a href="/bangkok-property-sales/">Bangkok</a>
++              <a href="/pattaya-property-sales/">Pattaya</a>
++              <a href="/phuket-property-sales/">Phuket</a>
++              <a href="/krabi-property-sales/">Krabi</a>
++            </div>
++          </details>
++          <a href="/tours-2/">Tours</a>
++        </nav>
++      </div>
+     </header>
+-    <main class="mx-auto max-w-6xl p-4">
++    <main class="fct-live-main">
+       <slot />
+     </main>
+-    <footer class="mt-16 border-t border-slate-200 py-8 text-center text-sm text-slate-500">
+-      © {new Date().getFullYear()} First Contact Thailand — Business Network Community
++    <footer class="fct-live-footer">
++      <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/cropped-firstcontact.png" alt="First Contact Thailand" />
++      <div>
++        <h2>About FIRST CONTACT</h2>
++        <p>Connecting locals, expats, and visitors with trusted businesses, community events, and helpful local support.</p>
++      </div>
++      <div>
++        <h2>CONTACT US</h2>
++        <p><a href="mailto:info@firstcontactthailand.com">info@firstcontactthailand.com</a></p>
++      </div>
++      <p class="fct-live-footer__copy">Copyright &copy; 2026 First Contact Thailand</p>
+     </footer>
+   </body>
+ </html>
+diff --git a/web/src/pages/[...slug].astro b/web/src/pages/[...slug].astro
+index ec4d2ab..14384ac 100644
+--- a/web/src/pages/[...slug].astro
++++ b/web/src/pages/[...slug].astro
+@@ -12,11 +12,104 @@ export async function getStaticPaths() {
+ 
+ const { page } = Astro.props;
+ const { Content } = await render(page);
++const rawBody = (page.body ?? '').trim();
++const isLegacyPlaceholder = /layouts\.siteorigin|Lorem ipsum|John Doe|\[\]\(#\)/.test(rawBody);
++const usesStandardFallback = rawBody.length < 80 || isLegacyPlaceholder;
++const contentHasH1 = /^#\s+/m.test(rawBody);
++const cleanTitle = page.data.title
++  .replace(/&#038;/g, '&')
++  .replace(/&#8211;/g, '-')
++  .replace(/-/g, ' ')
++  .replace(/\s+/g, ' ')
++  .trim();
++const fallbackCopy = {
++  'affiliate-marketing': 'Connect with trusted local partners for affiliate, referral, and practical online income opportunities in Thailand.',
++  'airport-transfers': 'Arrange fair, reliable airport transfer support with trusted local drivers.',
++  'bar-deals': 'Find local bar deals, happy hours, and social places without paying tourist prices.',
++  'building-a-property-in-thailand': 'Connect with trusted building contractors and property support in Thailand.',
++  'business-directory': 'Find trusted local businesses, services, and community contacts across Thailand.',
++  'business-directory-2': 'Find trusted local businesses, services, and community contacts across Thailand.',
++  'business-networking': 'Meet useful local business contacts, community members, and service providers.',
++  'business-set-ups': 'Get connected with practical local support for setting up and running a business in Thailand.',
++  'car-bike-hire': 'Find trusted local car and bike hire support with clear prices and practical help.',
++  'carbikehire': 'Find trusted local car and bike hire support with clear prices and practical help.',
++  'charities': 'Explore local charity programs and community projects supported through First Contact Thailand.',
++  'charity': 'Explore local charity programs and community projects supported through First Contact Thailand.',
++  'charity-work': 'Explore local charity programs and community projects supported through First Contact Thailand.',
++  'co-working-spaces': 'Find practical co-working spaces and local work-friendly places across Thailand.',
++  'crypto-education-business': 'Connect with local crypto education, online business, and digital opportunity support.',
++  'day-trips': 'Plan local day trips with trusted drivers, boat operators, and local partners.',
++  'fitness': 'Find local fitness, wellness, and community activity options in Thailand.',
++  'food-drink-deals': 'Find local food and drink deals, trusted recommendations, and places locals actually use.',
++  'food-drinks': 'Find local food and drink deals, trusted recommendations, and places locals actually use.',
++  'graphic-design': 'Connect with trusted graphic design and creative support for your business or project.',
++  'health-wellbeing': 'Find trusted health, wellbeing, fitness, and community wellness support.',
++  'hire-group': 'Find trusted local hire services, transport, equipment, and practical support.',
++  'insurance': 'Connect with trusted local insurance support for life in Thailand.',
++  'jetski-hire': 'Find trusted local water activity and jetski hire support.',
++  'koh-phangan': 'Find local contacts, events, services, and community support on Koh Phangan.',
++  'koh-samui': 'Find local contacts, events, services, and community support on Koh Samui.',
++  'learn-thai': 'Connect with local language learning, Thai lessons, and English teaching support.',
++  'legal-advice': 'Connect with trusted local legal support and practical guidance in Thailand.',
++  'marketing': 'Connect with trusted marketing, social media, and business promotion support.',
++  'mens-health-wellness': 'Find local men\'s health, wellness, and support options.',
++  'nannies': 'Find trusted local nanny and family support services.',
++  'networking': 'Meet useful local contacts and community members through First Contact Thailand.',
++  'online-jobs': 'Explore remote work, online jobs, and practical income opportunities.',
++  'remote-online-work-opportunities': 'Explore remote work, online jobs, and practical income opportunities.',
++  'restaurant-deals': 'Find local restaurant deals and trusted food recommendations.',
++  'social-events': 'Find local social events, meetups, and community activities.',
++  'social-events-2': 'Find local social events, meetups, and community activities.',
++  'social-media-support': 'Connect with trusted social media support for your business or project.',
++  'solar': 'Connect with local solar and practical home improvement support.',
++  'vehicle-rental': 'Find trusted local vehicle rental support with clear prices and local backup.',
++  'visas': 'Connect with trusted visa support and relocation guidance.',
++  'water': 'Find trusted local water, drinking water, and home supply support.',
++  'welcome-to-samui': 'Start with practical local contacts, services, and community support on Koh Samui.',
++};
++const fallbackDescription = fallbackCopy[page.data.slug] ?? `Connect with trusted local support for ${cleanTitle.toLowerCase()} in Thailand.`;
++const eventPageSlugs = new Set([
++  'bangkok-community-events',
++  'chiang-mai-community-events',
++  'community-events',
++  'hua-hin-community-events',
++  'koh-phangan-community-events',
++  'krabi-community-events',
++  'paint-night-event-registration-page',
++  'pattaya-community-events',
++  'phuket-community-events',
++  'social-events',
++  'social-events-2',
++]);
++const isEventPage = eventPageSlugs.has(page.data.slug);
++const hasLocalDealsBeachCta = page.data.slug === 'local-deals';
+ ---
+ 
+ <Layout title={`${page.data.title} — First Contact Thailand`}>
+-  <article class="prose prose-slate mx-auto max-w-3xl py-8">
+-    <h1>{page.data.title}</h1>
+-    <Content />
++  <article class={`content-page ${isEventPage ? 'event-page' : ''} prose prose-slate mx-auto max-w-3xl py-8`}>
++    {(usesStandardFallback || !contentHasH1) && <h1>{page.data.title}</h1>}
++    {usesStandardFallback ? (
++      <>
++        <p>{fallbackDescription}</p>
++        <h2>Trusted Local Support</h2>
++        <p>First Contact Thailand helps connect locals, expats, and visitors with practical support, fair local contacts, and community recommendations.</p>
++        <h2>How We Can Help</h2>
++        <p>Tell us what you need and we will point you towards suitable local partners, events, services, or community contacts.</p>
++        {!isEventPage && <p><a href="/contact-link/">Contact First Contact Thailand</a></p>}
++      </>
++    ) : (
++      <Content />
++    )}
++    {hasLocalDealsBeachCta && (
++      <div class="double-cta beach-only">
++        <a class="beach-cta" href="/contact-link/">Tell us about a local deal</a>
++      </div>
++    )}
++    {isEventPage && (
++      <div class="double-cta">
++        <a href="/past-events/">Check out our previous events</a>
++        <a class="beach-cta" href="/contact-link/">Let us know if you have a community event coming up</a>
++      </div>
++    )}
+   </article>
+ </Layout>
+diff --git a/web/src/pages/index.astro b/web/src/pages/index.astro
+index e69609a..333eaad 100644
+--- a/web/src/pages/index.astro
++++ b/web/src/pages/index.astro
+@@ -1,26 +1,96 @@
+ ---
+ import Layout from '../layouts/Layout.astro';
++
++const categories = [
++  {
++    title: 'Food & Beverage',
++    href: '/food-drinks/',
++    image: '/assets/media/firstcontactthailand.com/uploads/2025/11/alexandra-tran-VW0bzb90oMA-unsplash-scaled.jpg',
++  },
++  {
++    title: 'Tours & Entertainment',
++    href: '/tours-2/',
++    image: '/assets/media/firstcontactthailand.com/uploads/2025/11/Hero-Images-copy-2-scaled.jpg',
++  },
++  {
++    title: 'Local Business Network',
++    href: '/local-business-network/',
++    image: '/assets/media/firstcontactthailand.com/uploads/2025/11/PHOTO-2025-10-11-09-28-41-2.jpg',
++  },
++  {
++    title: 'Marketing & Design',
++    href: '/marketing/',
++    image: '/assets/media/firstcontactthailand.com/uploads/2025/11/start-up-scaled.jpg',
++  },
++  {
++    title: 'Hire',
++    href: '/hire/',
++    image: '/assets/media/firstcontactthailand.com/uploads/2025/11/scooter-scaled.jpg',
++  },
++  {
++    title: 'Property',
++    href: '/property/',
++    image: '/assets/media/firstcontactthailand.com/uploads/2025/11/b.networking-scaled.jpg',
++  },
++];
++
++const testimonialImages = [
++  '/assets/media/firstcontactthailand.com/uploads/2025/12/b94ca528-2a38-4526-8eab-e22f8b46daea.jpg',
++  '/assets/media/firstcontactthailand.com/uploads/2025/12/8b1d32be-1e0e-4506-b3ec-c8cf96fb9cf6.jpg',
++  '/assets/media/firstcontactthailand.com/uploads/2025/12/b624eb7c-d305-453f-8768-8ff4f94b09b3.jpg',
++];
+ ---
+ 
+-<Layout title="First Contact Thailand — Business Network Community">
+-  <section class="py-16 text-center">
+-    <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">
+-      Business Network <span class="text-teal-600">with Limitless Potential</span>
+-    </h1>
+-    <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+-      Over 300+ local businesses in our network across Koh Samui &amp; Koh Phangan.
+-      Whatever service you need, we point you in the right direction.
+-    </p>
+-    <div class="mt-8 flex justify-center gap-4">
+-      <a href="/pages" class="rounded-lg bg-teal-600 px-6 py-3 font-semibold text-white hover:bg-teal-700">
+-        Browse the network
+-      </a>
+-      <a href="/contact-link" class="rounded-lg border border-slate-300 px-6 py-3 font-semibold hover:bg-slate-50">
+-        Contact us
+-      </a>
++<Layout title="First Contact Thailand - A Business Network Community">
++  <section class="fct-home-title-band">
++    <h1>FIRST CONTACT THAILAND</h1>
++  </section>
++
++  <section class="fct-home-rotator" aria-label="Thailand community">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/cropped-Hero-Images-copy-scaled-1.jpg" alt="" />
++  </section>
++
++  <section class="fct-home-intro">
++    <img src="/assets/media/firstcontactthailand.com/uploads/2025/11/hero6-1024x542.jpg" alt="" />
++    <div>
++      <h2>About Us</h2>
++      <p>First Contact was founded in Koh Samui in 2024 with a clear purpose: to bring locals, expats, and travellers together by connecting them with trusted services and reliable local businesses.</p>
++      <p>Supporting local charities, Rotary clubs, and community groups across Thailand is a major focus for First Contact and remains at the heart of everything we do.</p>
++      <p>Our collective network began with more than 500 businesses in Koh Samui and has since expanded on a large scale across Thailand.</p>
+     </div>
+   </section>
+-  <p class="text-center text-sm text-slate-400">
+-    🚧 New site under construction — content migrated from WordPress, redesign in progress.
+-  </p>
++
++  <section class="fct-home-text">
++    <h2>How It Works</h2>
++    <p>Membership with First Contact is free. Our members give back by donating a percentage of the revenue they generate through First Contact to charitable and community causes.</p>
++    <p>We can direct you to reliable providers across a wide range of sectors, including marketing and advertising, legal services, tours and entertainment, food and beverage deals, vehicle hire, accommodation, property development and management, and many more.</p>
++    <p>First Contact helps people find the right services while supporting the local communities we all care about.</p>
++  </section>
++
++  <section class="fct-home-events">
++    <h2>FIND LOCAL COMMUNITY & BUSINESS EVENTS HAPPENING WEEKLY</h2>
++    <div class="fct-home-event-links">
++      <a href="/community-events/">Koh Samui Events</a>
++      <a href="/past-events/">Previous Events</a>
++      <a href="/contact-link/">List a Community Event</a>
++    </div>
++  </section>
++
++  <section class="fct-home-testimonials">
++    <h2>A few Testimonials from Our Previous Charity Events</h2>
++    <div>
++      {testimonialImages.map((image) => (
++        <img src={image} alt="" loading="lazy" />
++      ))}
++    </div>
++  </section>
++
++  <section class="fct-home-categories">
++    {categories.map((category) => (
++      <a href={category.href}>
++        <img src={category.image} alt="" loading="lazy" />
++        <span>{category.title}</span>
++      </a>
++    ))}
++  </section>
+ </Layout>
+diff --git a/web/src/pages/pages/index.astro b/web/src/pages/pages/index.astro
+index 98b5594..71f3534 100644
+--- a/web/src/pages/pages/index.astro
++++ b/web/src/pages/pages/index.astro
+@@ -6,14 +6,17 @@ const pages = (await getCollection('pages', ({ data }) => !data.draft))
+   .sort((a, b) => a.data.title.localeCompare(b.data.title));
+ ---
+ 
+-<Layout title="All pages — First Contact Thailand">
+-  <h1 class="mb-6 text-3xl font-bold">All migrated pages ({pages.length})</h1>
+-  <ul class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
++<Layout title="Site Index - First Contact Thailand">
++  <section class="site-index">
++    <h1>Site Index</h1>
++    <p>This is a review index for every page currently available inside the new Astro site.</p>
++  </section>
++  <ul class="site-index-grid">
+     {pages.map((p) => (
+       <li>
+-        <a href={`/${p.data.slug}`} class="block rounded-lg border border-slate-200 p-3 hover:border-teal-500 hover:bg-teal-50">
+-          <span class="font-medium">{p.data.title || p.data.slug}</span>
+-          <span class="block text-xs text-slate-400">/{p.data.slug}</span>
++        <a href={`/${p.data.slug}/`}>
++          <span>{p.data.title || p.data.slug}</span>
++          <small>/{p.data.slug}/</small>
+         </a>
+       </li>
+     ))}
+diff --git a/web/src/styles/global.css b/web/src/styles/global.css
+index a461c50..a360f79 100644
+--- a/web/src/styles/global.css
++++ b/web/src/styles/global.css
+@@ -1 +1,605 @@
+-@import "tailwindcss";
+\ No newline at end of file
++@import "tailwindcss";
++
++@layer components {
++  main details:not([open]) > :not(summary) {
++    display: none !important;
++  }
++
++  .fct-live-header {
++    background: #183641;
++  }
++
++  .fct-live-header__inner {
++    display: flex;
++    max-width: 73.75rem;
++    min-height: 5.75rem;
++    align-items: center;
++    flex-wrap: wrap;
++    gap: 1.25rem;
++    margin: 0 auto;
++    padding: 0.625rem 1.25rem;
++  }
++
++  .fct-live-logo {
++    display: flex;
++    flex: 0 0 auto;
++    align-items: center;
++    text-decoration: none;
++  }
++
++  .fct-live-logo img {
++    display: block;
++    width: auto;
++    max-width: 15rem;
++    height: auto;
++    max-height: 4.5rem;
++    object-fit: contain;
++  }
++
++  .fct-live-nav {
++    display: flex;
++    flex: 1 1 auto;
++    align-items: center;
++    justify-content: flex-end;
++    flex-wrap: wrap;
++    gap: 0.95rem;
++    color: #ffffff;
++    font-size: 1rem;
++    font-weight: 800;
++    line-height: 1.2;
++  }
++
++  .fct-live-nav a,
++  .fct-live-nav summary {
++    display: inline-flex;
++    min-height: 2.35rem;
++    align-items: center;
++    color: #ffffff;
++    text-decoration: none;
++    white-space: nowrap;
++  }
++
++  .fct-live-nav details {
++    position: relative;
++  }
++
++  .fct-live-nav summary {
++    cursor: pointer;
++    list-style: none;
++  }
++
++  .fct-live-nav details > div {
++    position: absolute;
++    z-index: 20;
++    top: calc(100% + 0.75rem);
++    left: 0;
++    display: none;
++    min-width: 13rem;
++    gap: 0.15rem;
++    padding: 0.6rem;
++    border: 1px solid rgb(8 125 148 / 20%);
++    border-radius: 0.5rem;
++    background: #ffffff;
++    box-shadow: 0 14px 30px rgb(0 0 0 / 16%);
++  }
++
++  .fct-live-nav details > div a {
++    display: block;
++    padding: 0.45rem 0.6rem;
++    color: #082a3a;
++    white-space: nowrap;
++  }
++
++  .fct-live-nav details[open] > div,
++  .fct-live-nav details:hover > div,
++  .fct-live-nav details:focus-within > div {
++    display: grid;
++  }
++
++  @media (max-width: 900px) {
++    .fct-live-header__inner {
++      align-items: flex-start;
++      flex-direction: column;
++    }
++
++    .fct-live-logo img {
++      max-width: 13rem;
++      max-height: 4rem;
++    }
++
++    .fct-live-nav {
++      justify-content: flex-start;
++      flex-wrap: wrap;
++    }
++  }
++
++  @media (min-width: 901px) and (max-width: 1280px) {
++    .fct-live-header__inner {
++      align-items: flex-start;
++      flex-direction: column;
++      gap: 0.75rem;
++    }
++
++    .fct-live-nav {
++      width: 100%;
++      justify-content: flex-start;
++    }
++  }
++
++  .fct-home-title-band {
++    display: flex;
++    min-height: 7.875rem;
++    align-items: center;
++    justify-content: center;
++    margin: 0 calc(50% - 50vw);
++    padding: 0.875rem 1.25rem;
++    background: #183641;
++    color: #ffffff;
++    text-align: center;
++  }
++
++  .fct-home-title-band h1 {
++    margin: 0;
++    color: #ffffff;
++    font-size: clamp(1.7rem, 4vw, 3.2rem);
++    font-weight: 900;
++    letter-spacing: 0;
++    line-height: 1.05;
++  }
++
++  .fct-home-rotator {
++    max-width: 73.75rem;
++    margin: 1.875rem auto 2.375rem;
++    padding: 0 1.25rem;
++    background: #ffffff;
++  }
++
++  .fct-home-rotator img {
++    display: block;
++    width: 100%;
++    min-height: 22.5rem;
++    aspect-ratio: 16 / 5;
++    object-fit: cover;
++    border: 0;
++    border-radius: 0.5rem;
++    box-shadow: 0 14px 32px rgb(8 42 58 / 12%);
++  }
++
++  .fct-home-intro,
++  .fct-home-text,
++  .fct-home-events,
++  .fct-home-testimonials,
++  .fct-home-categories {
++    box-sizing: border-box;
++    width: min(100%, 73.75rem);
++    margin: 0 auto;
++    padding: 2.5rem 1.25rem;
++  }
++
++  .fct-home-intro {
++    display: grid;
++    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
++    gap: 2rem;
++    align-items: center;
++  }
++
++  .fct-home-intro > img {
++    display: block;
++    width: 100%;
++    max-width: 34rem;
++    aspect-ratio: 16 / 10;
++    object-fit: cover;
++    border-radius: 0.5rem;
++  }
++
++  .fct-home-intro h2,
++  .fct-home-text h2,
++  .fct-home-events h2,
++  .fct-home-testimonials h2 {
++    margin: 0 0 1rem;
++    color: #071f2a;
++    font-size: clamp(1.6rem, 2.4vw, 2rem);
++    font-weight: 900;
++    line-height: 1.15;
++    letter-spacing: 0;
++    text-transform: none;
++  }
++
++  .fct-home-intro p,
++  .fct-home-text p {
++    margin: 0 0 0.875rem;
++    color: #244858;
++    font-size: 1.05rem;
++    line-height: 1.6;
++  }
++
++  .fct-home-events {
++    text-align: center;
++  }
++
++  .fct-home-event-links {
++    display: flex;
++    flex-wrap: wrap;
++    justify-content: center;
++    gap: 1rem;
++    margin-top: 1.25rem;
++  }
++
++  .fct-home-event-links a {
++    box-sizing: border-box;
++    display: inline-flex;
++    width: min(100%, 18rem);
++    min-height: 4.5rem;
++    align-items: center;
++    justify-content: center;
++    padding: 1rem 1.125rem;
++    border: 2px solid #0f766e;
++    border-radius: 0.5rem;
++    background: #ffffff;
++    color: #111827;
++    font-size: 1rem;
++    font-weight: 800;
++    line-height: 1.25;
++    text-align: center;
++    text-decoration: none;
++  }
++
++  .fct-home-testimonials {
++    text-align: center;
++  }
++
++  .fct-home-testimonials > div,
++  .fct-home-categories {
++    display: grid;
++    grid-template-columns: repeat(3, minmax(0, 1fr));
++    gap: 1.25rem;
++  }
++
++  .fct-home-testimonials img,
++  .fct-home-categories img {
++    display: block;
++    width: 100%;
++    max-width: 100%;
++    aspect-ratio: 4 / 3;
++    object-fit: cover;
++    border: 0;
++    border-radius: 0.5rem;
++  }
++
++  .fct-home-categories a {
++    display: block;
++    overflow: hidden;
++    border: 1px solid #e5e7eb;
++    border-radius: 0.5rem;
++    background: #ffffff;
++    color: #0f766e;
++    text-align: center;
++    text-decoration: none;
++    box-shadow: 0 10px 24px rgb(8 42 58 / 8%);
++  }
++
++  .fct-home-categories span {
++    display: block;
++    padding: 0.875rem 1rem;
++    color: #0f766e;
++    font-size: 1.05rem;
++    font-weight: 900;
++    line-height: 1.2;
++    letter-spacing: 0;
++    text-transform: none;
++  }
++
++  @media (max-width: 760px) {
++    .fct-home-intro,
++    .fct-home-testimonials > div,
++    .fct-home-categories {
++      grid-template-columns: 1fr;
++    }
++
++    .fct-home-rotator img {
++      min-height: 16rem;
++      aspect-ratio: 4 / 3;
++    }
++  }
++
++  .homepage-section {
++    padding: 3rem 0 1rem;
++  }
++
++  .homepage-section__heading {
++    max-width: 46rem;
++    margin-bottom: 1.5rem;
++  }
++
++  .homepage-section__heading h2,
++  .site-index h1 {
++    margin: 0;
++    color: #111827;
++    font-size: 2rem;
++    line-height: 1.15;
++  }
++
++  .homepage-section__heading p,
++  .site-index p {
++    margin: 0.75rem 0 0;
++    color: #475569;
++    font-size: 1rem;
++    line-height: 1.6;
++  }
++
++  .homepage-card-grid {
++    display: grid;
++    grid-template-columns: repeat(4, minmax(0, 1fr));
++    gap: 1rem;
++  }
++
++  .homepage-card {
++    display: flex;
++    min-width: 0;
++    flex-direction: column;
++    overflow: hidden;
++    border: 1px solid #e5e7eb;
++    border-radius: 0.5rem;
++    background: #ffffff;
++  }
++
++  .homepage-card img {
++    width: 100%;
++    aspect-ratio: 4 / 3;
++    object-fit: cover;
++  }
++
++  .homepage-card > div {
++    display: flex;
++    flex: 1;
++    flex-direction: column;
++    padding: 1rem;
++  }
++
++  .homepage-card h3 {
++    margin: 0;
++    color: #111827;
++    font-size: 1.05rem;
++    line-height: 1.2;
++  }
++
++  .homepage-card p {
++    flex: 1;
++    margin: 0.75rem 0 1rem;
++    color: #374151;
++    font-size: 0.95rem;
++    line-height: 1.45;
++  }
++
++  .homepage-card a {
++    display: inline-flex;
++    min-height: 3rem;
++    align-items: center;
++    justify-content: center;
++    border: 2px solid #0f766e;
++    border-radius: 0.5rem;
++    padding: 0.75rem 1rem;
++    color: #111827;
++    font-weight: 800;
++    text-align: center;
++  }
++
++  .homepage-card a:hover,
++  .site-index-grid a:hover {
++    background: #f0fdfa;
++    color: #0f766e;
++  }
++
++  .site-index {
++    max-width: 46rem;
++    padding: 2rem 0 1.5rem;
++  }
++
++  .site-index-grid {
++    display: grid;
++    grid-template-columns: repeat(3, minmax(0, 1fr));
++    gap: 0.75rem;
++    padding: 0;
++    list-style: none;
++  }
++
++  .site-index-grid a {
++    display: grid;
++    min-height: 5rem;
++    align-content: center;
++    gap: 0.35rem;
++    border: 1px solid #d1d5db;
++    border-radius: 0.5rem;
++    padding: 1rem;
++    color: #111827;
++  }
++
++  .site-index-grid span {
++    font-weight: 800;
++    line-height: 1.25;
++  }
++
++  .fct-nav-group-label {
++    display: block;
++    margin: 0.35rem 0.75rem 0.15rem;
++    padding-top: 0.4rem;
++    border-top: 1px solid rgb(8 125 148 / 18%);
++    color: #0f766e;
++    font-size: 0.82rem;
++    font-weight: 900;
++    line-height: 1.2;
++  }
++
++  .site-index-grid small {
++    color: #64748b;
++    overflow-wrap: anywhere;
++  }
++
++  .content-page:not(.event-page) p:has(> a + a) {
++    display: grid;
++    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
++    gap: 0.75rem;
++    align-items: stretch;
++  }
++
++  .content-page p:has(> a:only-child) {
++    display: flex;
++    justify-content: center;
++  }
++
++  .beach-cta {
++    display: flex;
++    min-height: 8rem;
++    align-items: center;
++    justify-content: center;
++    padding: 1.5rem;
++    border-radius: 0.5rem;
++    background:
++      linear-gradient(rgb(15 118 110 / 70%), rgb(15 118 110 / 70%)),
++      url("/assets/media/firstcontactthailand.com/uploads/2025/11/beach-1-scaled.jpg") center / cover;
++    color: #ffffff;
++    font-size: 1.15rem;
++    font-weight: 800;
++    line-height: 1.25;
++    text-align: center;
++    text-decoration: none;
++    width: min(100%, 36rem);
++  }
++
++  .content-page:not(.event-page) p:has(> a + a) > a,
++  .content-page p > a:only-child,
++  .double-cta > a:not(.beach-cta):first-child {
++    box-sizing: border-box;
++    display: inline-flex;
++    min-height: 4.5rem;
++    height: auto;
++    align-items: center;
++    justify-content: center;
++    padding: 1rem 1.125rem;
++    border: 2px solid #0f766e;
++    border-radius: 0.5rem;
++    background: #ffffff;
++    color: #111827;
++    font-size: 1rem;
++    font-weight: 800;
++    line-height: 1.25;
++    text-align: center;
++    text-decoration: none;
++    white-space: normal;
++    overflow-wrap: anywhere;
++    width: min(100%, 28rem);
++  }
++
++  .content-page:not(.event-page) p:has(> a + a) > a:hover,
++  .content-page p > a:only-child:hover,
++  .double-cta > a:not(.beach-cta):first-child:hover {
++    background: #ffffff;
++    color: #0f766e;
++  }
++
++  .double-cta {
++    display: grid;
++    justify-items: center;
++    gap: 1rem;
++    margin-top: 2rem;
++  }
++
++  .event-page p:has(a[href*="past-events"]):has(a[href*="contact-link"]) {
++    display: none;
++  }
++
++  .content-page:has(.service-card-grid) {
++    max-width: 72rem;
++  }
++
++  .service-card-grid {
++    display: grid;
++    grid-template-columns: repeat(4, minmax(0, 1fr));
++    gap: 1rem;
++    margin-top: 2rem;
++  }
++
++  .service-card-grid-three {
++    grid-template-columns: repeat(3, minmax(0, 1fr));
++  }
++
++  .service-card {
++    display: flex;
++    min-width: 0;
++    flex-direction: column;
++    overflow: hidden;
++    border: 1px solid #e5e7eb;
++    border-radius: 0.5rem;
++    background: #ffffff;
++  }
++
++  .service-card img {
++    display: block;
++    width: 100%;
++    aspect-ratio: 4 / 3;
++    object-fit: cover;
++    border: 0;
++    outline: 0;
++    box-shadow: none;
++  }
++
++  .service-card h2 {
++    margin: 1rem 1rem 0;
++    color: #111827;
++    font-size: 1.1rem;
++    line-height: 1.2;
++  }
++
++  .service-card p {
++    flex: 1;
++    margin: 0.75rem 1rem 1rem;
++    color: #374151;
++    font-size: 0.95rem;
++    line-height: 1.45;
++  }
++
++  .service-card a {
++    box-sizing: border-box;
++    display: inline-flex;
++    min-height: 6rem;
++    height: auto;
++    align-items: center;
++    justify-content: center;
++    margin: auto 1rem 1rem;
++    padding: 1rem;
++    border: 2px solid #0f766e;
++    border-radius: 0.5rem;
++    background: #ffffff;
++    color: #111827;
++    font-size: 1rem;
++    font-weight: 800;
++    line-height: 1.25;
++    text-align: center;
++    text-decoration: none;
++    white-space: normal;
++    overflow-wrap: anywhere;
++  }
++
++  .service-card a:hover {
++    background: #ffffff;
++    color: #0f766e;
++  }
++
++  @media (max-width: 640px) {
++    .homepage-card-grid,
++    .site-index-grid {
++      grid-template-columns: 1fr;
++    }
++
++    .service-card-grid {
++      grid-template-columns: 1fr;
++    }
++  }
++
++  @media (min-width: 641px) and (max-width: 980px) {
++    .homepage-card-grid,
++    .site-index-grid {
++      grid-template-columns: repeat(2, minmax(0, 1fr));
++    }
++  }
++}
