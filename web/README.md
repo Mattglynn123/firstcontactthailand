@@ -29,7 +29,7 @@ The standalone server checkout is:
 
 It tracks the GitHub branch `codex/standalone-rebuild`. The legacy `first-contact-thailand-code-repo` checkout is WordPress history and must not be used for standalone changes.
 
-The IONOS account does not provide a system Node.js runtime. A verified, unprivileged runtime is therefore installed in the ignored `.server-tools/node` directory. Run project commands through the wrapper from the repository root:
+The IONOS account does not provide a system Node.js runtime and limits SSH processes to 768 MB of virtual memory. A verified, unprivileged runtime is therefore installed in the ignored `.server-tools/node` directory. The wrapper also applies the V8 memory profile required by IONOS. Run project commands through it from the repository root:
 
 ```sh
 ./web/scripts/server-node.sh node --version

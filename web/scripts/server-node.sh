@@ -13,4 +13,9 @@ fi
 PATH="$node_bin:$PATH"
 export PATH
 
+# IONOS limits SSH processes to 768 MB of virtual memory. These flags keep V8
+# below that ceiling while preserving enough heap for this static Astro build.
+: "${NODE_OPTIONS:=--jitless --max-old-space-size=256 --v8-pool-size=1}"
+export NODE_OPTIONS
+
 exec "$@"
