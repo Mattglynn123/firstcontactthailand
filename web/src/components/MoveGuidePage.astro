@@ -1,0 +1,79 @@
+---
+import PageHero from './PageHero.astro';
+
+interface Props {
+  city: string;
+  title: string;
+  text: string;
+  image: string;
+}
+
+const { city, title, text, image } = Astro.props;
+const points = [
+  {
+    title: 'Prepare before you arrive',
+    text: 'Plan your visa, work permissions, insurance, travel documents, driving licences, property rules, leases, local customs, banking and emergency contacts before you land.',
+  },
+  {
+    title: 'Choose the right area',
+    text: `Different ${city} areas suit different lifestyles. Consider schools, work, transport, healthcare, supermarkets, community and whether you want a quieter local area or a busier expat hub.`,
+  },
+  {
+    title: 'Find safe accommodation',
+    text: 'Use short-term accommodation while you learn the area. Before committing long term, check deposits, utility charges, access, internet quality and the reputation of the agent or owner.',
+  },
+  {
+    title: 'Know local and emergency services',
+    text: 'Keep reliable contacts for medical care, road accidents, tourist police, your embassy, legal support, property questions and urgent family matters in Thailand.',
+  },
+  {
+    title: 'Build your local network',
+    text: `Join community events, business groups, sports, charity projects, wellness groups and local meetups so ${city} starts to feel connected rather than unfamiliar.`,
+  },
+  {
+    title: 'Plan for real local life',
+    text: 'Expect differences in weather, transport, service times, language and daily routines. Keep expectations realistic, stay flexible and give yourself time to settle properly.',
+  },
+];
+---
+
+<PageHero
+  eyebrow="Move to Thailand guide"
+  title={title}
+  text={text}
+  image={image}
+  primaryLabel={`Find support in ${city}`}
+  primaryHref={`/contact-link/?topic=${encodeURIComponent(`Moving to ${city}`)}`}
+  secondaryLabel="Explore local services"
+  secondaryHref="/local-business-network/"
+/>
+
+<section class="section">
+  <div class="section__inner support-layout">
+    <div class="support-layout__intro">
+      <p class="section-kicker">Your practical checklist</p>
+      <h2>Prepare for the move, then build local connections</h2>
+      <p>Use these steps to check the essentials before you commit, then ask First Contact for relevant local introductions.</p>
+    </div>
+    <div class="support-points">
+      {points.map((point, index) => (
+        <article>
+          <span>{String(index + 1).padStart(2, '0')}</span>
+          <h3>{point.title}</h3>
+          <p>{point.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section final-cta">
+  <div class="section__inner final-cta__inner">
+    <div>
+      <p class="section-kicker">How First Contact can help</p>
+      <h2>Find your local {city} connections</h2>
+      <p>Ask about property, rentals, legal services, insurance, vehicles, health, local deals, business services or community introductions.</p>
+    </div>
+    <a class="button button--primary" href={`/contact-link/?topic=${encodeURIComponent(`Moving to ${city}`)}`}>Contact local support</a>
+  </div>
+</section>

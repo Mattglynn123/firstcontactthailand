@@ -21,9 +21,9 @@ Visit ethic Elephant sanctuaries on the island
 
 ## PIG ISLAND
 
-Visit the iconic Pig Island ![🐷](https://static.xx.fbcdn.net/images/emoji.php/v9/t4f/2/16/1f437.png)![📍](https://static.xx.fbcdn.net/images/emoji.php/v9/tcc/2/16/1f4cd.png)Koh Madsum.
+Visit the iconic Pig Island, Koh Madsum.
 
-Enjoy a fun day swimming, snorkeling, and relaxing under the tropical sun ![🏝️](https://static.xx.fbcdn.net/images/emoji.php/v9/t2a/2/16/1f3dd.png) — an unforgettable experience awaits!
+Enjoy a fun day swimming, snorkeling, and relaxing under the tropical sun - an unforgettable experience awaits!
 
 ![](/assets/fct/national-park-scaled.jpg "Screenshot")
 

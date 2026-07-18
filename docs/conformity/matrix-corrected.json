@@ -1,0 +1,5802 @@
+{
+  "summary": {
+    "generatedAt": "2026-07-18T13:30:13.368Z",
+    "liveReport": "wordpress-live-all.json",
+    "astroReport": "astro-corrected-all.json",
+    "liveRoutes": 122,
+    "stagingRoutes": 128,
+    "commonRoutes": 122,
+    "missingFromStaging": [],
+    "stagingOnly": [
+      "/building-contractors/",
+      "/buyers-agent/",
+      "/homepage/",
+      "/pages/",
+      "/property-management/",
+      "/property-sales/"
+    ],
+    "priorities": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 128
+    },
+    "states": {
+      "open": 0,
+      "review": 0,
+      "resolved": 9,
+      "clean": 119
+    }
+  },
+  "routes": [
+    {
+      "route": "/",
+      "priority": "low",
+      "state": "resolved",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1061,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 5051,
+        "textLength": 2220,
+        "images": 12,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 2.09,
+      "headingsOnlyInWordPress": [
+        "about us",
+        "how it works",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "first contact thailand",
+        "local knowledge. trusted people. stronger communities.",
+        "one trusted starting point for local life in thailand",
+        "tell us what you need",
+        "get a trusted introduction",
+        "support local communities",
+        "practical connections, all in one place",
+        "local business network",
+        "community events",
+        "tours & experiences",
+        "property",
+        "hire",
+        "local deals",
+        "community and business events",
+        "real people, local events and shared experiences",
+        "not sure where to begin?",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [
+        "mat-mvp",
+        "mat-recovered"
+      ],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": "Keep the richer Astro homepage and verify it visually against the stable parts of the live page."
+    },
+    {
+      "route": "/37-2/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 0,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 812,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": null,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "37 2",
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/about-us/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1262,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 3,
+        "failedRequests": 2
+      },
+      "staging": {
+        "status": 200,
+        "height": 1781,
+        "textLength": 689,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.55,
+      "headingsOnlyInWordPress": [
+        "about us",
+        "business network with limitless potential",
+        "what we do...",
+        "300",
+        "30",
+        "3000",
+        "3",
+        "optimizing every area of your business!",
+        "get in touch...",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about first contact thailand",
+        "useful introductions with a community purpose",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/about/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 810,
+        "images": 11,
+        "missingImages": 0,
+        "overflowItems": 17,
+        "duplicateSignals": 0,
+        "consoleErrors": 3,
+        "failedRequests": 2
+      },
+      "staging": {
+        "status": 200,
+        "height": 1781,
+        "textLength": 689,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.85,
+      "headingsOnlyInWordPress": [
+        "about",
+        "inspiro is a digital product agency that focuses on strategy and design.",
+        "showreel",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about first contact thailand",
+        "useful introductions with a community purpose",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/affiliate-marketing/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 19,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 886,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 46.63,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/airport-transfers/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 757,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 844,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.11,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/autistic-children-swimming-program/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 781,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1547,
+        "textLength": 785,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.01,
+      "headingsOnlyInWordPress": [
+        "autistic learning & swimming program koh samui",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "autistic learning &amp; swimming program koh samui",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/bangkok-charity-programs/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 820,
+        "images": 7,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 852,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.04,
+      "headingsOnlyInWordPress": [
+        "clean drinking water systems",
+        "kid’s day out",
+        "polio plus",
+        "low income communities",
+        "youth",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/bangkok-community-events/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 2671,
+        "textLength": 120,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 837,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 6.97,
+      "headingsOnlyInWordPress": [
+        "socialising in bangkok",
+        "upcoming events",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "bangkok community events",
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/bar-deals/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1886,
+        "images": 5,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 1,
+        "consoleErrors": 3,
+        "failedRequests": 2
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 844,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.45,
+      "headingsOnlyInWordPress": [
+        "plan a project with us?",
+        "architecture and design",
+        "planning",
+        "project management",
+        "“one of the finest design construction agencies i have ever worked with”",
+        "recent projects",
+        "hello world!",
+        "connect with us",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/become-a-better-tour-guide/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 654,
+        "images": 5,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 856,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.31,
+      "headingsOnlyInWordPress": [
+        "how to save time, earn more commissions and become a better tour guide",
+        "commissions",
+        "pre bookings",
+        "gold membership",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "become a better tour guide",
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/blog/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 145,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 812,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 5.6,
+      "headingsOnlyInWordPress": [
+        "hello world!",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/building-a-property-in-thailand/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1969,
+        "images": 5,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 3,
+        "failedRequests": 2
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 847,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.43,
+      "headingsOnlyInWordPress": [
+        "building a property in thailand",
+        "plan a project with us?",
+        "architecture and design",
+        "planning",
+        "project management",
+        "“one of the finest design construction agencies i have ever worked with”",
+        "recent projects",
+        "hello world!",
+        "connect with us",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/building-contractors/",
+      "priority": "low",
+      "state": "clean",
+      "live": null,
+      "staging": {
+        "status": 200,
+        "height": 2005,
+        "textLength": 922,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": null,
+      "headingsOnlyInWordPress": [],
+      "headingsOnlyInAstro": [
+        "building contractors",
+        "prepare the project before choosing a contractor",
+        "create a clear scope",
+        "compare suitable providers",
+        "use independent checks",
+        "agree milestones",
+        "need a trusted local contact?",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "Astro-only route"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/business-directory-2/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 719,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 4,
+        "failedRequests": 3
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 854,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.19,
+      "headingsOnlyInWordPress": [
+        "business directory",
+        "we have over over 500 businesses in our network",
+        "services",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "local business network",
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/business-directory/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 785,
+        "images": 6,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 5,
+        "failedRequests": 4
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 850,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.08,
+      "headingsOnlyInWordPress": [
+        "we have over over 500 businesses in our network",
+        "services",
+        "airport transfers",
+        "lessons",
+        "products",
+        "“you only live once, lick the bowl”",
+        "categories",
+        "cookies",
+        "bread",
+        "cakes",
+        "donuts",
+        "latest recipes",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/business-networking/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1906,
+        "images": 5,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 1,
+        "consoleErrors": 3,
+        "failedRequests": 2
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 849,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.45,
+      "headingsOnlyInWordPress": [
+        "plan a project with us?",
+        "architecture and design",
+        "planning",
+        "project management",
+        "“one of the finest design construction agencies i have ever worked with”",
+        "recent projects",
+        "hello world!",
+        "connect with us",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/business-set-ups/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1900,
+        "images": 5,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 3,
+        "failedRequests": 2
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 862,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.45,
+      "headingsOnlyInWordPress": [
+        "business set up",
+        "plan a project with us?",
+        "architecture and design",
+        "planning",
+        "project management",
+        "“one of the finest design construction agencies i have ever worked with”",
+        "recent projects",
+        "hello world!",
+        "connect with us",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/buyers-agent/",
+      "priority": "low",
+      "state": "clean",
+      "live": null,
+      "staging": {
+        "status": 200,
+        "height": 2005,
+        "textLength": 925,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": null,
+      "headingsOnlyInWordPress": [],
+      "headingsOnlyInAstro": [
+        "buyers agent",
+        "represent your own interests clearly",
+        "define the brief",
+        "shortlist efficiently",
+        "verify independently",
+        "plan the next steps",
+        "need a trusted local contact?",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "Astro-only route"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/car-bike-hire/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1886,
+        "images": 5,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 1,
+        "consoleErrors": 3,
+        "failedRequests": 2
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 849,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.45,
+      "headingsOnlyInWordPress": [
+        "plan a project with us?",
+        "architecture and design",
+        "planning",
+        "project management",
+        "“one of the finest design construction agencies i have ever worked with”",
+        "recent projects",
+        "hello world!",
+        "connect with us",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/carbikehire/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 15,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 849,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 56.6,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/charities/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 11,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 858,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 78,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/charity-work/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 16,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 863,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 53.94,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/charity/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 0,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 854,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": null,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "charity",
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/chiang-mai-charity-programs-2/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1950,
+        "images": 12,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 6730,
+        "textLength": 1922,
+        "images": 12,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.99,
+      "headingsOnlyInWordPress": [
+        "children's water safety and drowning prevention",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "children’s water safety and drowning prevention",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/chiang-mai-charity-programs/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1922,
+        "images": 12,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 6730,
+        "textLength": 1922,
+        "images": 12,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1,
+      "headingsOnlyInWordPress": [
+        "children's water safety and drowning prevention",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "children’s water safety and drowning prevention",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/chiang-mai-community-events/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 231,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1020,
+        "textLength": 241,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.04,
+      "headingsOnlyInWordPress": [
+        "socialising in chiang mai",
+        "upcoming events",
+        "chiang mai community events",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "chiang mai community calendar",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/co-working-spaces/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1902,
+        "images": 5,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 1,
+        "consoleErrors": 3,
+        "failedRequests": 3
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 849,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.45,
+      "headingsOnlyInWordPress": [
+        "plan a project with us?",
+        "architecture and design",
+        "planning",
+        "project management",
+        "“one of the finest design construction agencies i have ever worked with”",
+        "recent projects",
+        "hello world!",
+        "connect with us",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/community-events/",
+      "priority": "low",
+      "state": "resolved",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 147,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 3
+      },
+      "staging": {
+        "status": 200,
+        "height": 2844,
+        "textLength": 1366,
+        "images": 8,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 9.29,
+      "headingsOnlyInWordPress": [
+        "socialising in samui",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "koh samui community events",
+        "regular community connections",
+        "ai community meetups",
+        "friday business lunch",
+        "beach craft market",
+        "pub quiz",
+        "beach walks & gatherings",
+        "full moon party trips",
+        "have a community event coming up?",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [
+        "mat-mvp",
+        "mat-recovered"
+      ],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": "Resolved in Astro: keep the clean events hub and the 22 published event detail routes."
+    },
+    {
+      "route": "/contact-2/",
+      "priority": "low",
+      "state": "resolved",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 197,
+        "images": 4,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1787,
+        "textLength": 742,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 3.77,
+      "headingsOnlyInWordPress": [
+        "inspiro",
+        "address",
+        "email",
+        "phone",
+        "our locations",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "contact first contact thailand",
+        "how can we help?",
+        "explore"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": "Resolved in Astro: the legacy URL now reuses the canonical Contact page component."
+    },
+    {
+      "route": "/contact-3/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 236,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 4,
+        "failedRequests": 3
+      },
+      "staging": {
+        "status": 200,
+        "height": 1787,
+        "textLength": 742,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 3.14,
+      "headingsOnlyInWordPress": [
+        "contact us",
+        "we're ready to connect you with the best businesses on the islands",
+        "send us a message",
+        "contact information",
+        "quick links"
+      ],
+      "headingsOnlyInAstro": [
+        "contact first contact thailand",
+        "how can we help?",
+        "explore"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/contact-link/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 205,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1787,
+        "textLength": 742,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 3.62,
+      "headingsOnlyInWordPress": [
+        "contact us",
+        "we would love to help. feel free to reach out!",
+        "prefer a personal touch? contact us and we will get in touch!",
+        "give us a shout and lets have a chat.",
+        "quick links"
+      ],
+      "headingsOnlyInAstro": [
+        "contact first contact thailand",
+        "how can we help?",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [
+        "mat-mvp",
+        "mat-recovered"
+      ],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/crypto-education-business/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1922,
+        "images": 5,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 1,
+        "consoleErrors": 3,
+        "failedRequests": 2
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 865,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.45,
+      "headingsOnlyInWordPress": [
+        "plan a project with us?",
+        "architecture and design",
+        "planning",
+        "project management",
+        "“one of the finest design construction agencies i have ever worked with”",
+        "recent projects",
+        "hello world!",
+        "connect with us",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/day-trips/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1886,
+        "images": 5,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 1,
+        "consoleErrors": 3,
+        "failedRequests": 2
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 839,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.44,
+      "headingsOnlyInWordPress": [
+        "plan a project with us?",
+        "architecture and design",
+        "planning",
+        "project management",
+        "“one of the finest design construction agencies i have ever worked with”",
+        "recent projects",
+        "hello world!",
+        "connect with us",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/event/ai-community-meeting-nature-bar-maenam-weekly-2026-07-22/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 914,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 626,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.68,
+      "headingsOnlyInWordPress": [
+        "details",
+        "venue",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/ai-community-meeting-nature-bar-maenam-weekly-2026-07-29/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 914,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 626,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.68,
+      "headingsOnlyInWordPress": [
+        "details",
+        "venue",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/ai-community-meeting-nature-bar-maenam-weekly-2026-08-05/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 916,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 628,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.69,
+      "headingsOnlyInWordPress": [
+        "details",
+        "venue",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/ai-community-meeting-nature-bar-maenam-weekly-2026-08-12/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 918,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 630,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.69,
+      "headingsOnlyInWordPress": [
+        "details",
+        "venue",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/ai-community-meeting-nature-bar-maenam-weekly-2026-08-19/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 918,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 630,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.69,
+      "headingsOnlyInWordPress": [
+        "details",
+        "venue",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/beach-walk-koh-samui-weekly-2026-07-18/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 883,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 607,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.69,
+      "headingsOnlyInWordPress": [
+        "details",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/beach-walk-koh-samui-weekly-2026-07-25/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 883,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 607,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.69,
+      "headingsOnlyInWordPress": [
+        "details",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/event/beach-walk-koh-samui-weekly-2026-08-01/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 885,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 609,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.69,
+      "headingsOnlyInWordPress": [
+        "details",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/beach-walk-koh-samui-weekly-2026-08-08/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 885,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 609,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.69,
+      "headingsOnlyInWordPress": [
+        "details",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/beach-walk-koh-samui-weekly-2026-08-15/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 887,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 611,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.69,
+      "headingsOnlyInWordPress": [
+        "details",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/beach-walk-koh-samui-weekly-2026-08-22/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 907,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 611,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.67,
+      "headingsOnlyInWordPress": [
+        "details",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/business-networking-lunch-nature-bar-maenam-weekly-2026-07-24/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 925,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 629,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.68,
+      "headingsOnlyInWordPress": [
+        "details",
+        "venue",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/business-networking-lunch-nature-bar-maenam-weekly-2026-07-31/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 925,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 629,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.68,
+      "headingsOnlyInWordPress": [
+        "details",
+        "venue",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/business-networking-lunch-nature-bar-maenam-weekly-2026-08-07/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 927,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 8
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 631,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.68,
+      "headingsOnlyInWordPress": [
+        "details",
+        "venue",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/event/business-networking-lunch-nature-bar-maenam-weekly-2026-08-14/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 929,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 633,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.68,
+      "headingsOnlyInWordPress": [
+        "details",
+        "venue",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/business-networking-lunch-nature-bar-maenam-weekly-2026-08-21/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 929,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 633,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.68,
+      "headingsOnlyInWordPress": [
+        "details",
+        "venue",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/hua-hin-charity-golf-classic-2026/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 959,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1723,
+        "textLength": 634,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.66,
+      "headingsOnlyInWordPress": [
+        "details",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/pub-quiz-nature-bar-maenam-beach-weekly-2026-07-23/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 917,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 602,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.66,
+      "headingsOnlyInWordPress": [
+        "details",
+        "venue",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/pub-quiz-nature-bar-maenam-beach-weekly-2026-07-30/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 917,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 602,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.66,
+      "headingsOnlyInWordPress": [
+        "details",
+        "venue",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/pub-quiz-nature-bar-maenam-beach-weekly-2026-08-06/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 919,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 604,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.66,
+      "headingsOnlyInWordPress": [
+        "details",
+        "venue",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/event/pub-quiz-nature-bar-maenam-beach-weekly-2026-08-13/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 921,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 606,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.66,
+      "headingsOnlyInWordPress": [
+        "details",
+        "venue",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/event/pub-quiz-nature-bar-maenam-beach-weekly-2026-08-20/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 921,
+        "images": 3,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1644,
+        "textLength": 606,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.66,
+      "headingsOnlyInWordPress": [
+        "details",
+        "venue",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "about this event",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/family-activities/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1243,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 14,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 838,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.67,
+      "headingsOnlyInWordPress": [
+        "thailand’s most unique wildlife experience",
+        "“there is no sincerer love than the love of food”",
+        "so how does it work?",
+        "latest news from our blog",
+        "hello world!",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/fitness/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 7,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 832,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 118.86,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/food-drink-deals/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 931,
+        "images": 6,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 4,
+        "failedRequests": 3
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 859,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.92,
+      "headingsOnlyInWordPress": [
+        "beautifully baked",
+        "\"if it's beautifully baked and deliciously decadent, we will teach you how\"",
+        "services",
+        "\"you only live once, lick the bowl\"",
+        "categories",
+        "cookies",
+        "bread",
+        "cakes",
+        "donuts",
+        "latest recipes",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/food-drinks/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 13,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 854,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 65.69,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/graphic-design/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 14,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 852,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 60.86,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/health-fitness/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 766,
+        "images": 5,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 2380,
+        "textLength": 1077,
+        "images": 6,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.41,
+      "headingsOnlyInWordPress": [
+        "womens health & wellness",
+        "mens health & wellness",
+        "personal products",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "health and community belong together",
+        "beach fitness meetups",
+        "women's health & wellness",
+        "men's health & wellness",
+        "personal health products",
+        "ready to get active or find support?",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/health-wellbeing/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 18,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 842,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 46.78,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/hire-group/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 10,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 840,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 84,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/hire/",
+      "priority": "low",
+      "state": "resolved",
+      "live": {
+        "status": 200,
+        "height": 1662,
+        "textLength": 627,
+        "images": 5,
+        "missingImages": 3,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 2298,
+        "textLength": 901,
+        "images": 5,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.44,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "simple, local and reliable",
+        "local services",
+        "need someone dependable?",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [
+        "mat-mvp",
+        "mat-recovered"
+      ],
+      "issues": [
+        "3 missing WordPress image(s)",
+        "WordPress runtime/network errors"
+      ],
+      "decision": "Keep Astro; it removes the three broken images present in WordPress."
+    },
+    {
+      "route": "/homepage/",
+      "priority": "low",
+      "state": "clean",
+      "live": null,
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 820,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": null,
+      "headingsOnlyInWordPress": [],
+      "headingsOnlyInAstro": [
+        "homepage",
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "Astro-only route"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/hua-hin-charity-programs/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1630,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 2046,
+        "textLength": 1836,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.13,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/hua-hin-community-events/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 120,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 9
+      },
+      "staging": {
+        "status": 200,
+        "height": 1675,
+        "textLength": 841,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 7.01,
+      "headingsOnlyInWordPress": [
+        "socialising in hua hin",
+        "upcoming events",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "hua hin community calendar",
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/insurance/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 9,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 827,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 91.89,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/jetski-hire/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 11,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 821,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 74.64,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/koh-phangan-charity-programs/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 120,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 934,
+        "textLength": 120,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/koh-phangan-community-events/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 0,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1020,
+        "textLength": 243,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": null,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "koh phangan community calendar",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/koh-phangan/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 11,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 839,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 76.27,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/koh-samui-charity-programs/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1067,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 2340,
+        "textLength": 1467,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.37,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/koh-samui-surf-lifesaving-club/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 813,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1478,
+        "textLength": 813,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/koh-samui/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 9,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 18
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 835,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 92.78,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/krabi-charity-programs/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 114,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 900,
+        "textLength": 114,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/krabi-community-events/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 785,
+        "images": 5,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1517,
+        "textLength": 815,
+        "images": 5,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.04,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/krabi-property-sales/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1512,
+        "images": 11,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 2
+      },
+      "staging": {
+        "status": 200,
+        "height": 6583,
+        "textLength": 1482,
+        "images": 11,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.98,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/learn-thai/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 27,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 860,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 31.85,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/legal-advice/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 12,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 840,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 70,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/local-business-network-clean/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 922,
+        "images": 8,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 4180,
+        "textLength": 899,
+        "images": 8,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.98,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/local-business-network/",
+      "priority": "low",
+      "state": "resolved",
+      "live": {
+        "status": 200,
+        "height": 20627,
+        "textLength": 2717,
+        "images": 18,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 3729,
+        "textLength": 2564,
+        "images": 18,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.94,
+      "headingsOnlyInWordPress": [
+        "co working spaces",
+        "water - drink healthy",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "find the right local partner faster",
+        "co-working spaces",
+        "healthy drinking water",
+        "need a provider you can trust?",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [
+        "mat-mvp",
+        "mat-recovered"
+      ],
+      "issues": [
+        "WordPress render is structurally broken",
+        "WordPress runtime/network errors"
+      ],
+      "decision": "Keep the clean 16-card Astro implementation; the current WordPress render is broken."
+    },
+    {
+      "route": "/local-deals/",
+      "priority": "low",
+      "state": "resolved",
+      "live": {
+        "status": 200,
+        "height": 1738,
+        "textLength": 504,
+        "images": 5,
+        "missingImages": 0,
+        "overflowItems": 6,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 2322,
+        "textLength": 908,
+        "images": 5,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.8,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "better local value",
+        "looking for a local recommendation?",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [
+        "mat-mvp",
+        "mat-recovered"
+      ],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": "Keep Astro and validate all deal destinations and CTA labels."
+    },
+    {
+      "route": "/login/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 59,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 920,
+        "textLength": 59,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/marketing/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 9,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 838,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 93.11,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/mens-health-wellness/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 22,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 829,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 37.68,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/move-to-thailand-guide/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 1609,
+        "textLength": 1227,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1865,
+        "textLength": 1340,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.09,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "how first contact can help",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/moving-to-bangkok/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 2270,
+        "textLength": 1849,
+        "images": 8,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 2410,
+        "textLength": 1815,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.98,
+      "headingsOnlyInWordPress": [
+        "emergency & local services checklist",
+        "how first contact can help",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "prepare for the move, then build local connections",
+        "know local and emergency services",
+        "find your local bangkok connections",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/moving-to-chiang-mai/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 2342,
+        "textLength": 1920,
+        "images": 8,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 2
+      },
+      "staging": {
+        "status": 200,
+        "height": 2410,
+        "textLength": 1833,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.95,
+      "headingsOnlyInWordPress": [
+        "emergency & local services checklist",
+        "how first contact can help",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "prepare for the move, then build local connections",
+        "know local and emergency services",
+        "find your local chiang mai connections",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/moving-to-hua-hin/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 2342,
+        "textLength": 1911,
+        "images": 8,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 2
+      },
+      "staging": {
+        "status": 200,
+        "height": 2410,
+        "textLength": 1815,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.95,
+      "headingsOnlyInWordPress": [
+        "emergency & local services checklist",
+        "how first contact can help",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "prepare for the move, then build local connections",
+        "know local and emergency services",
+        "find your local hua hin connections",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/moving-to-pattaya/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 2342,
+        "textLength": 1911,
+        "images": 8,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 2
+      },
+      "staging": {
+        "status": 200,
+        "height": 2410,
+        "textLength": 1815,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.95,
+      "headingsOnlyInWordPress": [
+        "emergency & local services checklist",
+        "how first contact can help",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "prepare for the move, then build local connections",
+        "know local and emergency services",
+        "find your local pattaya connections",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/moving-to-phuket/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 2342,
+        "textLength": 1908,
+        "images": 8,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 2
+      },
+      "staging": {
+        "status": 200,
+        "height": 2410,
+        "textLength": 1809,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.95,
+      "headingsOnlyInWordPress": [
+        "emergency & local services checklist",
+        "how first contact can help",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "prepare for the move, then build local connections",
+        "know local and emergency services",
+        "find your local phuket connections",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/moving-to-samui/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 2127,
+        "textLength": 1754,
+        "images": 8,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1974,
+        "textLength": 1824,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.04,
+      "headingsOnlyInWordPress": [
+        "moving to thailand",
+        "emergency & local services checklist",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "moving to samui",
+        "understand local rules",
+        "how first contact can help",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/nannies/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 14,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 819,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 58.5,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/networking/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 10,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 842,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 84.2,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/online-jobs/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 11,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 832,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 75.64,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/other-tours/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 479,
+        "images": 9,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 4967,
+        "textLength": 491,
+        "images": 9,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.03,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "other tours",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/pages/",
+      "priority": "low",
+      "state": "clean",
+      "live": null,
+      "staging": {
+        "status": 200,
+        "height": 3971,
+        "textLength": 3773,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": null,
+      "headingsOnlyInWordPress": [],
+      "headingsOnlyInAstro": [
+        "site index",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "Astro-only route"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/paint-night-event-registration-page/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 304,
+        "images": 6,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 3,
+        "failedRequests": 2
+      },
+      "staging": {
+        "status": 200,
+        "height": 2615,
+        "textLength": 347,
+        "images": 6,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.14,
+      "headingsOnlyInWordPress": [
+        "paint night event registration page",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/password-recovery/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 30,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 11
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 838,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 27.93,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/past-events/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 1015,
+        "images": 15,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 5108,
+        "textLength": 1816,
+        "images": 15,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.79,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "previous first contact events",
+        "beach craft market",
+        "beach party",
+        "business networking lunch",
+        "ai community meeting",
+        "paint & sip",
+        "koh samui anzac day",
+        "songkran family beach party",
+        "full moon party vip trip",
+        "beach day party",
+        "nature bar day party",
+        "speed dating night",
+        "samui's got no talent",
+        "pub quiz night",
+        "looking for the next event?",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/pattaya-charity-programs/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 2593,
+        "textLength": 940,
+        "images": 9,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 2205,
+        "textLength": 1108,
+        "images": 9,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.18,
+      "headingsOnlyInWordPress": [
+        "save a childs eyes",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "save a child's eyes",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/pattaya-community-events/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 321,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 837,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 2.61,
+      "headingsOnlyInWordPress": [
+        "socialising in pattaya",
+        "upcoming events",
+        "pattaya pride",
+        "tomorrowland pattaya",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "pattaya community events",
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/phuket-charity-programs/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 905,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1539,
+        "textLength": 996,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.1,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/phuket-community-events/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 580,
+        "images": 6,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 835,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.44,
+      "headingsOnlyInWordPress": [
+        "socialising in phuket",
+        "upcoming events",
+        "rafael cerato at illuzion phuket",
+        "ministry of sound at illuzion phuket",
+        "phuket vegetarian festival",
+        "snowbirds charity golf classic",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "phuket community events",
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/property-clean/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 189,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 18
+      },
+      "staging": {
+        "status": 200,
+        "height": 919,
+        "textLength": 250,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.32,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/property-management/",
+      "priority": "low",
+      "state": "clean",
+      "live": null,
+      "staging": {
+        "status": 200,
+        "height": 2005,
+        "textLength": 917,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": null,
+      "headingsOnlyInWordPress": [],
+      "headingsOnlyInAstro": [
+        "property management",
+        "support that fits the property",
+        "owner requirements",
+        "routine maintenance",
+        "guest and tenant support",
+        "clear communication",
+        "need a trusted local contact?",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "Astro-only route"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/property-sales/",
+      "priority": "low",
+      "state": "clean",
+      "live": null,
+      "staging": {
+        "status": 200,
+        "height": 1981,
+        "textLength": 945,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": null,
+      "headingsOnlyInWordPress": [],
+      "headingsOnlyInAstro": [
+        "property sales",
+        "a clearer way to begin your search",
+        "define the location",
+        "meet suitable local contacts",
+        "check before committing",
+        "stay connected locally",
+        "need a trusted local contact?",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "Astro-only route"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/property/",
+      "priority": "low",
+      "state": "resolved",
+      "live": {
+        "status": 200,
+        "height": 2468,
+        "textLength": 2351,
+        "images": 7,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 2353,
+        "textLength": 1102,
+        "images": 7,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.47,
+      "headingsOnlyInWordPress": [
+        "how to buy property in thailand",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "clear property pathways",
+        "buying property in thailand",
+        "looking at property in thailand?",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [
+        "mat-mvp",
+        "mat-recovered"
+      ],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": "Resolved in Astro: the legacy URL now uses the complete five-path property hub."
+    },
+    {
+      "route": "/real-estate/",
+      "priority": "low",
+      "state": "resolved",
+      "live": {
+        "status": 200,
+        "height": 2477,
+        "textLength": 2351,
+        "images": 7,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 2353,
+        "textLength": 1102,
+        "images": 7,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.47,
+      "headingsOnlyInWordPress": [
+        "how to buy property in thailand",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "clear property pathways",
+        "buying property in thailand",
+        "looking at property in thailand?",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [
+        "mat-mvp",
+        "mat-recovered"
+      ],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": "Keep the complete five-path property hub and align the legacy /property/ URL with it."
+    },
+    {
+      "route": "/remote-online-work-opportunities/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 32,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 853,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 26.66,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/restaurant-deals/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 16,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 829,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 51.81,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/sample-page/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 863,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 826,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.96,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/social-events-2/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 77,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 5,
+        "failedRequests": 4
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 813,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 10.56,
+      "headingsOnlyInWordPress": [
+        "social events",
+        "koh samui & koh phangan",
+        "connect with the community",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "community events",
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/social-events/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 13,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 4
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 810,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 62.31,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/social-media-support/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 21,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 844,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 40.19,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/solar/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 5,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 821,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 164.2,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/submissions/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 118,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 947,
+        "textLength": 118,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/test-classroom/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 14,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 832,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 59.43,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/think-pink-samui/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 781,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1436,
+        "textLength": 781,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/tours-2/",
+      "priority": "low",
+      "state": "resolved",
+      "live": {
+        "status": 200,
+        "height": 2113,
+        "textLength": 953,
+        "images": 6,
+        "missingImages": 0,
+        "overflowItems": 6,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 2404,
+        "textLength": 982,
+        "images": 6,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.03,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "local knowledge without the guesswork",
+        "want a tour arranged around you?",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [
+        "mat-mvp",
+        "mat-recovered"
+      ],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": "Keep Astro and validate the three tour pathways and responsive CTA layout."
+    },
+    {
+      "route": "/tours-clean/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 546,
+        "images": 6,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 1,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 3341,
+        "textLength": 540,
+        "images": 6,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.99,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/tours/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 962,
+        "images": 6,
+        "missingImages": 0,
+        "overflowItems": 6,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 19
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 814,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 0.85,
+      "headingsOnlyInWordPress": [
+        "customise your own day trip",
+        "full moon parties",
+        "other tours",
+        "become a better tour guide",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    },
+    {
+      "route": "/vehicle-rental/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 14,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 843,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 60.21,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/visas/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 5,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 815,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 163,
+      "headingsOnlyInWordPress": [
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/water/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 21,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 837,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 39.86,
+      "headingsOnlyInWordPress": [
+        "water – drink healthy",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "water drink healthy",
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [],
+      "decision": ""
+    },
+    {
+      "route": "/welcome-to-samui/",
+      "priority": "low",
+      "state": "clean",
+      "live": {
+        "status": 200,
+        "height": 900,
+        "textLength": 831,
+        "images": 5,
+        "missingImages": 0,
+        "overflowItems": 13,
+        "duplicateSignals": 0,
+        "consoleErrors": 2,
+        "failedRequests": 1
+      },
+      "staging": {
+        "status": 200,
+        "height": 1597,
+        "textLength": 850,
+        "images": 2,
+        "missingImages": 0,
+        "overflowItems": 0,
+        "duplicateSignals": 0,
+        "consoleErrors": 0,
+        "failedRequests": 0
+      },
+      "contentRatio": 1.02,
+      "headingsOnlyInWordPress": [
+        "plan a project with us?",
+        "architecture and design",
+        "planning",
+        "project management",
+        "quick links",
+        "contact us"
+      ],
+      "headingsOnlyInAstro": [
+        "practical help from trusted local contacts",
+        "share what you need",
+        "get a local introduction",
+        "support local communities",
+        "keep the process simple",
+        "explore",
+        "contact"
+      ],
+      "recoveredHistorySources": [],
+      "issues": [
+        "WordPress runtime/network errors"
+      ],
+      "decision": ""
+    }
+  ]
+}

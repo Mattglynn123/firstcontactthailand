@@ -1,7 +1,7 @@
 # Design and Technical QA
 
 - Result: **PASS**
-- Routes checked: **106**
+- Routes checked: **128**
 - Responsive screenshots: **55**
 - Broken internal links: **0**
 - Route failures: **0**

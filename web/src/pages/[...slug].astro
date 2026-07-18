@@ -1,18 +1,24 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import MoveGuidePage from '../components/MoveGuidePage.astro';
+import PageHero from '../components/PageHero.astro';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages', ({ data }) => !data.draft);
   const explicitRoutes = new Set([
     'about',
+    'about-us',
     'community-events',
+    'contact-2',
+    'contact-3',
     'contact-link',
     'health-fitness',
     'hire',
     'local-business-network',
     'local-deals',
     'past-events',
+    'property',
     'real-estate',
     'tours-2',
   ]);
@@ -26,8 +32,23 @@ export async function getStaticPaths() {
 const { page } = Astro.props;
 const { Content } = await render(page);
 const rawBody = (page.body ?? '').trim();
-const isLegacyPlaceholder = /layouts\.siteorigin|Lorem ipsum|John Doe|\[\]\(#\)|live-website\.com|wp-content|wordpress\.com|images\.unsplash\.com|<iframe|u003ciframe|Welcome to WordPress/i.test(rawBody);
-const usesStandardFallback = rawBody.length < 80 || isLegacyPlaceholder;
+const isLegacyPlaceholder = /layouts\.siteorigin|Lorem ipsum|John Doe|\[\]\(#\)|live-website\.com|wp-content|wordpress\.com|<iframe|u003ciframe|Welcome to WordPress/i.test(rawBody);
+const isRegionalPlaceholder = new Set([
+  'moving-to-bangkok',
+  'moving-to-chiang-mai',
+  'moving-to-hua-hin',
+  'moving-to-pattaya',
+  'moving-to-phuket',
+]).has(page.data.slug);
+const moveGuideCityBySlug = {
+  'moving-to-bangkok': 'Bangkok',
+  'moving-to-chiang-mai': 'Chiang Mai',
+  'moving-to-hua-hin': 'Hua Hin',
+  'moving-to-pattaya': 'Pattaya',
+  'moving-to-phuket': 'Phuket',
+};
+const moveGuideCity = moveGuideCityBySlug[page.data.slug];
+const usesStandardFallback = rawBody.length < 80 || isLegacyPlaceholder || isRegionalPlaceholder;
 const contentHasH1 = /^#\s+/m.test(rawBody);
 const cleanTitle = page.data.title
   .replace(/&#038;/g, '&')
@@ -65,6 +86,11 @@ const fallbackCopy = {
   'learn-thai': 'Connect with local language learning, Thai lessons, and English teaching support.',
   'legal-advice': 'Connect with trusted local legal support and practical guidance in Thailand.',
   'marketing': 'Connect with trusted marketing, social media, and business promotion support.',
+  'moving-to-bangkok': 'Start your move to Bangkok with practical local information and trusted introductions for the services you need.',
+  'moving-to-chiang-mai': 'Start your move to Chiang Mai with practical local information and trusted introductions for the services you need.',
+  'moving-to-hua-hin': 'Start your move to Hua Hin with practical local information and trusted introductions for the services you need.',
+  'moving-to-pattaya': 'Start your move to Pattaya with practical local information and trusted introductions for the services you need.',
+  'moving-to-phuket': 'Start your move to Phuket with practical local information and trusted introductions for the services you need.',
   'mens-health-wellness': 'Find local men\'s health, wellness, and support options.',
   'nannies': 'Find trusted local nanny and family support services.',
   'networking': 'Meet useful local contacts and community members through First Contact Thailand.',
@@ -81,6 +107,17 @@ const fallbackCopy = {
   'welcome-to-samui': 'Start with practical local contacts, services, and community support on Koh Samui.',
 };
 const fallbackDescription = fallbackCopy[page.data.slug] ?? `Connect with trusted local support for ${cleanTitle.toLowerCase()} in Thailand.`;
+const fallbackHeroImage = (() => {
+  const slug = page.data.slug;
+  if (/property|building|buyers/.test(slug)) return '/assets/fct/property-home.jpg';
+  if (/tour|trip|jet|family/.test(slug)) return '/assets/fct/tours-day-trip.jpg';
+  if (/hire|rental|transfer|car|bike|nann/.test(slug)) return '/assets/fct/hire-bike.jpg';
+  if (/deal|food|drink|bar|restaurant/.test(slug)) return '/assets/fct/deals-drinks.jpg';
+  if (/health|fitness|wellness|water/.test(slug)) return '/assets/fct/gym-scaled.jpg';
+  if (/event|social/.test(slug)) return '/assets/fct/event-business-lunch.png';
+  if (/charit|rotary|children|pink/.test(slug)) return '/assets/fct/hero-community.jpg';
+  return '/assets/fct/hero-network.jpg';
+})();
 const eventPageSlugs = new Set([
   'bangkok-community-events',
   'chiang-mai-community-events',
@@ -98,31 +135,68 @@ const isEventPage = eventPageSlugs.has(page.data.slug);
 const hasLocalDealsBeachCta = page.data.slug === 'local-deals';
 ---
 
-<Layout title={`${page.data.title} — First Contact Thailand`}>
-  <article class={`content-page ${isEventPage ? 'event-page' : ''} prose prose-slate mx-auto max-w-3xl py-8`}>
-    {(usesStandardFallback || !contentHasH1) && <h1>{page.data.title}</h1>}
-    {usesStandardFallback ? (
-      <>
-        <p>{fallbackDescription}</p>
-        <h2>Trusted Local Support</h2>
-        <p>First Contact Thailand helps connect locals, expats, and visitors with practical support, fair local contacts, and community recommendations.</p>
-        <h2>How We Can Help</h2>
-        <p>Tell us what you need and we will point you towards suitable local partners, events, services, or community contacts.</p>
-        {!isEventPage && <p><a href="/contact-link/">Contact First Contact Thailand</a></p>}
-      </>
-    ) : (
+<Layout title={`${cleanTitle} — First Contact Thailand`} description={fallbackDescription} image={fallbackHeroImage}>
+  {moveGuideCity ? (
+    <MoveGuidePage city={moveGuideCity} title={cleanTitle} text={fallbackDescription} image={fallbackHeroImage} />
+  ) : usesStandardFallback ? (
+    <>
+      <PageHero
+        eyebrow={isEventPage ? 'Community events' : 'Trusted local connections'}
+        title={cleanTitle}
+        text={fallbackDescription}
+        image={fallbackHeroImage}
+        primaryLabel={isEventPage ? 'Tell us about an event' : 'Ask for a local introduction'}
+        primaryHref="/contact-link/"
+        secondaryLabel={isEventPage ? 'See previous events' : 'Explore the network'}
+        secondaryHref={isEventPage ? '/past-events/' : '/local-business-network/'}
+      />
+      <section class="section">
+        <div class="section__inner support-layout">
+          <div class="support-layout__intro">
+            <p class="section-kicker">First Contact Thailand</p>
+            <h2>Practical help from trusted local contacts</h2>
+            <p>Tell us what you need and where you are. We will help you find a suitable local route without outdated templates, duplicate sections or unreliable listings.</p>
+          </div>
+          <div class="support-points">
+            <article>
+              <span>01</span>
+              <h3>Share what you need</h3>
+              <p>Give us the service, location and timing so we can understand the request clearly.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Get a local introduction</h3>
+              <p>We point you towards a relevant provider, event, service or community contact.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Support local communities</h3>
+              <p>First Contact connections are built around fair local service and stronger communities.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Keep the process simple</h3>
+              <p>Use one clear contact point instead of searching through outdated or duplicated pages.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </>
+  ) : (
+    <article class={`content-page ${isEventPage ? 'event-page' : ''} prose prose-slate mx-auto max-w-3xl py-8`}>
+      {!contentHasH1 && <h1>{cleanTitle}</h1>}
       <Content />
-    )}
-    {hasLocalDealsBeachCta && (
-      <div class="double-cta beach-only">
-        <a class="beach-cta" href="/contact-link/">Tell us about a local deal</a>
-      </div>
-    )}
-    {isEventPage && (
-      <div class="double-cta">
-        <a href="/past-events/">Check out our previous events</a>
-        <a class="beach-cta" href="/contact-link/">Let us know if you have a community event coming up</a>
-      </div>
-    )}
-  </article>
+      {hasLocalDealsBeachCta && (
+        <div class="double-cta beach-only">
+          <a class="beach-cta" href="/contact-link/">Tell us about a local deal</a>
+        </div>
+      )}
+      {isEventPage && (
+        <div class="double-cta">
+          <a href="/past-events/">Check out our previous events</a>
+          <a class="beach-cta" href="/contact-link/">Let us know if you have a community event coming up</a>
+        </div>
+      )}
+    </article>
+  )}
 </Layout>

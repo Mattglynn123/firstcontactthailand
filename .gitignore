@@ -49,8 +49,16 @@ build/
 
 # Generated visual QA artifacts (the report stays versioned)
 /docs/qa/screenshots/
+/docs/conformity/*
+!/docs/conformity/matrix-corrected.json
+!/docs/conformity/matrix-corrected.md
+!/docs/conformity/server-corrections.md
+/web/docs/
 /web/docs/qa-current/
 /docs/design-reference/asset-bundles.json
+
+# Local preview logs
+/web/preview-*.log
 
 # OS/editor noise
 .DS_Store

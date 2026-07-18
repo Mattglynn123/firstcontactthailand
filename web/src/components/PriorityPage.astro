@@ -31,7 +31,7 @@ const { page } = Astro.props;
 
 <section class="section section--soft">
   <div class="section__inner">
-    <div class={`service-grid service-grid--${Math.min(page.cards.length, 4)}`}>
+    <div class={`service-grid service-grid--${Math.min(page.cards.length, 5)}`}>
       {page.cards.map((card) => <ServiceCard card={card} />)}
     </div>
   </div>

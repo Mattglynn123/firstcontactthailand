@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+import { communityEvents, type CommunityEvent } from '../../data/events';
+
+export function getStaticPaths() {
+  return communityEvents.map((event) => ({
+    params: { slug: event.slug },
+    props: { event },
+  }));
+}
+
+interface Props {
+  event: CommunityEvent;
+}
+
+const { event } = Astro.props;
+const dateFormatter = new Intl.DateTimeFormat('en-GB', {
+  weekday: 'long',
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'Asia/Bangkok',
+});
+const timeFormatter = new Intl.DateTimeFormat('en-GB', {
+  hour: 'numeric',
+  minute: '2-digit',
+  hour12: true,
+  timeZone: 'Asia/Bangkok',
+});
+const start = new Date(event.start);
+const end = new Date(event.end);
+const dateLabel = dateFormatter.format(start);
+const timeLabel = event.allDay ? 'All day' : `${timeFormatter.format(start)} - ${timeFormatter.format(end)}`;
+const enquiryUrl = `/contact-link/?topic=${encodeURIComponent(`${event.title} - ${dateLabel}`)}`;
+---
+
+<Layout title={`${event.title} | First Contact Thailand`} description={event.excerpt} image={event.image}>
+  <PageHero
+    eyebrow={`Community event | ${dateLabel}`}
+    title={event.title}
+    text={event.excerpt}
+    image={event.image}
+    primaryLabel="Ask about this event"
+    primaryHref={enquiryUrl}
+    secondaryLabel="All community events"
+    secondaryHref="/community-events/"
+  />
+
+  <section class="section event-detail">
+    <div class="section__inner">
+      <div class="event-facts" aria-label="Event details">
+        <div>
+          <span>Date</span>
+          <strong>{dateLabel}</strong>
+        </div>
+        <div>
+          <span>Time</span>
+          <strong>{timeLabel}</strong>
+        </div>
+        <div>
+          <span>Venue</span>
+          <strong>{event.venue}</strong>
+        </div>
+      </div>
+
+      <div class="event-detail__copy">
+        <p class="section-kicker">First Contact Thailand community</p>
+        <h2>About this event</h2>
+        <p>{event.excerpt}</p>
+        <p>Event details can change. Contact First Contact Thailand before attending if you need confirmation or a local introduction.</p>
+        <div class="button-group">
+          <a class="button button--primary" href={enquiryUrl}>Ask about this event</a>
+          <a class="button button--outline" href="/past-events/">See previous events</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

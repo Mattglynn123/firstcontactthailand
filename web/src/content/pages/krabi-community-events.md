@@ -11,36 +11,32 @@ sourceType: pages
 draft: false
 ---
 
-Socialising in Krabi
+# Krabi Community Events
 
-Check out our community events
+Upcoming public events and community-friendly activities around Krabi, checked from current event listings.
 
-## Upcoming Events
+<section class="service-card-grid" aria-label="Upcoming Krabi events">
+  <article class="service-card">
+    <img src="/assets/fct/krabi-hospital-run.jpg" alt="Runners taking part in an outdoor event" />
+    <span class="service-card__meta">21 June 2026</span>
+    <h2>Krabi Hospital Run 2026</h2>
+    <p>Charity walk and run supporting Krabi Hospital, with 5 km and 10 km categories listed for the 2026 event.</p>
+    <a href="https://www.tourismthailand.org/Events-and-Festivals/krabi-hospital-run-2026">More details</a>
+  </article>
+  <article class="service-card">
+    <img src="/assets/fct/krabi-ngorn-nak-trail.jpg" alt="Mountain trail landscape near Krabi" />
+    <span class="service-card__meta">11-12 July 2026</span>
+    <h2>Ngorn Nak Trail</h2>
+    <p>Trail running from the coast toward Ngorn Nak Hill, with distance options listed from short runs up to longer trail routes.</p>
+    <a href="https://worldsmarathons.com/marathon/ngorn-nak-trail">More details</a>
+  </article>
+  <article class="service-card">
+    <img src="/assets/fct/krabi-bamboo-beach-club.jpg" alt="Live music and community gathering" />
+    <span class="service-card__meta">25 June 2026</span>
+    <h2>BYAS at Bamboo Beach Club</h2>
+    <p>Live music event listed for Bamboo Beach Club in Krabi. Check the event page for ticket and timing updates before travelling.</p>
+    <a href="https://www.bandsintown.com/c/krabi-thailand">More details</a>
+  </article>
+</section>
 
-[20 June 2026
-
-### Krabi Pride 2026
-
-A celebration of diversity in Krabi Town with parade, live performances, music, market, and community activities.
-
-](https://www.amari.com/vogue/happenings)[22-23 June 2026
-
-### ICVMWT 2026 Krabi
-
-International Conference on Vehicular, Mobile and Wearable Technology, bringing together researchers and industry professionals in Krabi.
-
-](https://iserd.co/Conference/23904/ICVMWT/)[11-12 July 2026
-
-### Ngorn Nak Trail 2026
-
-Beach and mountain trail running challenge around Dragon Crest and Khao Ngon Nak.
-
-](https://www.amari.com/vogue/happenings)[11-12 September 2026
-
-### Scenic Half Marathon Krabi 2026
-
-Running weekend around Ao Nang, with beach runs and road races through Krabi coastal scenery.
-
-](https://www.katarabeachclubkrabi.com/post/krabi-marathon-2026)
-
-[Check out our previous events](https://firstcontactthailand.com/past-events/) [let us know if you have a community event coming up](https://firstcontactthailand.com/contact-link/)
+Event details can change, so always check the linked organiser or listing page before making plans.
