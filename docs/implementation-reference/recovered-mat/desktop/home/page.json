@@ -1,0 +1,291 @@
+{
+  "document": {
+    "h": 2882,
+    "w": 1433
+  },
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "FIRST CONTACT THAILAND"
+    },
+    {
+      "tag": "H2",
+      "text": "About Us"
+    },
+    {
+      "tag": "H2",
+      "text": "How It Works"
+    },
+    {
+      "tag": "H2",
+      "text": "FIND LOCAL COMMUNITY & BUSINESS EVENTS HAPPENING WEEKLY"
+    },
+    {
+      "tag": "H2",
+      "text": "A few Testimonials from Our Previous Charity Events"
+    },
+    {
+      "tag": "H2",
+      "text": "About FIRST CONTACT"
+    },
+    {
+      "tag": "H2",
+      "text": "CONTACT US"
+    }
+  ],
+  "images": [
+    {
+      "alt": "First Contact Thailand",
+      "naturalHeight": 0,
+      "naturalWidth": 0,
+      "src": "http://127.0.0.1:4322/assets/media/firstcontactthailand.com/uploads/2025/11/cropped-firstcontact.png"
+    },
+    {
+      "alt": "",
+      "naturalHeight": 0,
+      "naturalWidth": 0,
+      "src": "http://127.0.0.1:4322/assets/media/firstcontactthailand.com/uploads/2025/11/cropped-Hero-Images-copy-scaled-1.jpg"
+    },
+    {
+      "alt": "",
+      "naturalHeight": 0,
+      "naturalWidth": 0,
+      "src": "http://127.0.0.1:4322/assets/media/firstcontactthailand.com/uploads/2025/11/hero6-1024x542.jpg"
+    },
+    {
+      "alt": "",
+      "naturalHeight": 0,
+      "naturalWidth": 0,
+      "src": "http://127.0.0.1:4322/assets/media/firstcontactthailand.com/uploads/2025/12/b94ca528-2a38-4526-8eab-e22f8b46daea.jpg"
+    },
+    {
+      "alt": "",
+      "naturalHeight": 0,
+      "naturalWidth": 0,
+      "src": "http://127.0.0.1:4322/assets/media/firstcontactthailand.com/uploads/2025/12/8b1d32be-1e0e-4506-b3ec-c8cf96fb9cf6.jpg"
+    },
+    {
+      "alt": "",
+      "naturalHeight": 0,
+      "naturalWidth": 0,
+      "src": "http://127.0.0.1:4322/assets/media/firstcontactthailand.com/uploads/2025/12/b624eb7c-d305-453f-8768-8ff4f94b09b3.jpg"
+    },
+    {
+      "alt": "",
+      "naturalHeight": 0,
+      "naturalWidth": 0,
+      "src": "http://127.0.0.1:4322/assets/media/firstcontactthailand.com/uploads/2025/11/alexandra-tran-VW0bzb90oMA-unsplash-scaled.jpg"
+    },
+    {
+      "alt": "",
+      "naturalHeight": 0,
+      "naturalWidth": 0,
+      "src": "http://127.0.0.1:4322/assets/media/firstcontactthailand.com/uploads/2025/11/Hero-Images-copy-2-scaled.jpg"
+    },
+    {
+      "alt": "",
+      "naturalHeight": 0,
+      "naturalWidth": 0,
+      "src": "http://127.0.0.1:4322/assets/media/firstcontactthailand.com/uploads/2025/11/PHOTO-2025-10-11-09-28-41-2.jpg"
+    },
+    {
+      "alt": "",
+      "naturalHeight": 0,
+      "naturalWidth": 0,
+      "src": "http://127.0.0.1:4322/assets/media/firstcontactthailand.com/uploads/2025/11/start-up-scaled.jpg"
+    },
+    {
+      "alt": "",
+      "naturalHeight": 0,
+      "naturalWidth": 0,
+      "src": "http://127.0.0.1:4322/assets/media/firstcontactthailand.com/uploads/2025/11/scooter-scaled.jpg"
+    },
+    {
+      "alt": "",
+      "naturalHeight": 0,
+      "naturalWidth": 0,
+      "src": "http://127.0.0.1:4322/assets/media/firstcontactthailand.com/uploads/2025/11/b.networking-scaled.jpg"
+    },
+    {
+      "alt": "First Contact Thailand",
+      "naturalHeight": 0,
+      "naturalWidth": 0,
+      "src": "http://127.0.0.1:4322/assets/media/firstcontactthailand.com/uploads/2025/11/cropped-firstcontact.png"
+    }
+  ],
+  "links": [
+    {
+      "href": "http://127.0.0.1:4322/",
+      "text": ""
+    },
+    {
+      "href": "http://127.0.0.1:4322/blog/",
+      "text": "Blog"
+    },
+    {
+      "href": "http://127.0.0.1:4322/bangkok-charity-programs/",
+      "text": "Bangkok"
+    },
+    {
+      "href": "http://127.0.0.1:4322/chiang-mai-charity-programs/",
+      "text": "Chiang Mai"
+    },
+    {
+      "href": "http://127.0.0.1:4322/hua-hin-charity-programs/",
+      "text": "Hua Hin"
+    },
+    {
+      "href": "http://127.0.0.1:4322/koh-samui-charity-programs/",
+      "text": "Koh Samui"
+    },
+    {
+      "href": "http://127.0.0.1:4322/pattaya-charity-programs/",
+      "text": "Pattaya"
+    },
+    {
+      "href": "http://127.0.0.1:4322/phuket-charity-programs/",
+      "text": "Phuket"
+    },
+    {
+      "href": "http://127.0.0.1:4322/bangkok-community-events/",
+      "text": "Bangkok"
+    },
+    {
+      "href": "http://127.0.0.1:4322/chiang-mai-community-events/",
+      "text": "Chiang Mai"
+    },
+    {
+      "href": "http://127.0.0.1:4322/hua-hin-community-events/",
+      "text": "Hua Hin"
+    },
+    {
+      "href": "http://127.0.0.1:4322/community-events/",
+      "text": "Koh Samui"
+    },
+    {
+      "href": "http://127.0.0.1:4322/pattaya-community-events/",
+      "text": "Pattaya"
+    },
+    {
+      "href": "http://127.0.0.1:4322/phuket-community-events/",
+      "text": "Phuket"
+    },
+    {
+      "href": "http://127.0.0.1:4322/health-fitness/",
+      "text": "Health & Fitness"
+    },
+    {
+      "href": "http://127.0.0.1:4322/hire/",
+      "text": "Hire"
+    },
+    {
+      "href": "http://127.0.0.1:4322/local-business-network/",
+      "text": "Local Business Network"
+    },
+    {
+      "href": "http://127.0.0.1:4322/local-deals/",
+      "text": "Local Deals"
+    },
+    {
+      "href": "http://127.0.0.1:4322/moving-to-bangkok/",
+      "text": "Bangkok"
+    },
+    {
+      "href": "http://127.0.0.1:4322/moving-to-chiang-mai/",
+      "text": "Chiang Mai"
+    },
+    {
+      "href": "http://127.0.0.1:4322/moving-to-hua-hin/",
+      "text": "Hua Hin"
+    },
+    {
+      "href": "http://127.0.0.1:4322/moving-to-samui/",
+      "text": "Koh Samui"
+    },
+    {
+      "href": "http://127.0.0.1:4322/moving-to-pattaya/",
+      "text": "Pattaya"
+    },
+    {
+      "href": "http://127.0.0.1:4322/moving-to-phuket/",
+      "text": "Phuket"
+    },
+    {
+      "href": "http://127.0.0.1:4322/real-estate/",
+      "text": "Overview"
+    },
+    {
+      "href": "http://127.0.0.1:4322/koh-samui-property-sales/",
+      "text": "Koh Samui"
+    },
+    {
+      "href": "http://127.0.0.1:4322/koh-phangan-property-sales/",
+      "text": "Koh Phangan"
+    },
+    {
+      "href": "http://127.0.0.1:4322/bangkok-property-sales/",
+      "text": "Bangkok"
+    },
+    {
+      "href": "http://127.0.0.1:4322/pattaya-property-sales/",
+      "text": "Pattaya"
+    },
+    {
+      "href": "http://127.0.0.1:4322/phuket-property-sales/",
+      "text": "Phuket"
+    },
+    {
+      "href": "http://127.0.0.1:4322/krabi-property-sales/",
+      "text": "Krabi"
+    },
+    {
+      "href": "http://127.0.0.1:4322/tours-2/",
+      "text": "Tours"
+    },
+    {
+      "href": "http://127.0.0.1:4322/community-events/",
+      "text": "Koh Samui Events"
+    },
+    {
+      "href": "http://127.0.0.1:4322/past-events/",
+      "text": "Previous Events"
+    },
+    {
+      "href": "http://127.0.0.1:4322/contact-link/",
+      "text": "List a Community Event"
+    },
+    {
+      "href": "http://127.0.0.1:4322/food-drinks/",
+      "text": "Food & Beverage"
+    },
+    {
+      "href": "http://127.0.0.1:4322/tours-2/",
+      "text": "Tours & Entertainment"
+    },
+    {
+      "href": "http://127.0.0.1:4322/local-business-network/",
+      "text": "Local Business Network"
+    },
+    {
+      "href": "http://127.0.0.1:4322/marketing/",
+      "text": "Marketing & Design"
+    },
+    {
+      "href": "http://127.0.0.1:4322/hire/",
+      "text": "Hire"
+    },
+    {
+      "href": "http://127.0.0.1:4322/property/",
+      "text": "Property"
+    },
+    {
+      "href": "mailto:info@firstcontactthailand.com",
+      "text": "info@firstcontactthailand.com"
+    }
+  ],
+  "title": "First Contact Thailand - A Business Network Community",
+  "viewport": {
+    "h": 900,
+    "w": 1440
+  }
+}

@@ -1,32 +1,36 @@
 ---
 import { contact } from '../data/site';
+import { Mail, MessageCircle, Phone } from '@lucide/astro';
 
-const year = new Date().getFullYear();
+const year = 2025;
 ---
 
 <footer class="site-footer">
   <div class="site-footer__inner">
     <div class="site-footer__brand">
       <img src="/assets/fct/cropped-firstcontact.png" alt="First Contact Thailand" width="94" height="116" />
-      <p>Connecting locals, expats and visitors with trusted businesses, community events and practical local support.</p>
+      <p>First Contact Thailand connects locals, expats, and visitors with trusted businesses, community events, helpful services, and local support across Thailand.</p>
     </div>
     <nav class="site-footer__links" aria-label="Footer links">
-      <h2>Explore</h2>
-      <a href="/local-business-network/">Business Network</a>
+      <h2>Quick Links</h2>
+      <a href="/charity/">Charity Work</a>
       <a href="/community-events/">Community Events</a>
-      <a href="/tours-2/">Tours</a>
-      <a href="/real-estate/">Property</a>
+      <a href="/health-fitness/">Health &amp; Fitness</a>
+      <a href="/hire/">Hire</a>
+      <a href="/local-business-network/">Local Business Network</a>
       <a href="/local-deals/">Local Deals</a>
+      <a href="/real-estate/">Property</a>
+      <a href="/tours-2/">Tours</a>
     </nav>
     <div class="site-footer__contact">
-      <h2>Contact</h2>
-      <a href={contact.whatsapp} target="_blank" rel="noreferrer">WhatsApp {contact.phoneDisplay}</a>
-      <a href={`mailto:${contact.email}`}>{contact.email}</a>
-      <a href={contact.facebook} target="_blank" rel="noreferrer">Facebook Community</a>
+      <h2>Contact Us</h2>
+      <a href={`tel:${contact.phoneDisplay.replace(/\s/g, '')}`}><Phone aria-hidden="true" size={18} />+66803378707</a>
+      <a href={`mailto:${contact.email}`}><Mail aria-hidden="true" size={18} />{contact.email}</a>
+      <a href={contact.facebook} target="_blank" rel="noreferrer">Facebook</a>
+      <a href={contact.whatsapp} target="_blank" rel="noreferrer"><MessageCircle aria-hidden="true" size={18} />WhatsApp</a>
     </div>
   </div>
   <div class="site-footer__legal">
-    <p>&copy; {year} First Contact Thailand</p>
-    <a href="/pages/">Site index</a>
+    <p>Copyright &copy; {year} First Contact Thailand</p>
   </div>
 </footer>

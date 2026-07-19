@@ -1,0 +1,54 @@
+---
+import ServiceCard from './ServiceCard.astro';
+
+const propertyCards = [
+  {
+    title: 'Property Sales',
+    text: 'Find trusted local property contacts for buying, selling, and understanding the market in Thailand.',
+    image: '/assets/fct/house-scaled.jpg',
+    href: '/property-sales/',
+    action: 'Connect with one of our sales agents',
+  },
+  {
+    title: 'Property Management',
+    text: 'Connect with reliable property management support for rentals, maintenance, inspections, and local owner services.',
+    image: '/assets/fct/house-2-scaled.jpg',
+    href: '/property-management/',
+    action: 'Contact us about property management',
+  },
+  {
+    title: 'Building Contractors',
+    text: 'Connect with trusted building contractors, renovation contacts, and local project support.',
+    image: '/assets/fct/house-1-scaled.jpg',
+    href: '/building-contractors/',
+    action: 'Contact us about building contractors',
+  },
+  {
+    title: 'How to Buy Property in Thailand',
+    text: 'A clear guide to the steps, checks, ownership options, and trusted local support before you buy in Thailand.',
+    image: '/assets/fct/legal-house-1.png',
+    href: '/property-sales/',
+    action: 'How to buy property in Thailand',
+  },
+  {
+    title: 'Buyers Agent',
+    text: 'Get independent support to search, compare, inspect, negotiate, and connect with trusted local property professionals.',
+    image: '/assets/fct/buyersagent.png',
+    href: '/buyers-agent/',
+    action: 'Learn more about buyers agents',
+  },
+];
+---
+
+<section class="reference-page property-reference">
+  <div class="reference-page__inner property-reference__inner">
+    <header class="reference-page__heading">
+      <h1>Property</h1>
+      <p>Connect with trusted property support across Thailand.</p>
+    </header>
+
+    <div class="service-grid service-grid--5">
+      {propertyCards.map((card) => <ServiceCard card={card} />)}
+    </div>
+  </div>
+</section>

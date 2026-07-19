@@ -10,13 +10,11 @@ const href = card.href ?? `/contact-link/?topic=${encodeURIComponent(card.title)
 ---
 
 <article class="service-tile">
-  <a class="service-tile__image" href={href} aria-label={card.action ?? `Ask about ${card.title}`}>
-    <img src={card.image} alt="" loading="lazy" decoding="async" />
-  </a>
+  {card.image && <img class="service-tile__image" src={card.image} alt={card.title} loading="lazy" decoding="async" />}
   <div class="service-tile__body">
     {card.meta && <p class="service-tile__meta">{card.meta}</p>}
     <h2>{card.title}</h2>
     <p>{card.text}</p>
-    <a class="text-link" href={href}>{card.action ?? 'Ask for an introduction'} <span aria-hidden="true">&rarr;</span></a>
+    {card.action && <a class="service-tile__cta" href={href}>{card.action}</a>}
   </div>
 </article>

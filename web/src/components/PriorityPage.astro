@@ -1,6 +1,5 @@
 ---
 import type { PriorityPage as Page } from '../data/site';
-import PageHero from './PageHero.astro';
 import ServiceCard from './ServiceCard.astro';
 
 interface Props {
@@ -10,40 +9,30 @@ interface Props {
 const { page } = Astro.props;
 ---
 
-<PageHero
-  eyebrow={page.eyebrow}
-  title={page.title}
-  text={page.heroText}
-  image={page.heroImage}
-  primaryLabel={page.ctaLabel}
-  primaryHref={page.ctaHref}
-  secondaryLabel={page.secondaryLabel}
-  secondaryHref={page.secondaryHref}
-/>
-
-<section class="section section--intro">
-  <div class="section__inner section__intro-copy">
-    <p class="section-kicker">First Contact Thailand</p>
-    <h2>{page.introTitle}</h2>
-    <p>{page.introText}</p>
-  </div>
-</section>
-
-<section class="section section--soft">
-  <div class="section__inner">
-    <div class={`service-grid service-grid--${Math.min(page.cards.length, 5)}`}>
+<section class={`reference-page reference-page--${page.slug}`}>
+  <div class="reference-page__inner">
+    {page.slug === 'local-business-network' && (
+      <figure class="reference-page__feature-image">
+        <img src={page.heroImage} alt="First Contact Thailand business community" width="1280" height="720" loading="eager" decoding="async" />
+      </figure>
+    )}
+    <header class="reference-page__heading">
+      <h1>{page.title}</h1>
+      <p>{page.heroText}</p>
+    </header>
+    <div class={`service-grid service-grid--${page.gridColumns ?? 3}`}>
       {page.cards.map((card) => <ServiceCard card={card} />)}
     </div>
-  </div>
-</section>
-
-<section class="section final-cta">
-  <div class="section__inner final-cta__inner">
-    <div>
-      <p class="section-kicker">A trusted local connection</p>
-      <h2>{page.ctaTitle}</h2>
-      <p>{page.ctaText}</p>
-    </div>
-    <a class="button button--primary" href={page.ctaHref}>{page.ctaLabel}</a>
+    {(page.ctaLabel && page.ctaHref) && (
+      <div class="reference-page__actions">
+        <a class="page-cta" href={page.ctaHref}>{page.ctaLabel}</a>
+        {page.secondaryLabel && page.secondaryHref && <a class="page-cta page-cta--image" href={page.secondaryHref}>{page.secondaryLabel}</a>}
+      </div>
+    )}
+    {(!page.ctaLabel && page.secondaryLabel && page.secondaryHref) && (
+      <div class="reference-page__actions">
+        <a class="page-cta page-cta--image" href={page.secondaryHref}>{page.secondaryLabel}</a>
+      </div>
+    )}
   </div>
 </section>

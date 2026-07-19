@@ -1,11 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import PriorityPage from '../components/PriorityPage.astro';
-import { priorityPages } from '../data/site';
-
-const page = priorityPages['real-estate'];
+import PropertyOverview from '../components/PropertyOverview.astro';
 ---
 
-<Layout title={page.seoTitle} description={page.description} image={page.heroImage}>
-  <PriorityPage page={page} />
+<Layout title="Property Support in Thailand | First Contact Thailand" description="Connect with trusted property support across Thailand." image="/assets/fct/property-home.jpg">
+  <PropertyOverview />
 </Layout>
