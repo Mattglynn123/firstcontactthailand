@@ -1,11 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import PriorityPage from '../components/PriorityPage.astro';
-import { priorityPages } from '../data/site';
+import RegionalEventsPage from '../components/RegionalEventsPage.astro';
+import { regionalEvents } from '../data/regional-events';
 
-const page = priorityPages['community-events'];
+const page = regionalEvents['community-events'];
 ---
 
-<Layout title={page.seoTitle} description={page.description} image={page.heroImage}>
-  <PriorityPage page={page} />
+<Layout title="Koh Samui Community Events | First Contact Thailand" description={page.intro} image={page.events[0]?.image}>
+  <RegionalEventsPage page={page} />
 </Layout>

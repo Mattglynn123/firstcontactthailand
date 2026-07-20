@@ -1,0 +1,30 @@
+---
+import type { CharityRegion } from '../data/charities';
+
+interface Props { page: CharityRegion; }
+const { page } = Astro.props;
+---
+
+<section class="reference-page charity-region">
+  <div class="reference-page__inner">
+    <header class="reference-page__heading">
+      <h1>{page.location} Charity Programs</h1>
+      <p>{page.intro}</p>
+    </header>
+    <div class="charity-grid">
+      {page.programs.map((item) => (
+        <article class="charity-card">
+          <img src={item.image} alt={item.title} loading="lazy" decoding="async" />
+          <div class="charity-card__body">
+            <h2>{item.title}</h2>
+            <p>{item.text}</p>
+            <a href={`/${item.slug}/`}>Read the local summary</a>
+          </div>
+        </article>
+      ))}
+    </div>
+    <div class="reference-page__actions">
+      <a class="page-cta page-cta--image" href="/contact-link/">Contact us to support a local charity program</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,41 @@
+---
+import type { RegionalEventsPage as Page } from '../data/regional-events';
+
+interface Props { page: Page; }
+const { page } = Astro.props;
+---
+
+<section class="reference-page regional-events">
+  <div class="reference-page__inner">
+    <header class="reference-page__heading">
+      <h1>Socialising in {page.location}</h1>
+      <p>{page.intro}</p>
+    </header>
+    <h2 class="regional-events__title">Upcoming Events</h2>
+    {page.events.length ? (
+      <div class="event-grid">
+        {page.events.map((event) => (
+          <article class="event-card">
+            <a class="event-card__media" href={event.href ?? '/contact-link/'} aria-label={`Find out more about ${event.title}`}>
+              <img src={event.image} alt={event.title} loading="lazy" decoding="async" />
+            </a>
+            <div class="event-card__body">
+              <p class="event-card__date">{event.date}</p>
+              <h2>{event.title}</h2>
+              <p>{event.text}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <div class="empty-state">
+        <h2>Events will be added here</h2>
+        <p>Know about a community event in {page.location}? Send it to First Contact Thailand for review.</p>
+      </div>
+    )}
+    <div class="reference-page__actions regional-events__actions">
+      <a class="page-cta" href={`/past-events/?area=${page.location.toLowerCase().replaceAll(' ', '-')}`}>Check out our previous events</a>
+      <a class="page-cta page-cta--image" href="/contact-link/">Let us know if you have a community event coming up</a>
+    </div>
+  </div>
+</section>

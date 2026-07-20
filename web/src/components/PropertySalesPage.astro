@@ -1,0 +1,31 @@
+---
+const areas = [
+  { label: 'Koh Samui', image: '/assets/fct/property-home.jpg', href: '/property-sales/koh-samui/' },
+  { label: 'Koh Phangan', image: '/assets/fct/house-scaled.jpg', href: '/property-sales/koh-phangan/' },
+  { label: 'Bangkok', image: '/assets/fct/home-rotator-bangkok.jpg', href: '/property-sales/bangkok/' },
+  { label: 'Pattaya', image: '/assets/fct/house-1-scaled.jpg', href: '/property-sales/pattaya/' },
+  { label: 'Phuket', image: '/assets/fct/house-2-scaled.jpg', href: '/property-sales/phuket/' },
+  { label: 'Krabi', image: '/assets/fct/property-building.jpg', href: '/property-sales/krabi/' },
+];
+---
+
+<section class="reference-page property-sales-reference">
+  <div class="reference-page__inner">
+    <header class="reference-page__heading">
+      <h1>Property Sales</h1>
+      <p>Choose an area to explore property opportunities with trusted local contacts.</p>
+    </header>
+    <div class="service-grid service-grid--3 property-sales-grid">
+      {areas.map((area) => (
+        <article class="service-tile">
+          <img class="service-tile__image" src={area.image} alt={`Property in ${area.label}`} loading="lazy" decoding="async" />
+          <div class="service-tile__body">
+            <h2>{area.label}</h2>
+            <p>Find local property sales support and practical introductions in {area.label}.</p>
+            <a class="service-tile__cta" href={area.href}>View {area.label} property sales</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+---
+const cards = [
+  { title: 'Commissions', text: 'Learn how to earn more commissions.', image: '/assets/fct/tour-guide-commissions.png' },
+  { title: 'Pre Bookings', text: 'Help Tour Guides plan ahead with our systems to pre-book tours, activities, transportation, and local experiences before arriving at your next destination.', image: '/assets/fct/tour-guide-pre-bookings.png' },
+  { title: 'Gold Membership', text: 'Premium access to exclusive training programs, priority support, preferred introductions, and new commission opportunities.', image: '/assets/fct/tour-guide-gold-membership.png' },
+];
+---
+
+<section class="reference-page tour-guide-page">
+  <div class="reference-page__inner">
+    <header class="reference-page__heading">
+      <h1>How to save time, earn more commissions and become a better tour guide</h1>
+      <p>A practical partner page for guide commissions, tour planning, and membership options.</p>
+    </header>
+    <div class="tour-guide-grid">
+      {cards.map((card) => (
+        <article>
+          <img src={card.image} alt={card.title} loading="lazy" decoding="async" />
+          <div>
+            <h2>{card.title}</h2>
+            <p>{card.text}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+    <div class="reference-page__actions">
+      <a class="page-cta page-cta--image" href="/contact-link/?topic=Become%20a%20better%20tour%20guide">Book your call now to learn more</a>
+    </div>
+  </div>
+</section>

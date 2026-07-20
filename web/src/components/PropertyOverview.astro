@@ -1,41 +1,28 @@
 ---
-import ServiceCard from './ServiceCard.astro';
-
-const propertyCards = [
+const services = [
   {
-    title: 'Property Sales',
-    text: 'Find trusted local property contacts for buying, selling, and understanding the market in Thailand.',
-    image: '/assets/fct/house-scaled.jpg',
+    label: 'Property Sales',
+    text: 'Explore property opportunities by area and connect with trusted local sales contacts.',
+    image: '/assets/fct/property-home.jpg',
     href: '/property-sales/',
-    action: 'Connect with one of our sales agents',
   },
   {
-    title: 'Property Management',
-    text: 'Connect with reliable property management support for rentals, maintenance, inspections, and local owner services.',
-    image: '/assets/fct/house-2-scaled.jpg',
-    href: '/property-management/',
-    action: 'Contact us about property management',
-  },
-  {
-    title: 'Building Contractors',
-    text: 'Connect with trusted building contractors, renovation contacts, and local project support.',
+    label: 'Property Management',
+    text: 'Find practical support for rentals, maintenance, inspections and local owner services.',
     image: '/assets/fct/house-1-scaled.jpg',
+    href: '/property-management/',
+  },
+  {
+    label: 'Building Contractors',
+    text: 'Connect with trusted contractors for construction, renovation and local project support.',
+    image: '/assets/fct/property-building.jpg',
     href: '/building-contractors/',
-    action: 'Contact us about building contractors',
   },
   {
-    title: 'How to Buy Property in Thailand',
-    text: 'A clear guide to the steps, checks, ownership options, and trusted local support before you buy in Thailand.',
-    image: '/assets/fct/legal-house-1.png',
-    href: '/property-sales/',
-    action: 'How to buy property in Thailand',
-  },
-  {
-    title: 'Buyers Agent',
-    text: 'Get independent support to search, compare, inspect, negotiate, and connect with trusted local property professionals.',
+    label: 'Buyers Agent',
+    text: 'Get local search support, practical area guidance and trusted introductions before buying.',
     image: '/assets/fct/buyersagent.png',
     href: '/buyers-agent/',
-    action: 'Learn more about buyers agents',
   },
 ];
 ---
@@ -44,11 +31,19 @@ const propertyCards = [
   <div class="reference-page__inner property-reference__inner">
     <header class="reference-page__heading">
       <h1>Property</h1>
-      <p>Connect with trusted property support across Thailand.</p>
+      <p>Choose the property service you need.</p>
     </header>
-
-    <div class="service-grid service-grid--5">
-      {propertyCards.map((card) => <ServiceCard card={card} />)}
+    <div class="service-grid service-grid--4 property-overview-grid">
+      {services.map((item) => (
+        <article class="service-tile">
+          <img class="service-tile__image" src={item.image} alt={item.label} loading="lazy" decoding="async" />
+          <div class="service-tile__body">
+            <h2>{item.label}</h2>
+            <p>{item.text}</p>
+            <a class="service-tile__cta" href={item.href}>Find out more</a>
+          </div>
+        </article>
+      ))}
     </div>
   </div>
 </section>

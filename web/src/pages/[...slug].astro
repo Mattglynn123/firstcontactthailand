@@ -3,9 +3,17 @@ import { getCollection, render } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import MoveGuidePage from '../components/MoveGuidePage.astro';
 import PageHero from '../components/PageHero.astro';
+import RegionalEventsPage from '../components/RegionalEventsPage.astro';
+import CharityRegionPage from '../components/CharityRegionPage.astro';
+import CharityProgramPage from '../components/CharityProgramPage.astro';
+import MoveToThailandPage from '../components/MoveToThailandPage.astro';
+import TourGuidePage from '../components/TourGuidePage.astro';
+import { regionalEvents } from '../data/regional-events';
+import { charityPrograms, charityRegions } from '../data/charities';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages', ({ data }) => !data.draft);
+  const programSlugs = new Set(charityPrograms.map((program) => program.slug));
   const explicitRoutes = new Set([
     'about',
     'about-us',
@@ -23,15 +31,26 @@ export async function getStaticPaths() {
     'tours-2',
   ]);
 
-  return pages.filter((page) => !explicitRoutes.has(page.data.slug)).map((page) => ({
+  const pagePaths = pages.filter((page) => !explicitRoutes.has(page.data.slug) && !programSlugs.has(page.data.slug)).map((page) => ({
     params: { slug: page.data.slug },
     props: { page },
   }));
+
+  const programPaths = charityPrograms.map((charityProgram) => ({
+    params: { slug: charityProgram.slug },
+    props: { charityProgram },
+  }));
+
+  return [...pagePaths, ...programPaths];
 }
 
-const { page } = Astro.props;
-const { Content } = await render(page);
-const rawBody = (page.body ?? '').trim();
+const { page, charityProgram } = Astro.props;
+let Content;
+if (page) {
+  const rendered = await render(page);
+  Content = rendered.Content;
+}
+const rawBody = (page?.body ?? '').trim();
 const isLegacyPlaceholder = /layouts\.siteorigin|Lorem ipsum|John Doe|\[\]\(#\)|live-website\.com|wp-content|wordpress\.com|<iframe|u003ciframe|Welcome to WordPress/i.test(rawBody);
 const isRegionalPlaceholder = new Set([
   'moving-to-bangkok',
@@ -39,7 +58,7 @@ const isRegionalPlaceholder = new Set([
   'moving-to-hua-hin',
   'moving-to-pattaya',
   'moving-to-phuket',
-]).has(page.data.slug);
+]).has(page?.data.slug);
 const moveGuideCityBySlug = {
   'moving-to-bangkok': 'Bangkok',
   'moving-to-chiang-mai': 'Chiang Mai',
@@ -47,10 +66,10 @@ const moveGuideCityBySlug = {
   'moving-to-pattaya': 'Pattaya',
   'moving-to-phuket': 'Phuket',
 };
-const moveGuideCity = moveGuideCityBySlug[page.data.slug];
+const moveGuideCity = moveGuideCityBySlug[page?.data.slug];
 const usesStandardFallback = rawBody.length < 80 || isLegacyPlaceholder || isRegionalPlaceholder;
 const contentHasH1 = /^#\s+/m.test(rawBody);
-const cleanTitle = page.data.title
+const cleanTitle = (page?.data.title ?? charityProgram?.title ?? 'First Contact Thailand')
   .replace(/&#038;/g, '&')
   .replace(/&#8211;/g, '-')
   .replace(/-/g, ' ')
@@ -106,9 +125,10 @@ const fallbackCopy = {
   'water': 'Find trusted local water, drinking water, and home supply support.',
   'welcome-to-samui': 'Start with practical local contacts, services, and community support on Koh Samui.',
 };
-const fallbackDescription = fallbackCopy[page.data.slug] ?? `Connect with trusted local support for ${cleanTitle.toLowerCase()} in Thailand.`;
+const currentSlug = page?.data.slug ?? charityProgram?.slug;
+const fallbackDescription = fallbackCopy[currentSlug] ?? charityProgram?.text ?? `Connect with trusted local support for ${cleanTitle.toLowerCase()} in Thailand.`;
 const fallbackHeroImage = (() => {
-  const slug = page.data.slug;
+  const slug = currentSlug;
   if (/property|building|buyers/.test(slug)) return '/assets/fct/property-home.jpg';
   if (/tour|trip|jet|family/.test(slug)) return '/assets/fct/tours-day-trip.jpg';
   if (/hire|rental|transfer|car|bike|nann/.test(slug)) return '/assets/fct/hire-bike.jpg';
@@ -131,12 +151,26 @@ const eventPageSlugs = new Set([
   'social-events',
   'social-events-2',
 ]);
-const isEventPage = eventPageSlugs.has(page.data.slug);
-const hasLocalDealsBeachCta = page.data.slug === 'local-deals';
+const isEventPage = eventPageSlugs.has(currentSlug);
+const hasLocalDealsBeachCta = currentSlug === 'local-deals';
+const regionalEventPage = regionalEvents[currentSlug];
+const charityRegion = charityRegions[currentSlug];
+const isMoveGuide = currentSlug === 'move-to-thailand-guide';
+const isTourGuide = currentSlug === 'become-a-better-tour-guide';
 ---
 
 <Layout title={`${cleanTitle} — First Contact Thailand`} description={fallbackDescription} image={fallbackHeroImage}>
-  {moveGuideCity ? (
+  {charityProgram ? (
+    <CharityProgramPage program={charityProgram} />
+  ) : charityRegion ? (
+    <CharityRegionPage page={charityRegion} />
+  ) : regionalEventPage ? (
+    <RegionalEventsPage page={regionalEventPage} />
+  ) : isMoveGuide ? (
+    <MoveToThailandPage />
+  ) : isTourGuide ? (
+    <TourGuidePage />
+  ) : moveGuideCity ? (
     <MoveGuidePage city={moveGuideCity} title={cleanTitle} text={fallbackDescription} image={fallbackHeroImage} />
   ) : usesStandardFallback ? (
     <>
@@ -185,7 +219,7 @@ const hasLocalDealsBeachCta = page.data.slug === 'local-deals';
   ) : (
     <article class={`content-page ${isEventPage ? 'event-page' : ''} prose prose-slate mx-auto max-w-3xl py-8`}>
       {!contentHasH1 && <h1>{cleanTitle}</h1>}
-      <Content />
+      {Content && <Content />}
       {hasLocalDealsBeachCta && (
         <div class="double-cta beach-only">
           <a class="beach-cta" href="/contact-link/">Tell us about a local deal</a>

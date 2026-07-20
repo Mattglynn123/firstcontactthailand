@@ -1,0 +1,22 @@
+---
+import type { CharityProgram } from '../data/charities';
+
+interface Props {
+  program: CharityProgram & { location: string; regionSlug: string };
+}
+const { program } = Astro.props;
+---
+
+<article class="charity-summary">
+  <a class="charity-summary__back" href={`/${program.regionSlug}/`}>Back to {program.location} charity programs</a>
+  <div class="charity-summary__layout">
+    <img src={program.image} alt={program.title} loading="eager" decoding="async" />
+    <div>
+      <p class="section-kicker">{program.location} charity program</p>
+      <h1>{program.title}</h1>
+      <p>{program.text}</p>
+      <p>First Contact Thailand shares this local summary so visitors can understand the program without leaving the site. Contact us if you would like to help, volunteer, donate, or request the latest project information.</p>
+      <a class="page-cta" href={`/contact-link/?topic=${encodeURIComponent(program.title)}`}>Ask how you can support this program</a>
+    </div>
+  </div>
+</article>

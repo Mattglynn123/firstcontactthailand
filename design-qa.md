@@ -1,36 +1,55 @@
 # First Contact Thailand - Design QA
 
-Review date: 2026-07-19
+Review date: 2026-07-20
 
-## Reference and scope
+## Reference hierarchy
 
-- Visual reference: the current public site at `https://firstcontactthailand.com/`.
-- Content corrections: Mat's recovered July 7-15 history and the conformity matrix in `docs/conformity/live-history-implementation-matrix.md`.
-- Implementation: standalone Astro output with local repository assets only.
-- Production WordPress was not modified.
+1. Mat's explicit July 20 requirements and recovered July 7-15 change history.
+2. The WordPress export and server-side page history for copy, navigation and page relationships.
+3. The public WordPress site for stable visual identity only: ocean header, white logo, typography, teal/navy/white palette and card treatment.
 
-## Build and technical checks
+The current WordPress render contains duplicated and collapsed sections, so those defects were documented but not copied into Astro. Production WordPress was not modified.
 
-- Astro build: 128 generated routes.
+## Required corrections
+
+| Area | Acceptance criterion | Result |
+| --- | --- | --- |
+| Property navigation | Two choices only: Property Overview and Property Sales | passed |
+| Property Overview | Four cards: Sales, Management, Building Contractors, Buyers Agent | passed |
+| Property Sales | Six areas: Koh Samui, Koh Phangan, Bangkok, Pattaya, Phuket, Krabi | passed |
+| Homepage | Community event links, testimonials and six category cards restored | passed |
+| Events | Structured regional/event pages with real local images and working routes | passed |
+| Charity | Extra information opens internal First Contact summaries | passed |
+| Move to Thailand | One complete guide page | passed |
+| Better Tour Guide | Commissions, pre-bookings and Gold Membership content restored | passed |
+| Local Deals | One claim CTA at the bottom of the page | passed |
+
+## Build and structural QA
+
+- Astro build: 175 generated routes.
 - Broken internal links: 0.
 - Missing local assets: 0.
-- Generated references to WordPress runtime, `wp-content`, `wp-includes`, `wp-json`, live-website hosts or imported mirror assets: 0.
-- Priority routes checked: home, Local Business Network, Community Events, Health & Fitness, Hire, Local Deals, Property, Tours and Contact.
+- Pages without exactly one H1: 0.
+- References to WordPress runtime, `wp-content`, `wp-includes`, `wp-json`, mirror HTML or live-website hosts: 0.
+- Console errors on the eight priority routes: 0.
+- Horizontal overflow on the eight priority routes at 1440 x 900 and 390 x 844: 0.
 
-## Responsive and visual checks
+## Visual and interaction QA
 
-- Desktop comparison: completed against current public reference captures.
-- Tablet verification: 768 x 1024, no horizontal overflow or visible broken media on priority routes.
-- Mobile verification: 390 x 844, no horizontal overflow or visible broken media on priority routes.
-- Mobile navigation: opens correctly, keeps all primary destinations visible and prevents the page behind it from becoming the active surface.
-- Each priority route has one page H1, one site header and one footer.
+- Compared public reference and Astro captures together for the homepage and Property flow.
+- Inspected top and bottom states at 1440 x 900 and 390 x 844 for Home, Property Overview, Property Sales, Community Events, Koh Samui Charity, Move to Thailand, Better Tour Guide and Local Deals.
+- Verified image loading, heading hierarchy, text wrapping, card dimensions, CTA visibility, footer completion and mobile navigation.
+- Opened the mobile menu and Property submenu; only Property Overview and Property Sales are presented.
+- Checked all priority images at natural width and confirmed no broken media.
 
-## Intentional source corrections
+Evidence is stored in `docs/design-qa-evidence/`. The public source screenshots show the WordPress duplication defect; focused implementation screenshots show the corrected standalone render.
 
-The standalone build keeps the current public site's visual identity while removing defects from the WordPress render: duplicated or collapsed content, narrow card columns, missing source images, repeated calls to action and delayed DOM overrides. Mat's latest event, business-network and page-level content changes are preserved in structured Astro data and components.
+## Comparison history
+
+The first reconstruction incorrectly treated an incomplete generated mirror as authoritative. This produced generic page fallbacks and missed Mat's information architecture. The July 20 pass replaced that assumption with requirement-level acceptance tests, recovered source content and route-specific Astro components. Each major issue reported by Mat is now represented by an explicit check in this document and `docs/conformity/matrix-corrected.md`.
 
 ## Release boundary
 
-This approval target is staging only. Replacing the production WordPress site remains a separate operation requiring Mat's explicit approval, a fresh backup and a verified rollback procedure.
+This result approves staging only. Production replacement requires Mat's visual sign-off, a fresh production backup and the documented atomic rollback procedure.
 
 Final result: **passed**.
