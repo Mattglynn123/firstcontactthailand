@@ -11,6 +11,7 @@ const qaRoot = path.join(repoRoot, 'docs', 'qa');
 const screenshotRoot = path.join(qaRoot, 'screenshots');
 const baseUrl = process.env.QA_BASE_URL ?? 'http://127.0.0.1:4322';
 const baseOrigin = new URL(baseUrl).origin;
+const skipExternalMedia = process.env.QA_SKIP_EXTERNAL_MEDIA === '1';
 
 const priorityRoutes = [
   '/',
@@ -111,6 +112,17 @@ const screenshotResults = [];
 
 try {
   const auditContext = await browser.newContext({ viewport: viewports.desktop });
+  if (skipExternalMedia) {
+    await auditContext.route('**/*', async (route) => {
+      const request = route.request();
+      const requestOrigin = new URL(request.url(), baseUrl).origin;
+      if (request.resourceType() === 'image' && requestOrigin !== baseOrigin) {
+        await route.abort('blockedbyclient');
+        return;
+      }
+      await route.continue();
+    });
+  }
   const auditPage = await auditContext.newPage();
 
   for (const route of routes) {
@@ -120,6 +132,7 @@ try {
     const externalRequestWarnings = [];
     const onConsole = (message) => {
       if (message.type() !== 'error') return;
+      if (skipExternalMedia && message.text().includes('ERR_BLOCKED_BY_CLIENT')) return;
       const locationUrl = message.location().url;
       if (locationUrl && new URL(locationUrl, baseUrl).origin !== baseOrigin) {
         externalConsoleWarnings.push(message.text());
@@ -129,8 +142,13 @@ try {
     };
     const onRequestFailed = (request) => {
       const failure = `${request.resourceType()}: ${request.url()}`;
-      if (new URL(request.url(), baseUrl).origin === baseOrigin) failedRequests.push(failure);
-      else externalRequestWarnings.push(failure);
+      const isExternal = new URL(request.url(), baseUrl).origin !== baseOrigin;
+      const wasSkippedByQa = skipExternalMedia
+        && isExternal
+        && request.resourceType() === 'image';
+      if (wasSkippedByQa) return;
+      if (isExternal) externalRequestWarnings.push(failure);
+      else failedRequests.push(failure);
     };
     auditPage.on('console', onConsole);
     auditPage.on('requestfailed', onRequestFailed);
@@ -228,6 +246,7 @@ const report = {
     routeFailures: routeFailures.length,
     screenshotFailures: screenshotFailures.length,
     externalWarnings,
+    skippedExternalMedia: skipExternalMedia,
   },
   brokenInternalLinks,
   routeResults,

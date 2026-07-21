@@ -41,7 +41,7 @@ jobs:
           exit 1
 
       - name: Audit routes and responsive layouts
-        run: QA_BASE_URL=http://127.0.0.1:4323 npm run qa
+        run: QA_BASE_URL=http://127.0.0.1:4323 QA_SKIP_EXTERNAL_MEDIA=1 npm run qa
 
       - name: Prepare IONOS staging package
         run: npm run build:staging

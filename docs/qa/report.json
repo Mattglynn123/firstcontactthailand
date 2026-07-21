@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T14:03:05.898Z",
+  "generatedAt": "2026-07-21T14:49:19.991Z",
   "baseUrl": "http://127.0.0.1:4323",
   "passed": true,
   "summary": {
@@ -8,7 +8,8 @@
     "brokenInternalLinks": 0,
     "routeFailures": 0,
     "screenshotFailures": 0,
-    "externalWarnings": 21
+    "externalWarnings": 0,
+    "skippedExternalMedia": true
   },
   "brokenInternalLinks": [],
   "routeResults": [
@@ -2277,30 +2278,8 @@
       "visibleOverflow": [],
       "consoleErrors": [],
       "failedRequests": [],
-      "externalConsoleWarnings": [
-        "Failed to load resource: net::ERR_BLOCKED_BY_RESPONSE.NotSameOrigin"
-      ],
-      "externalRequestWarnings": [
-        "image: https://img.lazudi.com/public/properties/209108/17734627556563.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/207105/17663831658336.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/206918/17655095831412.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/207997/17701722889647.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/210573/17789855087213.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/210571/17789844678383.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/207824/17695675868397.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/207382/17678429733303.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/208285/17709515331566.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/207102/17663757002307.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/207911/17698344879945.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/210575/17789917587666.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/210129/17773477061585.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/207099/17663757002307.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/207908/17698276589647.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/207329/17677548793495.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/210199/17775214762924.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/207229/17675776104547.jpg?fm=webp&w=900&h=600&markalpha=0",
-        "image: https://img.lazudi.com/public/properties/208027/17799389234704.jpg?fm=webp&w=900&h=600&markalpha=0"
-      ]
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/property-sales/pattaya/",
@@ -2314,9 +2293,7 @@
       "consoleErrors": [],
       "failedRequests": [],
       "externalConsoleWarnings": [],
-      "externalRequestWarnings": [
-        "image: https://cdn.gryphtech.com/userimages/92/Large/L_70d2f05b-cd0a-43e9-8ce1-80bd1581c6f8.jpg"
-      ]
+      "externalRequestWarnings": []
     },
     {
       "route": "/property-sales/phuket/",

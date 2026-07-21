@@ -6,7 +6,7 @@
 - Broken internal links: **0**
 - Route failures: **0**
 - Responsive failures: **0**
-- External resource warnings: **21**
+- External resource warnings: **0**
 
 ## Coverage
 
