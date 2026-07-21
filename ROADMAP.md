@@ -1,84 +1,24 @@
-# First Contact Thailand — Rebuild Roadmap
+# First Contact Thailand - Current Roadmap
 
-**Live site (old):** <https://firstcontactthailand.com> (WordPress — kept running untouched as safety net)
-**New site (this repo):** `web/` — Astro 6 + TypeScript + Tailwind CSS 4 + MDX
-**Why this stack:** see `docs/ADR-001-stack-choice.md` (built to be edited by AI agents: Codex, Claude Code)
+## Current State
 
-## Staging — the WordPress-free copy, live on the web ✅
+- WordPress-free Astro source is maintained on `codex/standalone-rebuild`.
+- Public review URL: `https://firstcontactthailand.com/staging/`.
+- Mat confirmed this staging version is the best current baseline on 21 July 2026.
+- Production WordPress remains unchanged as a rollback source until cutover.
+- GitHub Actions builds all generated routes, checks internal links and layout,
+  captures priority pages at desktop/tablet/mobile, and packages staging output.
 
-**<https://firstcontactthailand.com/staging/>** — a faithful static replica of the
-current site (102 pages, 659 files), served from the IONOS webspace with **zero
-WordPress/PHP/database behind it**. Set to `noindex` so search engines ignore it.
-Regenerate it any time with:
+## Immediate Work
 
-```bash
-cd web
-node scripts/mirror-site.mjs      # crawl live site -> mirror/ (root-relative)
-node scripts/make-relative.mjs    # -> mirror-rel/ (portable, any base path)
-node scripts/fix-fake-assets.mjs  # repair assets WP served as HTML pages
-node scripts/sweep-mirror.mjs     # QA: load every page headless, report issues
-```
+1. Mat performs final content and visual adjustments one controlled change at a time.
+2. Every approved change is committed and pushed only to `codex/standalone-rebuild`.
+3. GitHub Actions must pass before a controlled staging update.
+4. Mat reviews the updated public staging URL.
 
-### Known defects INHERITED from the live site (verified identical on live)
+## Production Cutover
 
-- 9 media files return an HTML page instead of the image on the live site
-  (deleted from the media library but still referenced). Visible as broken
-  images on `/hire/` and a few others: `car-scaled.jpg`, `bike-scaled.jpg`,
-  `cleaning-scaled.jpg`, `write-593333_1920.jpg`, `beach-background.jpg` (x2),
-  `beach-cta-background.jpg`, 2 plugin icons. **Fix by re-adding real images.**
-- 1 inline script has a JavaScript syntax error sitewide (also broken on live).
-- The events calendar embed is a third-party iframe (live-website.com) that
-  loads its assets from the old WordPress site — keep in mind at cutover.
-
-## Status — done ✅
-
-1. Full backup of the WordPress site (database + files), verified, stored off-server.
-2. Stack decision documented (ADR-001).
-3. Astro foundation scaffolded in `web/` (TypeScript strict, Tailwind, MDX, React islands).
-4. **All 100 pages + 1 post migrated** from WordPress to Markdown → `web/src/content/pages/` & `web/src/content/posts/`.
-   Each file keeps its original slug, title, dates and `originalUrl` in frontmatter.
-5. Content collections wired (`web/src/content.config.ts`), every page renders at `/{slug}`.
-6. Build verified: 102 pages in ~2s (`npm run build`).
-
-## How to work on it (Mat — from your laptop)
-
-```bash
-git clone https://github.com/Mattglynn123/firstcontactthailand.git
-cd firstcontactthailand/web
-npm install
-npm run dev        # open http://localhost:4321
-```
-
-Then open Codex in the repo folder and ask it for what you want — it will read
-`AGENTS.md` files automatically. Example first prompt:
-
-> Read ROADMAP.md and web/AGENTS.md. Show me the current state of the site with
-> `npm run dev`, then let's redesign the homepage: modern, mobile-first, using
-> the content in web/src/content/pages/homepage.md as source material.
-
-## Next steps — in order 🚧
-
-1. **Content curation** — ~100 migrated pages include duplicates (`tours` vs `tours-2`
-   vs `tours-clean`), test pages (`test-classroom`, `sample-page`, `37-2`) and empty
-   shells (32 files have empty bodies). Decide keep/merge/delete per page.
-   Mark rejects with `draft: true` in frontmatter (don't delete yet).
-2. **Migrate media** — images still point at the old WordPress URLs. Download the
-   needed ones into `web/src/assets/` and update the Markdown. (The full uploads
-   folder exists in the off-server backup if the live site ever goes away.)
-3. **Design system** — homepage + page templates in Tailwind: mobile-first, clean,
-   "slick". Keep the teal accent or pick a new palette.
-4. **Navigation** — build the real menu (city pages, categories: deals, tours,
-   property, health, events, charity…) to replace the placeholder header.
-5. **Events & community** — decide how events work on the new site (simple Markdown
-   list first; calendar integration later).
-6. **Deploy** — Cloudflare Pages, connected to this repo (build cmd `npm run build`,
-   output `web/dist`, root dir `web`). Every push = automatic preview URL.
-7. **Go live** — when the new site is validated: point the domain at Cloudflare
-   Pages. Keep WordPress reachable internally as archive until fully confident.
-
-## Rules
-
-- Never commit secrets (tokens, passwords). `private/`, backups and credentials
-  are gitignored — keep it that way.
-- The old WordPress site stays untouched until final cutover.
-- Small commits, clear messages. Push often so everyone stays in sync.
+Production replacement is not automatic. It requires Mat's written approval, a
+fresh backup, a maintenance window, a complete route/media/responsive check, and
+a tested rollback. Until then, all work remains on the standalone branch and
+public staging URL.

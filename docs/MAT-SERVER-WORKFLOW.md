@@ -1,4 +1,8 @@
-# Mat server workflow
+# Mat source and server workflow
+
+Mat's normal workflow is local on his own computer. Follow `GETTING-STARTED.md`
+and `CODEX-START-HERE.md`. The IONOS checkout is not the primary editor and the
+public staging directory must never be edited directly.
 
 ## One source of truth
 
@@ -11,9 +15,10 @@ Use only this repository and branch:
 
 Do not work in `matt AI`, a WordPress mirror, `first-contact-thailand-code-repo`, a generated HTML directory, or a previous Codex workspace.
 
-## Start each Codex task
+## Optional IONOS source checkout
 
-Open the IONOS checkout over SSH, then give Codex this instruction:
+Use the IONOS source checkout only when a controlled server-side diagnostic is
+explicitly required. The same branch restrictions apply:
 
 ```text
 Work only in /homepages/31/d4299444035/htdocs/firstcontactthailand-standalone on branch codex/standalone-rebuild.

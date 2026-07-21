@@ -1,36 +1,44 @@
-# First Contact Thailand - Agent Rules
+# First Contact Thailand - Standalone Site Rules
 
-This project is a WordPress site takeover workflow, not yet a full local codebase.
+This repository contains the WordPress-free Astro website. The legacy WordPress
+site is a production safety net only and is outside the development scope.
 
-## Shared Coordination
+## Authoritative Source
 
-- Use `shared-codex-opus/notes/` for durable context.
-- Use `shared-codex-opus/handoffs/` for short task passoffs.
-- Record any live-site actions immediately after they happen.
+- Repository: `https://github.com/Mattglynn123/firstcontactthailand.git`
+- Working branch: `codex/standalone-rebuild`
+- Public review URL: `https://firstcontactthailand.com/staging/`
+- Application root: `web/`
 
-## WordPress Operating Rules
+Before any edit, run:
 
-- Prefer `wp-admin` for Elementor, menus, forms, events, and plugin-specific settings.
-- Prefer REST plus Application Passwords for repeatable inventories and automation.
-- Prefer SSH or WP-CLI for server-level operations once access is confirmed.
-- Do not make production updates before backup and rollback are confirmed.
+```sh
+git fetch origin
+git switch codex/standalone-rebuild
+git pull --ff-only origin codex/standalone-rebuild
+git status --short --branch
+```
 
-## Collaboration Rules
+Stop if the branch is different, the pull cannot fast-forward, or tracked files
+have unexplained changes.
 
-- One agent owns a given write scope at a time.
-- Do not let multiple agents edit the same files concurrently.
-- Keep secrets out of shared markdown docs.
-- If host-level or destructive actions are required, document the exact action in the shared notes.
+## Scope
 
-## Current Priorities
+- Work only in this repository and branch.
+- Source changes belong in `web/src/`, `web/public/`, `web/scripts/`, or project documentation.
+- Do not inspect or edit WordPress, PHP, `wp-admin`, generated mirrors, rollback folders, old Codex workspaces, or previous branches.
+- Do not edit the public staging directory directly. Deployments are controlled, atomic operations with rollback.
+- Never commit passwords, tokens, cookies, SSH keys, `.env` files, backups, or database exports.
 
-1. Confirm hosting access and recovery path.
-2. Create a dedicated WordPress Application Password.
-3. Capture inventories of pages, plugins, themes, and settings.
-4. Decide whether the durable path is child theme, custom plugin, or both.
+## Verification
 
-## Model Preference
+From `web/`, install with `npm ci`, then run `npm run build` before committing.
+For visual changes, start `npm run dev`, verify the affected pages at desktop,
+tablet, and mobile widths, and check links, images, console errors, and overflow.
 
-- Codex side: use `GPT-5.4`, not `GPT-5.4 mini`
-- Codex reasoning preference: `extra high`
-- Claude side: use `Claude Opus 4.6` for the hardest reasoning and takeover tasks
+For every completed request, append a concise entry to `docs/MAT-WORKLOG.md`,
+commit only the intended files, and push to `origin/codex/standalone-rebuild`.
+Do this automatically before ending the task so completed work is never left
+only on Mat's laptop. Never force-push, rewrite history, or use a destructive
+reset. Confirm that the remote branch resolves to the new local `HEAD`, then
+return the commit SHA, branch URL, verification performed, and any remaining risk.

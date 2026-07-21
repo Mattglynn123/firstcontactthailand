@@ -1,11 +1,12 @@
 # Design and Technical QA
 
 - Result: **PASS**
-- Routes checked: **175**
+- Routes checked: **185**
 - Responsive screenshots: **55**
 - Broken internal links: **0**
 - Route failures: **0**
 - Responsive failures: **0**
+- External resource warnings: **21**
 
 ## Coverage
 
@@ -18,9 +19,9 @@ No automated P0, P1 or P2 issue remains. Final content approval is still require
 
 ## Visual Review
 
-- Compared the rebuilt home, Property Overview, Property Sales, community events, Koh Samui charity, Move to Thailand, Better Tour Guide and Local Deals pages against the captured live references and recovered Mat history.
+- Compared the rebuilt home, community events, local business network, hire, local deals, property, tours and contact pages against the captured live references.
 - Verified the shared ocean header, First Contact logo, typography hierarchy, local imagery, calls to action and footer identity.
-- Verified desktop, tablet and mobile captures, including the open mobile navigation and two-entry Property submenu states.
+- Verified desktop, tablet and mobile captures, including the open mobile navigation state.
 - The rebuild preserves Mat's content and visual identity while removing the broken narrow columns, missing media and duplicated legacy rendering visible in the source site.
 
 Final result: **passed**.

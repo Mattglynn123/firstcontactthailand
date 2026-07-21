@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-07-20T05:13:22.059Z",
-  "baseUrl": "http://127.0.0.1:4322",
+  "generatedAt": "2026-07-21T14:03:05.898Z",
+  "baseUrl": "http://127.0.0.1:4323",
   "passed": true,
   "summary": {
-    "routes": 175,
+    "routes": 185,
     "priorityScreenshots": 55,
     "brokenInternalLinks": 0,
     "routeFailures": 0,
-    "screenshotFailures": 0
+    "screenshotFailures": 0,
+    "externalWarnings": 21
   },
   "brokenInternalLinks": [],
   "routeResults": [
@@ -21,7 +22,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/37-2/",
@@ -33,7 +36,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/about-us/",
@@ -45,7 +50,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/about/",
@@ -57,7 +64,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/affiliate-marketing/",
@@ -69,7 +78,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/airport-transfers/",
@@ -81,7 +92,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/autistic-children-swimming-program/",
@@ -93,7 +106,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/bangkok-charity-programs/",
@@ -105,7 +120,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/bangkok-clean-drinking-water-systems/",
@@ -117,7 +134,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/bangkok-community-events/",
@@ -129,7 +148,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/bangkok-kid-s-day-out/",
@@ -141,7 +162,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/bangkok-low-income-communities/",
@@ -153,7 +176,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/bangkok-polio-plus/",
@@ -165,7 +190,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/bangkok-youth/",
@@ -177,7 +204,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/bar-deals/",
@@ -189,7 +218,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/become-a-better-tour-guide/",
@@ -201,7 +232,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/blog/",
@@ -213,7 +246,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/building-a-property-in-thailand/",
@@ -225,7 +260,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/building-contractors/",
@@ -237,7 +274,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/business-directory-2/",
@@ -249,7 +288,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/business-directory/",
@@ -261,7 +302,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/business-networking/",
@@ -273,7 +316,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/business-set-ups/",
@@ -285,7 +330,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/buyers-agent/",
@@ -297,7 +344,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/car-bike-hire/",
@@ -309,7 +358,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/carbikehire/",
@@ -321,7 +372,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/charities/",
@@ -333,7 +386,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/charity-work/",
@@ -345,7 +400,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/charity/",
@@ -357,7 +414,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/chiang-mai-b-e-a-m-ged-program/",
@@ -369,7 +428,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/chiang-mai-bcmf-b-k-kee-patient-house/",
@@ -381,7 +442,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/chiang-mai-charity-programs-2/",
@@ -393,7 +456,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/chiang-mai-charity-programs/",
@@ -405,7 +470,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/chiang-mai-children-s-water-safety-and-drowning-prevention/",
@@ -417,7 +484,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/chiang-mai-community-events/",
@@ -429,7 +498,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/chiang-mai-cultivating-a-peace-culture-in-school/",
@@ -441,7 +512,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/chiang-mai-free-food-for-the-poor-initiative/",
@@ -453,7 +526,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/chiang-mai-mae-tao-clinic-child-protection/",
@@ -465,7 +540,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/chiang-mai-school-vision-screening/",
@@ -477,7 +554,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/chiang-mai-teddy-trekkers-initiative/",
@@ -489,7 +568,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/chiang-mai-water-and-sanitation-project/",
@@ -501,7 +582,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/chiang-mai-winter-clothing-and-school-supplies-appeal/",
@@ -513,7 +596,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/co-working-spaces/",
@@ -525,7 +610,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/community-events/",
@@ -537,7 +624,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/contact-2/",
@@ -549,7 +638,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/contact-3/",
@@ -561,7 +652,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/contact-link/",
@@ -573,7 +666,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/crypto-education-business/",
@@ -585,7 +680,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/day-trips/",
@@ -597,7 +694,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/defibs-4-samui/",
@@ -609,7 +708,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/ai-community-meeting-nature-bar-maenam-weekly-2026-07-22/",
@@ -621,7 +722,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/ai-community-meeting-nature-bar-maenam-weekly-2026-07-29/",
@@ -633,7 +736,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/ai-community-meeting-nature-bar-maenam-weekly-2026-08-05/",
@@ -645,7 +750,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/ai-community-meeting-nature-bar-maenam-weekly-2026-08-12/",
@@ -657,7 +764,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/ai-community-meeting-nature-bar-maenam-weekly-2026-08-19/",
@@ -669,7 +778,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/beach-walk-koh-samui-weekly-2026-07-18/",
@@ -681,7 +792,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/beach-walk-koh-samui-weekly-2026-07-25/",
@@ -693,7 +806,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/beach-walk-koh-samui-weekly-2026-08-01/",
@@ -705,7 +820,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/beach-walk-koh-samui-weekly-2026-08-08/",
@@ -717,7 +834,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/beach-walk-koh-samui-weekly-2026-08-15/",
@@ -729,7 +848,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/beach-walk-koh-samui-weekly-2026-08-22/",
@@ -741,7 +862,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/business-networking-lunch-nature-bar-maenam-weekly-2026-07-24/",
@@ -753,7 +876,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/business-networking-lunch-nature-bar-maenam-weekly-2026-07-31/",
@@ -765,7 +890,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/business-networking-lunch-nature-bar-maenam-weekly-2026-08-07/",
@@ -777,7 +904,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/business-networking-lunch-nature-bar-maenam-weekly-2026-08-14/",
@@ -789,7 +918,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/business-networking-lunch-nature-bar-maenam-weekly-2026-08-21/",
@@ -801,7 +932,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/hua-hin-charity-golf-classic-2026/",
@@ -813,7 +946,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/pub-quiz-nature-bar-maenam-beach-weekly-2026-07-23/",
@@ -825,7 +960,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/pub-quiz-nature-bar-maenam-beach-weekly-2026-07-30/",
@@ -837,7 +974,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/pub-quiz-nature-bar-maenam-beach-weekly-2026-08-06/",
@@ -849,7 +988,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/pub-quiz-nature-bar-maenam-beach-weekly-2026-08-13/",
@@ -861,7 +1002,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/event/pub-quiz-nature-bar-maenam-beach-weekly-2026-08-20/",
@@ -873,7 +1016,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/family-activities/",
@@ -885,7 +1030,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/fitness/",
@@ -897,7 +1044,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/food-4-life-samui/",
@@ -909,7 +1058,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/food-drink-deals/",
@@ -921,7 +1072,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/food-drinks/",
@@ -933,7 +1086,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/graphic-design/",
@@ -945,7 +1100,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/health-fitness/",
@@ -957,7 +1114,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/health-wellbeing/",
@@ -969,7 +1128,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/hire-group/",
@@ -981,7 +1142,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/hire/",
@@ -993,7 +1156,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/homepage/",
@@ -1005,7 +1170,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/hua-hin-charity-programs/",
@@ -1017,7 +1184,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/hua-hin-children-of-the-forest/",
@@ -1029,7 +1198,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/hua-hin-community-events/",
@@ -1041,7 +1212,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/hua-hin-eyeglasses-for-children/",
@@ -1053,7 +1226,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/hua-hin-hua-hin-youth-football-championship-for-literacy/",
@@ -1065,7 +1240,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/hua-hin-library-books-for-local-schools/",
@@ -1077,7 +1254,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/hua-hin-lifesaving-training-for-students/",
@@ -1089,7 +1268,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/hua-hin-police-help-save-lives/",
@@ -1101,7 +1282,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/hua-hin-ultrasound-technology-project/",
@@ -1113,7 +1296,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/hua-hin-university-social-responsibility/",
@@ -1125,7 +1310,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/hua-hin-water-safety-and-drowning-prevention/",
@@ -1137,7 +1324,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/hua-hin-world-water-day-service-project/",
@@ -1149,7 +1338,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/insurance/",
@@ -1161,7 +1352,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/jetski-hire/",
@@ -1173,7 +1366,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/koh-phangan-charity-programs/",
@@ -1185,7 +1380,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/koh-phangan-community-events/",
@@ -1197,7 +1394,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/koh-phangan/",
@@ -1209,7 +1408,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/koh-samui-charity-programs/",
@@ -1221,7 +1422,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/koh-samui-surf-lifesaving-club/",
@@ -1233,7 +1436,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/koh-samui/",
@@ -1245,7 +1450,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/krabi-charity-programs/",
@@ -1257,7 +1464,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/krabi-community-events/",
@@ -1269,7 +1478,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/krabi-property-sales/",
@@ -1281,7 +1492,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/learn-thai/",
@@ -1293,7 +1506,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/legal-advice/",
@@ -1305,7 +1520,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/local-business-network-clean/",
@@ -1317,7 +1534,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/local-business-network/",
@@ -1329,7 +1548,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/local-deals/",
@@ -1341,7 +1562,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/login/",
@@ -1353,7 +1576,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/marketing/",
@@ -1365,7 +1590,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/mens-health-wellness/",
@@ -1377,7 +1604,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/move-to-thailand-guide/",
@@ -1389,7 +1618,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/moving-to-bangkok/",
@@ -1401,7 +1632,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/moving-to-chiang-mai/",
@@ -1413,7 +1646,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/moving-to-hua-hin/",
@@ -1425,7 +1660,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/moving-to-pattaya/",
@@ -1437,7 +1674,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/moving-to-phuket/",
@@ -1449,7 +1688,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/moving-to-samui/",
@@ -1461,7 +1702,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/nannies/",
@@ -1473,7 +1716,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/networking/",
@@ -1485,7 +1730,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/online-jobs/",
@@ -1497,7 +1744,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/other-tours/",
@@ -1509,7 +1758,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/pages/",
@@ -1521,7 +1772,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/paint-night-event-registration-page/",
@@ -1533,7 +1786,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/password-recovery/",
@@ -1545,7 +1800,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/past-events/",
@@ -1557,7 +1814,121 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
+    },
+    {
+      "route": "/past-events/bangkok/",
+      "status": 200,
+      "title": "Past Events in Bangkok | First Contact Thailand",
+      "h1Count": 1,
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "missingImages": [],
+      "visibleOverflow": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
+    },
+    {
+      "route": "/past-events/chiang-mai/",
+      "status": 200,
+      "title": "Past Events in Chiang Mai | First Contact Thailand",
+      "h1Count": 1,
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "missingImages": [],
+      "visibleOverflow": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
+    },
+    {
+      "route": "/past-events/hua-hin/",
+      "status": 200,
+      "title": "Past Events in Hua Hin | First Contact Thailand",
+      "h1Count": 1,
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "missingImages": [],
+      "visibleOverflow": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
+    },
+    {
+      "route": "/past-events/koh-phangan/",
+      "status": 200,
+      "title": "Past Events in Koh Phangan | First Contact Thailand",
+      "h1Count": 1,
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "missingImages": [],
+      "visibleOverflow": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
+    },
+    {
+      "route": "/past-events/krabi/",
+      "status": 200,
+      "title": "Past Events in Krabi | First Contact Thailand",
+      "h1Count": 1,
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "missingImages": [],
+      "visibleOverflow": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
+    },
+    {
+      "route": "/past-events/pattaya/",
+      "status": 200,
+      "title": "Past Events in Pattaya | First Contact Thailand",
+      "h1Count": 1,
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "missingImages": [],
+      "visibleOverflow": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
+    },
+    {
+      "route": "/past-events/phuket/",
+      "status": 200,
+      "title": "Past Events in Phuket | First Contact Thailand",
+      "h1Count": 1,
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "missingImages": [],
+      "visibleOverflow": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
+    },
+    {
+      "route": "/past-events/samui/",
+      "status": 200,
+      "title": "Past Events in Koh Samui | First Contact Thailand",
+      "h1Count": 1,
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "missingImages": [],
+      "visibleOverflow": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/pattaya-charity-programs/",
@@ -1569,7 +1940,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/pattaya-community-events/",
@@ -1581,7 +1954,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/pattaya-covid-protection/",
@@ -1593,7 +1968,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/pattaya-live-love-program/",
@@ -1605,7 +1982,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/pattaya-promoting-peace/",
@@ -1617,7 +1996,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/pattaya-rotary-drinking-water/",
@@ -1629,7 +2010,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/pattaya-save-a-childs-eyes/",
@@ -1641,7 +2024,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/pattaya-shop-local-too/",
@@ -1653,7 +2038,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/pattaya-young-entrepreneurs-fair/",
@@ -1665,7 +2052,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/phuket-aed-pads/",
@@ -1677,7 +2066,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/phuket-charity-programs/",
@@ -1689,7 +2080,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/phuket-community-events/",
@@ -1701,7 +2094,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/phuket-rescue-boat-patong-beach/",
@@ -1713,7 +2108,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/phuket-safe-roads-project/",
@@ -1725,7 +2122,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/phuket-save-a-child-swim-program/",
@@ -1737,7 +2136,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/phuket-tsunami-scholarship-program/",
@@ -1749,7 +2150,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/property-clean/",
@@ -1761,7 +2164,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/property-management/",
@@ -1773,7 +2178,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/property-sales/",
@@ -1785,7 +2192,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/property-sales/bangkok/",
@@ -1797,7 +2206,37 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
+    },
+    {
+      "route": "/property-sales/chiang-mai/",
+      "status": 200,
+      "title": "Property Sales in Chiang Mai | First Contact Thailand",
+      "h1Count": 1,
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "missingImages": [],
+      "visibleOverflow": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
+    },
+    {
+      "route": "/property-sales/hua-hin/",
+      "status": 200,
+      "title": "Property Sales in Hua Hin | First Contact Thailand",
+      "h1Count": 1,
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "missingImages": [],
+      "visibleOverflow": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/property-sales/koh-phangan/",
@@ -1809,7 +2248,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/property-sales/koh-samui/",
@@ -1821,7 +2262,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/property-sales/krabi/",
@@ -1833,7 +2276,31 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [
+        "Failed to load resource: net::ERR_BLOCKED_BY_RESPONSE.NotSameOrigin"
+      ],
+      "externalRequestWarnings": [
+        "image: https://img.lazudi.com/public/properties/209108/17734627556563.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/207105/17663831658336.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/206918/17655095831412.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/207997/17701722889647.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/210573/17789855087213.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/210571/17789844678383.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/207824/17695675868397.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/207382/17678429733303.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/208285/17709515331566.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/207102/17663757002307.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/207911/17698344879945.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/210575/17789917587666.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/210129/17773477061585.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/207099/17663757002307.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/207908/17698276589647.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/207329/17677548793495.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/210199/17775214762924.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/207229/17675776104547.jpg?fm=webp&w=900&h=600&markalpha=0",
+        "image: https://img.lazudi.com/public/properties/208027/17799389234704.jpg?fm=webp&w=900&h=600&markalpha=0"
+      ]
     },
     {
       "route": "/property-sales/pattaya/",
@@ -1845,7 +2312,11 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": [
+        "image: https://cdn.gryphtech.com/userimages/92/Large/L_70d2f05b-cd0a-43e9-8ce1-80bd1581c6f8.jpg"
+      ]
     },
     {
       "route": "/property-sales/phuket/",
@@ -1857,7 +2328,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/property/",
@@ -1869,7 +2342,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/real-estate/",
@@ -1881,7 +2356,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/remote-online-work-opportunities/",
@@ -1893,7 +2370,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/restaurant-deals/",
@@ -1905,7 +2384,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/sample-page/",
@@ -1917,7 +2398,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/social-events-2/",
@@ -1929,7 +2412,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/social-events/",
@@ -1941,7 +2426,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/social-media-support/",
@@ -1953,7 +2440,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/solar/",
@@ -1965,7 +2454,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/submissions/",
@@ -1977,7 +2468,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/support-4-autism-samui/",
@@ -1989,7 +2482,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/swim-4-life-samui/",
@@ -2001,7 +2496,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/test-classroom/",
@@ -2013,7 +2510,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/think-pink-samui/",
@@ -2025,7 +2524,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/tours-2/",
@@ -2037,7 +2538,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/tours-clean/",
@@ -2049,7 +2552,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/tours/",
@@ -2061,7 +2566,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/vehicle-rental/",
@@ -2073,7 +2580,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/visas/",
@@ -2085,7 +2594,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/water/",
@@ -2097,7 +2608,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     },
     {
       "route": "/welcome-to-samui/",
@@ -2109,7 +2622,9 @@
       "missingImages": [],
       "visibleOverflow": [],
       "consoleErrors": [],
-      "failedRequests": []
+      "failedRequests": [],
+      "externalConsoleWarnings": [],
+      "externalRequestWarnings": []
     }
   ],
   "screenshotResults": [

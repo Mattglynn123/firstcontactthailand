@@ -1,49 +1,47 @@
-# Getting Started — for Mat
+# Getting Started - Mat
 
-Simple, non-technical steps. You talk to Codex; Codex does the work.
+## First-time setup
 
-## Part 1 — One-time setup (about 10 minutes, only ever done once)
+Install Node.js LTS and Git, then run:
 
-1. Install **Node.js** — go to https://nodejs.org and install the big green **LTS** button.
-2. Install **Git** — go to https://git-scm.com/download/win and install (click Next through it).
-3. Open a terminal (search "Terminal" or "PowerShell" in Windows) and run, one line at a time:
-   ```
-   git clone https://github.com/Mattglynn123/firstcontactthailand.git
-   cd firstcontactthailand
-   cd web
-   npm install
-   ```
-   When it finishes, setup is done. You never do Part 1 again.
+```powershell
+cd "$HOME\Documents"
+git clone --branch codex/standalone-rebuild --single-branch https://github.com/Mattglynn123/firstcontactthailand.git
+cd firstcontactthailand\web
+npm ci
+```
 
-## Part 2 — Every time you want to work on the site
+Open the folder `$HOME\Documents\firstcontactthailand` in the Codex desktop app.
+Do not open the parent `Documents` folder or any previous website folder.
 
-1. Open **Codex** in the `firstcontactthailand` folder.
-2. First time only, paste this to Codex:
-   > Read CODEX-START-HERE.md and follow it.
-   After that, just tell Codex what you want in plain English, e.g.
-   *"Make the homepage more modern"* or *"Fix the broken images on the Hire page."*
-3. To **see the site** while you work, open a terminal in the folder and run:
-   ```
-   cd web
-   npm run dev
-   ```
-   Then open **http://localhost:4321** in your browser. Leave it running — it
-   updates live as Codex makes changes. (Press Ctrl+C in the terminal to stop.)
-4. When you like a change, tell Codex: *"Save and push this."* (That backs it up
-   to GitHub so nothing is ever lost and Daniel can see it too.)
+## Start a work session
 
-## Part 3 — When you're happy with the whole site
+Open a terminal in `firstcontactthailand` and run:
 
-1. Tell Codex:
-   > I'm happy with the site — prepare it to go live.
-   Codex gets it production-ready.
-2. Message **Daniel** — he does the final step: switching your web address
-   (firstcontactthailand.com) over to the new site.
+```powershell
+git fetch origin
+git switch codex/standalone-rebuild
+git pull --ff-only origin codex/standalone-rebuild
+git status --short --branch
+cd web
+npm run dev
+```
 
-That's it. Your old WordPress site stays running untouched the whole time as a
-backup, until you're 100% happy.
+Open the local URL printed by Astro, normally `http://localhost:4321/`.
+The public approved staging version remains available at
+`https://firstcontactthailand.com/staging/` for comparison.
 
-## If you get stuck
+Start a new Codex task in the repository folder and paste the complete prompt in
+`CODEX-START-HERE.md`. After Codex verifies the branch and commit, describe one
+specific change at a time.
 
-- Message Daniel with a screenshot.
-- Or tell Codex: *"Something's not working — here's what I see: [describe it]."*
+Codex is instructed to document, commit, and push each completed change
+automatically. Mat can still use this sentence to request an immediate checkpoint:
+
+```text
+Run the build and responsive checks. If they pass, commit this requested change and push only to origin/codex/standalone-rebuild. Return the commit SHA and branch URL. Do not deploy production.
+```
+
+At the end of every session, Mat should receive a commit SHA and this branch URL:
+`https://github.com/Mattglynn123/firstcontactthailand/tree/codex/standalone-rebuild`.
+If Codex does not provide both, ask: `Confirm that all completed work is committed and pushed, and verify that local HEAD matches the remote branch SHA.`

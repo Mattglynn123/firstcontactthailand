@@ -1,51 +1,54 @@
-# Codex — Start Here (First Contact Thailand rebuild)
+# Codex Start Here - Mat
 
-Paste the prompt below into Codex, in the cloned `firstcontactthailand` folder.
-It picks up exactly where the handoff left off.
+Open the cloned `firstcontactthailand` repository itself as the Codex workspace,
+not its parent folder and not an old `matt AI` folder. Start a new Codex task and
+paste the prompt below.
 
----
+```text
+Continue the approved First Contact Thailand standalone website.
 
-You are working on the First Contact Thailand website rebuild. The old site is
-WordPress; we are rebuilding it WordPress-free. Everything you need is in this repo.
+Authoritative repository:
+https://github.com/Mattglynn123/firstcontactthailand.git
 
-BEFORE DOING ANYTHING, read these files:
-1. ROADMAP.md            (full status + next steps + known defects)
-2. docs/ADR-001-stack-choice.md   (why Astro, the target stack)
-3. web/AGENTS.md         (conventions, commands, layout of the Astro project)
+Authoritative branch:
+codex/standalone-rebuild
 
-CONTEXT (already done, do not redo):
-- Full verified backup of the live WordPress site exists off-server.
-- A faithful static replica is live at https://firstcontactthailand.com/staging/
-  (noindex). Regenerate with the scripts in web/scripts/ if needed.
-- The new Astro site lives in web/ : Astro 6 + TypeScript + Tailwind 4 + MDX.
-- All 100 WordPress pages + 1 post are migrated to Markdown in
-  web/src/content/pages/ and web/src/content/posts/ (frontmatter keeps the
-  original slug, title, dates, originalUrl).
+Approved public staging reference:
+https://firstcontactthailand.com/staging/
 
-GROUND RULES:
-- Never touch the live WordPress site. Work only in this repo.
-- Keep page slugs stable (SEO) until go-live.
-- Retire pages by setting `draft: true` in frontmatter — do not delete during curation.
-- Run `npm run build` (in web/) before every commit; it must stay green.
-- Small commits, clear messages, push often. Never commit secrets.
+Before doing anything:
+1. Confirm that the current workspace is the cloned firstcontactthailand repository.
+2. Read AGENTS.md and web/AGENTS.md.
+3. Run git fetch origin.
+4. Run git switch codex/standalone-rebuild.
+5. Run git pull --ff-only origin codex/standalone-rebuild.
+6. Run git status --short --branch and git rev-parse HEAD.
+7. Run git log -5 --oneline so the latest saved work is visible.
+8. Stop and explain the problem if the branch is not codex/standalone-rebuild, the pull cannot fast-forward, or tracked files contain unexplained changes.
 
-FIRST TASK — start the dev server and do content curation:
-1. `cd web && npm install && npm run dev`, open http://localhost:4321/pages to see all pages.
-2. There are duplicates and junk to resolve. Group and recommend keep/merge/delete for:
-   - Tours: `tours`, `tours-2`, `tours-clean`, `other-tours`
-   - Contact: `contact-2`, `contact-3`, `contact-link`
-   - Business network: `local-business-network`, `local-business-network-clean`,
-     `business-networking`, `business-directory`, `business-directory-2`
-   - Real estate / property: `property`, `property-clean`, `real-estate`, `charities`
-   - Car/bike hire: `car-bike-hire`, `carbikehire`
-   - Test/empty pages: `test-classroom`, `sample-page`, `37-2`, `blog`, `hello-world`
-     and the ~32 files whose body is empty.
-3. Propose a final page list (canonical slug per topic) and a redirect map for the
-   dropped duplicates. Mark all rejects `draft: true`. Show me the plan before mass edits.
+Work only on the standalone Astro source in this repository. Do not inspect or edit WordPress, PHP, wp-admin, generated mirrors, old HTML copies, rollback folders, old Codex workspaces, codex/astro-mvp-july15, codex/mat-local-history-july7-15, or astro-foundation.
 
-THEN (later tasks, in ROADMAP.md order): re-add the broken images, build the real
-navigation menu, design the homepage + page template in Tailwind (mobile-first),
-and set up Cloudflare Pages deploy (build `npm run build`, output `web/dist`, root `web`).
+The staging URL above is the version Mat approved as the best current baseline. Preserve its layout, content, routes, property navigation, regional events, charity pages, images, responsive behavior, and working links unless Mat explicitly requests a specific change.
 
-Ask me to confirm anything ambiguous. Begin by reading the three files above and
-giving me the curation plan.
+For every requested change:
+- identify the exact source files before editing;
+- make only the requested change;
+- run npm ci if dependencies are not installed;
+- run npm run build from web/;
+- visually verify affected pages on desktop and mobile;
+- do not deploy to production or edit the server staging directory directly;
+- show Mat the result locally when the change is visual;
+
+AUTOMATIC SAVE AND TRACEABILITY RULES:
+- Treat GitHub as the permanent backup and audit trail. Do not leave completed work only on this laptop.
+- After each logically complete requested change, append an entry to docs/MAT-WORKLOG.md with the UTC date, Mat's request, files or areas changed, verification performed, and completion status.
+- Run git diff --check and npm run build before saving. Run the relevant browser/responsive checks for visual changes.
+- Stage only the intended files and docs/MAT-WORKLOG.md. Never add credentials, .env files, generated secrets, node_modules, backups, or unrelated files.
+- Create a clear commit, then push automatically to origin/codex/standalone-rebuild. Do not wait for Mat to remember to ask for a push.
+- Verify the save with git status --short --branch, git rev-parse HEAD, and git ls-remote origin refs/heads/codex/standalone-rebuild. The local and remote SHAs must match.
+- Never force-push, rebase published work, rewrite history, run git reset --hard, or delete previous work.
+- If verification fails, keep working until the requested change is safe. If genuinely blocked, do not claim completion; explain exactly what remains and do not deploy it.
+- At the end of every session, return the commit SHA, GitHub branch URL, tests performed, worklog entry, and any remaining issue.
+
+Start by reporting the verified branch, commit SHA, working-tree status, and the exact local preview command. Do not modify files yet.
+```

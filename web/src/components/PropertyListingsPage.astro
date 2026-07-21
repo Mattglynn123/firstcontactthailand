@@ -107,7 +107,7 @@ const { area } = Astro.props;
       <p data-gallery-title>Property photos</p>
       <button type="button" data-gallery-close aria-label="Close photo gallery">Close</button>
     </div>
-    <img data-gallery-image alt="" />
+    <img data-gallery-image src={area.image} alt={`${area.name} property photos`} />
     <div class="property-gallery__controls">
       <button type="button" data-gallery-previous>Previous photo</button>
       <span data-gallery-status></span>
@@ -136,6 +136,7 @@ const { area } = Astro.props;
     let visibleCount = 24;
     let galleryImages = [];
     let galleryIndex = 0;
+    const fallbackImage = root.querySelector('.property-catalogue__hero img')?.getAttribute('src') || '';
 
     const escapeHtml = (value) => String(value ?? '')
       .replaceAll('&', '&amp;')
@@ -149,7 +150,7 @@ const { area } = Astro.props;
       : 'Price on application';
 
     const cardHtml = (listing, index) => {
-      const image = listing.images?.[0] || root.querySelector('.property-catalogue__hero img')?.getAttribute('src') || '';
+      const image = listing.images?.[0] || fallbackImage;
       const facts = [
         listing.bedrooms ? `${listing.bedrooms} bed${listing.bedrooms === 1 ? '' : 's'}` : '',
         listing.bathrooms ? `${listing.bathrooms} bath${listing.bathrooms === 1 ? '' : 's'}` : '',
@@ -192,6 +193,13 @@ const { area } = Astro.props;
         ? visible.map(cardHtml).join('')
         : '<div class="empty-state"><h2>No properties match these filters</h2><p>Clear the filters or contact us with your requirements.</p></div>';
       more.hidden = visible.length >= sorted.length;
+      results.querySelectorAll('.property-card__media img').forEach((image) => {
+        const useFallback = () => {
+          if (fallbackImage && image.getAttribute('src') !== fallbackImage) image.src = fallbackImage;
+        };
+        image.addEventListener('error', useFallback);
+        if (image.complete && image.naturalWidth === 0) useFallback();
+      });
       results.querySelectorAll('[data-gallery-open]').forEach((button) => {
         button.addEventListener('click', () => {
           const listing = visible[Number(button.dataset.galleryOpen)];
@@ -236,6 +244,9 @@ const { area } = Astro.props;
     sort.addEventListener('change', render);
     more.addEventListener('click', () => { visibleCount += 24; render(); });
     gallery.querySelector('[data-gallery-close]').addEventListener('click', () => gallery.close());
+    galleryImage.addEventListener('error', () => {
+      if (fallbackImage && galleryImage.getAttribute('src') !== fallbackImage) galleryImage.src = fallbackImage;
+    });
     gallery.querySelector('[data-gallery-previous]').addEventListener('click', () => { galleryIndex = (galleryIndex - 1 + galleryImages.length) % galleryImages.length; updateGallery(); });
     gallery.querySelector('[data-gallery-next]').addEventListener('click', () => { galleryIndex = (galleryIndex + 1) % galleryImages.length; updateGallery(); });
     gallery.addEventListener('click', (event) => { if (event.target === gallery) gallery.close(); });

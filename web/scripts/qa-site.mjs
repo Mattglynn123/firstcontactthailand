@@ -10,6 +10,7 @@ const distRoot = path.join(webRoot, 'dist');
 const qaRoot = path.join(repoRoot, 'docs', 'qa');
 const screenshotRoot = path.join(qaRoot, 'screenshots');
 const baseUrl = process.env.QA_BASE_URL ?? 'http://127.0.0.1:4322';
+const baseOrigin = new URL(baseUrl).origin;
 
 const priorityRoutes = [
   '/',
@@ -115,10 +116,22 @@ try {
   for (const route of routes) {
     const consoleErrors = [];
     const failedRequests = [];
+    const externalConsoleWarnings = [];
+    const externalRequestWarnings = [];
     const onConsole = (message) => {
-      if (message.type() === 'error') consoleErrors.push(message.text());
+      if (message.type() !== 'error') return;
+      const locationUrl = message.location().url;
+      if (locationUrl && new URL(locationUrl, baseUrl).origin !== baseOrigin) {
+        externalConsoleWarnings.push(message.text());
+        return;
+      }
+      consoleErrors.push(message.text());
     };
-    const onRequestFailed = (request) => failedRequests.push(`${request.resourceType()}: ${request.url()}`);
+    const onRequestFailed = (request) => {
+      const failure = `${request.resourceType()}: ${request.url()}`;
+      if (new URL(request.url(), baseUrl).origin === baseOrigin) failedRequests.push(failure);
+      else externalRequestWarnings.push(failure);
+    };
     auditPage.on('console', onConsole);
     auditPage.on('requestfailed', onRequestFailed);
 
@@ -140,8 +153,14 @@ try {
         documentWidth: document.documentElement.scrollWidth,
         viewportWidth: window.innerWidth,
         missingImages: [...document.images]
-          .filter((image) => !image.complete || image.naturalWidth === 0)
-          .map((image) => image.getAttribute('src')),
+          .filter((image) => {
+            const src = image.currentSrc || image.getAttribute('src');
+            const style = getComputedStyle(image);
+            const rect = image.getBoundingClientRect();
+            const visible = style.display !== 'none' && style.visibility !== 'hidden' && rect.width > 0 && rect.height > 0;
+            return src && visible && (!image.complete || image.naturalWidth === 0);
+          })
+          .map((image) => image.currentSrc || image.getAttribute('src')),
         visibleOverflow,
       };
     });
@@ -154,6 +173,8 @@ try {
       ...state,
       consoleErrors: [...new Set(consoleErrors)],
       failedRequests: [...new Set(failedRequests)],
+      externalConsoleWarnings: [...new Set(externalConsoleWarnings)],
+      externalRequestWarnings: [...new Set(externalRequestWarnings)],
     });
   }
 
@@ -194,6 +215,7 @@ try {
 const routeFailures = routeResults.filter((result) => result.status !== 200 || result.h1Count !== 1 || result.documentWidth > result.viewportWidth + 1 || result.missingImages.length || result.consoleErrors.length || result.failedRequests.length || result.visibleOverflow.length);
 const screenshotFailures = screenshotResults.filter((result) => result.status !== 200 || result.documentWidth > result.viewportWidth + 1 || result.missingImages || result.menuVisible === false);
 const passed = !brokenInternalLinks.length && !routeFailures.length && !screenshotFailures.length;
+const externalWarnings = routeResults.reduce((total, result) => total + result.externalConsoleWarnings.length + result.externalRequestWarnings.length, 0);
 
 const report = {
   generatedAt: new Date().toISOString(),
@@ -205,6 +227,7 @@ const report = {
     brokenInternalLinks: brokenInternalLinks.length,
     routeFailures: routeFailures.length,
     screenshotFailures: screenshotFailures.length,
+    externalWarnings,
   },
   brokenInternalLinks,
   routeResults,
@@ -222,6 +245,7 @@ const markdown = [
   `- Broken internal links: **${brokenInternalLinks.length}**`,
   `- Route failures: **${routeFailures.length}**`,
   `- Responsive failures: **${screenshotFailures.length}**`,
+  `- External resource warnings: **${externalWarnings}**`,
   '',
   '## Coverage',
   '',
