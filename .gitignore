@@ -59,6 +59,7 @@ build/
 
 # Local preview logs
 /web/preview-*.log
+/web/.astro-*.log
 
 # OS/editor noise
 .DS_Store

@@ -1,0 +1,15 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PastEventsPage from '../../components/PastEventsPage.astro';
+import { pastEvents } from '../../data/past-events';
+
+export function getStaticPaths() {
+  return Object.values(pastEvents).map((page) => ({ params: { area: page.slug }, props: { page } }));
+}
+
+const { page } = Astro.props;
+---
+
+<Layout title={`Past Events in ${page.location} | First Contact Thailand`} description={`Past community events in ${page.location}.`} image={page.events[0]?.image ?? '/assets/fct/PHOTO-2025-10-11-09-28-41-2.jpg'}>
+  <PastEventsPage page={page} />
+</Layout>

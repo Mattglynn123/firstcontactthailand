@@ -23,6 +23,8 @@ function prefixRootPaths(content) {
     .replaceAll("href='/", `href='${stagingPrefix}/`)
     .replaceAll('src="/', `src="${stagingPrefix}/`)
     .replaceAll("src='/", `src='${stagingPrefix}/`)
+    .replaceAll('data-listings-path="/', `data-listings-path="${stagingPrefix}/`)
+    .replaceAll("data-listings-path='/", `data-listings-path='${stagingPrefix}/`)
     .replaceAll("url('/", `url('${stagingPrefix}/`)
     .replaceAll('url("/', `url("${stagingPrefix}/`)
     .replace(/url\(\/(?!\/)/g, `url(${stagingPrefix}/`);

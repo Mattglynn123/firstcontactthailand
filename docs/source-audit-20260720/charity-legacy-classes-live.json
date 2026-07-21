@@ -1,0 +1,485 @@
+[
+  {
+    "backgrounds": [
+      {
+        "bg": "linear-gradient(rgba(16, 44, 55, 0.84), rgba(16, 44, 55, 0.84)), url(\"https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-Hero-Images-copy-scaled-1.jpg\")",
+        "cls": "side-nav",
+        "tag": "ASIDE",
+        "text": "Toggle navigation BlogCharityBangkokChiang MaiHua HinKoh SamuiPattayaPhuketEventsBangkokChiang MaiHua HinKoh SamuiPattayaPhuketHealth & FitnessHireLocal Business NetworkLocal DealsMove to Thailand GuideBangkokChiang MaiHua HinKoh SamuiPatta"
+      },
+      {
+        "bg": "linear-gradient(rgba(16, 44, 55, 0.84), rgba(16, 44, 55, 0.84)), url(\"https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-Hero-Images-copy-scaled-1.jpg\")",
+        "cls": "side-nav__scrollable-container",
+        "tag": "DIV",
+        "text": "Toggle navigation BlogCharityBangkokChiang MaiHua HinKoh SamuiPattayaPhuketEventsBangkokChiang MaiHua HinKoh SamuiPattayaPhuketHealth & FitnessHireLocal Business NetworkLocal DealsMove to Thailand GuideBangkokChiang MaiHua HinKoh SamuiPatta"
+      },
+      {
+        "bg": "linear-gradient(rgba(16, 44, 55, 0.64), rgba(16, 44, 55, 0.64)), url(\"https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-Hero-Images-copy-scaled-1.jpg\")",
+        "cls": "navbar",
+        "tag": "DIV",
+        "text": "BlogCharityBangkokChiang MaiHua HinKoh SamuiPattayaPhuketEventsBangkokChiang MaiHua HinKoh SamuiPattayaPhuketHealth & FitnessHireLocal Business NetworkLocal DealsMove to Thailand GuideBangkokChiang MaiHua HinKoh SamuiPattayaPhuketPropertyPr"
+      }
+    ],
+    "cardish": [
+      {
+        "cls": "wp-singular page-template page-template-page-templates page-template-no-title page-template-page-templatesno-title-php page page-id-1600 wp-custom-logo wp-embed-responsive wp-theme-inspiro tribe-js tec-no-tickets-on-recurring tec-no-rsvp-on-recurring inspiro--with-page-nav post-display-content-excerpt title-tagline-hidden colors-light elementor-default elementor-kit-71 tribe-theme-inspiro fct-mobile-charity-page-lock-20260625e fct-mobile-scroll-unlock-20260625f inspiro-page-ready",
+        "href": "https://firstcontactthailand.com/blog/",
+        "tag": "BODY",
+        "text": "(function(html){html.className = html.className.replace(/\\bno-js\\b/,'js')})(document.documentElement); Bangkok Charity Programs – First Contact Thailand img:is([sizes=\"auto\" i], [sizes^=\"auto,\" i]) { contain-intrinsic-size: 3000px 1500px } body.page-id-1660 .entry-content p, body.page-id-1660 .entry-content .panel-widg"
+      },
+      {
+        "cls": "wp-block-group fct-charity-area-page fct-bangkok-charity-page-20260605a has-global-padding is-layout-constrained wp-block-group-is-layout-constrained",
+        "href": "https://rcbfoundation.org/projects/improve-sanitation-hygiene-and-clean-drinking-water-facilities-in-needy-schools-and-communities/",
+        "tag": "DIV",
+        "text": "Bangkok Charity Programs We support Bangkok charity programs, including projects run by the Rotary Club of Bangkok Foundation. Clean Drinking Water Systems Supporting clean drinking water systems, sanitation, and hygiene education for rural schools and communities. Kid’s Day Out Rotary nursing scholarships help student"
+      },
+      {
+        "cls": "fct-bangkok-charity-grid-20260605a",
+        "href": "https://rcbfoundation.org/projects/improve-sanitation-hygiene-and-clean-drinking-water-facilities-in-needy-schools-and-communities/",
+        "tag": "DIV",
+        "text": "Clean Drinking Water Systems Supporting clean drinking water systems, sanitation, and hygiene education for rural schools and communities. Kid’s Day Out Rotary nursing scholarships help students in financial hardship and support Thailand’s need for registered nurses. Polio Plus Helping stateless children access prepara"
+      },
+      {
+        "cls": "fct-bangkok-charity-card-20260605a",
+        "href": "https://rcbfoundation.org/projects/improve-sanitation-hygiene-and-clean-drinking-water-facilities-in-needy-schools-and-communities/",
+        "tag": "A",
+        "text": "Clean Drinking Water Systems Supporting clean drinking water systems, sanitation, and hygiene education for rural schools and communities."
+      },
+      {
+        "cls": "fct-bangkok-charity-card-body-20260605a",
+        "href": "https://rcbfoundation.org/projects/improve-sanitation-hygiene-and-clean-drinking-water-facilities-in-needy-schools-and-communities/",
+        "tag": "DIV",
+        "text": "Clean Drinking Water Systems Supporting clean drinking water systems, sanitation, and hygiene education for rural schools and communities."
+      },
+      {
+        "cls": "fct-bangkok-charity-card-20260605a",
+        "href": "https://rcbfoundation.org/projects/open-opportunities-for-rotary-nursing-scholars/",
+        "tag": "A",
+        "text": "Kid’s Day Out Rotary nursing scholarships help students in financial hardship and support Thailand’s need for registered nurses."
+      },
+      {
+        "cls": "fct-bangkok-charity-card-body-20260605a",
+        "href": "https://rcbfoundation.org/projects/open-opportunities-for-rotary-nursing-scholars/",
+        "tag": "DIV",
+        "text": "Kid’s Day Out Rotary nursing scholarships help students in financial hardship and support Thailand’s need for registered nurses."
+      },
+      {
+        "cls": "fct-bangkok-charity-card-20260605a",
+        "href": "https://rcbfoundation.org/projects/peace-and-conflict-resolution-by-supporting-children-of-the-forest-sangklaburi/",
+        "tag": "A",
+        "text": "Polio Plus Helping stateless children access preparatory education, Thai language support, and safer pathways into school."
+      },
+      {
+        "cls": "fct-bangkok-charity-card-body-20260605a",
+        "href": "https://rcbfoundation.org/projects/peace-and-conflict-resolution-by-supporting-children-of-the-forest-sangklaburi/",
+        "tag": "DIV",
+        "text": "Polio Plus Helping stateless children access preparatory education, Thai language support, and safer pathways into school."
+      },
+      {
+        "cls": "fct-bangkok-charity-card-20260605a",
+        "href": "https://rcbfoundation.org/projects/protect-the-environment-by-implementing-waste-management-learning-and-infrastructures-in-a-rural-school-to-reduce-plastic-waste/",
+        "tag": "A",
+        "text": "Low Income Communities Supporting waste-management learning, sorting bins, composting, and reusable water bottles at a rural school."
+      },
+      {
+        "cls": "fct-bangkok-charity-card-body-20260605a",
+        "href": "https://rcbfoundation.org/projects/protect-the-environment-by-implementing-waste-management-learning-and-infrastructures-in-a-rural-school-to-reduce-plastic-waste/",
+        "tag": "DIV",
+        "text": "Low Income Communities Supporting waste-management learning, sorting bins, composting, and reusable water bottles at a rural school."
+      },
+      {
+        "cls": "fct-bangkok-charity-card-20260605a",
+        "href": "https://rcbfoundation.org/product/you-pick/",
+        "tag": "A",
+        "text": "Youth Choose the Rotary category you prefer, or let the foundation allocate support where it is most helpful."
+      },
+      {
+        "cls": "fct-bangkok-charity-card-body-20260605a",
+        "href": "https://rcbfoundation.org/product/you-pick/",
+        "tag": "DIV",
+        "text": "Youth Choose the Rotary category you prefer, or let the foundation allocate support where it is most helpful."
+      },
+      {
+        "cls": "fct-bangkok-charity-cta-20260605a",
+        "href": "https://firstcontactthailand.com/contact-link/",
+        "tag": "A",
+        "text": "Please tell us what other Bangkok charity groups to support"
+      }
+    ],
+    "url": "https://firstcontactthailand.com/bangkok-charity-programs/"
+  },
+  {
+    "backgrounds": [
+      {
+        "bg": "linear-gradient(rgba(16, 44, 55, 0.84), rgba(16, 44, 55, 0.84)), url(\"https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-Hero-Images-copy-scaled-1.jpg\")",
+        "cls": "side-nav",
+        "tag": "ASIDE",
+        "text": "Toggle navigation BlogCharityBangkokChiang MaiHua HinKoh SamuiPattayaPhuketEventsBangkokChiang MaiHua HinKoh SamuiPattayaPhuketHealth & FitnessHireLocal Business NetworkLocal DealsMove to Thailand GuideBangkokChiang MaiHua HinKoh SamuiPatta"
+      },
+      {
+        "bg": "linear-gradient(rgba(16, 44, 55, 0.84), rgba(16, 44, 55, 0.84)), url(\"https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-Hero-Images-copy-scaled-1.jpg\")",
+        "cls": "side-nav__scrollable-container",
+        "tag": "DIV",
+        "text": "Toggle navigation BlogCharityBangkokChiang MaiHua HinKoh SamuiPattayaPhuketEventsBangkokChiang MaiHua HinKoh SamuiPattayaPhuketHealth & FitnessHireLocal Business NetworkLocal DealsMove to Thailand GuideBangkokChiang MaiHua HinKoh SamuiPatta"
+      },
+      {
+        "bg": "linear-gradient(rgba(16, 44, 55, 0.64), rgba(16, 44, 55, 0.64)), url(\"https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-Hero-Images-copy-scaled-1.jpg\")",
+        "cls": "navbar",
+        "tag": "DIV",
+        "text": "BlogCharityBangkokChiang MaiHua HinKoh SamuiPattayaPhuketEventsBangkokChiang MaiHua HinKoh SamuiPattayaPhuketHealth & FitnessHireLocal Business NetworkLocal DealsMove to Thailand GuideBangkokChiang MaiHua HinKoh SamuiPattayaPhuketPropertyPr"
+      }
+    ],
+    "cardish": [
+      {
+        "cls": "wp-singular page-template-default page page-id-1660 wp-custom-logo wp-embed-responsive wp-theme-inspiro tribe-js tec-no-tickets-on-recurring tec-no-rsvp-on-recurring inspiro--with-page-nav post-display-content-excerpt title-tagline-hidden colors-light elementor-default elementor-kit-71 tribe-theme-inspiro fct-mobile-charity-page-lock-20260625e fct-mobile-scroll-unlock-20260625f inspiro-page-ready inspiro-page-loaded",
+        "href": "https://firstcontactthailand.com/blog/",
+        "tag": "BODY",
+        "text": "(function(html){html.className = html.className.replace(/\\bno-js\\b/,'js')})(document.documentElement); Chiang Mai Charity Programs – First Contact Thailand img:is([sizes=\"auto\" i], [sizes^=\"auto,\" i]) { contain-intrinsic-size: 3000px 1500px } body.page-id-1660 .entry-content p, body.page-id-1660 .entry-content .panel-w"
+      },
+      {
+        "cls": "fct-charity-area-page-20260603a fct-chiang-mai-charity-page-20260603a",
+        "href": "https://www.cmirotary.org/children-s-water-safety-program",
+        "tag": "SECTION",
+        "text": "Chiang Mai Charity Programs We support Chiang Mai charity projects, primarily via the Chiang Mai International Rotary Club, including children, education, health, water safety, community wellbeing and practical support programs. We also work with many other charity groups and would love to hear from others so we can su"
+      },
+      {
+        "cls": "fct-charity-area-heading-20260603a",
+        "href": "",
+        "tag": "HEADER",
+        "text": "Chiang Mai Charity Programs We support Chiang Mai charity projects, primarily via the Chiang Mai International Rotary Club, including children, education, health, water safety, community wellbeing and practical support programs. We also work with many other charity groups and would love to hear from others so we can su"
+      },
+      {
+        "cls": "fct-charity-area-grid-20260603a",
+        "href": "https://www.cmirotary.org/children-s-water-safety-program",
+        "tag": "DIV",
+        "text": "Children's Water Safety and Drowning Prevention Supporting water survival training for local students, helping children build basic swimming and ocean-safety skills. Read more BCMF B.K. Kee Patient House Helping provide support and accommodation for patients and families who travel to Chiang Mai for medical treatment. "
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-20260603a",
+        "href": "https://www.cmirotary.org/children-s-water-safety-program",
+        "tag": "ARTICLE",
+        "text": "Children's Water Safety and Drowning Prevention Supporting water survival training for local students, helping children build basic swimming and ocean-safety skills. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-image-link-20260603a",
+        "href": "https://www.cmirotary.org/children-s-water-safety-program",
+        "tag": "A",
+        "text": ""
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-body-20260603a",
+        "href": "https://www.cmirotary.org/children-s-water-safety-program",
+        "tag": "DIV",
+        "text": "Children's Water Safety and Drowning Prevention Supporting water survival training for local students, helping children build basic swimming and ocean-safety skills. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-20260603a",
+        "href": "https://www.cmirotary.org/bcmf-bk-kee-patient-house",
+        "tag": "ARTICLE",
+        "text": "BCMF B.K. Kee Patient House Helping provide support and accommodation for patients and families who travel to Chiang Mai for medical treatment. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-image-link-20260603a",
+        "href": "https://www.cmirotary.org/bcmf-bk-kee-patient-house",
+        "tag": "A",
+        "text": ""
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-body-20260603a",
+        "href": "https://www.cmirotary.org/bcmf-bk-kee-patient-house",
+        "tag": "DIV",
+        "text": "BCMF B.K. Kee Patient House Helping provide support and accommodation for patients and families who travel to Chiang Mai for medical treatment. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-20260603a",
+        "href": "https://www.cmirotary.org/beam-foundation-ged-program",
+        "tag": "ARTICLE",
+        "text": "B.E.A.M. GED Program Supporting education pathways and opportunities for young people through GED learning and wider community education. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-image-link-20260603a",
+        "href": "https://www.cmirotary.org/beam-foundation-ged-program",
+        "tag": "A",
+        "text": ""
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-body-20260603a",
+        "href": "https://www.cmirotary.org/beam-foundation-ged-program",
+        "tag": "DIV",
+        "text": "B.E.A.M. GED Program Supporting education pathways and opportunities for young people through GED learning and wider community education. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-20260603a",
+        "href": "https://www.cmirotary.org/school-vision-screening",
+        "tag": "ARTICLE",
+        "text": "School Vision Screening Screening school children for eyesight issues and helping children access spectacles so poor vision does not hold back learning. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-image-link-20260603a",
+        "href": "https://www.cmirotary.org/school-vision-screening",
+        "tag": "A",
+        "text": ""
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-body-20260603a",
+        "href": "https://www.cmirotary.org/school-vision-screening",
+        "tag": "DIV",
+        "text": "School Vision Screening Screening school children for eyesight issues and helping children access spectacles so poor vision does not hold back learning. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-20260603a",
+        "href": "https://www.cmirotary.org/cultivating-peace-culture-in-school",
+        "tag": "ARTICLE",
+        "text": "Cultivating a Peace Culture in School Helping students build confidence, discipline and non-violent conflict resolution through peace-culture education. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-image-link-20260603a",
+        "href": "https://www.cmirotary.org/cultivating-peace-culture-in-school",
+        "tag": "A",
+        "text": ""
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-body-20260603a",
+        "href": "https://www.cmirotary.org/cultivating-peace-culture-in-school",
+        "tag": "DIV",
+        "text": "Cultivating a Peace Culture in School Helping students build confidence, discipline and non-violent conflict resolution through peace-culture education. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-20260603a",
+        "href": "https://www.cmirotary.org/winter-clothing-school-supplies-app",
+        "tag": "ARTICLE",
+        "text": "Winter Clothing and School Supplies Appeal Collecting and distributing winter clothing and school supplies for communities that need practical seasonal support. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-image-link-20260603a",
+        "href": "https://www.cmirotary.org/winter-clothing-school-supplies-app",
+        "tag": "A",
+        "text": ""
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-body-20260603a",
+        "href": "https://www.cmirotary.org/winter-clothing-school-supplies-app",
+        "tag": "DIV",
+        "text": "Winter Clothing and School Supplies Appeal Collecting and distributing winter clothing and school supplies for communities that need practical seasonal support. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-20260603a",
+        "href": "https://www.cmirotary.org/water-sanitation-project",
+        "tag": "ARTICLE",
+        "text": "Water and Sanitation Project Improving access to cleaner water and sanitation infrastructure for communities across Northern Thailand. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-image-link-20260603a",
+        "href": "https://www.cmirotary.org/water-sanitation-project",
+        "tag": "A",
+        "text": ""
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-body-20260603a",
+        "href": "https://www.cmirotary.org/water-sanitation-project",
+        "tag": "DIV",
+        "text": "Water and Sanitation Project Improving access to cleaner water and sanitation infrastructure for communities across Northern Thailand. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-20260603a",
+        "href": "https://www.cmirotary.org/teddy-trekkers-initiative",
+        "tag": "ARTICLE",
+        "text": "Teddy Trekkers Initiative A hands-on initiative supporting children and families through outreach, care packages and community visits. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-image-link-20260603a",
+        "href": "https://www.cmirotary.org/teddy-trekkers-initiative",
+        "tag": "A",
+        "text": ""
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-body-20260603a",
+        "href": "https://www.cmirotary.org/teddy-trekkers-initiative",
+        "tag": "DIV",
+        "text": "Teddy Trekkers Initiative A hands-on initiative supporting children and families through outreach, care packages and community visits. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-20260603a",
+        "href": "https://www.cmirotary.org/mae-tao-clinic-child-protection",
+        "tag": "ARTICLE",
+        "text": "Mae Tao Clinic Child Protection Supporting child protection and education work connected with the Mae Tao Clinic community. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-image-link-20260603a",
+        "href": "https://www.cmirotary.org/mae-tao-clinic-child-protection",
+        "tag": "A",
+        "text": ""
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-body-20260603a",
+        "href": "https://www.cmirotary.org/mae-tao-clinic-child-protection",
+        "tag": "DIV",
+        "text": "Mae Tao Clinic Child Protection Supporting child protection and education work connected with the Mae Tao Clinic community. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-20260603a",
+        "href": "https://www.cmirotary.org/free-food-for-the-poor-initiative",
+        "tag": "ARTICLE",
+        "text": "Free Food for the Poor Initiative Helping provide food support to vulnerable people and families who need practical assistance. Read more"
+      },
+      {
+        "cls": "fct-chiang-mai-charity-image-link-20260603a",
+        "href": "https://www.cmirotary.org/free-food-for-the-poor-initiative",
+        "tag": "A",
+        "text": ""
+      },
+      {
+        "cls": "fct-chiang-mai-charity-card-body-20260603a",
+        "href": "https://www.cmirotary.org/free-food-for-the-poor-initiative",
+        "tag": "DIV",
+        "text": "Free Food for the Poor Initiative Helping provide food support to vulnerable people and families who need practical assistance. Read more"
+      },
+      {
+        "cls": "fct-charity-area-cta-20260603a",
+        "href": "https://firstcontactthailand.com/contact-link/",
+        "tag": "A",
+        "text": "Please tell us what charity groups to support"
+      }
+    ],
+    "url": "https://firstcontactthailand.com/chiang-mai-charity-programs/"
+  },
+  {
+    "backgrounds": [
+      {
+        "bg": "linear-gradient(rgba(16, 44, 55, 0.84), rgba(16, 44, 55, 0.84)), url(\"https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-Hero-Images-copy-scaled-1.jpg\")",
+        "cls": "side-nav",
+        "tag": "ASIDE",
+        "text": "Toggle navigation BlogCharityBangkokChiang MaiHua HinKoh SamuiPattayaPhuketEventsBangkokChiang MaiHua HinKoh SamuiPattayaPhuketHealth & FitnessHireLocal Business NetworkLocal DealsMove to Thailand GuideBangkokChiang MaiHua HinKoh SamuiPatta"
+      },
+      {
+        "bg": "linear-gradient(rgba(16, 44, 55, 0.84), rgba(16, 44, 55, 0.84)), url(\"https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-Hero-Images-copy-scaled-1.jpg\")",
+        "cls": "side-nav__scrollable-container",
+        "tag": "DIV",
+        "text": "Toggle navigation BlogCharityBangkokChiang MaiHua HinKoh SamuiPattayaPhuketEventsBangkokChiang MaiHua HinKoh SamuiPattayaPhuketHealth & FitnessHireLocal Business NetworkLocal DealsMove to Thailand GuideBangkokChiang MaiHua HinKoh SamuiPatta"
+      },
+      {
+        "bg": "linear-gradient(rgba(16, 44, 55, 0.64), rgba(16, 44, 55, 0.64)), url(\"https://firstcontactthailand.com/wp-content/uploads/2025/11/cropped-Hero-Images-copy-scaled-1.jpg\")",
+        "cls": "navbar",
+        "tag": "DIV",
+        "text": "BlogCharityBangkokChiang MaiHua HinKoh SamuiPattayaPhuketEventsBangkokChiang MaiHua HinKoh SamuiPattayaPhuketHealth & FitnessHireLocal Business NetworkLocal DealsMove to Thailand GuideBangkokChiang MaiHua HinKoh SamuiPattayaPhuketPropertyPr"
+      }
+    ],
+    "cardish": [
+      {
+        "cls": "wp-singular page-template-default page page-id-1746 wp-custom-logo wp-embed-responsive wp-theme-inspiro tribe-js tec-no-tickets-on-recurring tec-no-rsvp-on-recurring inspiro--with-page-nav post-display-content-excerpt title-tagline-hidden colors-light elementor-default elementor-kit-71 tribe-theme-inspiro fct-mobile-charity-page-lock-20260625e fct-mobile-scroll-unlock-20260625f fct-mobile-final-lock-20260627a inspiro-page-ready inspiro-page-loaded",
+        "href": "https://firstcontactthailand.com/blog/",
+        "tag": "BODY",
+        "text": "(function(html){html.className = html.className.replace(/\\bno-js\\b/,'js')})(document.documentElement); Pattaya Charity Programs – First Contact Thailand img:is([sizes=\"auto\" i], [sizes^=\"auto,\" i]) { contain-intrinsic-size: 3000px 1500px } body.page-id-1660 .entry-content p, body.page-id-1660 .entry-content .panel-widg"
+      },
+      {
+        "cls": "fct-pattaya-charity-page",
+        "href": "https://www.rotarypattaya.com/young-enterpreneurs-fair/",
+        "tag": "SECTION",
+        "text": "Pattaya Charity Programs We support several Pattaya charity projects, primarily via the Rotary Club of Pattaya. Young Entrepreneurs FairSupporting young people with practical enterprise experience and community-led opportunities. Rotary Drinking WaterHelping provide access to safe drinking water and practical health su"
+      },
+      {
+        "cls": "fct-pattaya-charity-intro",
+        "href": "",
+        "tag": "P",
+        "text": "We support several Pattaya charity projects, primarily via the Rotary Club of Pattaya."
+      },
+      {
+        "cls": "fct-pattaya-charity-grid",
+        "href": "https://www.rotarypattaya.com/young-enterpreneurs-fair/",
+        "tag": "DIV",
+        "text": "Young Entrepreneurs FairSupporting young people with practical enterprise experience and community-led opportunities. Rotary Drinking WaterHelping provide access to safe drinking water and practical health support for local communities. COVID ProtectionCommunity protection work supporting safer local health outcomes. P"
+      },
+      {
+        "cls": "fct-pattaya-charity-card",
+        "href": "https://www.rotarypattaya.com/young-enterpreneurs-fair/",
+        "tag": "A",
+        "text": "Young Entrepreneurs FairSupporting young people with practical enterprise experience and community-led opportunities."
+      },
+      {
+        "cls": "fct-pattaya-charity-body",
+        "href": "https://www.rotarypattaya.com/young-enterpreneurs-fair/",
+        "tag": "DIV",
+        "text": "Young Entrepreneurs FairSupporting young people with practical enterprise experience and community-led opportunities."
+      },
+      {
+        "cls": "fct-pattaya-charity-card",
+        "href": "https://www.rotarypattaya.com/rotary-drinking-water/",
+        "tag": "A",
+        "text": "Rotary Drinking WaterHelping provide access to safe drinking water and practical health support for local communities."
+      },
+      {
+        "cls": "fct-pattaya-charity-body",
+        "href": "https://www.rotarypattaya.com/rotary-drinking-water/",
+        "tag": "DIV",
+        "text": "Rotary Drinking WaterHelping provide access to safe drinking water and practical health support for local communities."
+      },
+      {
+        "cls": "fct-pattaya-charity-card",
+        "href": "https://www.rotarypattaya.com/covid-protection/",
+        "tag": "A",
+        "text": "COVID ProtectionCommunity protection work supporting safer local health outcomes."
+      },
+      {
+        "cls": "fct-pattaya-charity-body",
+        "href": "https://www.rotarypattaya.com/covid-protection/",
+        "tag": "DIV",
+        "text": "COVID ProtectionCommunity protection work supporting safer local health outcomes."
+      },
+      {
+        "cls": "fct-pattaya-charity-card",
+        "href": "https://www.rotarypattaya.com/promoting-peace/",
+        "tag": "A",
+        "text": "Promoting PeaceChildren use art to express peace, with proceeds supporting scholarships and local Rotary charities."
+      },
+      {
+        "cls": "fct-pattaya-charity-body",
+        "href": "https://www.rotarypattaya.com/promoting-peace/",
+        "tag": "DIV",
+        "text": "Promoting PeaceChildren use art to express peace, with proceeds supporting scholarships and local Rotary charities."
+      },
+      {
+        "cls": "fct-pattaya-charity-card",
+        "href": "https://www.rotarypattaya.com/shop-local-too/",
+        "tag": "A",
+        "text": "Shop Local Too!Encouraging local support and community connection through Rotary Pattaya initiatives."
+      },
+      {
+        "cls": "fct-pattaya-charity-body",
+        "href": "https://www.rotarypattaya.com/shop-local-too/",
+        "tag": "DIV",
+        "text": "Shop Local Too!Encouraging local support and community connection through Rotary Pattaya initiatives."
+      },
+      {
+        "cls": "fct-pattaya-charity-card",
+        "href": "https://www.rotarypattaya.com/save-a-childs-eyes/",
+        "tag": "A",
+        "text": "Save a Childs EyesProviding eye tests and glasses for underprivileged children who need help to learn at school."
+      },
+      {
+        "cls": "fct-pattaya-charity-body",
+        "href": "https://www.rotarypattaya.com/save-a-childs-eyes/",
+        "tag": "DIV",
+        "text": "Save a Childs EyesProviding eye tests and glasses for underprivileged children who need help to learn at school."
+      },
+      {
+        "cls": "fct-pattaya-charity-card",
+        "href": "https://www.rotarypattaya.com/live-love-program/",
+        "tag": "A",
+        "text": "LIVE LOVE programHelping vulnerable children and carers build confidence, healthy choices, and happier futures."
+      },
+      {
+        "cls": "fct-pattaya-charity-body",
+        "href": "https://www.rotarypattaya.com/live-love-program/",
+        "tag": "DIV",
+        "text": "LIVE LOVE programHelping vulnerable children and carers build confidence, healthy choices, and happier futures."
+      },
+      {
+        "cls": "fct-pattaya-charity-cta",
+        "href": "https://firstcontactthailand.com/contact-link/",
+        "tag": "A",
+        "text": "Please tell us what other Pattaya charity groups to support"
+      }
+    ],
+    "url": "https://firstcontactthailand.com/pattaya-charity-programs/"
+  }
+]

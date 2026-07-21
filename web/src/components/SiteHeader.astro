@@ -14,7 +14,15 @@ import { ChevronDown, Menu, X } from '@lucide/astro';
         <details class="nav-dropdown">
           <summary>{item.label}<ChevronDown aria-hidden="true" size={14} stroke-width={2.5} /></summary>
           <div class="nav-dropdown__menu">
-            {item.children.map((child) => <a href={child.href}>{child.label}</a>)}
+            {item.children.map((child) => child.children ? (
+              <details class="nav-submenu">
+                <summary>{child.label}<ChevronDown aria-hidden="true" size={14} stroke-width={2.5} /></summary>
+                <div class="nav-submenu__menu">
+                  <a href={child.href}>All property sales</a>
+                  {child.children.map((grandchild) => <a href={grandchild.href}>{grandchild.label}</a>)}
+                </div>
+              </details>
+            ) : <a href={child.href}>{child.label}</a>)}
           </div>
         </details>
       ) : (
@@ -42,7 +50,15 @@ import { ChevronDown, Menu, X } from '@lucide/astro';
           <details>
             <summary>{item.label}<ChevronDown aria-hidden="true" size={16} stroke-width={2.5} /></summary>
             <div>
-              {item.children.map((child) => <a href={child.href}>{child.label}</a>)}
+              {item.children.map((child) => child.children ? (
+                <details class="mobile-nav__nested">
+                  <summary>{child.label}<ChevronDown aria-hidden="true" size={15} stroke-width={2.5} /></summary>
+                  <div>
+                    <a href={child.href}>All property sales</a>
+                    {child.children.map((grandchild) => <a href={grandchild.href}>{grandchild.label}</a>)}
+                  </div>
+                </details>
+              ) : <a href={child.href}>{child.label}</a>)}
             </div>
           </details>
         ) : (

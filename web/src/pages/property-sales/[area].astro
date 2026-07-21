@@ -1,36 +1,15 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import SupportPage from '../../components/SupportPage.astro';
+import PropertyListingsPage from '../../components/PropertyListingsPage.astro';
+import { propertyAreas } from '../../data/property-areas';
 
 export function getStaticPaths() {
-  const areas = [
-    { slug: 'koh-samui', name: 'Koh Samui' },
-    { slug: 'koh-phangan', name: 'Koh Phangan' },
-    { slug: 'bangkok', name: 'Bangkok' },
-    { slug: 'pattaya', name: 'Pattaya' },
-    { slug: 'phuket', name: 'Phuket' },
-    { slug: 'krabi', name: 'Krabi' },
-  ];
-  return areas.map((area) => ({ params: { area: area.slug }, props: { area } }));
+  return propertyAreas.map((area) => ({ params: { area: area.slug }, props: { area } }));
 }
 
 const { area } = Astro.props;
 ---
 
-<Layout title={`Property Sales in ${area.name} | First Contact Thailand`} description={`Connect with trusted property sales contacts in ${area.name}.`} image="/assets/fct/property-home.jpg">
-  <SupportPage
-    eyebrow="Property sales area"
-    title={`${area.name} Property Sales`}
-    text={`Start your property search in ${area.name} with practical local knowledge and trusted introductions.`}
-    image="/assets/fct/property-home.jpg"
-    introTitle={`A clearer way to search in ${area.name}`}
-    introText="First Contact helps you identify suitable local contacts and the questions to ask before making any commitment. Independent legal and technical checks remain essential."
-    points={[
-      { title: 'Define your brief', text: 'Share the property type, budget, preferred location and intended use.' },
-      { title: 'Meet local contacts', text: `Connect with relevant property professionals who understand ${area.name}.` },
-      { title: 'Check before committing', text: 'Use independent legal, title and technical checks before paying a deposit.' },
-      { title: 'Plan ongoing support', text: 'Ask about management, maintenance, renovation and practical owner services.' },
-    ]}
-    ctaLabel={`Start a ${area.name} property enquiry`}
-  />
+<Layout title={`Property Sales in ${area.name} | First Contact Thailand`} description={`Current property listings for sale in ${area.name}.`} image={area.image}>
+  <PropertyListingsPage area={area} />
 </Layout>

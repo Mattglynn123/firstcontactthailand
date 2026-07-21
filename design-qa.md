@@ -1,55 +1,63 @@
 # First Contact Thailand - Design QA
 
-Review date: 2026-07-20
+Review date: 2026-07-21
 
 ## Reference hierarchy
 
 1. Mat's explicit July 20 requirements and recovered July 7-15 change history.
-2. The WordPress export and server-side page history for copy, navigation and page relationships.
-3. The public WordPress site for stable visual identity only: ocean header, white logo, typography, teal/navy/white palette and card treatment.
+2. The current public WordPress pages for copy, images, navigation relationships and stable visual identity.
+3. Server-side history and WordPress exports where the public render was duplicated, collapsed or otherwise unreliable.
 
-The current WordPress render contains duplicated and collapsed sections, so those defects were documented but not copied into Astro. Production WordPress was not modified.
+Production WordPress remained read-only. Visible source defects were recorded as evidence but were not reproduced in Astro.
 
-## Required corrections
+## Acceptance matrix
 
 | Area | Acceptance criterion | Result |
 | --- | --- | --- |
-| Property navigation | Two choices only: Property Overview and Property Sales | passed |
-| Property Overview | Four cards: Sales, Management, Building Contractors, Buyers Agent | passed |
-| Property Sales | Six areas: Koh Samui, Koh Phangan, Bangkok, Pattaya, Phuket, Krabi | passed |
-| Homepage | Community event links, testimonials and six category cards restored | passed |
-| Events | Structured regional/event pages with real local images and working routes | passed |
-| Charity | Extra information opens internal First Contact summaries | passed |
+| Property navigation | Property Overview plus a nested Property Sales menu | passed |
+| Property Overview | Sales, Management, Building Contractors and Buyers Agent | passed |
+| Property Sales | Koh Samui, Koh Phangan, Bangkok, Pattaya, Phuket, Krabi, Chiang Mai and Hua Hin | passed |
+| Property catalogues | Regional page, filters, sorting, pagination, gallery and enquiry flow | passed |
+| Homepage | Community links, testimonials and category cards retained | passed |
+| Events | Correct regional current-event images and region-specific past-event archives | passed |
+| Charity | Correct local images and internal Rotary programme summaries | passed |
 | Move to Thailand | One complete guide page | passed |
-| Better Tour Guide | Commissions, pre-bookings and Gold Membership content restored | passed |
+| Better Tour Guide | Commissions, pre-bookings and Gold Membership content retained | passed |
 | Local Deals | One claim CTA at the bottom of the page | passed |
 
 ## Build and structural QA
 
-- Astro build: 175 generated routes.
-- Broken internal links: 0.
-- Missing local assets: 0.
+- `npm run build:staging`: passed.
+- Static HTML pages generated: 185.
+- Broken internal links or local asset references: 0.
 - Pages without exactly one H1: 0.
-- References to WordPress runtime, `wp-content`, `wp-includes`, `wp-json`, mirror HTML or live-website hosts: 0.
-- Console errors on the eight priority routes: 0.
-- Horizontal overflow on the eight priority routes at 1440 x 900 and 390 x 844: 0.
+- Property JSON paths rewritten for `/staging/`: 8 of 8.
+- References to `wp-content`, `wp-includes`, `wp-json` or `live-website.com`: 0.
+- Secret scan across source and evidence files: 0 findings.
+- `git diff --check`: passed.
 
 ## Visual and interaction QA
 
-- Compared public reference and Astro captures together for the homepage and Property flow.
-- Inspected top and bottom states at 1440 x 900 and 390 x 844 for Home, Property Overview, Property Sales, Community Events, Koh Samui Charity, Move to Thailand, Better Tour Guide and Local Deals.
-- Verified image loading, heading hierarchy, text wrapping, card dimensions, CTA visibility, footer completion and mobile navigation.
-- Opened the mobile menu and Property submenu; only Property Overview and Property Sales are presented.
-- Checked all priority images at natural width and confirmed no broken media.
+- Desktop viewport: 1440 x 1000.
+- Mobile viewport: 390 x 844.
+- Source and implementation captures were opened together for the homepage, Pattaya events, Phuket charity, Property Sales and a regional property catalogue.
+- In-app Browser verified image loading, overflow, headings, cards, CTAs, footer completion and mobile menu states.
+- Chrome independently verified the same priority routes and reported no console errors.
+- Mobile Property navigation was opened through both nested levels and exposed the overview plus all eight regional sales links.
+- Regional event checks covered current cards, images and region-specific archive destinations.
+- Regional charity checks covered programme images, internal summaries and Rotary attribution.
+- Property checks intentionally validate the page, interface and first rendered results only; they do not exhaustively crawl thousands of catalogue entries.
 
-Evidence is stored in `docs/design-qa-evidence/`. The public source screenshots show the WordPress duplication defect; focused implementation screenshots show the corrected standalone render.
+Evidence is stored in `docs/design-qa-evidence/`, with source evidence in `docs/source-audit-20260720/` and the content reconciliation in `docs/source-audit-20260720/content-gap-matrix.md`.
 
-## Comparison history
+## Iteration history
 
-The first reconstruction incorrectly treated an incomplete generated mirror as authoritative. This produced generic page fallbacks and missed Mat's information architecture. The July 20 pass replaced that assumption with requirement-level acceptance tests, recovered source content and route-specific Astro components. Each major issue reported by Mat is now represented by an explicit check in this document and `docs/conformity/matrix-corrected.md`.
+The earlier reconstruction treated an incomplete generated mirror as authoritative. That caused generic fallbacks, missing regional relationships and collapsed layouts. This pass rebuilt the affected routes from public source evidence and Mat's recovered history, then added explicit route-level checks for every major issue he reported.
+
+No P0, P1 or P2 issue remains in the validated local build. Public staging receives a separate post-deployment browser verification before handoff.
 
 ## Release boundary
 
-This result approves staging only. Production replacement requires Mat's visual sign-off, a fresh production backup and the documented atomic rollback procedure.
+This report approves staging only. Replacing production requires Mat's visual sign-off, a fresh production backup and the documented atomic rollback procedure.
 
 Final result: **passed**.

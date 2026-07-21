@@ -1,6 +1,7 @@
 export type NavChild = {
   label: string;
   href: string;
+  children?: NavChild[];
 };
 
 export type NavItem = NavChild & {
@@ -76,7 +77,20 @@ export const navigation: NavItem[] = [
     href: '/real-estate/',
     children: [
       { label: 'Property Overview', href: '/real-estate/' },
-      { label: 'Property Sales', href: '/property-sales/' },
+      {
+        label: 'Property Sales',
+        href: '/property-sales/',
+        children: [
+          { label: 'Koh Samui', href: '/property-sales/koh-samui/' },
+          { label: 'Koh Phangan', href: '/property-sales/koh-phangan/' },
+          { label: 'Bangkok', href: '/property-sales/bangkok/' },
+          { label: 'Pattaya', href: '/property-sales/pattaya/' },
+          { label: 'Phuket', href: '/property-sales/phuket/' },
+          { label: 'Krabi', href: '/property-sales/krabi/' },
+          { label: 'Chiang Mai', href: '/property-sales/chiang-mai/' },
+          { label: 'Hua Hin', href: '/property-sales/hua-hin/' },
+        ],
+      },
     ],
   },
   { label: 'Tours', href: '/tours-2/' },

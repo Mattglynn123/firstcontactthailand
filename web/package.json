@@ -9,6 +9,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "build:staging": "npm run build && node scripts/prepare-staging.mjs",
+    "sync:properties": "node scripts/sync-property-listings.mjs",
     "preview": "astro preview",
     "audit:conformity": "node scripts/conformity-audit.mjs",
     "audit:compare": "node scripts/compare-conformity.mjs",
