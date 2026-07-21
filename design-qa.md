@@ -47,14 +47,15 @@ Production WordPress remained read-only. Visible source defects were recorded as
 - Regional event checks covered current cards, images and region-specific archive destinations.
 - Regional charity checks covered programme images, internal summaries and Rotary attribution.
 - Property checks intentionally validate the page, interface and first rendered results only; they do not exhaustively crawl thousands of catalogue entries.
+- The deployed public staging was rechecked in both the in-app Browser and Chrome across 12 priority routes; desktop and mobile checks reported no broken images, horizontal overflow or console errors.
 
-Evidence is stored in `docs/design-qa-evidence/`, with source evidence in `docs/source-audit-20260720/` and the content reconciliation in `docs/source-audit-20260720/content-gap-matrix.md`.
+Evidence is stored in `docs/design-qa-evidence/`, including `staging-public-property-menu-mobile.png`; source evidence is in `docs/source-audit-20260720/` and the content reconciliation is in `docs/source-audit-20260720/content-gap-matrix.md`.
 
 ## Iteration history
 
 The earlier reconstruction treated an incomplete generated mirror as authoritative. That caused generic fallbacks, missing regional relationships and collapsed layouts. This pass rebuilt the affected routes from public source evidence and Mat's recovered history, then added explicit route-level checks for every major issue he reported.
 
-No P0, P1 or P2 issue remains in the validated local build. Public staging receives a separate post-deployment browser verification before handoff.
+No P0, P1 or P2 issue remains in the validated local build or the deployed public staging.
 
 ## Release boundary
 
