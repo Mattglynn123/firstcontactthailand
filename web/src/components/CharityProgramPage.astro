@@ -15,7 +15,7 @@ const { program } = Astro.props;
       <p class="section-kicker">{program.location} charity program</p>
       <h1>{program.title}</h1>
       <p>{program.text}</p>
-      <p>This local summary is based on information published by {program.sourceName}. Contact us if you would like to help, volunteer, donate, or request the latest project information.</p>
+      <p>This is a {program.sourceName} program</p>
       <a class="charity-summary__source" href={program.sourceUrl} target="_blank" rel="noreferrer">Visit the official Rotary source</a>
       <a class="page-cta" href={`/contact-link/?topic=${encodeURIComponent(program.title)}`}>Ask how you can support this program</a>
     </div>

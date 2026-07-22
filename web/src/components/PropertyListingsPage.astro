@@ -1,77 +1,78 @@
 ---
 import type { PropertyArea } from '../data/property-areas';
+import { propertyAreas } from '../data/property-areas';
 
 interface Props { area: PropertyArea; }
 const { area } = Astro.props;
 ---
 
-<section class="property-catalogue" data-property-catalogue data-listings-path={`/data/property-listings/${area.slug}.json`}>
-  <div class="property-catalogue__hero">
-    <img src={area.image} alt={`${area.name} property`} loading="eager" decoding="async" />
-    <div class="property-catalogue__hero-copy">
-      <p class="section-kicker">Property sales</p>
-      <h1>{area.name} Property Sales</h1>
-      <p>{area.intro}</p>
-    </div>
-  </div>
-
+<section
+  class="property-catalogue property-catalogue--live"
+  data-property-catalogue
+  data-area={area.slug}
+  data-area-name={area.name}
+  data-fallback-image={area.image}
+  data-listings-path={`/data/property-listings/${area.slug}.json`}
+>
   <div class="property-catalogue__inner">
-    <form class="property-filters" data-property-filters>
-      <label>
-        <span>Search</span>
-        <input name="query" type="search" placeholder="Property or location" autocomplete="off" />
-      </label>
-      <label>
-        <span>Location</span>
-        <select name="location"><option value="">All locations</option></select>
-      </label>
-      <label>
-        <span>Minimum price</span>
-        <select name="minPrice">
-          <option value="0">No minimum</option>
-          <option value="1000000">THB 1 million</option>
-          <option value="3000000">THB 3 million</option>
-          <option value="5000000">THB 5 million</option>
-          <option value="10000000">THB 10 million</option>
-          <option value="25000000">THB 25 million</option>
-        </select>
-      </label>
-      <label>
-        <span>Maximum price</span>
-        <select name="maxPrice">
-          <option value="0">No maximum</option>
-          <option value="3000000">THB 3 million</option>
-          <option value="5000000">THB 5 million</option>
-          <option value="10000000">THB 10 million</option>
-          <option value="25000000">THB 25 million</option>
-          <option value="50000000">THB 50 million</option>
-        </select>
-      </label>
-      <label>
-        <span>Bedrooms</span>
-        <select name="bedrooms">
-          <option value="0">Any</option>
-          <option value="1">1+</option>
-          <option value="2">2+</option>
-          <option value="3">3+</option>
-          <option value="4">4+</option>
-          <option value="5">5+</option>
-        </select>
-      </label>
-      <label>
-        <span>Bathrooms</span>
-        <select name="bathrooms">
-          <option value="0">Any</option>
-          <option value="1">1+</option>
-          <option value="2">2+</option>
-          <option value="3">3+</option>
-          <option value="4">4+</option>
-        </select>
-      </label>
-      <div class="property-filters__actions">
-        <button type="submit">Search properties</button>
-        <button type="reset">Clear filters</button>
-      </div>
+    <div class="property-sales-topbar">
+      <a href="/">Return to Homepage</a>
+    </div>
+
+    <p class="property-sales-kicker">Property sales</p>
+    <h1>{area.name} Property Sales</h1>
+    <p class="property-sales-intro">{area.intro}</p>
+
+    <form class="property-filters property-filters--live" data-property-filters>
+      <input name="query" type="search" placeholder="Search properties" aria-label="Search properties" autocomplete="off" />
+      <select name="location" aria-label="Area"><option value="">All areas</option></select>
+      <select name="minPrice" aria-label="Minimum price">
+        <option value="">Min price</option>
+        <option value="1000000">THB 1m</option>
+        <option value="3000000">THB 3m</option>
+        <option value="5000000">THB 5m</option>
+        <option value="10000000">THB 10m</option>
+        <option value="20000000">THB 20m</option>
+        <option value="30000000">THB 30m</option>
+        <option value="40000000">THB 40m</option>
+        <option value="50000000">THB 50m</option>
+        <option value="75000000">THB 75m</option>
+        <option value="100000000">THB 100m</option>
+        <option value="150000000">THB 150m</option>
+        <option value="200000000">THB 200m</option>
+      </select>
+      <select name="maxPrice" aria-label="Maximum price">
+        <option value="">Max price</option>
+        <option value="3000000">THB 3m</option>
+        <option value="5000000">THB 5m</option>
+        <option value="10000000">THB 10m</option>
+        <option value="20000000">THB 20m</option>
+        <option value="30000000">THB 30m</option>
+        <option value="40000000">THB 40m</option>
+        <option value="50000000">THB 50m</option>
+        <option value="75000000">THB 75m</option>
+        <option value="100000000">THB 100m</option>
+        <option value="150000000">THB 150m</option>
+        <option value="200000000">THB 200m</option>
+      </select>
+      <select name="bedrooms" aria-label="Bedrooms">
+        <option value="">Beds</option>
+        <option value="1">1+</option>
+        <option value="2">2+</option>
+        <option value="3">3+</option>
+        <option value="4">4+</option>
+        <option value="5">5+</option>
+      </select>
+      <select name="bathrooms" aria-label="Bathrooms">
+        <option value="">Baths</option>
+        <option value="1">1+</option>
+        <option value="2">2+</option>
+        <option value="3">3+</option>
+        <option value="4">4+</option>
+        <option value="5">5+</option>
+      </select>
+      <button type="submit">Search</button>
+      <button type="button" data-property-refresh>Refresh listings</button>
     </form>
 
     <div class="property-results__heading" aria-live="polite">
@@ -95,6 +96,11 @@ const { area } = Astro.props;
     </div>
     <button class="property-load-more" type="button" data-property-more hidden>Show more properties</button>
 
+    <nav class="property-sales-bottom-nav" aria-label="Property sales areas">
+      <a href="/property-sales/">Property Sales</a>
+      {propertyAreas.map((item) => <a href={`/property-sales/${item.slug}/`}>{item.name}</a>)}
+    </nav>
+
     <div class="property-catalogue__contact">
       <h2>Looking for something specific?</h2>
       <p>Tell us your preferred location, property type and budget. We will connect you with the relevant local property contact.</p>
@@ -107,12 +113,7 @@ const { area } = Astro.props;
       <p data-gallery-title>Property photos</p>
       <button type="button" data-gallery-close aria-label="Close photo gallery">Close</button>
     </div>
-    <img data-gallery-image src={area.image} alt={`${area.name} property photos`} />
-    <div class="property-gallery__controls">
-      <button type="button" data-gallery-previous>Previous photo</button>
-      <span data-gallery-status></span>
-      <button type="button" data-gallery-next>Next photo</button>
-    </div>
+    <div class="property-gallery__grid" data-gallery-grid></div>
   </dialog>
 </section>
 
@@ -126,17 +127,30 @@ const { area } = Astro.props;
     const count = root.querySelector('[data-property-count]');
     const sort = root.querySelector('[data-property-sort]');
     const more = root.querySelector('[data-property-more]');
+    const refresh = root.querySelector('[data-property-refresh]');
     const locationSelect = form.elements.location;
     const gallery = root.querySelector('[data-property-gallery]');
-    const galleryImage = gallery.querySelector('[data-gallery-image]');
-    const galleryTitle = gallery.querySelector('[data-gallery-title]');
-    const galleryStatus = gallery.querySelector('[data-gallery-status]');
+    const galleryGrid = root.querySelector('[data-gallery-grid]');
+    const galleryTitle = root.querySelector('[data-gallery-title]');
+    const areaSlug = root.dataset.area;
+    const areaName = root.dataset.areaName;
+    const fallbackImage = root.dataset.fallbackImage || `/assets/fct/property-areas/${areaSlug}.jpg`;
     let allListings = [];
     let filteredListings = [];
     let visibleCount = 24;
-    let galleryImages = [];
-    let galleryIndex = 0;
-    const fallbackImage = root.querySelector('.property-catalogue__hero img')?.getAttribute('src') || '';
+
+    const remaxEndpoint = 'https://www.remax.co.th/search/listing-search/docs/search';
+    const remaxBaseFilter = "content/TenantId eq 6 and content/MacroRegionId eq 92 and content/OnHoldListing eq false and content/IsRegionalOffice eq false and content/IsViewable eq true and content/TransactionTypeUID eq 261 and content/ListingStatusUID ne 167 and content/ListingStatusUID ne 169";
+    const remaxFilters = {
+      'koh-phangan': "content/Province eq 'Surat Thani' and content/City eq 'Koh Pha Ngan'",
+      bangkok: "content/Province eq 'Bangkok'",
+      pattaya: "content/Province eq 'Chonburi-Pattaya'",
+      phuket: "content/Province eq 'Phuket'",
+      'chiang-mai': "content/Province eq 'Chiang Mai'",
+      'hua-hin': "content/City eq 'Hua Hin'",
+    };
+    const zeemuiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBmaHp1ZWV6eXBicGZldmFncGJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ0NzUxMTgsImV4cCI6MjA3MDA1MTExOH0.zU46jdoobbbT7tN-SIICAXviOcipMNN2qzyP7oiDBvk';
+    const zeemuiEndpoint = 'https://pfhzueezypbpfevagpbg.supabase.co/rest/v1/properties?select=id,title,description,price,type,bedrooms,bathrooms,city,country,area,active,sold,price_on_application,property_ref,url_slug,new_property,reduced,featured,created_at,updated_at,property_images(image_url,display_order)&active=eq.true&limit=1000';
 
     const escapeHtml = (value) => String(value ?? '')
       .replaceAll('&', '&amp;')
@@ -145,44 +159,85 @@ const { area } = Astro.props;
       .replaceAll('"', '&quot;')
       .replaceAll("'", '&#039;');
 
-    const formatPrice = (listing) => listing.price
-      ? new Intl.NumberFormat('en-US', { style: 'currency', currency: listing.currency || 'THB', maximumFractionDigits: 0 }).format(listing.price)
-      : 'Price on application';
+    const clean = (value) => String(value ?? '')
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/\bRE\s*\/?\s*MAX\b/gi, '')
+      .replace(/\bREMAX[A-Za-z0-9_#-]*\b/gi, '')
+      .replace(/@remax[A-Za-z0-9_.-]*/gi, '')
+      .replace(/\bTop Properties\b/gi, '')
+      .replace(/\bParadise Properties(?: Krabi)?\b/gi, '')
+      .replace(/\bKate Property Krabi\b/gi, '')
+      .replace(/\s+/g, ' ')
+      .trim();
 
-    const cardHtml = (listing, index) => {
-      const image = listing.images?.[0] || fallbackImage;
-      const facts = [
-        listing.bedrooms ? `${listing.bedrooms} bed${listing.bedrooms === 1 ? '' : 's'}` : '',
-        listing.bathrooms ? `${listing.bathrooms} bath${listing.bathrooms === 1 ? '' : 's'}` : '',
-      ].filter(Boolean).join(' · ');
-      const badges = [listing.newListing ? '<span>New</span>' : '', listing.featured ? '<span>Featured</span>' : ''].join('');
-      return `<article class="property-card">
-        <button class="property-card__media" type="button" data-gallery-open="${index}" aria-label="View photos of ${escapeHtml(listing.title)}">
-          <img src="${escapeHtml(image)}" alt="${escapeHtml(listing.title)}" loading="lazy" decoding="async">
-          ${badges ? `<span class="property-card__badges">${badges}</span>` : ''}
-          ${listing.images?.length > 1 ? `<span class="property-card__photos">${listing.images.length} photos</span>` : ''}
-        </button>
-        <div class="property-card__body">
-          <p class="property-card__price">${escapeHtml(formatPrice(listing))}</p>
-          <h3>${escapeHtml(listing.title)}</h3>
-          <p class="property-card__location">${escapeHtml(listing.location)}</p>
-          ${facts ? `<p class="property-card__facts">${escapeHtml(facts)}</p>` : ''}
-          <p class="property-card__description">${escapeHtml(listing.description)}</p>
-          <a href="/contact-link/?topic=${encodeURIComponent(listing.title)}">Enquire about this property</a>
-        </div>
-      </article>`;
+    const listingTime = (listing) => Date.parse(listing.updatedAt || listing.createdAt || '') || 0;
+    const isNewByDate = (listing) => {
+      const time = listingTime(listing);
+      return Boolean(time && Date.now() - time <= 14 * 24 * 60 * 60 * 1000);
     };
+    const summary = (value) => {
+      const text = clean(value);
+      return text.length > 170 ? `${text.slice(0, 167)}...` : text;
+    };
+    const formatPrice = (listing) => listing.price
+      ? `THB ${Number(listing.price).toLocaleString('en-US')}`
+      : 'Price on application';
 
     const sortListings = (listings) => {
       const selected = sort.value;
       return [...listings].sort((a, b) => {
         if (selected === 'price-asc') return (a.price || Number.MAX_SAFE_INTEGER) - (b.price || Number.MAX_SAFE_INTEGER);
         if (selected === 'price-desc') return (b.price || 0) - (a.price || 0);
-        if (selected === 'newest') return String(b.updatedAt || '').localeCompare(String(a.updatedAt || ''));
-        if (a.newListing !== b.newListing) return a.newListing ? -1 : 1;
+        if (selected === 'newest') return listingTime(b) - listingTime(a);
+        if ((a.newListing || isNewByDate(a)) !== (b.newListing || isNewByDate(b))) return (a.newListing || isNewByDate(a)) ? -1 : 1;
         if (a.featured !== b.featured) return a.featured ? -1 : 1;
-        return 0;
+        if (Boolean(a.price) !== Boolean(b.price)) return a.price ? -1 : 1;
+        if (a.price && b.price && a.price !== b.price) return a.price - b.price;
+        return listingTime(b) - listingTime(a) || String(a.title || '').localeCompare(String(b.title || ''));
       });
+    };
+
+    const cardHtml = (listing, index) => {
+      const image = listing.images?.[0] || fallbackImage;
+      const full = clean(listing.description) || `Current property listing for sale in ${areaName}.`;
+      const short = summary(full);
+      const facts = [
+        listing.bedrooms ? `${listing.bedrooms} bed${listing.bedrooms === 1 ? '' : 's'}` : '',
+        listing.bathrooms ? `${listing.bathrooms} bath${listing.bathrooms === 1 ? '' : 's'}` : '',
+      ].filter(Boolean);
+      const badges = [
+        listing.newListing || isNewByDate(listing) ? '<span class="property-card__new">New Listing</span>' : '',
+        listing.featured ? '<span>Featured</span>' : '',
+      ].join('');
+      return `<article class="property-card" data-location="${escapeHtml(listing.location)}" data-price="${Number(listing.price) || 0}" data-bedrooms="${Number(listing.bedrooms) || 0}" data-bathrooms="${Number(listing.bathrooms) || 0}">
+        <button class="property-card__media" type="button" data-gallery-open="${index}" aria-label="View photos of ${escapeHtml(listing.title)}">
+          <img src="${escapeHtml(image)}" alt="${escapeHtml(listing.title)}" loading="lazy" decoding="async">
+          ${badges ? `<span class="property-card__badges">${badges}</span>` : ''}
+          ${listing.images?.length > 1 ? `<span class="property-card__photos">${listing.images.length} photos</span>` : ''}
+        </button>
+        <div class="property-card__body">
+          <h3>${escapeHtml(listing.title)}</h3>
+          <div class="property-card__meta">
+            <span>${escapeHtml(formatPrice(listing))}</span>
+            <span>${escapeHtml(listing.location || areaName)}</span>
+            ${facts.map((fact) => `<span>${escapeHtml(fact)}</span>`).join('')}
+          </div>
+          <p class="property-card__description property-card__description--short">${escapeHtml(short)}</p>
+          <p class="property-card__description property-card__description--full" hidden>${escapeHtml(full)}</p>
+          ${full.length > short.length ? '<button class="property-card__read-more" type="button" data-description-toggle>Read full description</button>' : ''}
+          <div class="property-card__actions">
+            <button type="button" data-gallery-open="${index}">View photos</button>
+            <a href="/contact-link/?property=${encodeURIComponent(listing.title || listing.id)}">Enquire</a>
+          </div>
+        </div>
+      </article>`;
+    };
+
+    const populateAreas = () => {
+      const current = locationSelect.value;
+      const locations = [...new Set(allListings.map((listing) => String(listing.location || '').split(',')[0].trim()).filter(Boolean))].sort();
+      locationSelect.innerHTML = '<option value="">All areas</option>' + locations.map((location) => `<option value="${escapeHtml(location)}">${escapeHtml(location)}</option>`).join('');
+      locationSelect.value = current;
     };
 
     const render = () => {
@@ -191,7 +246,7 @@ const { area } = Astro.props;
       count.textContent = `${filteredListings.length.toLocaleString()} ${filteredListings.length === 1 ? 'property' : 'properties'} found`;
       results.innerHTML = visible.length
         ? visible.map(cardHtml).join('')
-        : '<div class="empty-state"><h2>No properties match these filters</h2><p>Clear the filters or contact us with your requirements.</p></div>';
+        : '<article class="property-card property-card--message"><div class="property-card__body"><h3>No properties match these filters</h3><p>Clear the filters or contact us with your requirements.</p></div></article>';
       more.hidden = visible.length >= sorted.length;
       results.querySelectorAll('.property-card__media img').forEach((image) => {
         const useFallback = () => {
@@ -200,30 +255,21 @@ const { area } = Astro.props;
         image.addEventListener('error', useFallback);
         if (image.complete && image.naturalWidth === 0) useFallback();
       });
-      results.querySelectorAll('[data-gallery-open]').forEach((button) => {
-        button.addEventListener('click', () => {
-          const listing = visible[Number(button.dataset.galleryOpen)];
-          galleryImages = listing.images?.length ? listing.images : [button.querySelector('img').src];
-          galleryIndex = 0;
-          galleryTitle.textContent = listing.title;
-          updateGallery();
-          gallery.showModal();
-        });
-      });
     };
 
     const applyFilters = () => {
       const data = new FormData(form);
       const query = String(data.get('query') || '').trim().toLowerCase();
-      const location = String(data.get('location') || '');
+      const location = String(data.get('location') || '').toLowerCase();
       const minPrice = Number(data.get('minPrice') || 0);
       const maxPrice = Number(data.get('maxPrice') || 0);
       const bedrooms = Number(data.get('bedrooms') || 0);
       const bathrooms = Number(data.get('bathrooms') || 0);
       filteredListings = allListings.filter((listing) => {
+        const cardLocation = String(listing.location || '').split(',')[0].trim().toLowerCase();
         const searchable = `${listing.title} ${listing.location} ${listing.description}`.toLowerCase();
         return (!query || searchable.includes(query))
-          && (!location || listing.location === location)
+          && (!location || cardLocation === location)
           && (!minPrice || listing.price >= minPrice)
           && (!maxPrice || (listing.price > 0 && listing.price <= maxPrice))
           && (!bedrooms || listing.bedrooms >= bedrooms)
@@ -233,39 +279,155 @@ const { area } = Astro.props;
       render();
     };
 
-    const updateGallery = () => {
-      galleryImage.src = galleryImages[galleryIndex] || '';
-      galleryImage.alt = `${galleryTitle.textContent}, photo ${galleryIndex + 1}`;
-      galleryStatus.textContent = `${galleryIndex + 1} of ${galleryImages.length}`;
+    const normalizeZeemui = (property) => ({
+      id: String(property.id ?? property.property_ref ?? property.title),
+      title: clean(property.title) || 'Koh Samui Property For Sale',
+      description: clean(property.description) || 'Current property listing for sale in Koh Samui.',
+      price: property.price_on_application ? 0 : Number(property.price) || 0,
+      currency: 'THB',
+      location: clean(property.area || property.city || 'Koh Samui'),
+      bedrooms: Number(property.bedrooms) || 0,
+      bathrooms: Number(property.bathrooms) || 0,
+      images: [...(property.property_images ?? [])]
+        .sort((a, b) => Number(a.display_order ?? 0) - Number(b.display_order ?? 0))
+        .map((image) => image.image_url)
+        .filter(Boolean)
+        .slice(0, 12),
+      featured: Boolean(property.featured),
+      newListing: Boolean(property.new_property),
+      createdAt: property.created_at || '',
+      updatedAt: property.created_at || property.updated_at || '',
+    });
+
+    const englishItem = (items, field) => {
+      if (!Array.isArray(items)) return '';
+      const preferred = items.find((item) => item?.ISOLanguageCode === 'en' && item?.[field]);
+      return clean(preferred?.[field] ?? items.find((item) => item?.[field])?.[field] ?? '');
+    };
+    const remaxTitle = (property) => {
+      const metaTitle = englishItem(property.ListingMetaTags, 'MetaTitle').replace(/\|.*/, '').replace(/\{seo:[^}]+\}/g, '').trim();
+      return metaTitle || [property.LocalZone, property.City, property.Province].filter(Boolean).slice(0, 2).join(', ') || `${areaName} Property For Sale`;
+    };
+    const normalizeRemax = (row) => {
+      const property = row?.content ?? row;
+      const regionId = Number(property.MacroRegionId) || 92;
+      return {
+        id: String(property.ListingKey ?? property.ListingId ?? property.ListingReference ?? remaxTitle(property)),
+        title: remaxTitle(property),
+        description: englishItem(property.ListingDescriptions, 'Description') || `Current property listing for sale in ${areaName}.`,
+        price: property.HidePricePublic ? 0 : Number(property.ListingPrice) || 0,
+        currency: property.ListingCurrency || 'THB',
+        location: [property.LocalZone, property.City, property.Province].filter(Boolean).slice(0, 2).join(', ') || areaName,
+        bedrooms: Number(property.NumberOfBedrooms) || 0,
+        bathrooms: Number(property.NumberOfBathrooms) || 0,
+        images: [...(property.ListingImages ?? [])]
+          .sort((a, b) => Number(a.Order ?? 0) - Number(b.Order ?? 0))
+          .filter((image) => image?.FileName)
+          .slice(0, 12)
+          .map((image) => `https://cdn.gryphtech.com/userimages/${regionId}/Large/${encodeURIComponent(image.FileName)}`),
+        featured: false,
+        newListing: false,
+        updatedAt: property.FirstUpdatedToWeb || property.LastUpdatedOnWeb || '',
+      };
+    };
+
+    const fetchZeemui = async () => {
+      const response = await fetch(zeemuiEndpoint, { headers: { apikey: zeemuiKey, Authorization: `Bearer ${zeemuiKey}` } });
+      if (!response.ok) throw new Error(`Zeemui HTTP ${response.status}`);
+      return (await response.json()).map(normalizeZeemui);
+    };
+    const fetchRemax = async () => {
+      const filter = remaxFilters[areaSlug];
+      if (!filter) throw new Error('No live RE/MAX feed configured');
+      const rows = [];
+      let skip = 0;
+      let total = Infinity;
+      while (skip < total && skip < 1500) {
+        const response = await fetch(remaxEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            count: true,
+            skip,
+            top: 500,
+            searchMode: 'any',
+            queryType: 'simple',
+            search: '*',
+            filter: `${remaxBaseFilter} and ${filter}`,
+            orderby: 'content/FirstUpdatedToWeb desc',
+          }),
+        });
+        if (!response.ok) throw new Error(`RE/MAX HTTP ${response.status}`);
+        const data = await response.json();
+        total = Number(data['@odata.count']) || data.value?.length || 0;
+        rows.push(...(data.value ?? []));
+        skip += 500;
+        if (!data.value?.length) break;
+      }
+      return rows.map(normalizeRemax);
+    };
+    const fetchSnapshot = async () => {
+      const response = await fetch(root.dataset.listingsPath);
+      if (!response.ok) throw new Error(`Snapshot HTTP ${response.status}`);
+      return (await response.json()).listings || [];
+    };
+
+    const loadListings = async () => {
+      count.textContent = `Loading ${areaName} properties...`;
+      results.innerHTML = '<p class="property-results__loading">Loading current property listings...</p>';
+      try {
+        if (areaSlug === 'koh-samui') {
+          allListings = await fetchZeemui();
+        } else if (areaSlug === 'krabi') {
+          allListings = await fetchSnapshot();
+        } else {
+          try {
+            allListings = await fetchRemax();
+          } catch {
+            allListings = await fetchSnapshot();
+          }
+        }
+        populateAreas();
+        filteredListings = allListings;
+        visibleCount = 24;
+        applyFilters();
+      } catch {
+        count.textContent = 'Listings temporarily unavailable';
+        results.innerHTML = '<article class="property-card property-card--message"><div class="property-card__body"><h3>Listing feed not loaded</h3><p>The page is built, but the listing feed could not be reached from this browser session.</p><a href="/contact-link/">Enquire</a></div></article>';
+      }
     };
 
     form.addEventListener('submit', (event) => { event.preventDefault(); applyFilters(); });
-    form.addEventListener('reset', () => setTimeout(applyFilters));
+    form.addEventListener('input', applyFilters);
+    form.addEventListener('change', applyFilters);
     sort.addEventListener('change', render);
     more.addEventListener('click', () => { visibleCount += 24; render(); });
+    refresh.addEventListener('click', loadListings);
     gallery.querySelector('[data-gallery-close]').addEventListener('click', () => gallery.close());
-    galleryImage.addEventListener('error', () => {
-      if (fallbackImage && galleryImage.getAttribute('src') !== fallbackImage) galleryImage.src = fallbackImage;
-    });
-    gallery.querySelector('[data-gallery-previous]').addEventListener('click', () => { galleryIndex = (galleryIndex - 1 + galleryImages.length) % galleryImages.length; updateGallery(); });
-    gallery.querySelector('[data-gallery-next]').addEventListener('click', () => { galleryIndex = (galleryIndex + 1) % galleryImages.length; updateGallery(); });
     gallery.addEventListener('click', (event) => { if (event.target === gallery) gallery.close(); });
+    results.addEventListener('click', (event) => {
+      const toggle = event.target.closest('[data-description-toggle]');
+      if (toggle) {
+        const body = toggle.closest('.property-card__body');
+        const shortText = body.querySelector('.property-card__description--short');
+        const fullText = body.querySelector('.property-card__description--full');
+        const open = toggle.getAttribute('data-open') === 'true';
+        shortText.hidden = !open;
+        fullText.hidden = open;
+        toggle.setAttribute('data-open', String(!open));
+        toggle.textContent = open ? 'Read full description' : 'Show less';
+        return;
+      }
+      const galleryButton = event.target.closest('[data-gallery-open]');
+      if (galleryButton) {
+        const listing = sortListings(filteredListings).slice(0, visibleCount)[Number(galleryButton.dataset.galleryOpen)];
+        const images = listing?.images?.length ? listing.images : [fallbackImage];
+        galleryTitle.textContent = listing?.title || 'Property photos';
+        galleryGrid.innerHTML = images.map((image, index) => `<img src="${escapeHtml(image)}" alt="${escapeHtml(listing?.title || 'Property photo')} ${index + 1}" loading="lazy" decoding="async">`).join('');
+        gallery.showModal();
+      }
+    });
 
-    fetch(root.dataset.listingsPath)
-      .then((response) => {
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return response.json();
-      })
-      .then((payload) => {
-        allListings = payload.listings || [];
-        const locations = [...new Set(allListings.map((listing) => listing.location).filter(Boolean))].sort();
-        locationSelect.insertAdjacentHTML('beforeend', locations.map((location) => `<option value="${escapeHtml(location)}">${escapeHtml(location)}</option>`).join(''));
-        filteredListings = allListings;
-        render();
-      })
-      .catch(() => {
-        count.textContent = 'Listings temporarily unavailable';
-        results.innerHTML = '<div class="empty-state"><h2>Unable to load the property catalogue</h2><p>Please contact us and we will help with your property search.</p></div>';
-      });
+    loadListings();
   })();
 </script>

@@ -20,3 +20,11 @@ as the source change.
 - Reason: external property image providers caused the otherwise successful audit to exceed GitHub's 15-minute job limit.
 - Safety: unavailable provider images still use the local regional fallback; external media remains visible in the QA report as non-blocking warnings.
 - Status: complete; no production or staging deployment was performed.
+
+## 2026-07-22 - Property pages and shared content cleanup
+
+- Request: bring standalone property sales pages closer to the live site, standardize shared cards and enquiry forms, remove the homepage events block, correct health and fitness cards, and replace AI wording on charity program pages.
+- Scope: refreshed property snapshots, added live-style property search and read-full-description controls, standardized property card behaviour across all sales regions, tightened shared card image/text alignment, updated the standard enquiry form styling, restored the live health and fitness card set, removed the homepage calendar/events CTA, split homepage property and vehicle cards, matched the testimonial heading style, removed extra Local Business Network card CTAs, set the footer copyright year to 2024, simplified the Move to Thailand Guide to the live-style article layout, and hid Past Events, Krabi, and Koh Phangan from the Events dropdown.
+- Safety: worked only in the standalone Astro site; production WordPress, the live site, and the server staging directory were not modified.
+- Verification: property listing sync, Astro build, desktop/mobile visual checks, and git diff validation.
+- Status: complete except the separate past-events inventory/picture recovery request, which remains a follow-up item.
