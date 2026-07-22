@@ -180,7 +180,7 @@ const isTourGuide = currentSlug === 'become-a-better-tour-guide';
         text={fallbackDescription}
         image={fallbackHeroImage}
         primaryLabel={isEventPage ? 'Tell us about an event' : 'Ask for a local introduction'}
-        primaryHref="/contact-link/"
+        primaryHref={`/contact-link/?topic=${encodeURIComponent(cleanTitle)}`}
         secondaryLabel={isEventPage ? 'See previous events' : 'Explore the network'}
         secondaryHref={isEventPage ? '/past-events/' : '/local-business-network/'}
       />
@@ -222,13 +222,13 @@ const isTourGuide = currentSlug === 'become-a-better-tour-guide';
       {Content && <Content />}
       {hasLocalDealsBeachCta && (
         <div class="double-cta beach-only">
-          <a class="beach-cta" href="/contact-link/">Tell us about a local deal</a>
+          <a class="beach-cta" href="/contact-link/?topic=Local%20Deals">Tell us about a local deal</a>
         </div>
       )}
       {isEventPage && (
         <div class="double-cta">
           <a href="/past-events/">Check out our previous events</a>
-          <a class="beach-cta" href="/contact-link/">Let us know if you have a community event coming up</a>
+          <a class="beach-cta" href={`/contact-link/?topic=${encodeURIComponent(cleanTitle)}`}>Let us know if you have a community event coming up</a>
         </div>
       )}
     </article>

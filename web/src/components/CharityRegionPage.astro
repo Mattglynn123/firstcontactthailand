@@ -18,13 +18,13 @@ const { page } = Astro.props;
           <div class="charity-card__body">
             <h2>{item.title}</h2>
             <p>{item.text}</p>
-            <a href={`/${item.slug}/`}>Read the local summary</a>
+            <a href={`/${item.slug}/`}>Read more information</a>
           </div>
         </article>
       ))}
     </div>
     <div class="reference-page__actions">
-      <a class="page-cta page-cta--image" href="/contact-link/">Contact us to support a local charity program</a>
+      <a class="page-cta page-cta--image" href={`/contact-link/?topic=${encodeURIComponent(`${page.location} charity programs`)}`}>Contact us to support a local charity program</a>
     </div>
   </div>
 </section>

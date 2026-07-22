@@ -36,7 +36,7 @@ const { page } = Astro.props;
 
     <div class="reference-page__actions regional-events__actions">
       <a class="page-cta" href={page.returnHref}>Return to upcoming events</a>
-      <a class="page-cta page-cta--image" href="/contact-link/">Tell us about a community event</a>
+      <a class="page-cta page-cta--image" href={`/contact-link/?topic=${encodeURIComponent(`${page.location} community event`)}`}>Tell us about a community event</a>
     </div>
   </div>
 </section>

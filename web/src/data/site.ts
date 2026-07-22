@@ -123,7 +123,7 @@ export const priorityPages: Record<string, PriorityPage> = {
       { title: 'Weddings', text: 'Connect with local wedding, event, and celebration partners.', image: '/assets/fct/photo-1502635385003-ee1e6a1a742d.avif' },
     ],
     ctaLabel: 'Contact us and we will connect you with our trusted local business partners',
-    ctaHref: connectHref,
+    ctaHref: '/contact-link/?topic=Local%20Business%20Network',
   },
   'community-events': {
     slug: 'community-events',
@@ -135,7 +135,7 @@ export const priorityPages: Record<string, PriorityPage> = {
     gridColumns: 3,
     cards: [
       { title: 'AI Meet Up', text: 'Weekly Wednesdays, 4:00 pm - 6:00 pm at Nature Bar, Maenam.', image: '/assets/fct/ai-community-meeting.jpeg', href: '/event/ai-community-meeting-nature-bar-maenam-weekly-2026-07-22/', action: 'Ask about this event' },
-      { title: 'Crypto Community Gathering', text: 'Weekly Wednesdays, 4:00 pm - 6:00 pm at Nature Bar, Maenam.', image: '/assets/fct/past-event-crypto-community-gathering.jpeg', href: '/contact-link/?fct_event=crypto-community-gathering', action: 'Ask about this event' },
+      { title: 'Crypto Community Gathering', text: 'Weekly Wednesdays, 4:00 pm - 6:00 pm at Nature Bar, Maenam.', image: '/assets/fct/past-event-crypto-community-gathering.jpeg', href: '/contact-link/?topic=Crypto%20Community%20Gathering', action: 'Ask about this event' },
       { title: 'Pub Quiz', text: 'Weekly Thursdays, 7:00 pm - 9:45 pm at Nature Bar, Maenam.', image: '/assets/fct/pub-quiz-nature-bar.jpeg', href: '/event/pub-quiz-nature-bar-maenam-beach-weekly-2026-07-23/', action: 'Ask about this event' },
       { title: 'Business Lunch', text: 'Weekly Fridays, 3:00 pm - 5:00 pm at Nature Bar, Maenam.', image: '/assets/fct/friday-business-networking-lunch.png', href: '/event/business-networking-lunch-nature-bar-maenam-weekly-2026-07-24/', action: 'Ask about this event' },
       { title: 'Beach Walk', text: 'Weekly Saturdays, 4:00 pm - 6:00 pm.', image: '/assets/fct/beach-walk-community.jpg', href: '/event/beach-walk-koh-samui-weekly-2026-07-18/', action: 'Ask about this event' },
@@ -143,7 +143,7 @@ export const priorityPages: Record<string, PriorityPage> = {
     ctaLabel: 'Check out our previous events',
     ctaHref: '/past-events/',
     secondaryLabel: 'Let us know if you have a community event coming up',
-    secondaryHref: connectHref,
+    secondaryHref: '/contact-link/?topic=Samui%20community%20event',
   },
   hire: {
     slug: 'hire',
@@ -159,7 +159,7 @@ export const priorityPages: Record<string, PriorityPage> = {
       { title: 'Local Services', text: 'Book trusted local partners who are vetted, reliable, fairly priced, and ready to help you get things done.', image: '/assets/fct/hire-services.jpg' },
     ],
     ctaLabel: 'Click here and we will connect you with our trusted local partners.',
-    ctaHref: connectHref,
+    ctaHref: '/contact-link/?topic=Hire%20Trusted%20Local%20Services',
   },
   'local-deals': {
     slug: 'local-deals',
@@ -175,7 +175,7 @@ export const priorityPages: Record<string, PriorityPage> = {
       { title: 'Live Like a Local', text: 'Discover how to shop, eat, travel, and enjoy Thailand at local rates with trusted local recommendations.', image: '/assets/fct/photo-1504674900247-0877df9cc836.avif' },
     ],
     ctaLabel: 'Tell us which local deal you would like to claim',
-    ctaHref: '/contact-link/?fct_service=local-deals',
+    ctaHref: '/contact-link/?topic=Local%20Deals',
   },
   'health-fitness': {
     slug: 'health-fitness',
@@ -191,7 +191,7 @@ export const priorityPages: Record<string, PriorityPage> = {
       { title: 'Personal Products', text: 'Personal products are important. When you look good you feel good. We can connect you with trusted community partners for products and support.', image: '/assets/fct/personal-scaled.jpg' },
     ],
     ctaLabel: 'Ask about health and fitness',
-    ctaHref: connectHref,
+    ctaHref: '/contact-link/?topic=Health%20and%20Fitness',
   },
   'tours-2': {
     slug: 'tours-2',
@@ -202,8 +202,8 @@ export const priorityPages: Record<string, PriorityPage> = {
     heroImage: '/assets/fct/Hero-Images-copy-2-scaled.jpg',
     gridColumns: 4,
     cards: [
-      { title: 'Customise Your Own Day Trip', text: 'Explore like a local with trusted drivers, boat operators, and guides who tailor every trip to your needs.', image: '/assets/fct/Hero-Images-copy-2-scaled.jpg', href: connectHref, action: 'Connect with local partners' },
-      { title: 'Full Moon Parties', text: 'Safe, stylish Full Moon Party experiences arranged around your group with trusted local support.', image: '/assets/fct/1-scaled.jpg', href: '/contact-link/', action: 'Book your Full Moon trip' },
+      { title: 'Customise Your Own Day Trip', text: 'Explore like a local with trusted drivers, boat operators, and guides who tailor every trip to your needs.', image: '/assets/fct/Hero-Images-copy-2-scaled.jpg', href: '/contact-link/?topic=Customise%20Your%20Own%20Day%20Trip', action: 'Connect with local partners' },
+      { title: 'Full Moon Parties', text: 'Safe, stylish Full Moon Party experiences arranged around your group with trusted local support.', image: '/assets/fct/1-scaled.jpg', href: '/assets/fct/full-moon-party-vip-trip-29-june-2026.jpeg', action: 'Book your Full Moon trip' },
       { title: 'Other Tours', text: 'Discover hidden gems and authentic local experiences while supporting trusted local partners.', image: '/assets/fct/11-scaled.jpg', href: '/other-tours/', action: 'View other tours' },
       { title: 'Become a Better Tour Guide', text: 'Elevate the way you create guest experiences while learning how to maximise your commissions.', image: '/assets/fct/tour-guide-fun-pic-20260609.png', href: '/become-a-better-tour-guide/', action: 'Find out more' },
     ],

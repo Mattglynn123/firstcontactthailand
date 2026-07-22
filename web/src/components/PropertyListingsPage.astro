@@ -19,20 +19,34 @@ const { area } = Astro.props;
       <a href="/">Return to Homepage</a>
     </div>
 
-    <p class="property-sales-kicker">Property sales</p>
-    <h1>{area.name} Property Sales</h1>
+    <h1>{area.name}</h1>
     <p class="property-sales-intro">{area.intro}</p>
 
     <form class="property-filters property-filters--live" data-property-filters>
-      <input name="query" type="search" placeholder="Search properties" aria-label="Search properties" autocomplete="off" />
       <select name="location" aria-label="Area"><option value="">All areas</option></select>
       <select name="minPrice" aria-label="Minimum price">
         <option value="">Min price</option>
         <option value="1000000">THB 1m</option>
+        <option value="2000000">THB 2m</option>
         <option value="3000000">THB 3m</option>
+        <option value="4000000">THB 4m</option>
         <option value="5000000">THB 5m</option>
+        <option value="6000000">THB 6m</option>
+        <option value="7000000">THB 7m</option>
+        <option value="8000000">THB 8m</option>
+        <option value="9000000">THB 9m</option>
         <option value="10000000">THB 10m</option>
+        <option value="11000000">THB 11m</option>
+        <option value="12000000">THB 12m</option>
+        <option value="13000000">THB 13m</option>
+        <option value="14000000">THB 14m</option>
+        <option value="15000000">THB 15m</option>
+        <option value="16000000">THB 16m</option>
+        <option value="17000000">THB 17m</option>
+        <option value="18000000">THB 18m</option>
+        <option value="19000000">THB 19m</option>
         <option value="20000000">THB 20m</option>
+        <option value="25000000">THB 25m</option>
         <option value="30000000">THB 30m</option>
         <option value="40000000">THB 40m</option>
         <option value="50000000">THB 50m</option>
@@ -43,10 +57,27 @@ const { area } = Astro.props;
       </select>
       <select name="maxPrice" aria-label="Maximum price">
         <option value="">Max price</option>
+        <option value="1000000">THB 1m</option>
+        <option value="2000000">THB 2m</option>
         <option value="3000000">THB 3m</option>
+        <option value="4000000">THB 4m</option>
         <option value="5000000">THB 5m</option>
+        <option value="6000000">THB 6m</option>
+        <option value="7000000">THB 7m</option>
+        <option value="8000000">THB 8m</option>
+        <option value="9000000">THB 9m</option>
         <option value="10000000">THB 10m</option>
+        <option value="11000000">THB 11m</option>
+        <option value="12000000">THB 12m</option>
+        <option value="13000000">THB 13m</option>
+        <option value="14000000">THB 14m</option>
+        <option value="15000000">THB 15m</option>
+        <option value="16000000">THB 16m</option>
+        <option value="17000000">THB 17m</option>
+        <option value="18000000">THB 18m</option>
+        <option value="19000000">THB 19m</option>
         <option value="20000000">THB 20m</option>
+        <option value="25000000">THB 25m</option>
         <option value="30000000">THB 30m</option>
         <option value="40000000">THB 40m</option>
         <option value="50000000">THB 50m</option>
@@ -74,22 +105,6 @@ const { area } = Astro.props;
       <button type="submit">Search</button>
       <button type="button" data-property-refresh>Refresh listings</button>
     </form>
-
-    <div class="property-results__heading" aria-live="polite">
-      <div>
-        <p class="section-kicker">Current listings</p>
-        <h2 data-property-count>Loading {area.name} properties...</h2>
-      </div>
-      <label>
-        <span>Sort</span>
-        <select data-property-sort>
-          <option value="recommended">Recommended</option>
-          <option value="newest">Newest</option>
-          <option value="price-asc">Price: low to high</option>
-          <option value="price-desc">Price: high to low</option>
-        </select>
-      </label>
-    </div>
 
     <div class="property-results" data-property-results>
       <p class="property-results__loading">Loading current property listings...</p>
@@ -150,7 +165,7 @@ const { area } = Astro.props;
       'hua-hin': "content/City eq 'Hua Hin'",
     };
     const zeemuiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBmaHp1ZWV6eXBicGZldmFncGJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ0NzUxMTgsImV4cCI6MjA3MDA1MTExOH0.zU46jdoobbbT7tN-SIICAXviOcipMNN2qzyP7oiDBvk';
-    const zeemuiEndpoint = 'https://pfhzueezypbpfevagpbg.supabase.co/rest/v1/properties?select=id,title,description,price,type,bedrooms,bathrooms,city,country,area,active,sold,price_on_application,property_ref,url_slug,new_property,reduced,featured,created_at,updated_at,property_images(image_url,display_order)&active=eq.true&limit=1000';
+    const zeemuiEndpoint = 'https://pfhzueezypbpfevagpbg.supabase.co/rest/v1/properties?select=id,title,description,price,type,bedrooms,bathrooms,city,country,area,active,sold,price_on_application,property_ref,url_slug,new_property,reduced,featured,created_at,updated_at,property_images(image_url,display_order)&active=eq.true&order=created_at.desc&limit=1000';
 
     const escapeHtml = (value) => String(value ?? '')
       .replaceAll('&', '&amp;')
@@ -184,16 +199,17 @@ const { area } = Astro.props;
       : 'Price on application';
 
     const sortListings = (listings) => {
-      const selected = sort.value;
+      const selected = sort?.value || 'recommended';
       return [...listings].sort((a, b) => {
         if (selected === 'price-asc') return (a.price || Number.MAX_SAFE_INTEGER) - (b.price || Number.MAX_SAFE_INTEGER);
         if (selected === 'price-desc') return (b.price || 0) - (a.price || 0);
         if (selected === 'newest') return listingTime(b) - listingTime(a);
         if ((a.newListing || isNewByDate(a)) !== (b.newListing || isNewByDate(b))) return (a.newListing || isNewByDate(a)) ? -1 : 1;
+        if (listingTime(a) !== listingTime(b)) return listingTime(b) - listingTime(a);
         if (a.featured !== b.featured) return a.featured ? -1 : 1;
         if (Boolean(a.price) !== Boolean(b.price)) return a.price ? -1 : 1;
         if (a.price && b.price && a.price !== b.price) return a.price - b.price;
-        return listingTime(b) - listingTime(a) || String(a.title || '').localeCompare(String(b.title || ''));
+        return String(a.title || '').localeCompare(String(b.title || ''));
       });
     };
 
@@ -243,7 +259,7 @@ const { area } = Astro.props;
     const render = () => {
       const sorted = sortListings(filteredListings);
       const visible = sorted.slice(0, visibleCount);
-      count.textContent = `${filteredListings.length.toLocaleString()} ${filteredListings.length === 1 ? 'property' : 'properties'} found`;
+      if (count) count.textContent = `${filteredListings.length.toLocaleString()} ${filteredListings.length === 1 ? 'property' : 'properties'} found`;
       results.innerHTML = visible.length
         ? visible.map(cardHtml).join('')
         : '<article class="property-card property-card--message"><div class="property-card__body"><h3>No properties match these filters</h3><p>Clear the filters or contact us with your requirements.</p></div></article>';
@@ -259,7 +275,6 @@ const { area } = Astro.props;
 
     const applyFilters = () => {
       const data = new FormData(form);
-      const query = String(data.get('query') || '').trim().toLowerCase();
       const location = String(data.get('location') || '').toLowerCase();
       const minPrice = Number(data.get('minPrice') || 0);
       const maxPrice = Number(data.get('maxPrice') || 0);
@@ -267,9 +282,7 @@ const { area } = Astro.props;
       const bathrooms = Number(data.get('bathrooms') || 0);
       filteredListings = allListings.filter((listing) => {
         const cardLocation = String(listing.location || '').split(',')[0].trim().toLowerCase();
-        const searchable = `${listing.title} ${listing.location} ${listing.description}`.toLowerCase();
-        return (!query || searchable.includes(query))
-          && (!location || cardLocation === location)
+        return (!location || cardLocation === location)
           && (!minPrice || listing.price >= minPrice)
           && (!maxPrice || (listing.price > 0 && listing.price <= maxPrice))
           && (!bedrooms || listing.bedrooms >= bedrooms)
@@ -373,7 +386,7 @@ const { area } = Astro.props;
     };
 
     const loadListings = async () => {
-      count.textContent = `Loading ${areaName} properties...`;
+      if (count) count.textContent = `Loading ${areaName} properties...`;
       results.innerHTML = '<p class="property-results__loading">Loading current property listings...</p>';
       try {
         if (areaSlug === 'koh-samui') {
@@ -392,15 +405,15 @@ const { area } = Astro.props;
         visibleCount = 24;
         applyFilters();
       } catch {
-        count.textContent = 'Listings temporarily unavailable';
-        results.innerHTML = '<article class="property-card property-card--message"><div class="property-card__body"><h3>Listing feed not loaded</h3><p>The page is built, but the listing feed could not be reached from this browser session.</p><a href="/contact-link/">Enquire</a></div></article>';
+        if (count) count.textContent = 'Listings temporarily unavailable';
+        results.innerHTML = `<article class="property-card property-card--message"><div class="property-card__body"><h3>Listing feed not loaded</h3><p>The page is built, but the listing feed could not be reached from this browser session.</p><a href="/contact-link/?topic=${encodeURIComponent(`${areaName} property sales`)}">Enquire</a></div></article>`;
       }
     };
 
     form.addEventListener('submit', (event) => { event.preventDefault(); applyFilters(); });
     form.addEventListener('input', applyFilters);
     form.addEventListener('change', applyFilters);
-    sort.addEventListener('change', render);
+    sort?.addEventListener('change', render);
     more.addEventListener('click', () => { visibleCount += 24; render(); });
     refresh.addEventListener('click', loadListings);
     gallery.querySelector('[data-gallery-close]').addEventListener('click', () => gallery.close());

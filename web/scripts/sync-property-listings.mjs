@@ -121,7 +121,7 @@ async function fetchRemax(areaSlug, filter) {
 async function fetchSamui() {
   const key = process.env.PROPERTY_SUPABASE_KEY
     || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBmaHp1ZWV6eXBicGZldmFncGJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ0NzUxMTgsImV4cCI6MjA3MDA1MTExOH0.zU46jdoobbbT7tN-SIICAXviOcipMNN2qzyP7oiDBvk';
-  const endpoint = 'https://pfhzueezypbpfevagpbg.supabase.co/rest/v1/properties?select=id,title,description,price,type,bedrooms,bathrooms,city,country,area,active,sold,price_on_application,property_ref,url_slug,new_property,reduced,featured,created_at,updated_at,property_images(image_url,display_order)&active=eq.true&limit=1000';
+  const endpoint = 'https://pfhzueezypbpfevagpbg.supabase.co/rest/v1/properties?select=id,title,description,price,type,bedrooms,bathrooms,city,country,area,active,sold,price_on_application,property_ref,url_slug,new_property,reduced,featured,created_at,updated_at,property_images(image_url,display_order)&active=eq.true&order=created_at.desc&limit=1000';
   const response = await fetch(endpoint, { headers: { apikey: key, Authorization: `Bearer ${key}` } });
   if (!response.ok) throw new Error(`Koh Samui property feed: HTTP ${response.status}`);
   const rows = await response.json();

@@ -22,13 +22,13 @@ export const regionalEvents: Record<string, RegionalEventsPage> = {
     archiveSlug: 'samui',
     intro: 'Check out our community events on Samui.',
     events: [
-      { date: 'Every Wednesday - next session: Wednesday 22 July', title: 'Ai Meet Up', text: '4:00 pm - 6:00 pm. Weekly meetup at Nature Bar, Maenam.', image: '/assets/fct/ai-community-meeting.jpeg', href: '/contact-link/' },
-      { date: 'Every Wednesday - next session: Wednesday 22 July', title: 'Crypto Community Gathering', text: '4:00 pm - 6:00 pm. Weekly community meetup at Nature Bar, Maenam.', image: '/assets/fct/past-event-crypto-community-gathering.jpeg', href: '/contact-link/' },
-      { date: 'Every Wednesday - next session: Wednesday 22 July', title: 'Free Beach Fitness Meet Ups', text: 'Wednesday mornings. Beach exercise for locals, expats, and visitors who want to stay active and meet people.', image: '/assets/fct/beach-1-scaled.jpg', href: '/contact-link/?fct_event=free-beach-fitness' },
-      { date: 'Every Thursday - next session: Thursday 23 July', title: 'Pub Quiz', text: '7:00 pm - 9:45 pm. Weekly Thursday quiz at Nature Bar, Maenam.', image: '/assets/fct/pub-quiz-nature-bar.jpeg', href: '/contact-link/' },
-      { date: 'Every Friday - next session: Friday 24 July', title: 'Business Lunch', text: '3:00 pm - 5:00 pm. Weekly Friday business lunch at Nature Bar, Maenam.', image: '/assets/fct/friday-business-networking-lunch.png', href: '/contact-link/' },
-      { date: 'Every Saturday - next session: Saturday 25 July', title: 'Beach Walk', text: '4:00 pm - 6:00 pm. Weekly Saturday beach walk.', image: '/assets/fct/beach-walk-community.jpg', href: '/contact-link/' },
-      { date: 'Monday 29th June 2026', title: 'Full Moon Party VIP Trip', text: 'VIP Full Moon Party trip by speedboat to Koh Phangan, with welcome drink at Nature Bar, Maenam, hotel pick up and drop off, and return departure around 1:30 am.', image: '/assets/fct/full-moon-party-vip-trip-29-june-2026.jpeg', href: '/contact-link/?fct_event=full-moon-party-vip-trip' },
+      { date: 'Every Wednesday - next session: Wednesday 22 July', title: 'Ai Meet Up', text: '4:00 pm - 6:00 pm. Weekly meetup at Nature Bar, Maenam.', image: '/assets/fct/ai-community-meeting.jpeg', href: '/contact-link/?topic=AI%20Meet%20Up' },
+      { date: 'Every Wednesday - next session: Wednesday 22 July', title: 'Crypto Community Gathering', text: '4:00 pm - 6:00 pm. Weekly community meetup at Nature Bar, Maenam.', image: '/assets/fct/past-event-crypto-community-gathering.jpeg', href: '/contact-link/?topic=Crypto%20Community%20Gathering' },
+      { date: 'Every Wednesday - next session: Wednesday 22 July', title: 'Free Beach Fitness Meet Ups', text: 'Wednesday mornings. Beach exercise for locals, expats, and visitors who want to stay active and meet people.', image: '/assets/fct/beach-1-scaled.jpg', href: '/contact-link/?topic=Free%20Beach%20Fitness%20Meet%20Ups' },
+      { date: 'Every Thursday - next session: Thursday 23 July', title: 'Pub Quiz', text: '7:00 pm - 9:45 pm. Weekly Thursday quiz at Nature Bar, Maenam.', image: '/assets/fct/pub-quiz-nature-bar.jpeg', href: '/contact-link/?topic=Pub%20Quiz' },
+      { date: 'Every Friday - next session: Friday 24 July', title: 'Business Lunch', text: '3:00 pm - 5:00 pm. Weekly Friday business lunch at Nature Bar, Maenam.', image: '/assets/fct/friday-business-networking-lunch.png', href: '/contact-link/?topic=Business%20Lunch' },
+      { date: 'Every Saturday - next session: Saturday 25 July', title: 'Beach Walk', text: '4:00 pm - 6:00 pm. Weekly Saturday beach walk.', image: '/assets/fct/beach-walk-community.jpg', href: '/contact-link/?topic=Beach%20Walk' },
+      { date: 'Monday 29th June 2026', title: 'Full Moon Party VIP Trip', text: 'VIP Full Moon Party trip by speedboat to Koh Phangan, with welcome drink at Nature Bar, Maenam, hotel pick up and drop off, and return departure around 1:30 am.', image: '/assets/fct/full-moon-party-vip-trip-29-june-2026.jpeg', href: '/assets/fct/full-moon-party-vip-trip-29-june-2026.jpeg' },
     ],
   },
   'bangkok-community-events': {
@@ -37,8 +37,8 @@ export const regionalEvents: Record<string, RegionalEventsPage> = {
     archiveSlug: 'bangkok',
     intro: 'Current community, music and social events in Bangkok.',
     events: [
-      { date: '27-28 June 2026', title: 'Club 30 Bangkok', text: 'Bangkok nightlife and social event for music, drinks, and socialising.', image: '/assets/fct/bangkok-club-30.jpg', href: '/contact-link/' },
-      { date: '25-26 July 2026', title: 'Monster Music Festival', text: 'A major Bangkok music event with live performances and festival atmosphere.', image: '/assets/fct/event-rock-concert.jpg', href: '/contact-link/' },
+      { date: '27-28 June 2026', title: 'Club 30 Bangkok', text: 'Bangkok nightlife and social event for music, drinks, and socialising.', image: '/assets/fct/bangkok-club-30.jpg', href: '/contact-link/?topic=Club%2030%20Bangkok' },
+      { date: '25-26 July 2026', title: 'Monster Music Festival', text: 'A major Bangkok music event with live performances and festival atmosphere.', image: '/assets/fct/event-rock-concert.jpg', href: '/contact-link/?topic=Monster%20Music%20Festival' },
     ],
   },
   'chiang-mai-community-events': {
@@ -55,7 +55,7 @@ export const regionalEvents: Record<string, RegionalEventsPage> = {
     archiveSlug: 'hua-hin',
     intro: 'Current community and charity events in Hua Hin.',
     events: [
-      { date: '27 November 2026', title: 'Rotary Royal Hua Hin Charity Golf Classic', text: 'Annual amateur charity golf classic supporting Rotary Royal Hua Hin community causes.', image: '/assets/fct/hua-hin-charity-golf-classic-20261127.jpeg', href: '/contact-link/' },
+      { date: '27 November 2026', title: 'Rotary Royal Hua Hin Charity Golf Classic', text: 'Annual amateur charity golf classic supporting Rotary Royal Hua Hin community causes.', image: '/assets/fct/hua-hin-charity-golf-classic-20261127.jpeg', href: '/contact-link/?topic=Rotary%20Royal%20Hua%20Hin%20Charity%20Golf%20Classic' },
     ],
   },
   'koh-phangan-community-events': {
@@ -83,8 +83,8 @@ export const regionalEvents: Record<string, RegionalEventsPage> = {
     archiveSlug: 'pattaya',
     intro: 'Current community, sport and social events in Pattaya.',
     events: [
-      { date: '27-29 June 2026', title: 'Pattaya Pride', text: 'Community celebration and social event in Pattaya.', image: '/assets/fct/events/pattaya-pride-current.jpg', href: '/contact-link/' },
-      { date: 'December 11-13, 2026', title: 'Tomorrowland Pattaya', text: 'Tomorrowland Thailand comes to Wisdom Valley near Pattaya for a major electronic music festival experience.', image: '/assets/fct/events/pattaya-tomorrowland-current.webp', href: '/contact-link/' },
+      { date: '27-29 June 2026', title: 'Pattaya Pride', text: 'Community celebration and social event in Pattaya.', image: '/assets/fct/events/pattaya-pride-current.jpg', href: '/contact-link/?topic=Pattaya%20Pride' },
+      { date: 'December 11-13, 2026', title: 'Tomorrowland Pattaya', text: 'Tomorrowland Thailand comes to Wisdom Valley near Pattaya for a major electronic music festival experience.', image: '/assets/fct/events/pattaya-tomorrowland-current.webp', href: '/contact-link/?topic=Tomorrowland%20Pattaya' },
     ],
   },
   'phuket-community-events': {
@@ -96,7 +96,7 @@ export const regionalEvents: Record<string, RegionalEventsPage> = {
       { date: '19 June 2026', title: 'Rafael Cerato at Illuzion Phuket', text: 'Underground music night at Illuzion Phuket in Patong.', image: '/assets/fct/phuket-music-stage.jpg', href: 'https://www.phuket.net/events/2026-06/' },
       { date: '26 June 2026', title: 'Ministry of Sound at Illuzion Phuket', text: 'Music and nightlife event at Illuzion Phuket in Patong.', image: '/assets/fct/event-rock-concert.jpg', href: 'https://www.phuket.net/events/2026-06/' },
       { date: '10-18 October 2026', title: 'Phuket Vegetarian Festival', text: 'Nine-day cultural festival with processions, shrines, vegetarian food, and community traditions.', image: '/assets/fct/events/phuket-vegetarian-festival.jpg', href: 'https://www.phuket101.net/phuket-vegetarian-festival/' },
-      { date: '3 December 2026', title: 'Snowbirds Charity Golf Classic', text: 'Charity golf classic organised by Rotary and community partners.', image: '/assets/fct/phuket-snowbirds-golf.jpeg', href: '/contact-link/' },
+      { date: '3 December 2026', title: 'Snowbirds Charity Golf Classic', text: 'Charity golf classic organised by Rotary and community partners.', image: '/assets/fct/phuket-snowbirds-golf.jpeg', href: '/contact-link/?topic=Snowbirds%20Charity%20Golf%20Classic' },
     ],
   },
 };

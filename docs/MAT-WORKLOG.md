@@ -28,3 +28,11 @@ as the source change.
 - Safety: worked only in the standalone Astro site; production WordPress, the live site, and the server staging directory were not modified.
 - Verification: property listing sync, Astro build, desktop/mobile visual checks, and git diff validation.
 - Status: complete except the separate past-events inventory/picture recovery request, which remains a follow-up item.
+
+## 2026-07-22 - Review fixes for events, charity, enquiry links and homepage cards
+
+- Request: fix Mat's review notes across the non-live standalone site, including event pages, event photos, charity pages, enquiry routing, homepage testimonials alignment, the missing homepage property image, and the latest Samui property listing order.
+- Scope: rebuilt the property snapshots from the automated listing feed, kept the newest Samui Zeemui listing first, made property overview support cards open the standard enquiry form, normalized legacy enquiry parameters on the contact form, routed health, hire, local deals, events and charity CTAs to the standard enquiry form, fixed the Full Moon event link to the flyer, confirmed Chiang Mai and other events pages generate, fixed Pattaya past-event imagery, made charity cards use the same readable image/text sizing, left-aligned the homepage testimonials heading, and replaced the missing homepage property card image with an existing property asset.
+- Safety: worked only in the standalone Astro website under `web/`; production WordPress, the live site, and the server staging directory were not modified.
+- Verification: Astro build, local preview checks on desktop and mobile for the reported pages, 185-page internal link and asset audit, and git diff validation.
+- Status: complete for the review fixes in this pass.

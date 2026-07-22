@@ -81,12 +81,23 @@ const description = 'Contact First Contact Thailand for trusted local introducti
     if (!form) return;
 
     const params = new URLSearchParams(window.location.search);
-    const requestedTopic = params.get('topic');
+    const titleCase = (value) => value
+      .replace(/[-_]+/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .replace(/\b\w/g, (letter) => letter.toUpperCase())
+      .replace(/\b(Vip|Ai)\b/g, (word) => word.toUpperCase());
+    const requestedTopic = params.get('topic')
+      || params.get('property')
+      || params.get('fct_event')
+      || params.get('fct_service')
+      || params.get('fct_charity');
     if (requestedTopic) {
       const select = form.querySelector('select[name="topic"]');
+      const topicLabel = titleCase(requestedTopic);
       const customOption = document.createElement('option');
-      customOption.value = requestedTopic;
-      customOption.textContent = requestedTopic;
+      customOption.value = topicLabel;
+      customOption.textContent = topicLabel;
       customOption.selected = true;
       select?.appendChild(customOption);
     }
