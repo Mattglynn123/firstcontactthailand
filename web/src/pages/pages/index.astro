@@ -2,7 +2,8 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 
-const pages = (await getCollection('pages', ({ data }) => !data.draft))
+const hiddenReviewSlugs = new Set(['contact-2', 'contact-3']);
+const pages = (await getCollection('pages', ({ data }) => !data.draft && !hiddenReviewSlugs.has(data.slug)))
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
 
@@ -11,6 +12,9 @@ const pages = (await getCollection('pages', ({ data }) => !data.draft))
     <h1>Site Index</h1>
     <p>This is a review index for every page currently available inside the new Astro site.</p>
   </section>
+  <p class="site-index__standard-contact">
+    Standard enquiry form: <a href="/contact-link/">/contact-link/</a>
+  </p>
   <ul class="site-index-grid">
     {pages.map((p) => (
       <li>

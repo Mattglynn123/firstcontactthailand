@@ -550,7 +550,7 @@ h3 {
 }
 
 .home-testimonials h2 {
-  max-width: 760px;
+  max-width: 100%;
   margin: 0 0 28px;
   color: var(--ink);
   font-size: 2rem;
@@ -1146,6 +1146,11 @@ h3 {
   background: rgb(6 44 55 / 88%);
 }
 
+.property-card__badges .property-card__new {
+  background: #d71920;
+  color: var(--paper);
+}
+
 .property-card__photos {
   right: 12px;
   bottom: 12px;
@@ -1572,6 +1577,75 @@ h3 {
   border: 1px solid rgb(8 125 148 / 24%);
   border-radius: 8px;
   background: var(--paper);
+}
+
+.moving-thailand-page {
+  max-width: 1100px;
+}
+
+.moving-thailand-page__intro {
+  max-width: 920px;
+  margin: 0 0 34px;
+}
+
+.moving-thailand-page__help {
+  max-width: 900px;
+  margin: 0 0 38px;
+}
+
+.moving-thailand-page__help .page-cta {
+  max-width: 640px;
+  margin-top: 24px;
+}
+
+.moving-thailand-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.moving-thailand-card {
+  display: flex;
+  min-width: 0;
+  min-height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgb(8 125 148 / 24%);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.moving-thailand-card img {
+  width: 100%;
+  height: 220px;
+  flex: 0 0 220px;
+  object-fit: cover;
+}
+
+.moving-thailand-card > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 18px 16px 20px;
+}
+
+.moving-thailand-card h2 {
+  min-height: 58px;
+  margin: 0 0 10px;
+  color: var(--teal);
+  font-size: 22px;
+  font-weight: 850;
+  line-height: 1.2;
+}
+
+.moving-thailand-card p {
+  flex: 1;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 15.5px;
+  line-height: 1.55;
 }
 
 .guide-page__grid span {
@@ -2249,6 +2323,7 @@ h3 {
   .home-categories,
   .event-grid,
   .charity-grid,
+  .moving-thailand-grid,
   .tour-guide-grid,
   .guide-page__grid,
   .charity-summary__layout,

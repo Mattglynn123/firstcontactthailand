@@ -186,9 +186,10 @@ const { area } = Astro.props;
       .trim();
 
     const listingTime = (listing) => Date.parse(listing.updatedAt || listing.createdAt || '') || 0;
-    const isNewByDate = (listing) => {
-      const time = listingTime(listing);
-      return Boolean(time && Date.now() - time <= 14 * 24 * 60 * 60 * 1000);
+    const listingCreatedTime = (listing) => Date.parse(listing.createdAt || listing.updatedAt || '') || 0;
+    const isNewListing = (listing) => {
+      const createdTime = listingCreatedTime(listing);
+      return Boolean(listing.newListing && createdTime && Date.now() - createdTime <= 3 * 24 * 60 * 60 * 1000);
     };
     const summary = (value) => {
       const text = clean(value);
@@ -204,7 +205,7 @@ const { area } = Astro.props;
         if (selected === 'price-asc') return (a.price || Number.MAX_SAFE_INTEGER) - (b.price || Number.MAX_SAFE_INTEGER);
         if (selected === 'price-desc') return (b.price || 0) - (a.price || 0);
         if (selected === 'newest') return listingTime(b) - listingTime(a);
-        if ((a.newListing || isNewByDate(a)) !== (b.newListing || isNewByDate(b))) return (a.newListing || isNewByDate(a)) ? -1 : 1;
+        if (isNewListing(a) !== isNewListing(b)) return isNewListing(a) ? -1 : 1;
         if (listingTime(a) !== listingTime(b)) return listingTime(b) - listingTime(a);
         if (a.featured !== b.featured) return a.featured ? -1 : 1;
         if (Boolean(a.price) !== Boolean(b.price)) return a.price ? -1 : 1;
@@ -222,7 +223,7 @@ const { area } = Astro.props;
         listing.bathrooms ? `${listing.bathrooms} bath${listing.bathrooms === 1 ? '' : 's'}` : '',
       ].filter(Boolean);
       const badges = [
-        listing.newListing || isNewByDate(listing) ? '<span class="property-card__new">New Listing</span>' : '',
+        isNewListing(listing) ? '<span class="property-card__new">New Listing</span>' : '',
         listing.featured ? '<span>Featured</span>' : '',
       ].join('');
       return `<article class="property-card" data-location="${escapeHtml(listing.location)}" data-price="${Number(listing.price) || 0}" data-bedrooms="${Number(listing.bedrooms) || 0}" data-bathrooms="${Number(listing.bathrooms) || 0}">

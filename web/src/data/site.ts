@@ -68,7 +68,7 @@ export const navigation: NavItem[] = [
   { label: 'Hire', href: '/hire/' },
   { label: 'Local Business Network', href: '/local-business-network/' },
   { label: 'Local Deals', href: '/local-deals/' },
-  { label: 'Move to Thailand Guide', href: '/move-to-thailand-guide/' },
+  { label: 'Move to Thailand Guide', href: '/moving-to-samui/' },
   {
     label: 'Property',
     href: '/real-estate/',

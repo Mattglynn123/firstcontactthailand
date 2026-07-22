@@ -1,29 +1,57 @@
 ---
+const cards = [
+  {
+    title: 'Prepare Before You Arrive',
+    text: 'Plan your visa, work permissions, insurance, travel documents, driving licenses, property rules, leases, and local customs, banking, and emergency contacts before you land. Samui is relaxed, but the move is much smoother when the important admin is handled early.',
+    image: '/assets/fct/business-visas.jpg',
+  },
+  {
+    title: 'Choose the Right Area',
+    text: 'Different parts of Samui suit different lifestyles. Think about schools, work, transport, beach access, nightlife, gyms, hospitals, supermarkets, and whether you want a quiet local area or a busier expat hub.',
+    image: '/assets/fct/home-rotator-island.jpg',
+  },
+  {
+    title: 'Find Safe Accommodation',
+    text: 'Short-term rentals are useful while you learn the island. Before committing long term, check deposits, utility charges, access roads, rainy-season drainage, internet quality, and the reputation of the agent or owner.',
+    image: '/assets/fct/house-1-scaled.jpg',
+  },
+  {
+    title: 'Emergency & Local Services Checklist',
+    text: 'Know who to contact and what steps to take for urgent local situations, including wills, road accidents, tourist police, embassy contacts, medical procedures, property disputes, Thailand residence cards, emergency embassy contacts, emergency medical procedures, and family support matters in Thailand.',
+    image: '/assets/fct/legal-scaled.jpg',
+  },
+  {
+    title: 'Build Your Local Network',
+    text: 'Life is easier when you meet people. Join community events, business groups, sports, charity projects, wellness groups, and local meetups so Samui starts to feel connected rather than unfamiliar.',
+    image: '/assets/fct/hero-network.jpg',
+  },
+  {
+    title: 'Plan for Real Island Life',
+    text: 'Expect differences in weather, transport, service times, language, and daily routines. Keep expectations realistic, stay flexible, and give yourself time to settle properly.',
+    image: '/assets/fct/beach-walk-community.jpg',
+  },
+];
 ---
 
-<article class="guide-page guide-page--live">
-  <h1>Move to Thailand Guide</h1>
-  <p>A simple starting point for planning your move to Thailand, with the key areas to check before you relocate, rent, buy, work, retire, or settle into local life.</p>
+<article class="guide-page guide-page--live moving-thailand-page">
+  <h1>Moving to Thailand</h1>
+  <p class="moving-thailand-page__intro">A practical one-page checklist for anyone planning a first move to Thailand, based on key first-time expat planning points and tailored to local life in Thailand.</p>
 
-  <h2>Visas &amp; Residency</h2>
-  <p>Start by understanding which visa route fits your plans, including retirement, family, education, work, investment, or long-stay options.</p>
+  <div class="moving-thailand-grid">
+    {cards.map((card) => (
+      <section class="moving-thailand-card">
+        <img src={card.image} alt={card.title} loading="lazy" decoding="async" />
+        <div>
+          <h2>{card.title}</h2>
+          <p>{card.text}</p>
+        </div>
+      </section>
+    ))}
+  </div>
 
-  <h2>Where to Live</h2>
-  <p>Thailand offers very different lifestyles across islands, beach towns, cities, and mountain areas. Think about schools, transport, healthcare, work, community, and day-to-day costs.</p>
-
-  <h2>Property &amp; Rentals</h2>
-  <p>Before renting or buying, check ownership rules, contracts, deposits, land titles, management fees, and local legal support.</p>
-
-  <h2>Healthcare &amp; Insurance</h2>
-  <p>Review medical insurance, emergency access, hospitals nearby, medication needs, and support for children or older family members.</p>
-
-  <h2>Banking &amp; Money</h2>
-  <p>Plan how you will handle banking, transfers, tax questions, income, pensions, and currency exchange.</p>
-
-  <h2>Trusted Local Support</h2>
-  <p>Moving is easier with reliable local contacts for legal help, property, removals, vehicles, insurance, schools, healthcare, business support, and community introductions.</p>
-
-  <h2>How First Contact Can Help</h2>
-  <p>First Contact Thailand connects locals, expats, and visitors with trusted service providers across Thailand.</p>
-  <p><a class="page-cta" href="/contact-link/?topic=Move%20to%20Thailand%20Guide">Contact us and we will connect you with trusted local support</a></p>
+  <section class="moving-thailand-page__help">
+    <h2>How First Contact Can Help</h2>
+    <p>First Contact Thailand can connect you with trusted local support for property, rentals, legal services, insurance, vehicles, tours, health and fitness, local deals, business services, and community introductions.</p>
+    <a class="page-cta" href="/contact-link/?topic=Moving%20to%20Thailand">Contact us to find your local Thailand connections</a>
+  </section>
 </article>

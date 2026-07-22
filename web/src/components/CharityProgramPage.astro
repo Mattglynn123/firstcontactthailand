@@ -16,7 +16,6 @@ const { program } = Astro.props;
       <h1>{program.title}</h1>
       <p>{program.text}</p>
       <p>This is a {program.sourceName} program</p>
-      <a class="charity-summary__source" href={program.sourceUrl} target="_blank" rel="noreferrer">Visit the official Rotary source</a>
       <a class="page-cta" href={`/contact-link/?topic=${encodeURIComponent(program.title)}`}>Ask how you can support this program</a>
     </div>
   </div>

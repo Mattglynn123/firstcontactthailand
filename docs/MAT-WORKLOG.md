@@ -36,3 +36,19 @@ as the source change.
 - Safety: worked only in the standalone Astro website under `web/`; production WordPress, the live site, and the server staging directory were not modified.
 - Verification: Astro build, local preview checks on desktop and mobile for the reported pages, 185-page internal link and asset audit, and git diff validation.
 - Status: complete for the review fixes in this pass.
+
+## 2026-07-23 - Remove Rotary source link from charity detail pages
+
+- Request: remove the `Visit the official Rotary source` line from all charity pages.
+- Scope: removed the shared source link from the charity program detail template so every charity extra-info page keeps the program wording and enquiry CTA without the external Rotary source link.
+- Safety: worked only in the standalone Astro website under `web/`; production WordPress, the live site, and the server staging directory were not modified.
+- Verification: Astro build and desktop/mobile local preview checks on representative Pattaya, Samui, Bangkok and Phuket charity detail pages.
+- Status: complete.
+
+## 2026-07-23 - Latest standalone review fixes
+
+- Request: fix the latest non-live review notes for Pattaya past-event photos, Samui sales new-listing badges, the Move to Thailand page, the standard enquiry link, homepage bottom cards, health page links, and non-Samui event pages.
+- Scope: replaced Pattaya past-event placeholders with event-relevant photos, limited red property `New Listing` badges to the feed's explicit new-listing flag, matched the live Moving to Thailand/Samui top wording and card order, verified the customise-your-tour and health enquiries use the standard enquiry form, removed old contact aliases from the review index, kept the testimonials heading on one line, renamed the homepage Vehicle Rental card to Hire, added homepage cards for Charities and Health & Fitness, and added past/upcoming event cards for Bangkok, Chiang Mai, Hua Hin, Koh Phangan, Krabi, Pattaya and Phuket while leaving Samui unchanged.
+- Safety: worked only in the standalone Astro website under `web/`; production WordPress, the live site, and the server staging directory were not modified.
+- Verification: Astro build, all-page internal link and first-party asset audit, desktop/mobile local preview checks on the homepage, Health & Fitness, Samui sales, Pattaya and Phuket past events, all non-Samui regional events pages, Moving to Samui, representative charity detail pages, and the standard enquiry form.
+- Status: complete for this review pass.
