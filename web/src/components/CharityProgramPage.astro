@@ -5,25 +5,70 @@ interface Props {
   program: CharityProgram & { location: string; regionSlug: string; sourceName: string; sourceUrl: string };
 }
 const { program } = Astro.props;
+
+const programWords = `${program.title} ${program.text}`.toLowerCase();
+const has = (...words: string[]) => words.some((word) => programWords.includes(word));
+const focus = (() => {
+  if (has('water safety', 'drowning', 'swim', 'lifesaving', 'surf')) return {
+    need: `The program helps children, families, students, and community volunteers in ${program.location} build confidence around water, learn safer habits, and reduce preventable accidents.`,
+    support: 'Support can help with qualified instructors, rescue and training equipment, pool or beach sessions, transport for children, safety materials, volunteer coordination, and community outreach.',
+  };
+  if (has('drinking water', 'sanitation', 'water and sanitation', 'world water')) return {
+    need: `The program focuses on practical access to safer water, better hygiene, and healthier daily routines for schools, families, and community groups connected with ${program.location}.`,
+    support: 'Support can help fund filtration equipment, storage, sanitation improvements, school water stations, hygiene education, maintenance, transport, and local follow-up.',
+  };
+  if (has('eye', 'vision', 'glasses', 'spectacles')) return {
+    need: `The program helps children whose learning, confidence, and daily life can be affected when eyesight problems are not identified or corrected early.`,
+    support: 'Support can help with screening days, eye tests, prescription glasses, transport, school coordination, and follow-up checks so children can keep learning comfortably.',
+  };
+  if (has('autism', 'child protection', 'children of the forest', 'low income', 'food', 'poor')) return {
+    need: `The program supports vulnerable children, families, carers, or low-income communities who need practical help, safer support networks, and reliable local follow-through.`,
+    support: 'Support can help with food, school supplies, transport, family support, activities, learning materials, care packages, outreach visits, and the running costs that keep help consistent.',
+  };
+  if (has('nursing', 'scholar', 'ged', 'school', 'library', 'education', 'literacy', 'youth', 'student')) return {
+    need: `The program focuses on education, confidence, and opportunity for students and young people who benefit from extra support beyond the normal school day.`,
+    support: 'Support can help with scholarships, books, learning materials, uniforms, transport, mentoring, classroom resources, training sessions, and practical pathways for students.',
+  };
+  if (has('aed', 'defib', 'police', 'rescue', 'covid', 'ultrasound', 'health', 'hospital', 'clinic', 'pads')) return {
+    need: `The program strengthens local health and emergency response so people in ${program.location} can get faster, more practical help when it matters.`,
+    support: 'Support can help with medical equipment, replacement supplies, AED pads, training sessions, response coordination, awareness materials, and practical support for local teams.',
+  };
+  if (has('peace', 'culture', 'promoting peace')) return {
+    need: `The program helps children and communities learn peaceful communication, confidence, cooperation, and positive ways to handle conflict.`,
+    support: 'Support can help with workshops, art materials, school sessions, youth activities, facilitation, awards, scholarships, and community events that keep the message visible.',
+  };
+  if (has('environment', 'roads', 'safe roads', 'reusable', 'waste')) return {
+    need: `The program improves everyday community safety and living conditions through practical local projects that make public spaces easier and safer to use.`,
+    support: 'Support can help with equipment, signage, education materials, infrastructure, community clean-up or safety work, school coordination, and local implementation costs.',
+  };
+  if (has('football', 'golf', 'entrepreneurs', 'fair', 'shop local', 'social responsibility')) return {
+    need: `The program brings local people together through sport, enterprise, service, and community participation so young people and local groups can build confidence and connection.`,
+    support: 'Support can help with event materials, venue costs, transport, coaching, mentoring, prizes, outreach, volunteer support, and practical expenses for community participation.',
+  };
+  return {
+    need: `The program focuses on practical community support in ${program.location}, with local partners helping turn goodwill into useful action for people who need it.`,
+    support: 'Support can help with supplies, transport, training, outreach, equipment, volunteer coordination, awareness, and the day-to-day costs that keep local charity programs moving.',
+  };
+})();
 const details = program.details ?? [
   {
     title: 'Program Overview',
-    text: program.text,
+    text: `${program.text} The internal First Contact page keeps the key program information together so supporters can understand the purpose before making an enquiry.`,
     image: program.image,
   },
   {
-    title: 'Local Impact',
-    text: `This ${program.location} program focuses on practical community support, local outcomes, and help that reaches people through an established local charity route.`,
+    title: 'Who It Helps',
+    text: focus.need,
     image: program.image,
   },
   {
     title: 'How Support Helps',
-    text: 'Support can help with equipment, supplies, transport, training, outreach, awareness, volunteer time, and the practical costs that keep local community programs running.',
+    text: focus.support,
     image: program.image,
   },
   {
     title: 'Get Involved',
-    text: 'First Contact can connect donors, volunteers, sponsors, and local supporters with the right route to ask questions and help the program.',
+    text: `First Contact can collect your question, preferred location, and type of support, then connect you with the right route for this ${program.sourceName} program.`,
     image: program.image,
   },
 ];
@@ -39,7 +84,7 @@ const details = program.details ?? [
   <div class="charity-detail-grid">
     {details.map((detail) => (
       <section class="charity-detail-card">
-        <img src={detail.image ?? program.image} alt={detail.title} loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/assets/fct/hero-community.jpg';" />
+        <img src={detail.image ?? program.image} alt={detail.title} loading="eager" decoding="async" onerror="this.onerror=null;this.src='/assets/fct/hero-community.jpg';" />
         <div>
           <h2>{detail.title}</h2>
           <p>{detail.text}</p>

@@ -14,7 +14,7 @@ const { page } = Astro.props;
     <div class="charity-grid">
       {page.programs.map((item) => (
         <article class="charity-card">
-          <img src={item.image} alt={item.title} loading="lazy" decoding="async" />
+          <img src={item.image} alt={item.title} loading="eager" decoding="async" onerror="this.onerror=null;this.src='/assets/fct/hero-community.jpg';" />
           <div class="charity-card__body">
             <h2>{item.title}</h2>
             <p>{item.text}</p>

@@ -68,3 +68,11 @@ as the source change.
 - Safety: worked only in the standalone Astro website under `web/`; production WordPress, the live site, and the server staging directory were not modified.
 - Verification: Astro built 185 pages; generated-page audit found no stale contact anchors, no external charity source anchors, no old AI charity-source wording, no missing event-card images, and no Phuket Samui-flyer reuse; full-site link/first-party-asset audit passed across 185 pages; desktop and mobile browser checks passed for Phuket and Pattaya events, Tours, Moving to Thailand, Pattaya charity, Pattaya Drinking Water, Samui Surf Lifesaving Club, the duplicate Chiang Mai charity route, and the standard enquiry form.
 - Status: complete.
+
+## 2026-07-23 - All-page enquiry and charity rules review
+
+- Request: check every page before Mat reviews again, especially the standard enquiry-form rule and charity page rules.
+- Scope: enforced charity-card image fallbacks and eager image loading across regional charity pages, expanded the shared charity detail template so each internal extra-info page has four richer program-specific sections, and kept the build-synced property listing snapshots current.
+- Safety: worked only in the standalone Astro website under `web/`; production WordPress, the live site, and the server staging directory were not modified.
+- Verification: property listing sync completed for all property regions; Astro built 185 pages; generated-site audit passed across all 185 pages for broken internal links/assets, visible CTA enquiry routing, event-card images, charity-card images, charity detail-card counts/images, old Rotary-source wording, and old placeholder links; desktop and mobile Chrome checks passed on the standard enquiry form, representative charity region/detail pages, Pattaya and Phuket events, Moving to Thailand, and Tours.
+- Status: complete.
