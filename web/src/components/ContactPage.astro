@@ -1,29 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import PageHero from './PageHero.astro';
 import { contact } from '../data/site';
 
-const pageTitle = 'Contact First Contact Thailand';
+const pageTitle = 'Contact Us';
 const description = 'Contact First Contact Thailand for trusted local introductions, events, tours, property, hire and deals.';
 ---
 
 <Layout title={`${pageTitle} | First Contact Thailand`} description={description} image="/assets/fct/contact-community.jpg">
-  <PageHero
-    eyebrow="Get connected"
-    title={pageTitle}
-    text="Tell us what you need and we will help connect you with trusted local partners across the network."
-    image="/assets/fct/contact-community.jpg"
-    primaryLabel="Message on WhatsApp"
-    primaryHref={contact.whatsapp}
-    secondaryLabel="Open Facebook Community"
-    secondaryHref={contact.facebook}
-  />
-
-  <section class="section contact-section">
+  <section class="section contact-section contact-section--plain">
     <div class="section__inner contact-layout">
       <div class="contact-copy">
-        <p class="section-kicker">A personal response</p>
-        <h2>How can we help?</h2>
+        <p class="section-kicker">First Contact Thailand</p>
+        <h1>{pageTitle}</h1>
         <p>Use this form for a business introduction, event, tour, property enquiry, hire request or local recommendation.</p>
         <div class="contact-direct">
           <a href={contact.whatsapp} target="_blank" rel="noreferrer">

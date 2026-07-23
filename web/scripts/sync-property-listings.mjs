@@ -128,7 +128,7 @@ async function fetchSamui() {
   const response = await fetch(endpoint, { headers: { apikey: key, Authorization: `Bearer ${key}` } });
   if (!response.ok) throw new Error(`Koh Samui property feed: HTTP ${response.status}`);
   const rows = await response.json();
-  const twoWeeks = 14 * 24 * 60 * 60 * 1000;
+  const threeDays = 3 * 24 * 60 * 60 * 1000;
   return rows.map((property) => {
     const updatedAt = property.created_at || property.updated_at || '';
     const timestamp = Date.parse(updatedAt);
@@ -147,7 +147,7 @@ async function fetchSamui() {
         .filter(Boolean)
         .slice(0, 12),
       featured: Boolean(property.featured),
-      newListing: Number.isFinite(timestamp) && Date.now() - timestamp <= twoWeeks,
+      newListing: Number.isFinite(timestamp) && Date.now() - timestamp <= threeDays,
       updatedAt,
     };
   });
@@ -190,10 +190,48 @@ function cleanLazudiImage(src) {
   try {
     const url = new URL(src);
     if (!url.hostname.includes('img.lazudi.com')) return '';
-    return `${url.origin}${url.pathname}?w=900&h=600&fm=webp&q=75`;
+    url.search = '';
+    url.searchParams.set('w', '914');
+    url.searchParams.set('h', '610');
+    url.searchParams.set('fm', 'webp');
+    url.searchParams.set('markalpha', '0');
+    return url.toString();
   } catch {
     return '';
   }
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function lazudiImageKey(src) {
+  try {
+    return new URL(src).pathname.toLowerCase();
+  } catch {
+    return '';
+  }
+}
+
+function extractLazudiGalleryImages(html, propertyId) {
+  const normalized = String(html ?? '')
+    .replace(/&amp;/g, '&')
+    .replace(/\\u002F/g, '/')
+    .replace(/\\\//g, '/');
+  const pattern = new RegExp(
+    `https?:\\/\\/img\\.lazudi\\.com\\/public\\/properties\\/${escapeRegExp(propertyId)}\\/[^"'\\s)<>]+?\\.(?:jpe?g|png|webp)(?:\\?[^"'\\s)<>]*)?`,
+    'gi',
+  );
+  const urls = [];
+  const seen = new Set();
+  for (const match of normalized.matchAll(pattern)) {
+    const cleaned = cleanLazudiImage(match[0]);
+    const key = lazudiImageKey(cleaned);
+    if (!cleaned || seen.has(key)) continue;
+    seen.add(key);
+    urls.push(cleaned);
+  }
+  return urls.slice(0, 16);
 }
 
 function cssString(value) {
@@ -259,6 +297,57 @@ async function captureKrabiOpenDetailImages(page, listingId, targetDir) {
     timeout: 10000,
   });
   return [`/assets/fct/properties/krabi/${listingId}/${filename}`];
+}
+
+async function captureKrabiImageDocuments(browser, imageUrls, listingId, targetDir, userAgent) {
+  if (!imageUrls.length) return [];
+  const tempDir = `${targetDir}.__tmp`;
+  await fs.rm(tempDir, { recursive: true, force: true });
+  await fs.mkdir(tempDir, { recursive: true });
+
+  const context = await browser.newContext({
+    viewport: { width: 1000, height: 760 },
+    deviceScaleFactor: 1,
+    userAgent,
+    extraHTTPHeaders: { Referer: 'https://lazudi.com/' },
+  });
+  const page = await context.newPage();
+  const localImages = [];
+
+  try {
+    for (const imageUrl of imageUrls) {
+      const response = await page.goto(imageUrl, { waitUntil: 'load', timeout: 45000 }).catch(() => null);
+      if (!response?.ok()) continue;
+      await page.waitForFunction(() => {
+        const image = document.querySelector('body > img') || document.querySelector('img');
+        return image?.naturalWidth > 0 && image?.naturalHeight > 0;
+      }, null, { timeout: 10000 }).catch(() => {});
+
+      const image = page.locator('body > img, img').first();
+      const loaded = await image.evaluate((img) => img.naturalWidth > 0 && img.naturalHeight > 0).catch(() => false);
+      if (!loaded) continue;
+
+      const filename = `photo-${String(localImages.length + 1).padStart(2, '0')}.jpg`;
+      await image.screenshot({
+        path: path.join(tempDir, filename),
+        type: 'jpeg',
+        quality: 82,
+        timeout: 10000,
+      });
+      localImages.push(`/assets/fct/properties/krabi/${listingId}/${filename}`);
+    }
+  } finally {
+    await context.close();
+  }
+
+  if (localImages.length === 0) {
+    await fs.rm(tempDir, { recursive: true, force: true });
+    return [];
+  }
+
+  await fs.rm(targetDir, { recursive: true, force: true });
+  await fs.rename(tempDir, targetDir);
+  return localImages;
 }
 
 async function captureKrabiDetailFallback(context, href, listingId, targetDir) {
@@ -380,6 +469,7 @@ async function fetchKrabiFromLazudi() {
   const browser = await chromium.launch({
     headless: true,
     ...(executablePath ? { executablePath } : {}),
+    args: ['--disable-gpu', '--disable-dev-shm-usage', '--disk-cache-size=1', '--media-cache-size=1'],
   });
   const areaName = areaNames.krabi;
   const searchUrl = 'https://lazudi.com/th-en/properties/for-sale/krabi';
@@ -407,20 +497,23 @@ async function fetchKrabiFromLazudi() {
         const detail = await detailPage.evaluate((propertyId) => {
           const body = document.body.innerText;
           const headings = Array.from(document.querySelectorAll('h1,h2,h3')).map((item) => item.innerText.trim());
+          const html = document.documentElement.outerHTML;
           const images = Array.from(document.querySelectorAll('img'))
             .map((image) => image.src)
             .filter((src) => src.includes(`public/properties/${propertyId}/`));
-          return { body, headings, images };
+          return { body, headings, html, images };
         }, card.id);
         const combinedText = `${detail.body}\n${card.text}`;
         const location = clean((combinedText.match(/\n([^|\n]*Krabi[^|\n]*)\s*\|\s*Id\s+/i)?.[1]) ?? 'Krabi');
         const title = extractLazudiTitle(detail.headings, detail.body, areaName);
         const description = extractLazudiDescription(detail.body) || clean(card.text) || `Current property listing for sale in ${areaName}.`;
-        const remoteImages = Array.from(new Set(detail.images.map(cleanLazudiImage).filter(Boolean))).slice(0, 12);
-        const localImages = await captureKrabiOpenDetailImages(
-          detailPage,
+        const remoteImages = extractLazudiGalleryImages(detail.html, String(card.id));
+        const localImages = await captureKrabiImageDocuments(
+          browser,
+          remoteImages.length > 0 ? remoteImages : Array.from(new Set(detail.images.map(cleanLazudiImage).filter(Boolean))),
           String(card.id),
           path.join(propertyAssetDir, 'krabi', String(card.id)),
+          userAgent,
         );
         const images = localImages.length > 0 ? localImages : remoteImages;
         const updated = detail.body.match(/Updated:\s*([0-9-]+)/i)?.[1] ?? '';

@@ -296,6 +296,11 @@ const { area } = Astro.props;
       render();
     };
 
+    const isFreshZeemuiListing = (property) => {
+      const timestamp = Date.parse(property.created_at || property.updated_at || '');
+      return Number.isFinite(timestamp) && Date.now() - timestamp <= 3 * 24 * 60 * 60 * 1000;
+    };
+
     const normalizeZeemui = (property) => ({
       id: String(property.id ?? property.property_ref ?? property.title),
       title: clean(property.title) || 'Koh Samui Property For Sale',
@@ -311,7 +316,7 @@ const { area } = Astro.props;
         .filter(Boolean)
         .slice(0, 12),
       featured: Boolean(property.featured),
-      newListing: Boolean(property.new_property),
+      newListing: isFreshZeemuiListing(property),
       createdAt: property.created_at || '',
       updatedAt: property.created_at || property.updated_at || '',
     });
@@ -440,7 +445,7 @@ const { area } = Astro.props;
         const listing = sortListings(filteredListings).slice(0, visibleCount)[Number(galleryButton.dataset.galleryOpen)];
         const images = listing?.images?.length ? listing.images : [fallbackImage];
         galleryTitle.textContent = listing?.title || 'Property photos';
-        galleryGrid.innerHTML = images.map((image, index) => `<img src="${escapeHtml(image)}" alt="${escapeHtml(listing?.title || 'Property photo')} ${index + 1}" loading="lazy" decoding="async">`).join('');
+        galleryGrid.innerHTML = images.map((image, index) => `<img src="${escapeHtml(image)}" alt="${escapeHtml(listing?.title || 'Property photo')} ${index + 1}" loading="eager" decoding="async">`).join('');
         gallery.showModal();
       }
     });

@@ -84,3 +84,11 @@ as the source change.
 - Safety: worked only in the standalone Astro website under `web/`; production WordPress, the live site, and the server staging directory were not modified.
 - Verification: property listing sync completed for all property regions; Astro built 185 pages; all-page static audit passed across 185 pages for internal links, first-party assets, event-card images, charity-card images/details, visible enquiry routing, old charity wording, old Moving helper wording, old Beach Fitness text, and source-provider branding.
 - Status: complete for this review pass; automated browser screenshots were not rerun because no Playwright/Chrome executable is available in this runtime, but the local preview is serving for Mat's manual review.
+
+## 2026-07-23 - Query pages, Pattaya event image and Krabi property galleries
+
+- Request: fix all query/enquiry pages, replace the duplicated Pattaya Bikini Beach Race image, and make Krabi property sales pull through multi-photo listing galleries from the current public Krabi source.
+- Scope: converted `contact-link`, `contact-2`, and `contact-3` to the shared plain-background standard enquiry form with the topic dropdown; added a dedicated Pattaya Bikini Beach Race image; updated the Krabi property sync to scrape current Lazudi gallery image URLs, save clean local JPG galleries, and write those galleries into the Krabi listing snapshot; set opened property galleries to eager-load images; aligned Samui red `New` badges to listings updated in the last 3 days.
+- Safety: worked only in the standalone Astro website under `web/`; production WordPress, the live site, and the server staging directory were not modified.
+- Verification: property listing sync completed for all property regions; Astro built 185 pages; desktop and mobile Playwright checks passed for all three query/contact routes, Krabi sales cards/gallery, Samui sales new-badge count, and Pattaya community events.
+- Status: complete.

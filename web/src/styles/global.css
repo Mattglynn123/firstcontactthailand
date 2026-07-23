@@ -2040,6 +2040,23 @@ h3 {
   background: var(--paper);
 }
 
+.contact-section--plain {
+  min-height: 62vh;
+  padding: 5rem 0 6.5rem;
+}
+
+.contact-section--plain .contact-layout {
+  align-items: start;
+}
+
+.contact-copy h1 {
+  margin: 0 0 0.85rem;
+  color: var(--ink);
+  font-size: clamp(2.35rem, 4vw, 3.45rem);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
 .contact-direct {
   display: grid;
   gap: 0.75rem;

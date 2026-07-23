@@ -91,7 +91,7 @@ export const regionalEvents: Record<string, RegionalEventsPage> = {
     intro: 'Current community, sport and social events in Pattaya.',
     events: [
       { date: '25-26 July 2026', title: 'Pattaya Marathon', text: 'Major community running weekend in Pattaya with runners, visitors and local supporters gathering along the coast.', image: '/assets/fct/events/pattaya-marathon-photo.png', href: '/contact-link/?topic=Pattaya%20Marathon' },
-      { date: '31 October 2026', title: 'Pattaya Bikini Beach Race', text: 'Beach running and social fitness event on Pattaya Beach with a fun community race atmosphere.', image: '/assets/fct/events/pattaya-marathon-photo.png', href: '/contact-link/?topic=Pattaya%20Bikini%20Beach%20Race' },
+      { date: '31 October 2026', title: 'Pattaya Bikini Beach Race', text: 'Beach running and social fitness event on Pattaya Beach with a fun community race atmosphere.', image: '/assets/fct/events/pattaya-bikini-beach-race-photo.png', href: '/contact-link/?topic=Pattaya%20Bikini%20Beach%20Race' },
       { date: '4-5 December 2026', title: 'Pattaya International Fireworks Festival', text: 'Major Pattaya waterfront festival weekend with fireworks displays over the bay and large public crowds along the beach.', image: '/assets/fct/events/pattaya-fireworks-festival-photo.png', href: '/contact-link/?topic=Pattaya%20International%20Fireworks%20Festival' },
       { date: '11-13 December 2026', title: 'Tomorrowland Pattaya', text: 'Tomorrowland Thailand comes to Wisdom Valley near Pattaya for a major electronic music festival experience.', image: '/assets/fct/events/pattaya-tomorrowland-current.webp', href: '/contact-link/?topic=Tomorrowland%20Pattaya' },
     ],
