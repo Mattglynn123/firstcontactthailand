@@ -37,4 +37,4 @@ First Contact can connect volunteers, sponsors, and supporters with the program 
 
 Tell us how you would like to help.
 
-[Get involved](https://firstcontactthailand.com/contact-link/?fct_charity=autistic-children-swimming-program) [Ask about volunteering](https://firstcontactthailand.com/contact-link/?fct_charity=autistic-children-swimming-program) [Support the program](https://firstcontactthailand.com/contact-link/?fct_charity=autistic-children-swimming-program) [Back to Charity Programs](https://firstcontactthailand.com/charity-work/)
+[Get involved](/contact-link/?fct_charity=autistic-children-swimming-program) [Ask about volunteering](/contact-link/?fct_charity=autistic-children-swimming-program) [Support the program](/contact-link/?fct_charity=autistic-children-swimming-program) [Back to Charity Programs](/charity/)

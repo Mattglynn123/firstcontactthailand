@@ -15,4 +15,4 @@ draft: false
 
 Koh Phangan community Calendar of events coming soon, please tell us what should be on the list
 
-[Tell us what should be on the list](https://firstcontactthailand.com/contact-link/)
+[Tell us what should be on the list](/contact-link/)

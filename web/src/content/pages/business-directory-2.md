@@ -36,7 +36,7 @@ draft: false
     
 *   [Car & Bike Hire](https://firstcontactthailand.com/car-bike-hire/)
     
-*   [Charity Work](https://firstcontactthailand.com/charity-work/)
+*   [Charity Work](/charity/)
     
 *   [Co Working Spaces](https://firstcontactthailand.com/co-working-spaces/)
     

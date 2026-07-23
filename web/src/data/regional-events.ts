@@ -28,7 +28,7 @@ export const regionalEvents: Record<string, RegionalEventsPage> = {
       { date: 'Every Thursday - next session: Thursday 23 July', title: 'Pub Quiz', text: '7:00 pm - 9:45 pm. Weekly Thursday quiz at Nature Bar, Maenam.', image: '/assets/fct/pub-quiz-nature-bar.jpeg', href: '/contact-link/?topic=Pub%20Quiz' },
       { date: 'Every Friday - next session: Friday 24 July', title: 'Business Lunch', text: '3:00 pm - 5:00 pm. Weekly Friday business lunch at Nature Bar, Maenam.', image: '/assets/fct/friday-business-networking-lunch.png', href: '/contact-link/?topic=Business%20Lunch' },
       { date: 'Every Saturday - next session: Saturday 25 July', title: 'Beach Walk', text: '4:00 pm - 6:00 pm. Weekly Saturday beach walk.', image: '/assets/fct/beach-walk-community.jpg', href: '/contact-link/?topic=Beach%20Walk' },
-      { date: 'Monday 29th June 2026', title: 'Full Moon Party VIP Trip', text: 'VIP Full Moon Party trip by speedboat to Koh Phangan, with welcome drink at Nature Bar, Maenam, hotel pick up and drop off, and return departure around 1:30 am.', image: '/assets/fct/full-moon-party-vip-trip-29-june-2026.jpeg', href: '/assets/fct/full-moon-party-vip-trip-29-june-2026.jpeg' },
+      { date: 'Friday 31st July 2026', title: 'Full Moon Party VIP Trip', text: 'VIP Full Moon Party trip by speedboat to Koh Phangan, with welcome drink at Nature Bar, Maenam, hotel pick up and drop off, and return departure around 1:30 am.', image: '/assets/fct/full-moon-party-vip-trip-31-july-2026.png', href: '/assets/fct/full-moon-party-vip-trip-31-july-2026.png' },
     ],
   },
   'bangkok-community-events': {
@@ -67,7 +67,7 @@ export const regionalEvents: Record<string, RegionalEventsPage> = {
     archiveSlug: 'koh-phangan',
     intro: 'Current island events and community-friendly activities on Koh Phangan.',
     events: [
-      { date: '31 July 2026', title: 'Full Moon Party', text: 'Koh Phangan full moon beach party period, with travellers usually planning transport and return trips in advance.', image: '/assets/fct/full-moon-party-vip-trip-29-june-2026.jpeg', href: '/assets/fct/full-moon-party-vip-trip-29-june-2026.jpeg' },
+      { date: '31 July 2026', title: 'Full Moon Party', text: 'Koh Phangan full moon beach party period, with travellers usually planning transport and return trips in advance.', image: '/assets/fct/full-moon-party-vip-trip-31-july-2026.png', href: '/assets/fct/full-moon-party-vip-trip-31-july-2026.png' },
       { date: '5-6 August 2026', title: 'Halfmoon Festival', text: 'Koh Phangan music and social festival event period for visitors looking for island nightlife and transport support.', image: '/assets/fct/1-scaled.jpg', href: '/contact-link/?topic=Halfmoon%20Festival%20Koh%20Phangan' },
     ],
   },
@@ -87,7 +87,7 @@ export const regionalEvents: Record<string, RegionalEventsPage> = {
     archiveSlug: 'pattaya',
     intro: 'Current community, sport and social events in Pattaya.',
     events: [
-      { date: '25-26 July 2026', title: 'Pattaya Marathon', text: 'Major community running weekend in Pattaya with runners, visitors and local supporters gathering along the coast.', image: '/assets/fct/pattaya-golf.png', href: '/contact-link/?topic=Pattaya%20Marathon' },
+      { date: '25-26 July 2026', title: 'Pattaya Marathon', text: 'Major community running weekend in Pattaya with runners, visitors and local supporters gathering along the coast.', image: '/assets/fct/events/pattaya-marathon-photo.png', href: '/contact-link/?topic=Pattaya%20Marathon' },
       { date: '11-13 December 2026', title: 'Tomorrowland Pattaya', text: 'Tomorrowland Thailand comes to Wisdom Valley near Pattaya for a major electronic music festival experience.', image: '/assets/fct/events/pattaya-tomorrowland-current.webp', href: '/contact-link/?topic=Tomorrowland%20Pattaya' },
     ],
   },
@@ -97,7 +97,7 @@ export const regionalEvents: Record<string, RegionalEventsPage> = {
     archiveSlug: 'phuket',
     intro: 'Current music, sport, cultural and community events in Phuket.',
     events: [
-      { date: '2 August 2026', title: 'Phuket Sunday Community Market', text: 'Local market-style community day for food, shopping, music and meeting people in Phuket.', image: '/assets/fct/event-beach-market.jpeg', href: '/contact-link/?topic=Phuket%20Sunday%20Community%20Market' },
+      { date: '2 August 2026', title: 'Phuket Sunday Community Market', text: 'Local market-style community day for food, shopping, music and meeting people in Phuket.', image: '/assets/fct/events/phuket-community-market-photo.png', href: '/contact-link/?topic=Phuket%20Sunday%20Community%20Market' },
       { date: '10-18 October 2026', title: 'Phuket Vegetarian Festival', text: 'Nine-day cultural festival with processions, shrines, vegetarian food, and community traditions.', image: '/assets/fct/events/phuket-vegetarian-festival.jpg', href: 'https://www.phuket101.net/phuket-vegetarian-festival/' },
       { date: '3 December 2026', title: 'Snowbirds Charity Golf Classic', text: 'Charity golf classic organised by Rotary and community partners.', image: '/assets/fct/phuket-snowbirds-golf.jpeg', href: '/contact-link/?topic=Snowbirds%20Charity%20Golf%20Classic' },
     ],

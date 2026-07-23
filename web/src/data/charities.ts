@@ -3,6 +3,13 @@ export type CharityProgram = {
   title: string;
   text: string;
   image: string;
+  details?: CharityProgramDetail[];
+};
+
+export type CharityProgramDetail = {
+  title: string;
+  text: string;
+  image?: string;
 };
 
 export type CharityRegion = {
@@ -14,11 +21,19 @@ export type CharityRegion = {
   programs: CharityProgram[];
 };
 
-const program = (region: string, title: string, text: string, image: string, slug?: string): CharityProgram => ({
+const program = (
+  region: string,
+  title: string,
+  text: string,
+  image: string,
+  slug?: string,
+  details?: CharityProgramDetail[],
+): CharityProgram => ({
   slug: slug ?? `${region}-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`,
   title,
   text,
   image,
+  details,
 });
 
 export const charityRegions: Record<string, CharityRegion> = {
@@ -77,7 +92,12 @@ export const charityRegions: Record<string, CharityRegion> = {
     sourceName: 'Rotary Club of Samui-Phangan',
     sourceUrl: 'https://rotarysamui-phangan.org/',
     programs: [
-      program('koh-samui', 'Koh Samui Surf Lifesaving Club', 'Supporting ocean safety, lifesaving skills, and swimming confidence for local children and families.', '/assets/fct/charity/koh-samui/koh-samui-surf-lifesaving-club.jpeg', 'koh-samui-surf-lifesaving-club'),
+      program('koh-samui', 'Koh Samui Surf Lifesaving Club', 'Supporting ocean safety, lifesaving skills, and swimming confidence for local children and families.', '/assets/fct/charity/koh-samui/koh-samui-surf-lifesaving-club.jpeg', 'koh-samui-surf-lifesaving-club', [
+        { title: 'Support The Program', text: 'Help the club keep practical ocean safety training available for local children and families. Every bit of support helps the program reach more kids.', image: '/assets/fct/charity/koh-samui/koh-samui-surf-lifesaving-club.jpeg' },
+        { title: 'Ocean Awareness', text: 'Beach awareness and lifesaving education give families more confidence around the water. The goal is safer days on Samui beaches.', image: '/assets/fct/beach-1-scaled.jpg' },
+        { title: 'Safety Skills', text: 'Children learn swimming confidence, ocean safety, and practical skills they can use. The program builds stronger swimmers and safer habits.', image: '/assets/fct/charity/koh-samui/swim-4-life.jpeg' },
+        { title: 'Get Involved', text: 'First Contact can connect volunteers, sponsors, and donors with the Surf Lifesaving Club team. Tell us how you would like to help.', image: '/assets/fct/charity/koh-samui/koh-samui-surf-lifesaving-club.jpeg' },
+      ]),
       program('koh-samui', 'Think Pink Samui', 'Supporting breast imaging services, screening days, awareness campaigns, and early detection for women on Koh Samui.', '/assets/fct/charity/koh-samui/think-pink-samui.jpg', 'think-pink-samui'),
       program('koh-samui', 'Support 4 Autism', 'Helping the Learning Center for Magical Autistic Children with teachers, transport, supplies, activities, and family support.', '/assets/fct/charity/koh-samui/support-4-autism.jpg', 'support-4-autism-samui'),
       program('koh-samui', 'Swim 4 Life', 'Free water-safety and swimming lessons for local children, helping reduce child drowning risk on Samui.', '/assets/fct/charity/koh-samui/swim-4-life.jpeg', 'swim-4-life-samui'),
@@ -92,7 +112,7 @@ export const charityRegions: Record<string, CharityRegion> = {
     sourceUrl: 'https://www.rotarypattaya.com/',
     programs: [
       program('pattaya', 'Young Entrepreneurs Fair', 'Supporting young people with practical enterprise experience and community-led opportunities.', '/assets/fct/charity/pattaya/young-entrepreneurs-fair.jpg'),
-      program('pattaya', 'Rotary Drinking Water', 'Helping provide access to safe drinking water and practical health support for local communities.', '/assets/fct/charity/pattaya/rotary-drinking-water.jpg'),
+      program('pattaya', 'Drinking Water', 'Helping provide access to safe drinking water and practical health support for local communities.', '/assets/fct/charity/pattaya/rotary-drinking-water.jpg'),
       program('pattaya', 'COVID Protection', 'Community protection work supporting safer local health outcomes.', '/assets/fct/charity/pattaya/covid-protection.webp'),
       program('pattaya', 'Promoting Peace', 'Children use art to express peace, with proceeds supporting scholarships and local Rotary charities.', '/assets/fct/charity/pattaya/promoting-peace.webp'),
       program('pattaya', 'Shop Local Too!', 'Encouraging local support and community connection through Rotary Pattaya initiatives.', '/assets/fct/charity/pattaya/shop-local-too.webp'),

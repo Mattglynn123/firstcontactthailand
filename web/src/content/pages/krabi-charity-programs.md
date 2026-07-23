@@ -15,4 +15,4 @@ draft: false
 
 Please tell us what charity groups to support
 
-[Please tell us what charity groups to support](https://firstcontactthailand.com/contact-link/)
+[Please tell us what charity groups to support](/contact-link/)

@@ -727,6 +727,11 @@ h3 {
   background: #eaf6f7;
 }
 
+.service-tile__image--contain {
+  object-fit: contain;
+  background: #071f2a;
+}
+
 .service-tile__body {
   display: flex;
   flex: 1;
@@ -1511,6 +1516,91 @@ h3 {
   color: var(--teal-dark);
   font-weight: 800;
   text-decoration: none;
+}
+
+.charity-summary__heading {
+  max-width: 900px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.charity-summary__heading > p:last-child {
+  margin: 0 auto;
+  color: var(--ink-soft);
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.45;
+}
+
+.charity-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+  margin: 0 auto 34px;
+}
+
+.charity-detail-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgb(8 125 148 / 24%);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 12px 28px rgb(8 42 58 / 8%);
+}
+
+.charity-detail-card > img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  background: var(--mist);
+}
+
+.charity-detail-card > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px 18px 22px;
+  text-align: left;
+}
+
+.charity-detail-card h2 {
+  min-height: 2.4em;
+  margin: 0 0 10px;
+  color: var(--teal-dark);
+  font-size: 22px;
+  line-height: 1.18;
+}
+
+.charity-detail-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 15.5px;
+  line-height: 1.5;
+}
+
+.charity-summary__actions {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.charity-summary__actions p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+  .charity-detail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .charity-summary__layout {
@@ -2323,6 +2413,7 @@ h3 {
   .home-categories,
   .event-grid,
   .charity-grid,
+  .charity-detail-grid,
   .moving-thailand-grid,
   .tour-guide-grid,
   .guide-page__grid,
@@ -2424,6 +2515,10 @@ h3 {
 
   .charity-summary__layout {
     gap: 28px;
+  }
+
+  .charity-detail-card h2 {
+    min-height: 0;
   }
 
   .charity-summary h1,

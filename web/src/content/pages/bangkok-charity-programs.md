@@ -57,4 +57,4 @@ Choose the Rotary category you prefer, or let the foundation allocate support wh
 
 ](https://rcbfoundation.org/product/you-pick/)
 
-[Please tell us what other Bangkok charity groups to support](https://firstcontactthailand.com/contact-link/)
+[Please tell us what other Bangkok charity groups to support](/contact-link/)

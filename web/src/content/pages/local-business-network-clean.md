@@ -51,4 +51,4 @@ Speak with trusted partners about personal, business, health, vehicle, property,
 
 Get introduced to local visa support for retirement, business, family, education, and long-stay planning.
 
-[Contact us and we will connect you with our trusted local business partners](https://firstcontactthailand.com/contact-link/)
+[Contact us and we will connect you with our trusted local business partners](/contact-link/)

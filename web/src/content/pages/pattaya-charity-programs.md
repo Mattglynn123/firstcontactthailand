@@ -24,7 +24,7 @@ We support several Pattaya charity projects, primarily via the Rotary Club of Pa
   </article>
   <article class="service-card">
     <img src="/assets/fct/drinking-scaled.jpg" alt="Safe drinking water program" />
-    <h2>Rotary Drinking Water</h2>
+    <h2>Drinking Water</h2>
     <p>Helping provide access to safe drinking water and practical health support for local communities.</p>
     <a href="https://www.rotarypattaya.com/rotary-drinking-water/">Learn about the program</a>
   </article>

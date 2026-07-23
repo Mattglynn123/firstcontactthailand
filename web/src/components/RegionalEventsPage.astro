@@ -17,7 +17,7 @@ const { page } = Astro.props;
         {page.events.map((event) => (
           <article class="event-card">
             <a class="event-card__media" href={event.href ?? `/contact-link/?topic=${encodeURIComponent(event.title)}`} aria-label={`Find out more about ${event.title}`}>
-              <img src={event.image} alt={event.title} loading="lazy" decoding="async" />
+              <img src={event.image} alt={event.title} loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/assets/fct/hero-community.jpg';" />
             </a>
             <div class="event-card__body">
               <p class="event-card__date">{event.date}</p>

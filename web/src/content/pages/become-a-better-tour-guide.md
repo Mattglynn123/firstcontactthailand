@@ -33,4 +33,4 @@ Help Tour Guides plan ahead with our systems to pre-book tours, activities, tran
 
 Premium access to exclusive training programs, priority support, preferred introductions, and new commission opportunities.
 
-[Book your call now to learn more](https://firstcontactthailand.com/contact-link/)
+[Book your call now to learn more](/contact-link/)

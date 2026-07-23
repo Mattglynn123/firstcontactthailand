@@ -43,4 +43,4 @@ Expect differences in weather, transport, service times, language, and daily rou
 
 First Contact Thailand can connect you with trusted local support for property, rentals, legal services, insurance, vehicles, tours, health and fitness, local deals, business services, and community introductions.
 
-[Contact us and we will connect you with trusted local support in Samui](https://firstcontactthailand.com/contact-link/)
+[Contact us and we will connect you with trusted local support in Samui](/contact-link/)

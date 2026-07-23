@@ -97,4 +97,4 @@ Helping provide food support to vulnerable people and families who need practica
 
 [Read more](https://www.cmirotary.org/free-food-for-the-poor-initiative)
 
-[Please tell us what charity groups to support](https://firstcontactthailand.com/contact-link/)
+[Please tell us what charity groups to support](/contact-link/)

@@ -75,4 +75,4 @@ Providing essential supplies to local families affected by hardship and the coll
 
 Contact us to see how you can support our charity programs
 
-](https://firstcontactthailand.com/contact-link/)
+](/contact-link/)

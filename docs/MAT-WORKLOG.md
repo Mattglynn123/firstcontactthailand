@@ -52,3 +52,19 @@ as the source change.
 - Safety: worked only in the standalone Astro website under `web/`; production WordPress, the live site, and the server staging directory were not modified.
 - Verification: Astro build, all-page internal link and first-party asset audit, desktop/mobile local preview checks on the homepage, Health & Fitness, Samui sales, Pattaya and Phuket past events, all non-Samui regional events pages, Moving to Samui, representative charity detail pages, and the standard enquiry form.
 - Status: complete for this review pass.
+
+## 2026-07-23 - Remove Moving to Thailand help wording and fix related review links
+
+- Request: remove the `How First Contact Can Help` heading and the following trusted local support paragraph from the Moving to Thailand page, fix the Other Tours CTA/page behaviour, and correct the Property Overview link.
+- Scope: removed the requested heading and paragraph from the standalone Moving to Thailand page while keeping the contact CTA link available, cleaned the Other Tours page title and enquiry CTA to use the standard local enquiry form, and standardised internal Property Overview links to `/property/` while keeping legacy aliases available.
+- Safety: worked only in the standalone Astro website under `web/`; production WordPress, the live site, and the server staging directory were not modified.
+- Verification: Astro build and desktop/mobile local preview checks on the Moving to Thailand page, Other Tours page, property overview route, and standard enquiry form.
+- Status: complete.
+
+## 2026-07-23 - Event photos, 31 July flyer and charity detail pages
+
+- Request: fix irrelevant Phuket and Pattaya event photos, update the Tours Full Moon flyer to 31 July, remove Samui/island-specific wording from Moving to Thailand, keep charity more-info pages internal, remove `Rotary` from the Pattaya drinking water card, and standardise enquiry links.
+- Scope: added new local Pattaya Marathon, Phuket Community Market, and 31 July Full Moon flyer assets, wired current event and Tours cards to those assets, added event image fallbacks, expanded charity extra-info pages into a four-card internal summary layout, kept charity cards pointing to internal more-info pages, renamed Pattaya `Drinking Water`, changed Moving to Thailand wording to Thailand-wide language, and converted legacy contact links to the local standard enquiry form.
+- Safety: worked only in the standalone Astro website under `web/`; production WordPress, the live site, and the server staging directory were not modified.
+- Verification: Astro built 185 pages; generated-page audit found no stale contact anchors, no external charity source anchors, no old AI charity-source wording, no missing event-card images, and no Phuket Samui-flyer reuse; full-site link/first-party-asset audit passed across 185 pages; desktop and mobile browser checks passed for Phuket and Pattaya events, Tours, Moving to Thailand, Pattaya charity, Pattaya Drinking Water, Samui Surf Lifesaving Club, the duplicate Chiang Mai charity route, and the standard enquiry form.
+- Status: complete.

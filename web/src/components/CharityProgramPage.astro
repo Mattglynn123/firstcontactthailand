@@ -5,18 +5,50 @@ interface Props {
   program: CharityProgram & { location: string; regionSlug: string; sourceName: string; sourceUrl: string };
 }
 const { program } = Astro.props;
+const details = program.details ?? [
+  {
+    title: 'Program Overview',
+    text: program.text,
+    image: program.image,
+  },
+  {
+    title: 'Local Impact',
+    text: `This ${program.location} program focuses on practical community support, local outcomes, and help that reaches people through an established local charity route.`,
+    image: program.image,
+  },
+  {
+    title: 'How Support Helps',
+    text: 'Support can help with equipment, supplies, transport, training, outreach, awareness, volunteer time, and the practical costs that keep local community programs running.',
+    image: program.image,
+  },
+  {
+    title: 'Get Involved',
+    text: 'First Contact can connect donors, volunteers, sponsors, and local supporters with the right route to ask questions and help the program.',
+    image: program.image,
+  },
+];
 ---
 
 <article class="charity-summary">
   <a class="charity-summary__back" href={`/${program.regionSlug}/`}>Back to {program.location} charity programs</a>
-  <div class="charity-summary__layout">
-    <img src={program.image} alt={program.title} loading="eager" decoding="async" />
-    <div>
-      <p class="section-kicker">{program.location} charity program</p>
-      <h1>{program.title}</h1>
-      <p>{program.text}</p>
-      <p>This is a {program.sourceName} program</p>
-      <a class="page-cta" href={`/contact-link/?topic=${encodeURIComponent(program.title)}`}>Ask how you can support this program</a>
-    </div>
+  <header class="charity-summary__heading">
+    <p class="section-kicker">{program.location} charity program</p>
+    <h1>{program.title}</h1>
+    <p>{program.text}</p>
+  </header>
+  <div class="charity-detail-grid">
+    {details.map((detail) => (
+      <section class="charity-detail-card">
+        <img src={detail.image ?? program.image} alt={detail.title} loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/assets/fct/hero-community.jpg';" />
+        <div>
+          <h2>{detail.title}</h2>
+          <p>{detail.text}</p>
+        </div>
+      </section>
+    ))}
+  </div>
+  <div class="charity-summary__actions">
+    <p>This is a {program.sourceName} program</p>
+    <a class="page-cta" href={`/contact-link/?topic=${encodeURIComponent(program.title)}`}>Ask how you can support this program</a>
   </div>
 </article>

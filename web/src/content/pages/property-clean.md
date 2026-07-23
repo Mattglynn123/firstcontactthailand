@@ -17,7 +17,7 @@ Connect with trusted property support across Thailand.
 
 Property Services
 
-[Property Sales Overview](https://firstcontactthailand.com/property-sales/) [Property Management](https://firstcontactthailand.com/property-management/) [Building Contractors](https://firstcontactthailand.com/building-contractors/) [Buyers Agent](https://firstcontactthailand.com/buyers-agent/)
+[Property Sales Overview](/property-sales/) [Property Management](/contact-link/?topic=Property%20Management) [Building Contractors](/contact-link/?topic=Building%20Contractors) [Buyers Agent](/contact-link/?topic=Buyers%20Agent)
 
 Property Sales Areas
 

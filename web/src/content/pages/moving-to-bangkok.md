@@ -19,4 +19,4 @@ Helpful moving information for this area is coming soon.
 
 Please tell us what local moving information, services, and trusted contacts would help you most in this area.
 
-[Tell us what should be added to this moving guide](https://firstcontactthailand.com/contact-link/)
+[Tell us what should be added to this moving guide](/contact-link/)

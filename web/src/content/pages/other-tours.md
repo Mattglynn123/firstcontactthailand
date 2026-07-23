@@ -1,5 +1,5 @@
 ---
-title: "other-tours"
+title: "Other Tours"
 slug: "other-tours"
 wpId: 972
 date: 2025-12-01T12:00:33
@@ -38,8 +38,4 @@ The best 360 degree views in the island, Swim, Snorkel, Canoe & Trek on these pi
 See the Island with a fun ATV Tour. Enjoy amazing Scenic Lookouts, a waterfall and the excitement of ATV riding.
 
   
-[  
-](https://firstcontactthailand.com/contact-link/)
-
-[Enquire Further & Book Here  
-](https://firstcontactthailand.com/contact-link/)
+[Enquire Further & Book Here](/contact-link/?topic=Other%20Tours)

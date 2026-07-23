@@ -45,10 +45,10 @@ Our community hosts weekly events ??
 
 ?? Personal products are important. When you look good you feel good! Whether you are young or old the right supplements can optimise your performance. Find the best products in Thailand. From Organic Farms to Sustanable Coconut scrubs
 
-[Click here to discover your next community event!](https://firstcontactthailand.com/contact-link/)
+[Click here to discover your next community event!](/contact-link/)
 
-[Click here to discover your next community event!](https://firstcontactthailand.com/contact-link/)
+[Click here to discover your next community event!](/contact-link/)
 
-[Click here to discover your next community event!](https://firstcontactthailand.com/contact-link/)
+[Click here to discover your next community event!](/contact-link/)
 
 More

@@ -12,6 +12,7 @@ export type ServiceCard = {
   title: string;
   text: string;
   image?: string;
+  imageFit?: 'cover' | 'contain';
   href?: string;
   action?: string;
   meta?: string;
@@ -71,9 +72,9 @@ export const navigation: NavItem[] = [
   { label: 'Move to Thailand Guide', href: '/moving-to-samui/' },
   {
     label: 'Property',
-    href: '/real-estate/',
+    href: '/property/',
     children: [
-      { label: 'Property Overview', href: '/real-estate/' },
+      { label: 'Property Overview', href: '/property/' },
       {
         label: 'Property Sales',
         href: '/property-sales/',
@@ -203,7 +204,7 @@ export const priorityPages: Record<string, PriorityPage> = {
     gridColumns: 4,
     cards: [
       { title: 'Customise Your Own Day Trip', text: 'Explore like a local with trusted drivers, boat operators, and guides who tailor every trip to your needs.', image: '/assets/fct/Hero-Images-copy-2-scaled.jpg', href: '/contact-link/?topic=Customise%20Your%20Own%20Day%20Trip', action: 'Connect with local partners' },
-      { title: 'Full Moon Parties', text: 'Safe, stylish Full Moon Party experiences arranged around your group with trusted local support.', image: '/assets/fct/1-scaled.jpg', href: '/assets/fct/full-moon-party-vip-trip-29-june-2026.jpeg', action: 'Book your Full Moon trip' },
+      { title: 'Full Moon Parties', text: 'Safe, stylish Full Moon Party experiences arranged around your group with trusted local support.', image: '/assets/fct/full-moon-party-vip-trip-31-july-2026.png', imageFit: 'contain', href: '/assets/fct/full-moon-party-vip-trip-31-july-2026.png', action: 'Book your Full Moon trip' },
       { title: 'Other Tours', text: 'Discover hidden gems and authentic local experiences while supporting trusted local partners.', image: '/assets/fct/11-scaled.jpg', href: '/other-tours/', action: 'View other tours' },
       { title: 'Become a Better Tour Guide', text: 'Elevate the way you create guest experiences while learning how to maximise your commissions.', image: '/assets/fct/tour-guide-fun-pic-20260609.png', href: '/become-a-better-tour-guide/', action: 'Find out more' },
     ],

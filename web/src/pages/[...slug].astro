@@ -51,7 +51,7 @@ if (page) {
   Content = rendered.Content;
 }
 const rawBody = (page?.body ?? '').trim();
-const isLegacyPlaceholder = /layouts\.siteorigin|Lorem ipsum|John Doe|\[\]\(#\)|live-website\.com|wp-content|wordpress\.com|<iframe|u003ciframe|Welcome to WordPress/i.test(rawBody);
+const isLegacyPlaceholder = /layouts\.siteorigin|Lorem ipsum|John Doe|\[\]\(#\)|\]\(#\)|live-website\.com|wp-content|wordpress\.com|<iframe|u003ciframe|Welcome to WordPress/i.test(rawBody);
 const isRegionalPlaceholder = new Set([
   'moving-to-bangkok',
   'moving-to-chiang-mai',
@@ -154,7 +154,10 @@ const eventPageSlugs = new Set([
 const isEventPage = eventPageSlugs.has(currentSlug);
 const hasLocalDealsBeachCta = currentSlug === 'local-deals';
 const regionalEventPage = regionalEvents[currentSlug];
-const charityRegion = charityRegions[currentSlug];
+const charityRegionAliases: Record<string, keyof typeof charityRegions> = {
+  'chiang-mai-charity-programs-2': 'chiang-mai-charity-programs',
+};
+const charityRegion = charityRegions[currentSlug] ?? charityRegions[charityRegionAliases[currentSlug]];
 const isMoveGuide = currentSlug === 'move-to-thailand-guide' || currentSlug === 'moving-to-samui';
 const isTourGuide = currentSlug === 'become-a-better-tour-guide';
 ---

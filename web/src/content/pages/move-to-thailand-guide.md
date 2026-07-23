@@ -43,4 +43,4 @@ Moving is easier with reliable local contacts for legal help, property, removals
 
 First Contact Thailand connects locals, expats, and visitors with trusted service providers across Thailand.
 
-[Contact us and we will connect you with trusted local support](https://firstcontactthailand.com/contact-link/)
+[Contact us and we will connect you with trusted local support](/contact-link/)

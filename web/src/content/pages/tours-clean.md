@@ -21,7 +21,7 @@ Connect with trusted local tours, day trips, parties, and guide support across T
 
 Plan a local day out with trusted partners who know the area.
 
-[Ask about day trips](https://firstcontactthailand.com/contact-link/)
+[Ask about day trips](/contact-link/)
 
 ![Full Moon Parties](/assets/fct/1-scaled.jpg)
 
@@ -29,7 +29,7 @@ Plan a local day out with trusted partners who know the area.
 
 Get connected with local support for party trips, transfers, and planning.
 
-[Ask about parties](https://firstcontactthailand.com/contact-link/)
+[Ask about parties](/contact-link/)
 
 ![Other tours](/assets/fct/11-scaled.jpg)
 
@@ -37,7 +37,7 @@ Get connected with local support for party trips, transfers, and planning.
 
 Find trusted local ideas for activities, excursions, and experiences.
 
-[Ask about tours](https://firstcontactthailand.com/contact-link/)
+[Ask about tours](/contact-link/)
 
 ![Become a better tour guide](/assets/fct/tour-guide-fun-pic-20260609.png)
 
@@ -45,4 +45,4 @@ Find trusted local ideas for activities, excursions, and experiences.
 
 Connect with local support to improve tour quality and customer experience.
 
-[Ask about guide support](https://firstcontactthailand.com/contact-link/)
+[Ask about guide support](/contact-link/)

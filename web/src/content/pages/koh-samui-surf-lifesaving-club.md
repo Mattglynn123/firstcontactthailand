@@ -37,4 +37,4 @@ First Contact can connect volunteers, sponsors, and donors with the Surf Lifesav
 
 Tell us how you would like to help.
 
-[Get involved](https://firstcontactthailand.com/contact-link/?fct_charity=koh-samui-surf-lifesaving-club) [Ask about volunteering](https://firstcontactthailand.com/contact-link/?fct_charity=koh-samui-surf-lifesaving-club) [Support the program](https://firstcontactthailand.com/contact-link/?fct_charity=koh-samui-surf-lifesaving-club) [Back to Charity Programs](https://firstcontactthailand.com/charity-work/)
+[Get involved](/contact-link/?fct_charity=koh-samui-surf-lifesaving-club) [Ask about volunteering](/contact-link/?fct_charity=koh-samui-surf-lifesaving-club) [Support the program](/contact-link/?fct_charity=koh-samui-surf-lifesaving-club) [Back to Charity Programs](/charity/)

@@ -10,7 +10,7 @@ const href = card.href ?? `/contact-link/?topic=${encodeURIComponent(card.title)
 ---
 
 <article class="service-tile">
-  {card.image && <img class="service-tile__image" src={card.image} alt={card.title} loading="lazy" decoding="async" />}
+  {card.image && <img class={`service-tile__image${card.imageFit === 'contain' ? ' service-tile__image--contain' : ''}`} src={card.image} alt={card.title} loading="lazy" decoding="async" />}
   <div class="service-tile__body">
     {card.meta && <p class="service-tile__meta">{card.meta}</p>}
     <h2>{card.title}</h2>
