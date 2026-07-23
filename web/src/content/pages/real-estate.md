@@ -13,4 +13,4 @@ Connect with trusted property support across Thailand.
 
 Property Services
 
-[Property Sales Overview](/property-sales/) [Property Management](/property-management/) [Building Contractors](/building-contractors/) [Buyers Agent](/buyers-agent/)
+[Property Sales Overview](/property-sales/) [Property Management](/contact-link/?topic=Property%20Management) [Building Contractors](/contact-link/?topic=Building%20Contractors) [Buyers Agent](/contact-link/?topic=Buyers%20Agent)

@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const outputDir = path.resolve(scriptDir, '../public/data/property-listings');
+const propertyAssetDir = path.resolve(scriptDir, '../public/assets/fct/properties');
 const remaxEndpoint = 'https://www.remax.co.th/search/listing-search/docs/search';
 const remaxBaseFilter = "content/TenantId eq 6 and content/MacroRegionId eq 92 and content/OnHoldListing eq false and content/IsRegionalOffice eq false and content/IsViewable eq true and content/TransactionTypeUID eq 261 and content/ListingStatusUID ne 167 and content/ListingStatusUID ne 169";
 
@@ -36,6 +37,8 @@ function clean(value) {
     .replace(/\bTop Properties\b/gi, '')
     .replace(/\bParadise Properties(?: Krabi)?\b/gi, '')
     .replace(/\bKate Property Krabi\b/gi, '')
+    .replace(/\bLazudi\b/gi, '')
+    .replace(/\bLAZ\d+\b/gi, '')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -150,6 +153,304 @@ async function fetchSamui() {
   });
 }
 
+async function pathExists(candidate) {
+  try {
+    await fs.access(candidate);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function chromiumExecutablePath() {
+  const candidates = [
+    process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE,
+    'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
+    'C:/Program Files/Google/Chrome/Application/chrome.exe',
+    '/usr/bin/google-chrome',
+    '/usr/bin/google-chrome-stable',
+    '/usr/bin/chromium',
+    '/usr/bin/chromium-browser',
+  ].filter(Boolean);
+  for (const candidate of candidates) {
+    if (await pathExists(candidate)) return candidate;
+  }
+  return undefined;
+}
+
+function parseThaiBaht(value) {
+  const match = String(value ?? '').match(/฿\s*([\d,.]+)\s*(M)?/i);
+  if (!match) return 0;
+  const amount = Number(match[1].replace(/,/g, ''));
+  if (!Number.isFinite(amount)) return 0;
+  return Math.round(match[2] ? amount * 1000000 : amount);
+}
+
+function cleanLazudiImage(src) {
+  try {
+    const url = new URL(src);
+    if (!url.hostname.includes('img.lazudi.com')) return '';
+    return `${url.origin}${url.pathname}?w=900&h=600&fm=webp&q=75`;
+  } catch {
+    return '';
+  }
+}
+
+function cssString(value) {
+  return JSON.stringify(String(value));
+}
+
+async function waitForLocatorCount(locator) {
+  try {
+    return await locator.count();
+  } catch {
+    return 0;
+  }
+}
+
+async function loadedImageHandle(card) {
+  const handle = await card.evaluateHandle((element) => {
+    const candidates = Array.from(element.querySelectorAll('.swiper-slide-active img, img'));
+    return candidates.find((image) => image.naturalWidth > 0 && image.naturalHeight > 0 && image.getClientRects().length > 0) ?? null;
+  }).catch(() => null);
+  return handle?.asElement() ?? null;
+}
+
+async function captureKrabiOpenDetailImages(page, listingId, targetDir) {
+  await fs.mkdir(targetDir, { recursive: true });
+  await page.waitForTimeout(3000);
+  await page.addStyleTag({
+    content: `
+      .swiper-btn-next-photo,
+      .swiper-btn-prev-photo,
+      .swiper-btn-next,
+      .swiper-btn-prev,
+      [class*="cookie"],
+      [id*="cookie"] {
+        display: none !important;
+      }
+    `,
+  }).catch(() => {});
+
+  let image = null;
+  for (let attempt = 0; attempt < 4 && !image; attempt += 1) {
+    const handle = await page.evaluateHandle((propertyId) => {
+      const images = Array.from(document.images);
+      return images.find((img) => img.src.includes(`/properties/${propertyId}/`)
+        && img.naturalWidth > 0
+        && img.naturalHeight > 0
+        && img.getClientRects().length > 0) ?? null;
+    }, listingId).catch(() => null);
+    image = handle?.asElement() ?? null;
+    if (!image) await page.waitForTimeout(2000);
+  }
+
+  const box = await image?.boundingBox();
+  if (!image || !box) return [];
+  const filename = 'photo-01.png';
+  await page.screenshot({
+    path: path.join(targetDir, filename),
+    clip: {
+      x: box.x,
+      y: box.y,
+      width: box.width,
+      height: Math.floor(box.height * 0.68),
+    },
+    timeout: 10000,
+  });
+  return [`/assets/fct/properties/krabi/${listingId}/${filename}`];
+}
+
+async function captureKrabiDetailFallback(context, href, listingId, targetDir) {
+  if (!href) return [];
+  const page = await context.newPage();
+  try {
+    await page.goto(href, { waitUntil: 'domcontentloaded', timeout: 60000 });
+    await page.waitForTimeout(5000);
+    return await captureKrabiOpenDetailImages(page, listingId, targetDir);
+  } catch {
+    return [];
+  } finally {
+    await page.close();
+  }
+}
+
+async function captureKrabiCardImages(browser, searchUrl, listings, userAgent) {
+  const context = await browser.newContext({
+    viewport: { width: 1366, height: 1200 },
+    deviceScaleFactor: 2,
+    userAgent,
+  });
+  const page = await context.newPage();
+  const imagesById = new Map();
+  try {
+    await page.goto(searchUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
+    await page.waitForSelector('a.search-property[data-property-id]', { timeout: 30000 });
+    await page.waitForTimeout(5000);
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)).catch(() => {});
+    await page.waitForTimeout(1500);
+    await page.evaluate(() => window.scrollTo(0, 0)).catch(() => {});
+    await page.waitForTimeout(1000);
+
+    for (const listing of listings) {
+      const card = page.locator(`a.search-property[data-property-id=${cssString(listing.id)}]`).first();
+      if ((await waitForLocatorCount(card)) === 0) continue;
+      const href = await card.evaluate((element) => element.href).catch(() => '');
+      await card.scrollIntoViewIfNeeded({ timeout: 10000 }).catch(() => {});
+      await card.hover({ timeout: 5000 }).catch(() => {});
+      await page.waitForTimeout(1200);
+
+      const slideCount = await card.evaluate((element) => {
+        const initializedSlides = element.querySelectorAll('.swiper-slide img').length;
+        if (initializedSlides > 0) return initializedSlides;
+        const config = element.querySelector('[x-data*="slides"]')?.getAttribute('x-data') ?? '';
+        const match = config.match(/slides:\s*JSON\.parse\('([^']+)'\)/);
+        if (!match) return 1;
+        try {
+          return Math.max(1, JSON.parse(match[1]).length);
+        } catch {
+          return 1;
+        }
+      }).catch(() => 1);
+
+      const targetDir = path.join(propertyAssetDir, 'krabi', String(listing.id));
+      await fs.mkdir(targetDir, { recursive: true });
+      const localImages = [];
+      const seenSources = new Set();
+      const maxSlides = Math.min(slideCount, 12);
+
+      for (let index = 0; index < maxSlides; index += 1) {
+        const image = await loadedImageHandle(card);
+        const source = await image?.evaluate((img) => img.currentSrc || img.src || '').catch(() => '');
+        if (image && source && !seenSources.has(source)) {
+          seenSources.add(source);
+          const filename = `photo-${String(localImages.length + 1).padStart(2, '0')}.png`;
+          await image.screenshot({ path: path.join(targetDir, filename), timeout: 10000 });
+          localImages.push(`/assets/fct/properties/krabi/${listing.id}/${filename}`);
+        }
+
+        const next = card.locator('button.swiper-btn-next').first();
+        if ((await waitForLocatorCount(next)) === 0) break;
+        await next.click({ force: true, timeout: 5000 }).catch(() => {});
+        await page.waitForTimeout(500);
+      }
+
+      if (localImages.length === 0) {
+        localImages.push(...await captureKrabiDetailFallback(context, href, listing.id, targetDir));
+      }
+
+      if (localImages.length > 0) imagesById.set(listing.id, localImages);
+    }
+  } finally {
+    await context.close();
+  }
+
+  return listings.map((listing) => ({
+    ...listing,
+    images: imagesById.get(listing.id) ?? listing.images,
+  }));
+}
+
+function extractLazudiDescription(body) {
+  const marker = 'About The Property';
+  const start = body.indexOf(marker);
+  if (start === -1) return '';
+  const after = body.slice(start + marker.length);
+  const endMarkers = ['Show More', 'Updated:', 'Location', 'Media', 'Learn More About This Property'];
+  const end = endMarkers
+    .map((item) => after.indexOf(item))
+    .filter((index) => index > 0)
+    .sort((a, b) => a - b)[0] ?? after.length;
+  return clean(after.slice(0, end)).slice(0, 3000);
+}
+
+function extractLazudiTitle(headings, body, areaName) {
+  const isUsefulTitle = (value) => value
+    && !/about the property|learn more|enquire|message us|call us|find your home|welcome|currency|language/i.test(value)
+    && !/^\d+(\.\d+)?\s*(sqm|bed|bath|room).*for sale/i.test(value);
+  const heading = headings.slice(1).find(isUsefulTitle) ?? headings.find(isUsefulTitle);
+  if (heading) return clean(heading);
+  const lines = body.split('\n').map((line) => clean(line)).filter(Boolean);
+  return lines.find((line) => /krabi/i.test(line) && !/^krabi$/i.test(line)) || `${areaName} Property For Sale`;
+}
+
+async function fetchKrabiFromLazudi() {
+  const { chromium } = await import('playwright');
+  const executablePath = await chromiumExecutablePath();
+  const browser = await chromium.launch({
+    headless: true,
+    ...(executablePath ? { executablePath } : {}),
+  });
+  const areaName = areaNames.krabi;
+  const searchUrl = 'https://lazudi.com/th-en/properties/for-sale/krabi';
+  const userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36';
+  try {
+    const page = await browser.newPage({ userAgent });
+    await page.goto(searchUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
+    await page.waitForSelector('a.search-property[data-property-id]', { timeout: 30000 });
+    await page.waitForTimeout(2500);
+    const cards = await page.evaluate(() => Array.from(document.querySelectorAll('a.search-property[data-property-id]'))
+      .slice(0, 20)
+      .map((card) => ({
+        id: card.getAttribute('data-property-id'),
+        href: card.href,
+        text: card.innerText,
+      })));
+    await page.close();
+
+    const listings = [];
+    for (const card of cards) {
+      const detailPage = await browser.newPage({ userAgent });
+      try {
+        await detailPage.goto(card.href, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        await detailPage.waitForTimeout(2500);
+        const detail = await detailPage.evaluate((propertyId) => {
+          const body = document.body.innerText;
+          const headings = Array.from(document.querySelectorAll('h1,h2,h3')).map((item) => item.innerText.trim());
+          const images = Array.from(document.querySelectorAll('img'))
+            .map((image) => image.src)
+            .filter((src) => src.includes(`public/properties/${propertyId}/`));
+          return { body, headings, images };
+        }, card.id);
+        const combinedText = `${detail.body}\n${card.text}`;
+        const location = clean((combinedText.match(/\n([^|\n]*Krabi[^|\n]*)\s*\|\s*Id\s+/i)?.[1]) ?? 'Krabi');
+        const title = extractLazudiTitle(detail.headings, detail.body, areaName);
+        const description = extractLazudiDescription(detail.body) || clean(card.text) || `Current property listing for sale in ${areaName}.`;
+        const remoteImages = Array.from(new Set(detail.images.map(cleanLazudiImage).filter(Boolean))).slice(0, 12);
+        const localImages = await captureKrabiOpenDetailImages(
+          detailPage,
+          String(card.id),
+          path.join(propertyAssetDir, 'krabi', String(card.id)),
+        );
+        const images = localImages.length > 0 ? localImages : remoteImages;
+        const updated = detail.body.match(/Updated:\s*([0-9-]+)/i)?.[1] ?? '';
+        listings.push({
+          id: String(card.id ?? title),
+          title,
+          description,
+          price: parseThaiBaht(detail.body) || parseThaiBaht(card.text),
+          currency: 'THB',
+          location: location || areaName,
+          bedrooms: Number(combinedText.match(/(\d+)\s+Beds?/i)?.[1]) || 0,
+          bathrooms: Number(combinedText.match(/(\d+)\s+Baths?/i)?.[1]) || 0,
+          images,
+          featured: false,
+          newListing: false,
+          updatedAt: updated,
+        });
+      } finally {
+        await detailPage.close();
+      }
+    }
+
+    const usable = listings.filter((listing) => listing.images.length > 0 && listing.description.length > 40);
+    if (usable.length < 8) throw new Error(`Lazudi returned only ${usable.length} usable Krabi listings`);
+    return usable;
+  } finally {
+    await browser.close();
+  }
+}
+
 function krabiListings() {
   const image = (propertyId, file) => `https://img.lazudi.com/public/properties/${propertyId}/${file}?fm=webp&w=900&h=600&markalpha=0`;
   const rows = [
@@ -227,4 +528,4 @@ await refreshSnapshot('koh-samui', fetchSamui, 'First Contact Properties');
 for (const [areaSlug, filter] of Object.entries(remaxAreas)) {
   await refreshSnapshot(areaSlug, () => fetchRemax(areaSlug, filter), 'Public property listing feed');
 }
-await writeSnapshot('krabi', krabiListings(), 'Curated Krabi property listings');
+await refreshSnapshot('krabi', fetchKrabiFromLazudi, 'Public Krabi property listing feed');

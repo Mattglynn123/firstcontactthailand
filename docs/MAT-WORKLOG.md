@@ -76,3 +76,11 @@ as the source change.
 - Safety: worked only in the standalone Astro website under `web/`; production WordPress, the live site, and the server staging directory were not modified.
 - Verification: property listing sync completed for all property regions; Astro built 185 pages; generated-site audit passed across all 185 pages for broken internal links/assets, visible CTA enquiry routing, event-card images, charity-card images, charity detail-card counts/images, old Rotary-source wording, and old placeholder links; desktop and mobile Chrome checks passed on the standard enquiry form, representative charity region/detail pages, Pattaya and Phuket events, Moving to Thailand, and Tours.
 - Status: complete.
+
+## 2026-07-23 - Final review cleanup before Mat re-check
+
+- Request: finish the outstanding review issues before Mat re-checks the non-live standalone site.
+- Scope: corrected the remaining health/events wording, cleaned the Moving to Thailand and regional moving guide helper wording, kept standard enquiry redirects for property support pages, refreshed property snapshots, rebuilt Krabi sales from the current public source with cleaned local listing output, added event-relevant images, expanded charity detail pages, removed external Rotary source CTAs, and kept Samui sales on the live Zeemui feed with red new-listing badges limited to new feed items.
+- Safety: worked only in the standalone Astro website under `web/`; production WordPress, the live site, and the server staging directory were not modified.
+- Verification: property listing sync completed for all property regions; Astro built 185 pages; all-page static audit passed across 185 pages for internal links, first-party assets, event-card images, charity-card images/details, visible enquiry routing, old charity wording, old Moving helper wording, old Beach Fitness text, and source-provider branding.
+- Status: complete for this review pass; automated browser screenshots were not rerun because no Playwright/Chrome executable is available in this runtime, but the local preview is serving for Mat's manual review.

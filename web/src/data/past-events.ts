@@ -42,7 +42,7 @@ export const pastEvents: Record<string, PastEventsPage> = {
     location: 'Chiang Mai',
     returnHref: '/chiang-mai-community-events/',
     events: [
-      { date: '31 May 2026', title: 'Chiang Mai Pride Community Weekend', text: 'Community celebration weekend in Chiang Mai bringing locals, expats and visitors together.', image: '/assets/fct/hero-community.jpg', href: '/contact-link/?topic=Chiang%20Mai%20Pride%20Community%20Weekend' },
+      { date: '31 May 2026', title: 'Chiang Mai Pride Community Weekend', text: 'Community celebration weekend in Chiang Mai bringing locals, expats and visitors together.', image: '/assets/fct/events/chiang-mai-pride-community-photo.png', href: '/contact-link/?topic=Chiang%20Mai%20Pride%20Community%20Weekend' },
       { date: '15 June 2026', title: 'Chiang Mai Food for the Poor Community Day', text: 'Local community support day connected with practical food and welfare help in Chiang Mai.', image: '/assets/fct/chiang-mai-free-food.jpg', href: '/contact-link/?topic=Chiang%20Mai%20Food%20For%20The%20Poor%20Community%20Day' },
     ],
   },

@@ -44,10 +44,10 @@ export const charityRegions: Record<string, CharityRegion> = {
     sourceUrl: 'https://rcbfoundation.org/',
     programs: [
       program('bangkok', 'Clean Drinking Water Systems', 'Supporting clean drinking water systems, sanitation, and hygiene education for rural schools and communities.', '/assets/fct/charity/bangkok/clean-drinking-water-systems.jpg'),
-      program('bangkok', "Kid's Day Out", "Rotary nursing scholarships help students in financial hardship and support Thailand's need for registered nurses.", '/assets/fct/charity/bangkok/kid-s-day-out.jpg'),
-      program('bangkok', 'Polio Plus', 'Helping stateless children access preparatory education, Thai language support, and safer pathways into school.', '/assets/fct/charity/bangkok/polio-plus.jpg'),
-      program('bangkok', 'Low Income Communities', 'Supporting waste-management learning, sorting bins, composting, and reusable water bottles at a rural school.', '/assets/fct/charity/bangkok/low-income-communities.jpg'),
-      program('bangkok', 'Youth', 'Choose the Rotary category you prefer, or let the foundation allocate support where it is most helpful.', '/assets/fct/charity/bangkok/youth.jpg'),
+      program('bangkok', 'Nursing Scholarships', "Helping nursing students in financial hardship continue their studies and supporting Thailand's need for registered nurses.", '/assets/fct/charity/bangkok/kid-s-day-out.jpg', 'bangkok-kid-s-day-out'),
+      program('bangkok', 'Children Of The Forest Education Support', 'Helping stateless and migrant children access preparatory education, Thai language support, and safer pathways into school.', '/assets/fct/charity/bangkok/polio-plus.jpg', 'bangkok-polio-plus'),
+      program('bangkok', 'Waste Management Learning', 'Supporting waste-management learning, sorting bins, composting, and reusable water bottles at a rural school.', '/assets/fct/charity/bangkok/low-income-communities.jpg', 'bangkok-low-income-communities'),
+      program('bangkok', 'Youth Charity Support', 'Helping direct support toward youth programs and community projects where the foundation can use it most effectively.', '/assets/fct/charity/bangkok/youth.jpg', 'bangkok-youth'),
     ],
   },
   'chiang-mai-charity-programs': {

@@ -39,8 +39,4 @@ Life is easier when you meet people. Join community events, business groups, spo
 
 Expect differences in weather, transport, service times, language, and daily routines. Keep expectations realistic, stay flexible, and give yourself time to settle properly.
 
-## How First Contact Can Help
-
-First Contact Thailand can connect you with trusted local support for property, rentals, legal services, insurance, vehicles, tours, health and fitness, local deals, business services, and community introductions.
-
 [Contact us and we will connect you with trusted local support in Samui](/contact-link/)

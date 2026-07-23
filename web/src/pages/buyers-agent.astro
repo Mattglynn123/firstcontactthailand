@@ -1,22 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import SupportPage from '../components/SupportPage.astro';
+const target = '/contact-link/?topic=Buyers%20Agent';
 ---
 
-<Layout title="Property Buyers Agent | First Contact Thailand" description="Find local property search and buyer support through First Contact Thailand." image="/assets/fct/house-scaled.jpg">
-  <SupportPage
-    eyebrow="Local buyer support"
-    title="Buyers Agent"
-    text="Get help defining your search, understanding local areas and reaching the right independent professionals."
-    image="/assets/fct/house-scaled.jpg"
-    introTitle="Represent your own interests clearly"
-    introText="A useful buyer-side process starts with clear criteria and independent due diligence. We connect you with local contacts who can support that process."
-    points={[
-      { title: 'Define the brief', text: 'Set the location, budget, property type, timing and non-negotiable requirements.' },
-      { title: 'Shortlist efficiently', text: 'Focus viewings and enquiries on options that genuinely match the brief.' },
-      { title: 'Verify independently', text: 'Use qualified legal and technical professionals before making a commitment.' },
-      { title: 'Plan the next steps', text: 'Consider management, maintenance, utilities and local support early.' },
-    ]}
-    ctaLabel="Ask about buyer support"
-  />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+    <title>Buyers Agent | First Contact Thailand</title>
+    <script is:inline define:vars={{ target }}>
+      window.location.replace(target);
+    </script>
+  </head>
+  <body>
+    <a href={target}>Continue to the enquiry form</a>
+  </body>
+</html>

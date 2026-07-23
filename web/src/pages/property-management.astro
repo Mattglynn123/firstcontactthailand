@@ -1,21 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import SupportPage from '../components/SupportPage.astro';
+const target = '/contact-link/?topic=Property%20Management';
 ---
 
-<Layout title="Property Management | First Contact Thailand" description="Find trusted local property management support in Thailand." image="/assets/fct/house-2-scaled.jpg">
-  <SupportPage
-    eyebrow="Practical local oversight"
-    title="Property Management"
-    text="Find local support for rentals, maintenance, guest communication and day-to-day property care."
-    image="/assets/fct/house-2-scaled.jpg"
-    introTitle="Support that fits the property"
-    introText="The right management setup depends on location, occupancy and how involved you want to be. We help you reach suitable local contacts."
-    points={[
-      { title: 'Owner requirements', text: 'Define occupancy, rental activity, response times and reporting expectations.' },
-      { title: 'Routine maintenance', text: 'Arrange trusted contacts for repairs, cleaning, gardens, pools and inspections.' },
-      { title: 'Guest and tenant support', text: 'Find practical local help for arrivals, communication and urgent issues.' },
-      { title: 'Clear communication', text: 'Agree how updates, costs and approvals will be handled before work begins.' },
-    ]}
-  />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+    <title>Property Management | First Contact Thailand</title>
+    <script is:inline define:vars={{ target }}>
+      window.location.replace(target);
+    </script>
+  </head>
+  <body>
+    <a href={target}>Continue to the enquiry form</a>
+  </body>
+</html>

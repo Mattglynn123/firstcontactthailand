@@ -21,7 +21,7 @@ Start by understanding which visa route fits your plans, including retirement, f
 
 ## Where to Live
 
-Thailand offers very different lifestyles across islands, beach towns, cities, and mountain areas. Think about schools, transport, healthcare, work, community, and day-to-day costs.
+Thailand offers very different lifestyles across regions, beach towns, cities, and mountain areas. Think about schools, transport, healthcare, work, community, and day-to-day costs.
 
 ## Property & Rentals
 
@@ -38,9 +38,5 @@ Plan how you will handle banking, transfers, tax questions, income, pensions, an
 ## Trusted Local Support
 
 Moving is easier with reliable local contacts for legal help, property, removals, vehicles, insurance, schools, healthcare, business support, and community introductions.
-
-## How First Contact Can Help
-
-First Contact Thailand connects locals, expats, and visitors with trusted service providers across Thailand.
 
 [Contact us and we will connect you with trusted local support](/contact-link/)

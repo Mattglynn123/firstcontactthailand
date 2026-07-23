@@ -1,22 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import SupportPage from '../components/SupportPage.astro';
+const target = '/contact-link/?topic=Building%20Contractors';
 ---
 
-<Layout title="Building Contractors | First Contact Thailand" description="Connect with trusted local contractors and property project support in Thailand." image="/assets/fct/property-building.jpg">
-  <SupportPage
-    eyebrow="Build and renovation support"
-    title="Building Contractors"
-    text="Connect with local contractors and practical project support for repairs, renovations and new builds."
-    image="/assets/fct/property-building.jpg"
-    introTitle="Prepare the project before choosing a contractor"
-    introText="Clear scope, independent checks and documented expectations reduce risk. We help you begin with useful local contacts."
-    points={[
-      { title: 'Create a clear scope', text: 'Document the work, quality expectations, responsibilities and proposed timeline.' },
-      { title: 'Compare suitable providers', text: 'Ask for relevant experience, references and transparent cost information.' },
-      { title: 'Use independent checks', text: 'Obtain appropriate legal, planning, structural and technical advice.' },
-      { title: 'Agree milestones', text: 'Record payment, inspection and approval stages before construction begins.' },
-    ]}
-    ctaLabel="Ask about contractors"
-  />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+    <title>Building Contractors | First Contact Thailand</title>
+    <script is:inline define:vars={{ target }}>
+      window.location.replace(target);
+    </script>
+  </head>
+  <body>
+    <a href={target}>Continue to the enquiry form</a>
+  </body>
+</html>
