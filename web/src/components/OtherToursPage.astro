@@ -1,0 +1,54 @@
+---
+const tours = [
+  {
+    title: 'Elephants',
+    text: 'Visit ethical elephant sanctuaries on the island with trusted local guidance.',
+    image: '/assets/fct/11-scaled.jpg',
+  },
+  {
+    title: 'Pig Island',
+    text: 'Visit the iconic Pig Island, Koh Madsum, for swimming, snorkelling, and a relaxed tropical day out.',
+    image: '/assets/fct/pig-island-scaled.jpg',
+  },
+  {
+    title: 'National Park',
+    text: 'Enjoy island views, swimming, snorkelling, canoeing, and trekking on picturesque day tours.',
+    image: '/assets/fct/national-park-scaled.jpg',
+  },
+  {
+    title: 'ATV',
+    text: 'See the island with a fun ATV tour, scenic lookouts, waterfalls, and practical local support.',
+    image: '/assets/fct/atv-scaled.jpg',
+  },
+];
+---
+
+<section class="reference-page other-tours-page">
+  <div class="reference-page__inner">
+    <div class="archive-top-action">
+      <a class="page-cta archive-top-action__cta" href="/tours-2/">Back to Tours</a>
+    </div>
+
+    <header class="reference-page__heading">
+      <h1>Other Tours</h1>
+      <p>Discover trusted local tours and island experiences.</p>
+    </header>
+
+    <div class="service-grid service-grid--4">
+      {tours.map((tour) => (
+        <article class="service-tile">
+          <img class="service-tile__image" src={tour.image} alt={tour.title} loading="lazy" decoding="async" />
+          <div class="service-tile__body">
+            <h2>{tour.title}</h2>
+            <p>{tour.text}</p>
+            <a class="service-tile__cta" href={`/contact-link/?topic=${encodeURIComponent(tour.title)}`}>Enquire Further &amp; Book Here</a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="reference-page__actions">
+      <a class="page-cta page-cta--image" href="/contact-link/?topic=Other%20Tours">Enquire Further &amp; Book Here</a>
+    </div>
+  </div>
+</section>

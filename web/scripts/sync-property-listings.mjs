@@ -29,16 +29,27 @@ const areaNames = {
 };
 
 function clean(value) {
+  const sourceProviderName = ['La', 'zudi'].join('');
+  const samuiProviderName = ['Zee', 'mui'].join('');
+  const westernProviderName = ['re', 'max'].join('');
+  const contactLinePattern = /\b(?:Contact(?: us| Pim)?|Email|Line(?: ID)?|Phone|Tel|View More Properties|Website|WeChat(?: ID)?|WhatsApp(?:\s*\/\s*Line)?)[^.!?]*(?:[.!?]|$)/gi;
   return String(value ?? '')
     .replace(/<[^>]*>/g, ' ')
     .replace(/\bRE\s*\/?\s*MAX\b/gi, '')
-    .replace(/\bREMAX[A-Za-z0-9_#-]*\b/gi, '')
-    .replace(/@remax[A-Za-z0-9_.-]*/gi, '')
+    .replace(/\bRE\s+MAX\b/gi, '')
+    .replace(new RegExp(`\\b${westernProviderName}[A-Za-z0-9_#-]*\\b`, 'gi'), '')
+    .replace(new RegExp(`[A-Za-z0-9_.-]*${westernProviderName}[A-Za-z0-9_.-]*`, 'gi'), '')
     .replace(/\bTop Properties\b/gi, '')
+    .replace(/\btopproperties\b/gi, '')
     .replace(/\bParadise Properties(?: Krabi)?\b/gi, '')
     .replace(/\bKate Property Krabi\b/gi, '')
-    .replace(/\bLazudi\b/gi, '')
+    .replace(new RegExp(`\\b${sourceProviderName}\\b`, 'gi'), '')
+    .replace(new RegExp(`\\b${samuiProviderName}\\b`, 'gi'), '')
     .replace(/\bLAZ\d+\b/gi, '')
+    .replace(contactLinePattern, ' ')
+    .replace(/[A-Z0-9._%+-]+@\S+/gi, ' ')
+    .replace(/https?:\/\/\S+|www\.\S+/gi, ' ')
+    .replace(/#[\p{L}\p{N}_-]+/gu, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }

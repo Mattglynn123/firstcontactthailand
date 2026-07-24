@@ -6,6 +6,14 @@ export type CharityProgram = {
   details?: CharityProgramDetail[];
 };
 
+export type CompletedCharityProgram = {
+  title: string;
+  date: string;
+  text: string;
+  image: string;
+  href?: string;
+};
+
 export type CharityProgramDetail = {
   title: string;
   text: string;
@@ -19,6 +27,17 @@ export type CharityRegion = {
   sourceName: string;
   sourceUrl: string;
   programs: CharityProgram[];
+  completedArchiveSlug?: string;
+  completedPrograms?: CompletedCharityProgram[];
+};
+
+export type CompletedCharityPage = {
+  slug: string;
+  title: string;
+  location: string;
+  intro: string;
+  returnHref: string;
+  programs: CompletedCharityProgram[];
 };
 
 const program = (
@@ -101,8 +120,21 @@ export const charityRegions: Record<string, CharityRegion> = {
       program('koh-samui', 'Think Pink Samui', 'Supporting breast imaging services, screening days, awareness campaigns, and early detection for women on Koh Samui.', '/assets/fct/charity/koh-samui/think-pink-samui.jpg', 'think-pink-samui'),
       program('koh-samui', 'Support 4 Autism', 'Helping the Learning Center for Magical Autistic Children with teachers, transport, supplies, activities, and family support.', '/assets/fct/charity/koh-samui/support-4-autism.jpg', 'support-4-autism-samui'),
       program('koh-samui', 'Swim 4 Life', 'Free water-safety and swimming lessons for local children, helping reduce child drowning risk on Samui.', '/assets/fct/charity/koh-samui/swim-4-life.jpeg', 'swim-4-life-samui'),
-      program('koh-samui', 'Defibs 4 Samui', 'Supporting public emergency response by helping place AED defibrillators with rescue teams around Samui.', '/assets/fct/charity/koh-samui/defibs-4-samui.jpg', 'defibs-4-samui'),
-      program('koh-samui', 'Food 4 Life', 'Providing essential supplies to local families affected by hardship and the collapse of tourism during Covid.', '/assets/fct/charity/koh-samui/food-4-life.jpg', 'food-4-life-samui'),
+    ],
+    completedArchiveSlug: 'koh-samui-completed-charity-programs',
+    completedPrograms: [
+      {
+        title: 'Food 4 Life',
+        date: 'Completed program',
+        text: 'Essential supplies were provided to local families affected by hardship and the collapse of tourism during Covid.',
+        image: '/assets/fct/charity/koh-samui/food-4-life.jpg',
+      },
+      {
+        title: 'Defibs 4 Samui',
+        date: 'Completed program',
+        text: 'Public emergency response was strengthened by helping place AED defibrillators with rescue teams around Samui.',
+        image: '/assets/fct/charity/koh-samui/defibs-4-samui.jpg',
+      },
     ],
   },
   'pattaya-charity-programs': {
@@ -113,11 +145,19 @@ export const charityRegions: Record<string, CharityRegion> = {
     programs: [
       program('pattaya', 'Young Entrepreneurs Fair', 'Supporting young people with practical enterprise experience and community-led opportunities.', '/assets/fct/charity/pattaya/young-entrepreneurs-fair.jpg'),
       program('pattaya', 'Drinking Water', 'Helping provide access to safe drinking water and practical health support for local communities.', '/assets/fct/charity/pattaya/rotary-drinking-water.jpg'),
-      program('pattaya', 'COVID Protection', 'Community protection work supporting safer local health outcomes.', '/assets/fct/charity/pattaya/covid-protection.webp'),
       program('pattaya', 'Promoting Peace', 'Children use art to express peace, with proceeds supporting scholarships and local Rotary charities.', '/assets/fct/charity/pattaya/promoting-peace.webp'),
       program('pattaya', 'Shop Local Too!', 'Encouraging local support and community connection through Rotary Pattaya initiatives.', '/assets/fct/charity/pattaya/shop-local-too.webp'),
       program('pattaya', 'Save a Childs Eyes', 'Providing eye tests and glasses for underprivileged children who need help to learn at school.', '/assets/fct/charity/pattaya/save-a-childs-eyes.webp'),
       program('pattaya', 'LIVE LOVE program', 'Helping vulnerable children and carers build confidence, healthy choices, and happier futures.', '/assets/fct/charity/pattaya/live-love-program.webp'),
+    ],
+    completedArchiveSlug: 'pattaya-completed-charity-programs',
+    completedPrograms: [
+      {
+        title: 'COVID Protection',
+        date: 'Completed program',
+        text: 'Community protection work supported safer local health outcomes during the Covid period.',
+        image: '/assets/fct/charity/pattaya/covid-protection.webp',
+      },
     ],
   },
   'phuket-charity-programs': {
@@ -144,3 +184,14 @@ export const charityPrograms = Object.values(charityRegions).flatMap((region) =>
     sourceUrl: region.sourceUrl,
   })),
 );
+
+export const completedCharityPages: CompletedCharityPage[] = Object.values(charityRegions)
+  .filter((region) => region.completedArchiveSlug && region.completedPrograms?.length)
+  .map((region) => ({
+    slug: region.completedArchiveSlug as string,
+    title: `${region.location} Completed Charity Programs`,
+    location: region.location,
+    intro: `Completed charity programs and past community support work in ${region.location}.`,
+    returnHref: `/${region.slug}/`,
+    programs: region.completedPrograms as CompletedCharityProgram[],
+  }));

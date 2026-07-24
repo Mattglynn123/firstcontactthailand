@@ -26,8 +26,14 @@ const year = 2024;
       <h2>Contact Us</h2>
       <a href={`tel:${contact.phoneDisplay.replace(/\s/g, '')}`}><Phone aria-hidden="true" size={18} />+66803378707</a>
       <a href={`mailto:${contact.email}`}><Mail aria-hidden="true" size={18} />{contact.email}</a>
-      <a href={contact.facebook} target="_blank" rel="noreferrer">Facebook</a>
-      <a href={contact.whatsapp} target="_blank" rel="noreferrer"><MessageCircle aria-hidden="true" size={18} />WhatsApp</a>
+      <a href={contact.facebook} target="_blank" rel="noreferrer">
+        <span class="site-footer__social-icon" aria-hidden="true">f</span>
+        Facebook
+      </a>
+      <a href={contact.whatsapp} target="_blank" rel="noreferrer">
+        <MessageCircle class="site-footer__lucide-icon" aria-hidden="true" size={18} />
+        WhatsApp
+      </a>
     </div>
   </div>
   <div class="site-footer__legal">

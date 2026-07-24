@@ -6,10 +6,12 @@ import PageHero from '../components/PageHero.astro';
 import RegionalEventsPage from '../components/RegionalEventsPage.astro';
 import CharityRegionPage from '../components/CharityRegionPage.astro';
 import CharityProgramPage from '../components/CharityProgramPage.astro';
+import CompletedCharityProgramsPage from '../components/CompletedCharityProgramsPage.astro';
 import MoveToThailandPage from '../components/MoveToThailandPage.astro';
+import OtherToursPage from '../components/OtherToursPage.astro';
 import TourGuidePage from '../components/TourGuidePage.astro';
 import { regionalEvents } from '../data/regional-events';
-import { charityPrograms, charityRegions } from '../data/charities';
+import { charityPrograms, charityRegions, completedCharityPages } from '../data/charities';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages', ({ data }) => !data.draft);
@@ -41,10 +43,15 @@ export async function getStaticPaths() {
     props: { charityProgram },
   }));
 
-  return [...pagePaths, ...programPaths];
+  const completedCharityPaths = completedCharityPages.map((completedCharityPage) => ({
+    params: { slug: completedCharityPage.slug },
+    props: { completedCharityPage },
+  }));
+
+  return [...pagePaths, ...programPaths, ...completedCharityPaths];
 }
 
-const { page, charityProgram } = Astro.props;
+const { page, charityProgram, completedCharityPage } = Astro.props;
 let Content;
 if (page) {
   const rendered = await render(page);
@@ -69,7 +76,7 @@ const moveGuideCityBySlug = {
 const moveGuideCity = moveGuideCityBySlug[page?.data.slug];
 const usesStandardFallback = rawBody.length < 80 || isLegacyPlaceholder || isRegionalPlaceholder;
 const contentHasH1 = /^#\s+/m.test(rawBody);
-const cleanTitle = (page?.data.title ?? charityProgram?.title ?? 'First Contact Thailand')
+const cleanTitle = (page?.data.title ?? charityProgram?.title ?? completedCharityPage?.title ?? 'First Contact Thailand')
   .replace(/&#038;/g, '&')
   .replace(/&#8211;/g, '-')
   .replace(/-/g, ' ')
@@ -125,8 +132,8 @@ const fallbackCopy = {
   'water': 'Find trusted local water, drinking water, and home supply support.',
   'welcome-to-samui': 'Start with practical local contacts, services, and community support on Koh Samui.',
 };
-const currentSlug = page?.data.slug ?? charityProgram?.slug;
-const fallbackDescription = fallbackCopy[currentSlug] ?? charityProgram?.text ?? `Connect with trusted local support for ${cleanTitle.toLowerCase()} in Thailand.`;
+const currentSlug = page?.data.slug ?? charityProgram?.slug ?? completedCharityPage?.slug;
+const fallbackDescription = fallbackCopy[currentSlug] ?? completedCharityPage?.intro ?? charityProgram?.text ?? `Connect with trusted local support for ${cleanTitle.toLowerCase()} in Thailand.`;
 const fallbackHeroImage = (() => {
   const slug = currentSlug;
   if (/property|building|buyers/.test(slug)) return '/assets/fct/property-home.jpg';
@@ -159,18 +166,23 @@ const charityRegionAliases: Record<string, keyof typeof charityRegions> = {
 };
 const charityRegion = charityRegions[currentSlug] ?? charityRegions[charityRegionAliases[currentSlug]];
 const isMoveGuide = currentSlug === 'move-to-thailand-guide' || currentSlug === 'moving-to-samui';
+const isOtherTours = currentSlug === 'other-tours';
 const isTourGuide = currentSlug === 'become-a-better-tour-guide';
 ---
 
 <Layout title={`${cleanTitle} — First Contact Thailand`} description={fallbackDescription} image={fallbackHeroImage}>
   {charityProgram ? (
     <CharityProgramPage program={charityProgram} />
+  ) : completedCharityPage ? (
+    <CompletedCharityProgramsPage page={completedCharityPage} />
   ) : charityRegion ? (
     <CharityRegionPage page={charityRegion} />
   ) : regionalEventPage ? (
     <RegionalEventsPage page={regionalEventPage} />
   ) : isMoveGuide ? (
     <MoveToThailandPage />
+  ) : isOtherTours ? (
+    <OtherToursPage />
   ) : isTourGuide ? (
     <TourGuidePage />
   ) : moveGuideCity ? (

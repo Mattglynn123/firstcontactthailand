@@ -1,0 +1,37 @@
+---
+import type { CompletedCharityPage } from '../data/charities';
+
+interface Props { page: CompletedCharityPage; }
+const { page } = Astro.props;
+---
+
+<section class="reference-page completed-charity-page">
+  <div class="reference-page__inner">
+    <div class="archive-top-action">
+      <a class="page-cta archive-top-action__cta" href={page.returnHref}>Back to {page.location} charity programs</a>
+    </div>
+
+    <header class="reference-page__heading">
+      <h1>{page.title}</h1>
+    </header>
+
+    <div class="service-grid service-grid--3">
+      {page.programs.map((program) => (
+        <article class="service-tile">
+          <img class="service-tile__image" src={program.image} alt={program.title} loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/assets/fct/hero-community.jpg';" />
+          <div class="service-tile__body">
+            <p class="service-tile__meta">{program.date}</p>
+            <h2>{program.title}</h2>
+            <p>{program.text}</p>
+            <a class="service-tile__cta" href={program.href ?? page.returnHref}>View program</a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="reference-page__actions regional-events__actions">
+      <a class="page-cta" href={page.returnHref}>Back to {page.location} charity programs</a>
+      <a class="page-cta page-cta--image" href={`/contact-link/?topic=${encodeURIComponent(`${page.location} charity programs`)}`}>Tell us about a completed charity program</a>
+    </div>
+  </div>
+</section>

@@ -7,9 +7,12 @@ const { page } = Astro.props;
 
 <section class="reference-page regional-events past-events-page">
   <div class="reference-page__inner">
+    <div class="archive-top-action">
+      <a class="page-cta archive-top-action__cta" href={page.returnHref}>Return to upcoming events</a>
+    </div>
+
     <header class="reference-page__heading">
       <h1>Past Events</h1>
-      <p>{page.location} community event archive.</p>
     </header>
 
     {page.events.length ? (

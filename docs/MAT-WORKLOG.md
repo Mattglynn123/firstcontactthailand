@@ -124,3 +124,11 @@ as the source change.
 - Safety: worked only in the standalone Astro website under `web/`; no server, deployment, or public site changes were made.
 - Verification: Astro built 185 pages; generated `contact-link`, `contact-2`, and `contact-3` pages all show `Submit` with the `page-cta page-cta--image contact-form__submit` classes.
 - Status: complete.
+
+## 2026-07-24 - Property, charity, events and enquiry cleanup
+
+- Request: send standard enquiry forms directly to WhatsApp, remove agency references and visible agency marks from property sales pages, centre single bottom CTAs, restore footer social icons, add completed charity program archives, add top-right return CTAs on archive/detail pages, remove repeated event intro text, and rebuild Other Tours in the standard card layout.
+- Scope: updated shared Astro components and public property snapshots only; added completed charity archives for Samui and Pattaya, including Samui Food 4 Life and Defibs plus the completed Covid programs; removed browser-side live property feed fetching from public pages so visitors use reviewed local snapshots.
+- Safety: worked only in the standalone Astro website under `web/`; no server, deployment, or public site changes were made.
+- Verification: Astro built 184 pages; local preview served on `http://127.0.0.1:4321/`; route checks passed for completed charity archives, regional charity pages, Other Tours, community and past events, Bangkok property sales, Moving to Thailand, and the standard enquiry form; static asset checks found no missing local assets.
+- Status: complete for Mat's final review before any live-site decision.

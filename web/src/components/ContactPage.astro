@@ -20,7 +20,7 @@ const description = 'Contact First Contact Thailand for trusted local introducti
         </div>
       </div>
 
-      <form class="contact-form" data-contact-form>
+      <form class="contact-form" data-contact-form data-whatsapp-number={contact.whatsapp.replace(/\D/g, '')}>
         <div class="form-row">
           <label>
             <span>Name</span>
@@ -84,15 +84,17 @@ const description = 'Contact First Contact Thailand for trusted local introducti
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       const data = new FormData(form);
-      const subject = `First Contact enquiry: ${data.get('topic')}`;
       const body = [
+        `First Contact enquiry: ${data.get('topic')}`,
+        '',
         `Name: ${data.get('name')}`,
         `Email: ${data.get('email')}`,
         `Topic: ${data.get('topic')}`,
         '',
         String(data.get('message') ?? ''),
       ].join('\n');
-      window.location.href = `mailto:info@firstcontactthailand.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const whatsappNumber = form.dataset.whatsappNumber || '66803378707';
+      window.location.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(body)}`;
     });
   })();
 </script>

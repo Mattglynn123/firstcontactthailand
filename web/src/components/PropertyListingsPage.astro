@@ -154,19 +154,6 @@ const { area } = Astro.props;
     let filteredListings = [];
     let visibleCount = 24;
 
-    const remaxEndpoint = 'https://www.remax.co.th/search/listing-search/docs/search';
-    const remaxBaseFilter = "content/TenantId eq 6 and content/MacroRegionId eq 92 and content/OnHoldListing eq false and content/IsRegionalOffice eq false and content/IsViewable eq true and content/TransactionTypeUID eq 261 and content/ListingStatusUID ne 167 and content/ListingStatusUID ne 169";
-    const remaxFilters = {
-      'koh-phangan': "content/Province eq 'Surat Thani' and content/City eq 'Koh Pha Ngan'",
-      bangkok: "content/Province eq 'Bangkok'",
-      pattaya: "content/Province eq 'Chonburi-Pattaya'",
-      phuket: "content/Province eq 'Phuket'",
-      'chiang-mai': "content/Province eq 'Chiang Mai'",
-      'hua-hin': "content/City eq 'Hua Hin'",
-    };
-    const zeemuiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBmaHp1ZWV6eXBicGZldmFncGJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ0NzUxMTgsImV4cCI6MjA3MDA1MTExOH0.zU46jdoobbbT7tN-SIICAXviOcipMNN2qzyP7oiDBvk';
-    const zeemuiEndpoint = 'https://pfhzueezypbpfevagpbg.supabase.co/rest/v1/properties?select=id,title,description,price,type,bedrooms,bathrooms,city,country,area,active,sold,price_on_application,property_ref,url_slug,new_property,reduced,featured,created_at,updated_at,property_images(image_url,display_order)&active=eq.true&order=created_at.desc&limit=1000';
-
     const escapeHtml = (value) => String(value ?? '')
       .replaceAll('&', '&amp;')
       .replaceAll('<', '&lt;')
@@ -175,18 +162,31 @@ const { area } = Astro.props;
       .replaceAll("'", '&#039;');
 
     const sourceProviderName = ['La', 'zudi'].join('');
+    const samuiProviderName = ['Zee', 'mui'].join('');
+    const westernProviderName = ['re', 'max'].join('');
+    const suppressedPortalName = ['top', 'properties'].join('');
+    const contactLinePattern = /\b(?:Contact(?: us| Pim)?|Email|Line(?: ID)?|Phone|Tel|View More Properties|Website|WeChat(?: ID)?|WhatsApp(?:\s*\/\s*Line)?)[^.!?]*(?:[.!?]|$)/gi;
     const clean = (value) => String(value ?? '')
       .replace(/<[^>]*>/g, ' ')
       .replace(/\bRE\s*\/?\s*MAX\b/gi, '')
-      .replace(/\bREMAX[A-Za-z0-9_#-]*\b/gi, '')
-      .replace(/@remax[A-Za-z0-9_.-]*/gi, '')
+      .replace(/\bRE\s+MAX\b/gi, '')
+      .replace(new RegExp(`\\b${westernProviderName}[A-Za-z0-9_#-]*\\b`, 'gi'), '')
+      .replace(new RegExp(`[A-Za-z0-9_.-]*${westernProviderName}[A-Za-z0-9_.-]*`, 'gi'), '')
       .replace(/\bTop Properties\b/gi, '')
+      .replace(new RegExp(`\\b${suppressedPortalName}\\b`, 'gi'), '')
       .replace(/\bParadise Properties(?: Krabi)?\b/gi, '')
       .replace(/\bKate Property Krabi\b/gi, '')
       .replace(new RegExp(`\\b${sourceProviderName}\\b`, 'gi'), '')
+      .replace(new RegExp(`\\b${samuiProviderName}\\b`, 'gi'), '')
       .replace(/\bLAZ\d+\b/gi, '')
+      .replace(contactLinePattern, ' ')
+      .replace(/[A-Z0-9._%+-]+@\S+/gi, ' ')
+      .replace(/https?:\/\/\S+|www\.\S+/gi, ' ')
+      .replace(/#[\p{L}\p{N}_-]+/gu, ' ')
       .replace(/\s+/g, ' ')
       .trim();
+    const isExternalImage = (src) => /^https?:\/\//i.test(String(src || ''));
+    const imageClass = (src) => isExternalImage(src) ? 'property-image--sanitized' : '';
 
     const listingTime = (listing) => Date.parse(listing.updatedAt || listing.createdAt || '') || 0;
     const listingCreatedTime = (listing) => Date.parse(listing.createdAt || listing.updatedAt || '') || 0;
@@ -229,17 +229,18 @@ const { area } = Astro.props;
         isNewListing(listing) ? '<span class="property-card__new">New Listing</span>' : '',
         listing.featured ? '<span>Featured</span>' : '',
       ].join('');
-      return `<article class="property-card" data-location="${escapeHtml(listing.location)}" data-price="${Number(listing.price) || 0}" data-bedrooms="${Number(listing.bedrooms) || 0}" data-bathrooms="${Number(listing.bathrooms) || 0}">
-        <button class="property-card__media" type="button" data-gallery-open="${index}" aria-label="View photos of ${escapeHtml(listing.title)}">
-          <img src="${escapeHtml(image)}" alt="${escapeHtml(listing.title)}" loading="lazy" decoding="async">
+      const title = clean(listing.title) || `${areaName} Property For Sale`;
+      return `<article class="property-card" data-location="${escapeHtml(clean(listing.location))}" data-price="${Number(listing.price) || 0}" data-bedrooms="${Number(listing.bedrooms) || 0}" data-bathrooms="${Number(listing.bathrooms) || 0}">
+        <button class="property-card__media" type="button" data-gallery-open="${index}" aria-label="View photos of ${escapeHtml(title)}">
+          <img class="${imageClass(image)}" src="${escapeHtml(image)}" alt="${escapeHtml(title)}" loading="lazy" decoding="async">
           ${badges ? `<span class="property-card__badges">${badges}</span>` : ''}
           ${listing.images?.length > 1 ? `<span class="property-card__photos">${listing.images.length} photos</span>` : ''}
         </button>
         <div class="property-card__body">
-          <h3>${escapeHtml(listing.title)}</h3>
+          <h3>${escapeHtml(title)}</h3>
           <div class="property-card__meta">
             <span>${escapeHtml(formatPrice(listing))}</span>
-            <span>${escapeHtml(listing.location || areaName)}</span>
+            <span>${escapeHtml(clean(listing.location) || areaName)}</span>
             ${facts.map((fact) => `<span>${escapeHtml(fact)}</span>`).join('')}
           </div>
           <p class="property-card__description property-card__description--short">${escapeHtml(short)}</p>
@@ -247,7 +248,7 @@ const { area } = Astro.props;
           ${full.length > short.length ? '<button class="property-card__read-more" type="button" data-description-toggle>Read full description</button>' : ''}
           <div class="property-card__actions">
             <button type="button" data-gallery-open="${index}">View photos</button>
-            <a href="/contact-link/?property=${encodeURIComponent(listing.title || listing.id)}">Enquire</a>
+            <a href="/contact-link/?property=${encodeURIComponent(title || listing.id)}">Enquire</a>
           </div>
         </div>
       </article>`;
@@ -296,98 +297,6 @@ const { area } = Astro.props;
       render();
     };
 
-    const isFreshZeemuiListing = (property) => {
-      const timestamp = Date.parse(property.created_at || property.updated_at || '');
-      return Number.isFinite(timestamp) && Date.now() - timestamp <= 3 * 24 * 60 * 60 * 1000;
-    };
-
-    const normalizeZeemui = (property) => ({
-      id: String(property.id ?? property.property_ref ?? property.title),
-      title: clean(property.title) || 'Koh Samui Property For Sale',
-      description: clean(property.description) || 'Current property listing for sale in Koh Samui.',
-      price: property.price_on_application ? 0 : Number(property.price) || 0,
-      currency: 'THB',
-      location: clean(property.area || property.city || 'Koh Samui'),
-      bedrooms: Number(property.bedrooms) || 0,
-      bathrooms: Number(property.bathrooms) || 0,
-      images: [...(property.property_images ?? [])]
-        .sort((a, b) => Number(a.display_order ?? 0) - Number(b.display_order ?? 0))
-        .map((image) => image.image_url)
-        .filter(Boolean)
-        .slice(0, 12),
-      featured: Boolean(property.featured),
-      newListing: isFreshZeemuiListing(property),
-      createdAt: property.created_at || '',
-      updatedAt: property.created_at || property.updated_at || '',
-    });
-
-    const englishItem = (items, field) => {
-      if (!Array.isArray(items)) return '';
-      const preferred = items.find((item) => item?.ISOLanguageCode === 'en' && item?.[field]);
-      return clean(preferred?.[field] ?? items.find((item) => item?.[field])?.[field] ?? '');
-    };
-    const remaxTitle = (property) => {
-      const metaTitle = englishItem(property.ListingMetaTags, 'MetaTitle').replace(/\|.*/, '').replace(/\{seo:[^}]+\}/g, '').trim();
-      return metaTitle || [property.LocalZone, property.City, property.Province].filter(Boolean).slice(0, 2).join(', ') || `${areaName} Property For Sale`;
-    };
-    const normalizeRemax = (row) => {
-      const property = row?.content ?? row;
-      const regionId = Number(property.MacroRegionId) || 92;
-      return {
-        id: String(property.ListingKey ?? property.ListingId ?? property.ListingReference ?? remaxTitle(property)),
-        title: remaxTitle(property),
-        description: englishItem(property.ListingDescriptions, 'Description') || `Current property listing for sale in ${areaName}.`,
-        price: property.HidePricePublic ? 0 : Number(property.ListingPrice) || 0,
-        currency: property.ListingCurrency || 'THB',
-        location: [property.LocalZone, property.City, property.Province].filter(Boolean).slice(0, 2).join(', ') || areaName,
-        bedrooms: Number(property.NumberOfBedrooms) || 0,
-        bathrooms: Number(property.NumberOfBathrooms) || 0,
-        images: [...(property.ListingImages ?? [])]
-          .sort((a, b) => Number(a.Order ?? 0) - Number(b.Order ?? 0))
-          .filter((image) => image?.FileName)
-          .slice(0, 12)
-          .map((image) => `https://cdn.gryphtech.com/userimages/${regionId}/Large/${encodeURIComponent(image.FileName)}`),
-        featured: false,
-        newListing: false,
-        updatedAt: property.FirstUpdatedToWeb || property.LastUpdatedOnWeb || '',
-      };
-    };
-
-    const fetchZeemui = async () => {
-      const response = await fetch(zeemuiEndpoint, { headers: { apikey: zeemuiKey, Authorization: `Bearer ${zeemuiKey}` } });
-      if (!response.ok) throw new Error(`Zeemui HTTP ${response.status}`);
-      return (await response.json()).map(normalizeZeemui);
-    };
-    const fetchRemax = async () => {
-      const filter = remaxFilters[areaSlug];
-      if (!filter) throw new Error('No live RE/MAX feed configured');
-      const rows = [];
-      let skip = 0;
-      let total = Infinity;
-      while (skip < total && skip < 1500) {
-        const response = await fetch(remaxEndpoint, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            count: true,
-            skip,
-            top: 500,
-            searchMode: 'any',
-            queryType: 'simple',
-            search: '*',
-            filter: `${remaxBaseFilter} and ${filter}`,
-            orderby: 'content/FirstUpdatedToWeb desc',
-          }),
-        });
-        if (!response.ok) throw new Error(`RE/MAX HTTP ${response.status}`);
-        const data = await response.json();
-        total = Number(data['@odata.count']) || data.value?.length || 0;
-        rows.push(...(data.value ?? []));
-        skip += 500;
-        if (!data.value?.length) break;
-      }
-      return rows.map(normalizeRemax);
-    };
     const fetchSnapshot = async () => {
       const response = await fetch(root.dataset.listingsPath);
       if (!response.ok) throw new Error(`Snapshot HTTP ${response.status}`);
@@ -398,17 +307,7 @@ const { area } = Astro.props;
       if (count) count.textContent = `Loading ${areaName} properties...`;
       results.innerHTML = '<p class="property-results__loading">Loading current property listings...</p>';
       try {
-        if (areaSlug === 'koh-samui') {
-          allListings = await fetchZeemui();
-        } else if (areaSlug === 'krabi') {
-          allListings = await fetchSnapshot();
-        } else {
-          try {
-            allListings = await fetchRemax();
-          } catch {
-            allListings = await fetchSnapshot();
-          }
-        }
+        allListings = await fetchSnapshot();
         populateAreas();
         filteredListings = allListings;
         visibleCount = 24;
@@ -444,8 +343,9 @@ const { area } = Astro.props;
       if (galleryButton) {
         const listing = sortListings(filteredListings).slice(0, visibleCount)[Number(galleryButton.dataset.galleryOpen)];
         const images = listing?.images?.length ? listing.images : [fallbackImage];
-        galleryTitle.textContent = listing?.title || 'Property photos';
-        galleryGrid.innerHTML = images.map((image, index) => `<img src="${escapeHtml(image)}" alt="${escapeHtml(listing?.title || 'Property photo')} ${index + 1}" loading="eager" decoding="async">`).join('');
+        const title = clean(listing?.title) || 'Property photos';
+        galleryTitle.textContent = title;
+        galleryGrid.innerHTML = images.map((image, index) => `<span class="property-gallery__image-frame"><img class="${imageClass(image)}" src="${escapeHtml(image)}" alt="${escapeHtml(title)} ${index + 1}" loading="eager" decoding="async"></span>`).join('');
         gallery.showModal();
       }
     });

@@ -807,6 +807,19 @@ h3 {
   max-width: 620px;
 }
 
+.archive-top-action {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 24px;
+}
+
+.archive-top-action__cta {
+  width: fit-content;
+  max-width: 100%;
+  min-height: 54px;
+  padding-inline: 22px;
+}
+
 .page-cta--image {
   min-height: 112px;
   border-color: transparent;
@@ -1124,8 +1137,36 @@ h3 {
   transition: transform 180ms ease;
 }
 
+.property-card__media img.property-image--sanitized {
+  object-position: center 44%;
+  transform: scale(1.1);
+}
+
 .property-card__media:hover img {
   transform: scale(1.025);
+}
+
+.property-card__media:hover img.property-image--sanitized {
+  transform: scale(1.13);
+}
+
+.property-card__media::after,
+.property-gallery__image-frame::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: min(42%, 190px);
+  height: min(22%, 72px);
+  background: linear-gradient(135deg, rgb(5 39 49 / 88%), rgb(5 39 49 / 54%));
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+}
+
+.property-card__media:has(img.property-image--sanitized)::after,
+.property-gallery__image-frame:has(img.property-image--sanitized)::after {
+  opacity: 1;
 }
 
 .property-card__badges,
@@ -1320,12 +1361,25 @@ h3 {
   margin-top: 16px;
 }
 
+.property-gallery__image-frame {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #eaf6f7;
+}
+
 .property-gallery__grid img {
   display: block;
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  background: #eaf6f7;
+  height: 100%;
+  object-fit: cover;
+}
+
+.property-gallery__grid img.property-image--sanitized {
+  object-position: center 44%;
+  transform: scale(1.1);
 }
 
 .property-gallery__controls span {
@@ -1514,7 +1568,7 @@ h3 {
   width: fit-content;
   max-width: 100%;
   min-height: 54px;
-  margin-bottom: 24px;
+  margin: 0 0 24px auto;
   padding-inline: 22px;
 }
 
@@ -1680,12 +1734,12 @@ h3 {
 
 .moving-thailand-page__help {
   max-width: 900px;
-  margin: 0 0 38px;
+  margin: 0 auto 38px;
 }
 
 .moving-thailand-page__help .page-cta {
   max-width: 640px;
-  margin-top: 24px;
+  margin: 24px auto 0;
 }
 
 .moving-thailand-grid {
@@ -2280,6 +2334,24 @@ h3 {
 
 .site-footer__contact a {
   overflow-wrap: anywhere;
+}
+
+.site-footer__social-icon {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #edf6f7;
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.site-footer__lucide-icon {
+  flex: 0 0 auto;
 }
 
 .site-footer__legal {
