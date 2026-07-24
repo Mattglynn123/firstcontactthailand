@@ -108,3 +108,11 @@ as the source change.
 - Safety: worked only in the standalone Astro website under `web/`; no server, deployment, or public site changes were made.
 - Verification: Astro built 185 pages; generated Pattaya Young Entrepreneurs Fair page has four unique detail images; all 43 generated charity detail pages use the standard CTA class on the back link.
 - Status: complete.
+
+## 2026-07-24 - Standard enquiry submit CTA
+
+- Request: change the standard enquiry form submit control from `Prepare email` to `Submit`, and make it use the standard CTA format instead of the blue shaded button.
+- Scope: updated the shared standard enquiry form button used by `contact-link`, `contact-2`, and `contact-3`.
+- Safety: worked only in the standalone Astro website under `web/`; no server, deployment, or public site changes were made.
+- Verification: Astro built 185 pages; generated `contact-link`, `contact-2`, and `contact-3` pages all show `Submit`, use the `page-cta` button class, and no longer contain `Prepare email`.
+- Status: complete.
