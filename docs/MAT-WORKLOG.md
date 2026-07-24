@@ -116,3 +116,11 @@ as the source change.
 - Safety: worked only in the standalone Astro website under `web/`; no server, deployment, or public site changes were made.
 - Verification: Astro built 185 pages; generated `contact-link`, `contact-2`, and `contact-3` pages all show `Submit`, use the `page-cta` button class, and no longer contain `Prepare email`.
 - Status: complete.
+
+## 2026-07-24 - Beach CTA on standard enquiry submit
+
+- Request: make the bottom CTA on the standard enquiry form use the beach-background CTA style so it does not look like the form fields above it.
+- Scope: updated the shared standard enquiry submit button used by `contact-link`, `contact-2`, and `contact-3` to include the beach-background CTA class.
+- Safety: worked only in the standalone Astro website under `web/`; no server, deployment, or public site changes were made.
+- Verification: Astro built 185 pages; generated `contact-link`, `contact-2`, and `contact-3` pages all show `Submit` with the `page-cta page-cta--image contact-form__submit` classes.
+- Status: complete.
