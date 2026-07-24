@@ -10,21 +10,12 @@ const description = 'Contact First Contact Thailand for trusted local introducti
   <section class="section contact-section contact-section--plain">
     <div class="section__inner contact-layout">
       <div class="contact-copy">
-        <p class="section-kicker">First Contact Thailand</p>
         <h1>{pageTitle}</h1>
         <p>Use this form for a business introduction, event, tour, property enquiry, hire request or local recommendation.</p>
         <div class="contact-direct">
           <a href={contact.whatsapp} target="_blank" rel="noreferrer">
             <span>WhatsApp</span>
             <strong>{contact.phoneDisplay}</strong>
-          </a>
-          <a href={`mailto:${contact.email}`}>
-            <span>Email</span>
-            <strong>{contact.email}</strong>
-          </a>
-          <a href={contact.facebook} target="_blank" rel="noreferrer">
-            <span>Community</span>
-            <strong>First Contact Thailand on Facebook</strong>
           </a>
         </div>
       </div>
@@ -57,7 +48,7 @@ const description = 'Contact First Contact Thailand for trusted local introducti
           <textarea name="message" rows="7" required></textarea>
         </label>
         <button class="button button--primary" type="submit">Prepare email</button>
-        <p class="form-note">Submitting opens your email app with the message prepared. You can also contact us directly on WhatsApp.</p>
+        <p class="form-note">All information is kept in the strictest of confidentiality.</p>
       </form>
     </div>
   </section>

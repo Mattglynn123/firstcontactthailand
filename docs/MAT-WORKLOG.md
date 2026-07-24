@@ -92,3 +92,11 @@ as the source change.
 - Safety: worked only in the standalone Astro website under `web/`; production WordPress, the live site, and the server staging directory were not modified.
 - Verification: property listing sync completed for all property regions; Astro built 185 pages; desktop and mobile Playwright checks passed for all three query/contact routes, Krabi sales cards/gallery, Samui sales new-badge count, and Pattaya community events.
 - Status: complete.
+
+## 2026-07-24 - Recover standard enquiry-form cleanup
+
+- Request: recover and save the latest standard enquiry-form cleanup from the interrupted session.
+- Scope: removed the small label above the `Contact Us` heading, removed the Email and Community contact boxes, kept WhatsApp as the direct contact option, and replaced the old submit note with the confidentiality message on the shared enquiry form used by `contact-link`, `contact-2`, and `contact-3`.
+- Safety: worked only in the standalone Astro website under `web/`; no server, deployment, or public site changes were made.
+- Verification: Astro built 185 pages; local source preview served on `http://127.0.0.1:4321/`; direct checks confirmed the recovered enquiry-form content is present.
+- Status: complete.
