@@ -100,3 +100,11 @@ as the source change.
 - Safety: worked only in the standalone Astro website under `web/`; no server, deployment, or public site changes were made.
 - Verification: Astro built 185 pages; local source preview served on `http://127.0.0.1:4321/`; direct checks confirmed the recovered enquiry-form content is present.
 - Status: complete.
+
+## 2026-07-24 - Charity detail back CTA and Pattaya image cleanup
+
+- Request: fix the Pattaya Young Entrepreneurs Fair extra-info images so the page does not repeat the same picture, and make the top charity detail back link use the standard CTA format on all charity pages.
+- Scope: updated the shared charity detail image set for community-participation programs and changed the shared charity detail back link to the standard CTA style.
+- Safety: worked only in the standalone Astro website under `web/`; no server, deployment, or public site changes were made.
+- Verification: Astro built 185 pages; generated Pattaya Young Entrepreneurs Fair page has four unique detail images; all 43 generated charity detail pages use the standard CTA class on the back link.
+- Status: complete.

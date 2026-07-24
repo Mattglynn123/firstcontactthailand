@@ -1511,11 +1511,11 @@ h3 {
 }
 
 .charity-summary__back {
-  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 54px;
   margin-bottom: 24px;
-  color: var(--teal-dark);
-  font-weight: 800;
-  text-decoration: none;
+  padding-inline: 22px;
 }
 
 .charity-summary__heading {

@@ -111,9 +111,10 @@ const detailImageSets = {
   ],
   communityParticipation: [
     program.image,
-    '/assets/fct/charity/pattaya/young-entrepreneurs-fair.jpg',
+    '/assets/fct/charity/bangkok/youth.jpg',
     '/assets/fct/charity/hua-hin/hua-hin-youth-football-championship-for-literacy.jpg',
     '/assets/fct/charity/pattaya/shop-local-too.webp',
+    '/assets/fct/hero-community.jpg',
   ],
   communitySupport: [
     program.image,
@@ -148,7 +149,7 @@ const details = program.details ?? [
 ---
 
 <article class="charity-summary">
-  <a class="charity-summary__back" href={`/${program.regionSlug}/`}>Back to {program.location} charity programs</a>
+  <a class="page-cta charity-summary__back" href={`/${program.regionSlug}/`}>Back to {program.location} charity programs</a>
   <header class="charity-summary__heading">
     <p class="section-kicker">{program.location} charity program</p>
     <h1>{program.title}</h1>
