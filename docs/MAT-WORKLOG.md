@@ -148,3 +148,10 @@ as the source change.
 - Safety: worked only in the standalone Astro website source; no server, staging, DNS, email, database or live-site files were modified.
 - Verification: prepared for remote GitHub Actions build/QA because the laptop does not have enough free disk space for a full local production build.
 - Status: pending remote build/QA verification.
+
+## 2026-07-25 - Production artifact packaging
+
+- Request: continue the approved production deployment using a verified root-domain build package.
+- Scope: updated GitHub Actions to upload the production `web/dist/` output as a separate deployment artifact while keeping the existing QA/staging evidence artifact.
+- Safety: no website content, server files, DNS, email or database settings were changed.
+- Verification: pending GitHub Actions build/QA for the packaging commit before any live file swap.
