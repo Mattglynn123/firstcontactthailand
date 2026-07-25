@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<Layout
+  title="Page Not Found | First Contact Thailand"
+  description="The page could not be found. Return to First Contact Thailand or ask for local help."
+  image="/assets/fct/hero-network.jpg"
+>
+  <PageHero
+    eyebrow="Page not found"
+    title="We could not find that page"
+    text="The link may have moved while the new First Contact Thailand site is being prepared. Start from the homepage or send us a quick message and we will point you in the right direction."
+    image="/assets/fct/hero-network.jpg"
+    primaryLabel="Return to homepage"
+    primaryHref="/"
+    secondaryLabel="Contact First Contact Thailand"
+    secondaryHref="/contact-link/?topic=Website%20page%20not%20found"
+  />
+</Layout>

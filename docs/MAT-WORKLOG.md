@@ -140,3 +140,11 @@ as the source change.
 - Safety: worked only in the standalone Astro website under `web/`; no server, deployment, or public site changes were made.
 - Verification: Astro built 184 pages; generated-page checks confirmed the Pattaya Save a Childs Eyes detail page uses unique images, Shop Local Too no longer uses the football image, Health & Fitness uses the beach-background CTA with the requested wording, and tour detail pages include the top-right homepage return CTA.
 - Status: complete for Mat's final review before any live-site decision.
+
+## 2026-07-25 - Production launch asset preflight
+
+- Request: continue the production launch path while keeping the live site unchanged until verification and approval.
+- Scope: added production `robots.txt`, added an Astro sitemap endpoint covering static pages, migrated content pages, event routes, past-event routes, property-area routes and charity program routes, and added a branded 404 page.
+- Safety: worked only in the standalone Astro website source; no server, staging, DNS, email, database or live-site files were modified.
+- Verification: prepared for remote GitHub Actions build/QA because the laptop does not have enough free disk space for a full local production build.
+- Status: pending remote build/QA verification.
