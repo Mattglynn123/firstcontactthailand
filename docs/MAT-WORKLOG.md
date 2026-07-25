@@ -132,3 +132,11 @@ as the source change.
 - Safety: worked only in the standalone Astro website under `web/`; no server, deployment, or public site changes were made.
 - Verification: Astro built 184 pages; local preview served on `http://127.0.0.1:4321/`; route checks passed for completed charity archives, regional charity pages, Other Tours, community and past events, Bangkok property sales, Moving to Thailand, and the standard enquiry form; static asset checks found no missing local assets.
 - Status: complete for Mat's final review before any live-site decision.
+
+## 2026-07-25 - Review fixes for charity images, health CTA and tour return links
+
+- Request: remove duplicated and irrelevant images from Pattaya charity extra-info pages, change the Health & Fitness bottom CTA to the beach-background style with Mat's requested wording, and add a top-right `Return to homepage` CTA on tour extra-info pages.
+- Scope: updated the shared charity detail image set, added dedicated Shop Local Too detail images and copy, added optional beach CTA support for priority pages, and added homepage return CTAs to tour detail routes.
+- Safety: worked only in the standalone Astro website under `web/`; no server, deployment, or public site changes were made.
+- Verification: Astro built 184 pages; generated-page checks confirmed the Pattaya Save a Childs Eyes detail page uses unique images, Shop Local Too no longer uses the football image, Health & Fitness uses the beach-background CTA with the requested wording, and tour detail pages include the top-right homepage return CTA.
+- Status: complete for Mat's final review before any live-site decision.

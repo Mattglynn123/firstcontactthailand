@@ -1925,6 +1925,12 @@ h3 {
   padding: 4rem 0;
 }
 
+.page-hero__top-action {
+  position: absolute;
+  top: 24px;
+  right: 0;
+}
+
 .page-hero h1 {
   max-width: 850px;
   margin: 0;
@@ -2687,6 +2693,12 @@ h3 {
 
   .page-hero__inner {
     padding: 3rem 0;
+  }
+
+  .page-hero__top-action {
+    position: static;
+    align-self: flex-end;
+    margin-bottom: 2rem;
   }
 
   .page-hero h1 {

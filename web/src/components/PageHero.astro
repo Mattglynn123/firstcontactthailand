@@ -8,6 +8,8 @@ interface Props {
   primaryHref?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
+  topActionLabel?: string;
+  topActionHref?: string;
 }
 
 const {
@@ -19,11 +21,18 @@ const {
   primaryHref = '/contact-link/',
   secondaryLabel,
   secondaryHref,
+  topActionLabel,
+  topActionHref,
 } = Astro.props;
 ---
 
 <section class="page-hero" style={`--page-hero-image: url('${image}')`}>
   <div class="page-hero__inner">
+    {topActionLabel && topActionHref && (
+      <div class="page-hero__top-action">
+        <a class="page-cta archive-top-action__cta" href={topActionHref}>{topActionLabel}</a>
+      </div>
+    )}
     <p class="eyebrow">{eyebrow}</p>
     <h1>{title}</h1>
     <p class="page-hero__text">{text}</p>

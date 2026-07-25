@@ -7,6 +7,7 @@ interface Props {
 }
 
 const { page } = Astro.props;
+const primaryCtaClass = `page-cta${page.ctaImage ? ' page-cta--image' : ''}`;
 ---
 
 <section class={`reference-page reference-page--${page.slug}`}>
@@ -25,7 +26,7 @@ const { page } = Astro.props;
     </div>
     {(page.ctaLabel && page.ctaHref) && (
       <div class="reference-page__actions">
-        <a class="page-cta" href={page.ctaHref}>{page.ctaLabel}</a>
+        <a class={primaryCtaClass} href={page.ctaHref}>{page.ctaLabel}</a>
         {page.secondaryLabel && page.secondaryHref && <a class="page-cta page-cta--image" href={page.secondaryHref}>{page.secondaryLabel}</a>}
       </div>
     )}

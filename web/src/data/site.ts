@@ -29,6 +29,7 @@ export type PriorityPage = {
   gridColumns?: 3 | 4;
   ctaLabel?: string;
   ctaHref?: string;
+  ctaImage?: boolean;
   secondaryLabel?: string;
   secondaryHref?: string;
 };
@@ -191,8 +192,9 @@ export const priorityPages: Record<string, PriorityPage> = {
       { title: "Mens Health & Wellness", text: "We care about mens health. Our community can connect you with trusted mens health and wellness programs.", image: '/assets/fct/gym-copy-scaled.jpg', href: '/contact-link/?topic=Mens%20Health%20and%20Wellness', action: 'Click here to discover mens health and wellness events and program' },
       { title: 'Personal Products', text: 'Personal products are important. When you look good you feel good. We can connect you with trusted community partners for products and support.', image: '/assets/fct/personal-scaled.jpg', href: '/contact-link/?topic=Personal%20Products', action: 'Click here to be connected with our community partners' },
     ],
-    ctaLabel: 'Ask about health and fitness',
+    ctaLabel: 'Tell us if you have a great community health & fitness program',
     ctaHref: '/contact-link/?topic=Health%20and%20Fitness',
+    ctaImage: true,
   },
   'tours-2': {
     slug: 'tours-2',

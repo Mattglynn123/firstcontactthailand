@@ -146,7 +146,12 @@ export const charityRegions: Record<string, CharityRegion> = {
       program('pattaya', 'Young Entrepreneurs Fair', 'Supporting young people with practical enterprise experience and community-led opportunities.', '/assets/fct/charity/pattaya/young-entrepreneurs-fair.jpg'),
       program('pattaya', 'Drinking Water', 'Helping provide access to safe drinking water and practical health support for local communities.', '/assets/fct/charity/pattaya/rotary-drinking-water.jpg'),
       program('pattaya', 'Promoting Peace', 'Children use art to express peace, with proceeds supporting scholarships and local Rotary charities.', '/assets/fct/charity/pattaya/promoting-peace.webp'),
-      program('pattaya', 'Shop Local Too!', 'Encouraging local support and community connection through Rotary Pattaya initiatives.', '/assets/fct/charity/pattaya/shop-local-too.webp'),
+      program('pattaya', 'Shop Local Too!', 'Encouraging local support and community connection through Rotary Pattaya initiatives.', '/assets/fct/charity/pattaya/shop-local-too.webp', undefined, [
+        { title: 'Program Overview', text: 'Shop Local Too! encourages residents and visitors to support local businesses, local services, and community initiatives in Pattaya.', image: '/assets/fct/charity/pattaya/shop-local-too.webp' },
+        { title: 'Who It Helps', text: 'The program helps local operators, community groups, and residents by keeping more support circulating through the Pattaya community.', image: '/assets/fct/deals-local-life.jpg' },
+        { title: 'How Support Helps', text: 'Support can help promote local traders, connect people with useful services, and keep community-focused projects visible.', image: '/assets/fct/hero-network.jpg' },
+        { title: 'Get Involved', text: 'First Contact can collect your enquiry and connect you with the right local route if you want to support or participate in the program.', image: '/assets/fct/contact-community.jpg' },
+      ]),
       program('pattaya', 'Save a Childs Eyes', 'Providing eye tests and glasses for underprivileged children who need help to learn at school.', '/assets/fct/charity/pattaya/save-a-childs-eyes.webp'),
       program('pattaya', 'LIVE LOVE program', 'Helping vulnerable children and carers build confidence, healthy choices, and happier futures.', '/assets/fct/charity/pattaya/live-love-program.webp'),
     ],

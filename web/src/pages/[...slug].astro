@@ -159,6 +159,17 @@ const eventPageSlugs = new Set([
   'social-events-2',
 ]);
 const isEventPage = eventPageSlugs.has(currentSlug);
+const tourDetailPageSlugs = new Set([
+  'airport-transfers',
+  'become-a-better-tour-guide',
+  'day-trips',
+  'family-activities',
+  'jetski-hire',
+  'other-tours',
+  'tours',
+  'tours-clean',
+]);
+const isTourDetailPage = tourDetailPageSlugs.has(currentSlug);
 const hasLocalDealsBeachCta = currentSlug === 'local-deals';
 const regionalEventPage = regionalEvents[currentSlug];
 const charityRegionAliases: Record<string, keyof typeof charityRegions> = {
@@ -198,6 +209,8 @@ const isTourGuide = currentSlug === 'become-a-better-tour-guide';
         primaryHref={`/contact-link/?topic=${encodeURIComponent(cleanTitle)}`}
         secondaryLabel={isEventPage ? 'See previous events' : 'Explore the network'}
         secondaryHref={isEventPage ? '/past-events/' : '/local-business-network/'}
+        topActionLabel={isTourDetailPage ? 'Return to homepage' : undefined}
+        topActionHref={isTourDetailPage ? '/' : undefined}
       />
       <section class="section">
         <div class="section__inner support-layout">
@@ -233,6 +246,11 @@ const isTourGuide = currentSlug === 'become-a-better-tour-guide';
     </>
   ) : (
     <article class={`content-page ${isEventPage ? 'event-page' : ''} prose prose-slate mx-auto max-w-3xl py-8`}>
+      {isTourDetailPage && (
+        <div class="archive-top-action">
+          <a class="page-cta archive-top-action__cta" href="/">Return to homepage</a>
+        </div>
+      )}
       {!contentHasH1 && <h1>{cleanTitle}</h1>}
       {Content && <Content />}
       {hasLocalDealsBeachCta && (
