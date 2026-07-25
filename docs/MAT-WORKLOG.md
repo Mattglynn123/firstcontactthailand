@@ -155,3 +155,14 @@ as the source change.
 - Scope: updated GitHub Actions to upload the production `web/dist/` output as a separate deployment artifact while keeping the existing QA/staging evidence artifact.
 - Safety: no website content, server files, DNS, email or database settings were changed.
 - Verification: pending GitHub Actions build/QA for the packaging commit before any live file swap.
+
+## 2026-07-25 - Production cutover
+
+- Request: Mat approved the production deployment after checking staging.
+- Deployed source SHA: `406a3a0f7d7e99ba6d7cf24237b2161c236a661e`.
+- Build source: GitHub Actions run `30157134102`, artifact `standalone-site-production`, SHA-256 `dd86a8864c2ac00290fe2bb860991761d0f2f1ac2e4a69c343801a6431465548`.
+- Backup: current live files copied to `/homepages/31/d4299444035/htdocs/fct-backups/production-cutover-20260725-191613/live-files-copy` and database dumped to `/homepages/31/d4299444035/htdocs/fct-backups/production-cutover-20260725-191613/live-database.sql.gz`.
+- Rollback: previous live root retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-rollback-production-20260725-406a3a0`.
+- Deployment destination: `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand`.
+- Verification: production homepage, priority routes, `robots.txt`, `sitemap.xml` and `404.html` returned HTTP 200; checked no `/staging/` dependency, no old runtime markers, no broken first-party links/assets on priority/recent routes, WhatsApp contact route present, and rendered smoke checks showed no broken images, no horizontal overflow and no console errors at the available browser viewport. GitHub Actions performed full build and responsive QA before deployment.
+- Status: production cutover complete; DNS, SSL and email services were not changed.
