@@ -113,13 +113,28 @@ export const charityRegions: Record<string, CharityRegion> = {
     programs: [
       program('koh-samui', 'Koh Samui Surf Lifesaving Club', 'Supporting ocean safety, lifesaving skills, and swimming confidence for local children and families.', '/assets/fct/charity/koh-samui/koh-samui-surf-lifesaving-club.jpeg', 'koh-samui-surf-lifesaving-club', [
         { title: 'Support The Program', text: 'Help the club keep practical ocean safety training available for local children and families. Every bit of support helps the program reach more kids.', image: '/assets/fct/charity/koh-samui/koh-samui-surf-lifesaving-club.jpeg' },
-        { title: 'Ocean Awareness', text: 'Beach awareness and lifesaving education give families more confidence around the water. The goal is safer days on Samui beaches.', image: '/assets/fct/beach-1-scaled.jpg' },
-        { title: 'Safety Skills', text: 'Children learn swimming confidence, ocean safety, and practical skills they can use. The program builds stronger swimmers and safer habits.', image: '/assets/fct/charity/koh-samui/swim-4-life.jpeg' },
-        { title: 'Get Involved', text: 'First Contact can connect volunteers, sponsors, and donors with the Surf Lifesaving Club team. Tell us how you would like to help.', image: '/assets/fct/charity/koh-samui/koh-samui-surf-lifesaving-club.jpeg' },
+        { title: 'Ocean Awareness', text: 'Beach awareness and lifesaving education give families more confidence around the water. The goal is safer days on Samui beaches.', image: '/assets/fct/charity/koh-samui/swim-4-life-water-safety-session.jpg' },
+        { title: 'Safety Skills', text: 'Children learn swimming confidence, ocean safety, and practical skills they can use. The program builds stronger swimmers and safer habits.', image: '/assets/fct/charity/koh-samui/swim-4-life-pool-lesson.jpg' },
+        { title: 'Get Involved', text: 'First Contact can connect volunteers, sponsors, and donors with the Surf Lifesaving Club team. Tell us how you would like to help.', image: '/assets/fct/charity/koh-samui/swim-4-life-graduation.jpg' },
       ]),
-      program('koh-samui', 'Think Pink Samui', 'Supporting breast imaging services, screening days, awareness campaigns, and early detection for women on Koh Samui.', '/assets/fct/charity/koh-samui/think-pink-samui.jpg', 'think-pink-samui'),
-      program('koh-samui', 'Support 4 Autism', 'Helping the Learning Center for Magical Autistic Children with teachers, transport, supplies, activities, and family support.', '/assets/fct/charity/koh-samui/support-4-autism.jpg', 'support-4-autism-samui'),
-      program('koh-samui', 'Swim 4 Life', 'Free water-safety and swimming lessons for local children, helping reduce child drowning risk on Samui.', '/assets/fct/charity/koh-samui/swim-4-life.jpeg', 'swim-4-life-samui'),
+      program('koh-samui', 'Think Pink Samui', 'Supporting breast imaging services, screening days, awareness campaigns, and early detection for women on Koh Samui.', '/assets/fct/charity/koh-samui/think-pink-samui.jpg', 'think-pink-samui', [
+        { title: 'Program Overview', text: 'Think Pink Samui supports breast imaging services, screening days, awareness campaigns, and earlier detection for women on Koh Samui.', image: '/assets/fct/charity/koh-samui/think-pink-samui.jpg' },
+        { title: 'Who It Helps', text: 'The program helps women and families access local breast-screening awareness and practical health information before problems are found too late.', image: '/assets/fct/charity/koh-samui/think-pink-samui-dr-kris.jpg' },
+        { title: 'How Support Helps', text: 'Support helps keep clear screening information, local awareness material, hospital links, and outreach visible across the Samui community.', image: '/assets/fct/charity/koh-samui/think-pink-samui-english-info.jpg' },
+        { title: 'Get Involved', text: 'First Contact can collect your enquiry and connect you with the right local route if you want to support Think Pink Samui.', image: '/assets/fct/charity/koh-samui/think-pink-samui-logo.png' },
+      ]),
+      program('koh-samui', 'Support 4 Autism', 'Helping the Learning Center for Magical Autistic Children with teachers, transport, supplies, activities, and family support.', '/assets/fct/charity/koh-samui/support-4-autism.jpg', 'support-4-autism-samui', [
+        { title: 'Program Overview', text: 'Support 4 Autism helps the Learning Center for Magical Autistic Children with teachers, transport, supplies, activities, and family support.', image: '/assets/fct/charity/koh-samui/support-4-autism.jpg' },
+        { title: 'Who It Helps', text: 'The program supports children, carers, teachers, and families who benefit from patient learning support and practical day-to-day help.', image: '/assets/fct/charity/koh-samui/support-4-autism-classroom.jpg' },
+        { title: 'How Support Helps', text: 'Support can help with learning materials, transport, activities, pool sessions, family support, and the running costs that keep the centre moving.', image: '/assets/fct/charity/koh-samui/support-4-autism-swimming-session.jpg' },
+        { title: 'Get Involved', text: 'First Contact can collect your enquiry and connect you with the right local route if you want to support the autism program.', image: '/assets/fct/charity/koh-samui/support-4-autism-mac-logo.jpg' },
+      ]),
+      program('koh-samui', 'Swim 4 Life', 'Free water-safety and swimming lessons for local children, helping reduce child drowning risk on Samui.', '/assets/fct/charity/koh-samui/swim-4-life.jpeg', 'swim-4-life-samui', [
+        { title: 'Program Overview', text: 'Swim 4 Life gives local children free water-safety and swimming lessons so they can build confidence and reduce drowning risk.', image: '/assets/fct/charity/koh-samui/swim-4-life.jpeg' },
+        { title: 'Who It Helps', text: 'The program helps Samui children, schools, and families build safer habits around pools, beaches, and everyday island life near water.', image: '/assets/fct/charity/koh-samui/swim-4-life-water-safety-session.jpg' },
+        { title: 'How Support Helps', text: 'Support can help with instructors, pool time, transport, teaching aids, safety equipment, and practical coordination for each lesson group.', image: '/assets/fct/charity/koh-samui/swim-4-life-coaching.jpg' },
+        { title: 'Get Involved', text: 'First Contact can collect your enquiry and connect you with the right local route if you want to support Swim 4 Life.', image: '/assets/fct/charity/koh-samui/swim-4-life-graduation.jpg' },
+      ]),
     ],
     completedArchiveSlug: 'koh-samui-completed-charity-programs',
     completedPrograms: [

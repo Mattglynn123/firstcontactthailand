@@ -173,3 +173,10 @@ as the source change.
 - Scope: changed the shared contact field label and WhatsApp message line so the standard enquiry form accepts either an email address or a WhatsApp number.
 - Safety: source-only Astro change; no live deployment performed yet.
 - Verification: pending build/QA.
+
+## 2026-07-26 - Samui charity program image cleanup
+
+- Request: replace irrelevant images on Think Pink Samui, Koh Samui Surf Lifesaving Club, Support 4 Autism, and related Samui charity extra-info pages using more relevant Rotary Samui-Phangan references.
+- Scope: added local Samui charity project images from the Rotary Samui-Phangan project pages and wired explicit detail-card image sets for the Samui charity programs so they no longer inherit unrelated regional fallback photos.
+- Safety: source and public asset changes only; live deployment pending verified build/QA.
+- Verification: pending build/QA.
