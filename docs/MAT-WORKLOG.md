@@ -166,3 +166,10 @@ as the source change.
 - Deployment destination: `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand`.
 - Verification: production homepage, priority routes, `robots.txt`, `sitemap.xml` and `404.html` returned HTTP 200; checked no `/staging/` dependency, no old runtime markers, no broken first-party links/assets on priority/recent routes, WhatsApp contact route present, and rendered smoke checks showed no broken images, no horizontal overflow and no console errors at the available browser viewport. GitHub Actions performed full build and responsive QA before deployment.
 - Status: production cutover complete; DNS, SSL and email services were not changed.
+
+## 2026-07-26 - Standard enquiry contact field wording
+
+- Request: update the standard enquiry form field that said `Email` so it reads `Email or WhatsApp`.
+- Scope: changed the shared contact field label and WhatsApp message line so the standard enquiry form accepts either an email address or a WhatsApp number.
+- Safety: source-only Astro change; no live deployment performed yet.
+- Verification: pending build/QA.

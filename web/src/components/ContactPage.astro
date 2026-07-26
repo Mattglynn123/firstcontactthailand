@@ -27,8 +27,8 @@ const description = 'Contact First Contact Thailand for trusted local introducti
             <input type="text" name="name" autocomplete="name" required />
           </label>
           <label>
-            <span>Email</span>
-            <input type="email" name="email" autocomplete="email" required />
+            <span>Email or WhatsApp</span>
+            <input type="text" name="contact" required />
           </label>
         </div>
         <label>
@@ -88,7 +88,7 @@ const description = 'Contact First Contact Thailand for trusted local introducti
         `First Contact enquiry: ${data.get('topic')}`,
         '',
         `Name: ${data.get('name')}`,
-        `Email: ${data.get('email')}`,
+        `Email or WhatsApp: ${data.get('contact')}`,
         `Topic: ${data.get('topic')}`,
         '',
         String(data.get('message') ?? ''),
