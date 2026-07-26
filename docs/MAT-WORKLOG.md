@@ -171,12 +171,22 @@ as the source change.
 
 - Request: update the standard enquiry form field that said `Email` so it reads `Email or WhatsApp`.
 - Scope: changed the shared contact field label and WhatsApp message line so the standard enquiry form accepts either an email address or a WhatsApp number.
-- Safety: source-only Astro change; no live deployment performed yet.
-- Verification: pending build/QA.
+- Safety: source-only Astro change, included in the verified 2026-07-26 live update below.
+- Verification: GitHub Actions run `30187358218` passed; live `/contact-link/` returned HTTP 200 and contained `Email or WhatsApp`.
 
 ## 2026-07-26 - Samui charity program image cleanup
 
 - Request: replace irrelevant images on Think Pink Samui, Koh Samui Surf Lifesaving Club, Support 4 Autism, and related Samui charity extra-info pages using more relevant Rotary Samui-Phangan references.
 - Scope: added local Samui charity project images from the Rotary Samui-Phangan project pages and wired explicit detail-card image sets for the Samui charity programs so they no longer inherit unrelated regional fallback photos.
-- Safety: source and public asset changes only; live deployment pending verified build/QA.
-- Verification: pending build/QA.
+- Safety: source and public asset changes only, included in the verified 2026-07-26 live update below.
+- Verification: GitHub Actions run `30187358218` passed; live Samui charity routes and new image assets returned HTTP 200.
+
+## 2026-07-26 - Live update for contact field and Samui charity images
+
+- Request: after the enquiry wording and Samui charity image fixes were completed, Mat approved pushing this update to the live site.
+- Deployed source SHA: `07f672be742bb9651551abc1b7944fce602fb7f8`.
+- Build source: GitHub Actions run `30187358218`, artifact `standalone-site-production`, SHA-256 `9f6feb84cdccb50315db31104b4f00c42dbd8fc92c90e7be2292df0273677786`.
+- Rollback: previous live root retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-rollback-production-20260726-1223-07f672b`.
+- Deployment destination: `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand`.
+- Verification: live homepage, `/contact-link/`, `/think-pink-samui/`, `/koh-samui-surf-lifesaving-club/`, `/support-4-autism-samui/`, `/swim-4-life-samui/`, `robots.txt` and `sitemap.xml` returned HTTP 200; new Samui image assets returned HTTP 200; checked no `/staging/` dependency in the unpacked deployment.
+- Status: live update complete; DNS, SSL and email services were not changed.
