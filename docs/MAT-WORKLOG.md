@@ -220,3 +220,13 @@ as the source change.
 - Rollback: previous live root retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-rollback-production-20260730-1508-ef70517`.
 - Safety: Astro content/public-asset change only; DNS, SSL and email services were not changed.
 - Verification: GitHub Actions build/QA passed; live `/ai-next-steps/` returned HTTP 200, restored photo-style card images, included the two replacement photo assets, removed generated graphic references, and selected image assets returned HTTP 200.
+
+## 2026-07-30 - AI layout and charity image corrections
+
+- Request: remove the AI meetup flyer from the AI Next Steps page, replace the eight unrelated AI photos with computer/AI-style photos, make the AI page use the same card-grid format as other extra-info pages, remove visible email addresses, replace the homepage Charities tile ocean image, replace the Pattaya Drinking Water hands image, and check charity pages for repeated or irrelevant fallback pictures.
+- Scope: added a dedicated `/ai-next-steps/` Astro route using the shared `PriorityPage` layout, added local AI topic photos for the requested cards, removed visible email links from the shared header/footer, changed charity fallbacks away from the ocean image, changed Pattaya Drinking Water to the water-glass image, added three compressed shared charity topic images, and updated charity detail image sets to avoid duplicate first-image fallback.
+- Deployed source SHA: `a707e7a459f7ad099ce0d11068d91394a970448a`.
+- Build source: GitHub Actions run `30528221832`, artifact `standalone-site-production`, SHA-256 `a9881e9aaf78389e7a39d98c617b489682c2e9348c222cbdc508b5bfd57e0571`.
+- Rollback: previous live root retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-rollback-production-20260730-0520-a707e7a`.
+- Safety: Astro source/public-asset change only; DNS, SSL and mail services were not changed.
+- Verification: GitHub Actions build/QA passed; live homepage, `/ai-next-steps/`, `/pattaya-charity-programs/`, `/pattaya-save-a-childs-eyes/`, and `/contact-link/` returned HTTP 200; expected new image references were present; selected new image assets returned HTTP 200; checked no visible email address or `mailto:` on the verified live pages; Save a Childs Eyes detail images were distinct.
