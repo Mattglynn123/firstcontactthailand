@@ -63,68 +63,86 @@ const focus = (() => {
 const detailImageSets = {
   waterSafety: [
     program.image,
+    '/assets/fct/charity/koh-samui/swim-4-life-water-safety-session.jpg',
+    '/assets/fct/charity/koh-samui/swim-4-life-pool-lesson.jpg',
+    '/assets/fct/charity/koh-samui/swim-4-life-coaching.jpg',
     '/assets/fct/charity/phuket/save-a-child-swim-program.png',
-    '/assets/fct/charity/koh-samui/swim-4-life.jpeg',
-    '/assets/fct/beach-1-scaled.jpg',
+    '/assets/fct/charity/hua-hin/water-safety-and-drowning-prevention.jpg',
   ],
   drinkingWater: [
     program.image,
     '/assets/fct/drinking-scaled.jpg',
     '/assets/fct/charity/bangkok/clean-drinking-water-systems.jpg',
     '/assets/fct/charity/chiang-mai/water-and-sanitation-project.jpg',
+    '/assets/fct/charity/hua-hin/world-water-day-service-project.jpg',
   ],
   eyeCare: [
     program.image,
-    '/assets/fct/charity/hua-hin/eyeglasses-for-children.jpg',
+    '/assets/fct/charity/shared/eye-care-child-glasses.jpg',
     '/assets/fct/chiang-mai-vision-screening.jpg',
-    '/assets/fct/charity/chiang-mai/school-vision-screening.jpg',
-    '/assets/fct/contact-community.jpg',
+    '/assets/fct/charity/hua-hin/eyeglasses-for-children.jpg',
   ],
   vulnerableFamilies: [
     program.image,
     '/assets/fct/charity/hua-hin/children-of-the-forest.jpg',
     '/assets/fct/charity/chiang-mai/free-food-for-the-poor-initiative.jpg',
     '/assets/fct/charity/koh-samui/support-4-autism.jpg',
+    '/assets/fct/charity/koh-samui/food-4-life.jpg',
+    '/assets/fct/charity/koh-samui/support-4-autism-learning-centre.jpg',
   ],
   education: [
     program.image,
     '/assets/fct/charity/chiang-mai/b-e-a-m-ged-program.jpg',
     '/assets/fct/charity/hua-hin/library-books-for-local-schools.jpg',
     '/assets/fct/charity/phuket/tsunami-scholarship-program.jpg',
+    '/assets/fct/charity/chiang-mai/winter-clothing-and-school-supplies-appeal.jpg',
+    '/assets/fct/charity/bangkok/youth.jpg',
   ],
   healthResponse: [
     program.image,
     '/assets/fct/charity/phuket/aed-pads.png',
+    '/assets/fct/charity/koh-samui/defibs-4-samui.jpg',
     '/assets/fct/charity/hua-hin/police-help-save-lives.jpg',
     '/assets/fct/charity/hua-hin/ultrasound-technology-project.jpg',
+    '/assets/fct/charity/pattaya/covid-protection.webp',
   ],
   peace: [
     program.image,
     '/assets/fct/charity/pattaya/promoting-peace.webp',
     '/assets/fct/charity/chiang-mai/cultivating-a-peace-culture-in-school.jpg',
-    '/assets/fct/hero-community.jpg',
+    '/assets/fct/charity/shared/children-art-supplies.jpg',
+    '/assets/fct/charity/bangkok/youth.jpg',
   ],
   communitySafety: [
     program.image,
     '/assets/fct/charity/phuket/safe-roads-project.png',
     '/assets/fct/charity/bangkok/low-income-communities.jpg',
-    '/assets/fct/hero-community.jpg',
+    '/assets/fct/charity/chiang-mai/water-and-sanitation-project.jpg',
+    '/assets/fct/charity/shared/community-hands.jpg',
   ],
   communityParticipation: [
     program.image,
+    '/assets/fct/charity/pattaya/young-entrepreneurs-fair.jpg',
     '/assets/fct/charity/bangkok/youth.jpg',
     '/assets/fct/charity/hua-hin/hua-hin-youth-football-championship-for-literacy.jpg',
     '/assets/fct/charity/pattaya/shop-local-too.webp',
-    '/assets/fct/hero-community.jpg',
+    '/assets/fct/charity/shared/community-hands.jpg',
   ],
   communitySupport: [
     program.image,
-    '/assets/fct/hero-community.jpg',
+    '/assets/fct/charity/shared/community-hands.jpg',
     '/assets/fct/contact-community.jpg',
     '/assets/fct/charity/bangkok/youth.jpg',
+    '/assets/fct/charity/koh-samui/food-4-life.jpg',
   ],
 };
-const defaultDetailImages = Array.from(new Set(detailImageSets[focus.type] ?? detailImageSets.communitySupport));
+const sharedBackupImages = [
+  '/assets/fct/charity/shared/community-hands.jpg',
+  '/assets/fct/contact-community.jpg',
+  '/assets/fct/charity/bangkok/youth.jpg',
+  '/assets/fct/charity/koh-samui/food-4-life.jpg',
+];
+const defaultDetailImages = Array.from(new Set([...(detailImageSets[focus.type] ?? detailImageSets.communitySupport), ...sharedBackupImages]));
 const details = program.details ?? [
   {
     title: 'Program Overview',
@@ -159,7 +177,7 @@ const details = program.details ?? [
   <div class="charity-detail-grid">
     {details.map((detail) => (
       <section class="charity-detail-card">
-        <img src={detail.image ?? program.image} alt={detail.title} loading="eager" decoding="async" onerror="this.onerror=null;this.src='/assets/fct/hero-community.jpg';" />
+        <img src={detail.image ?? program.image} alt={detail.title} loading="eager" decoding="async" onerror="this.onerror=null;this.src='/assets/fct/charity/shared/community-hands.jpg';" />
         <div>
           <h2>{detail.title}</h2>
           <p>{detail.text}</p>

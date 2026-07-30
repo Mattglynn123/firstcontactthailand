@@ -159,7 +159,7 @@ export const charityRegions: Record<string, CharityRegion> = {
     sourceUrl: 'https://www.rotarypattaya.com/',
     programs: [
       program('pattaya', 'Young Entrepreneurs Fair', 'Supporting young people with practical enterprise experience and community-led opportunities.', '/assets/fct/charity/pattaya/young-entrepreneurs-fair.jpg'),
-      program('pattaya', 'Drinking Water', 'Helping provide access to safe drinking water and practical health support for local communities.', '/assets/fct/charity/pattaya/rotary-drinking-water.jpg'),
+      program('pattaya', 'Drinking Water', 'Helping provide access to safe drinking water and practical health support for local communities.', '/assets/fct/drinking-scaled.jpg'),
       program('pattaya', 'Promoting Peace', 'Children use art to express peace, with proceeds supporting scholarships and local Rotary charities.', '/assets/fct/charity/pattaya/promoting-peace.webp'),
       program('pattaya', 'Shop Local Too!', 'Encouraging local support and community connection through Rotary Pattaya initiatives.', '/assets/fct/charity/pattaya/shop-local-too.webp', undefined, [
         { title: 'Program Overview', text: 'Shop Local Too! encourages residents and visitors to support local businesses, local services, and community initiatives in Pattaya.', image: '/assets/fct/charity/pattaya/shop-local-too.webp' },
