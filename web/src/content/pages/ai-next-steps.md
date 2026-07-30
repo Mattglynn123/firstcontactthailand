@@ -13,7 +13,7 @@ Practical AI topics for local businesses that want simple, useful ways to get st
 
 <section class="service-card-grid local-business-grid" aria-label="AI Next Steps">
   <article class="service-card">
-    <img src="/assets/fct/ai-community-meeting.jpeg" alt="Basic AI tutorials" />
+    <img src="/assets/fct/ai-next-steps/ai-basic-tutorials.jpg" alt="Basic AI tutorials" />
     <h2>Basic AI Tutorials</h2>
     <p>Simple beginner-friendly sessions that explain what AI can do and how to use it in everyday business tasks.</p>
   </article>
@@ -48,7 +48,7 @@ Practical AI topics for local businesses that want simple, useful ways to get st
     <p>Use AI to plan campaigns, write better posts, create content ideas, improve offers, and save time on promotion.</p>
   </article>
   <article class="service-card">
-    <img src="/assets/fct/Hero-Images-copy-2-scaled.jpg" alt="Types of AI tools" />
+    <img src="/assets/fct/ai-next-steps/ai-tool-types.jpg" alt="Types of AI tools" />
     <h2>Types Of AI Tools</h2>
     <p>An overview of AI tools for text, voice, images, video, research, automation, customer support, and business planning.</p>
   </article>
@@ -68,37 +68,37 @@ Practical AI topics for local businesses that want simple, useful ways to get st
     <p>A starter pack for using AI in a new or growing business, including core tools, workflows, and useful prompts.</p>
   </article>
   <article class="service-card">
-    <img src="/assets/fct/personal-scaled.jpg" alt="AI for business pain points" />
+    <img src="/assets/fct/ai-next-steps/ai-business-pain-points.jpg" alt="AI for business pain points" />
     <h2>How AI Can Help With Business Pain Points</h2>
     <p>Identify time drains, repeated admin, customer service gaps, content bottlenecks, and other areas AI can support.</p>
   </article>
   <article class="service-card">
-    <img src="/assets/fct/event-rock-concert.jpg" alt="AI and Meta platforms" />
+    <img src="/assets/fct/ai-next-steps/ai-meta-marketing.jpg" alt="AI and Meta platforms" />
     <h2>How AI Can Work With Meta</h2>
     <p>Explore how AI can support Facebook, Instagram, ads, customer messages, content planning, and community engagement.</p>
   </article>
   <article class="service-card">
-    <img src="/assets/fct/contact-community.jpg" alt="AI for good" />
+    <img src="/assets/fct/ai-next-steps/ai-for-good.jpg" alt="AI for good" />
     <h2>AI For Good</h2>
     <p>Ideas for using AI to support job creation, myth busting, community education, and positive local projects.</p>
   </article>
   <article class="service-card">
-    <img src="/assets/fct/crypto-scaled.jpg" alt="AI API support" />
+    <img src="/assets/fct/ai-next-steps/ai-api-workflows.jpg" alt="AI API support" />
     <h2>How To Work AI With APIs</h2>
     <p>A practical introduction to using APIs so AI tools can connect with data, websites, apps, and business systems.</p>
   </article>
   <article class="service-card">
-    <img src="/assets/fct/business-legal.jpg" alt="AI safety and data protection" />
+    <img src="/assets/fct/ai-next-steps/ai-data-security.jpg" alt="AI safety and data protection" />
     <h2>Safety, Data Security And Protection</h2>
     <p>Understand what information to protect, what not to share, and how to use AI more safely in business.</p>
   </article>
   <article class="service-card">
-    <img src="/assets/fct/business-visas.jpg" alt="Samui business startup checklist" />
+    <img src="/assets/fct/ai-next-steps/ai-samui-checklist.jpg" alt="Samui business startup checklist" />
     <h2>Samui Business Start Up Checklist</h2>
     <p>A practical Samui business checklist that can be converted into different languages for local and expat users.</p>
   </article>
   <article class="service-card">
-    <img src="/assets/fct/legal-house-1.png" alt="AI server setup" />
+    <img src="/assets/fct/ai-next-steps/ai-server-setup.jpg" alt="AI server setup" />
     <h2>Server Setup For AI</h2>
     <p>Advanced support for businesses that need hosting, servers, integrations, automation, or more technical AI systems.</p>
   </article>

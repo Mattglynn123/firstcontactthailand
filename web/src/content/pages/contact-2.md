@@ -22,9 +22,9 @@ draft: false
 
 Koh Samui, Thailand
 
-### **Email**
+### **WhatsApp**
 
-office@example.com
+Please use WhatsApp for enquiries.
 
 ### **Phone**
 

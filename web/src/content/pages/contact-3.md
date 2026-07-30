@@ -41,7 +41,7 @@ Contact Us
 _www.firstcontactthailand.com_
 
 _+61 434 194 524_  
-_mattglynn@yahoo.com_
+_WhatsApp preferred for now_
 
 [  
   
