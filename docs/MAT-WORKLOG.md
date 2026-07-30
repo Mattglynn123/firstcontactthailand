@@ -230,3 +230,13 @@ as the source change.
 - Rollback: previous live root retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-rollback-production-20260730-0520-a707e7a`.
 - Safety: Astro source/public-asset change only; DNS, SSL and mail services were not changed.
 - Verification: GitHub Actions build/QA passed; live homepage, `/ai-next-steps/`, `/pattaya-charity-programs/`, `/pattaya-save-a-childs-eyes/`, and `/contact-link/` returned HTTP 200; expected new image references were present; selected new image assets returned HTTP 200; checked no visible email address or `mailto:` on the verified live pages; Save a Childs Eyes detail images were distinct.
+
+## 2026-07-30 - AI repeated computer image fix
+
+- Request: change one of the repeated-looking computer photos on the AI Next Steps page and take it live.
+- Scope: replaced the `How AI Can Work With Meta` image and the `Samui Business Start Up Checklist` image so the obvious duplicated dashboard/table photos are no longer repeated.
+- Deployed source SHA: `1448991b95b272e9155f89a3d758039eb1825fec`.
+- Build source: GitHub Actions run `30532379522` passed.
+- Rollback: previous live image files retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-asset-backup-20260730-1448991-ai-images`.
+- Safety: live asset-only update to two existing image filenames; no DNS, SSL, mail or unrelated server files were changed.
+- Verification: server SHA-256 matched local replacement files; public `/ai-next-steps/?v=1448991` returned HTTP 200 and referenced both image filenames; public asset hashes matched the uploaded replacement images.
