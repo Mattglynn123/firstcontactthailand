@@ -190,3 +190,10 @@ as the source change.
 - Deployment destination: `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand`.
 - Verification: live homepage, `/contact-link/`, `/think-pink-samui/`, `/koh-samui-surf-lifesaving-club/`, `/support-4-autism-samui/`, `/swim-4-life-samui/`, `robots.txt` and `sitemap.xml` returned HTTP 200; new Samui image assets returned HTTP 200; checked no `/staging/` dependency in the unpacked deployment.
 - Status: live update complete; DNS, SSL and email services were not changed.
+
+## 2026-07-30 - Local Business Network AI next steps
+
+- Request: add a CTA under the AI block on Local Business Network and create an AI next-steps page using Mat's supplied headings, with a picture on each item.
+- Scope: added the `AI Next Steps` CTA on `/local-business-network/` and created `/ai-next-steps/` with 18 AI topic cards, each using an existing local image asset.
+- Safety: Astro content-only change; no server, DNS, SSL, email or live-site files changed in this source update.
+- Verification: pending build/QA.
