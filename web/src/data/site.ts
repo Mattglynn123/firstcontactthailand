@@ -108,7 +108,7 @@ export const priorityPages: Record<string, PriorityPage> = {
     gridColumns: 3,
     cards: [
       { title: 'Affiliate Marketing', text: 'Build trusted referral partnerships across Thailand and connect with businesses that can help your customers.', image: '/assets/fct/Marketing-scaled.jpg' },
-      { title: 'AI Community', text: 'Connect with local founders, operators, and business owners using practical tools to work smarter.', image: '/assets/fct/ai-community-local-business-network-20260530.jpeg' },
+      { title: 'AI Community', text: 'Connect with local founders, operators, and business owners using practical tools to work smarter.', image: '/assets/fct/ai-community-local-business-network-20260530.jpeg', href: '/ai-next-steps/', action: 'AI Next Steps' },
       { title: 'Business Done 4 U', text: 'Get practical local support for setting up, improving, and running your business in Thailand.', image: '/assets/fct/start-up-scaled.jpg' },
       { title: 'Co Working Spaces', text: 'Find flexible workspaces, meeting places, and local business hubs.', image: '/assets/fct/co-working-scaled.jpg' },
       { title: 'Crypto Education & Business', text: 'Connect with local crypto education, online business, and digital opportunity support.', image: '/assets/fct/crypto-scaled.jpg' },
