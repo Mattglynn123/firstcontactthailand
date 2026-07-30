@@ -210,3 +210,10 @@ as the source change.
 - Rollback: previous live root retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-rollback-production-20260730-1357-e6fa6d3`.
 - Safety: Astro content/public-asset change only; DNS, SSL and email services were not changed.
 - Verification: GitHub Actions build/QA passed; live `/ai-next-steps/` returned HTTP 200, referenced the new `assets/fct/ai-next-steps/` images, no longer referenced the repeated business images checked, and selected new PNG assets returned HTTP 200.
+
+## 2026-07-30 - AI next steps photo reinstatement
+
+- Request: reinstate the photo-style pictures on AI Next Steps and only change the pictures that were repeated.
+- Scope: restored the original photo-style image set, changed the repeated AI Business Start Up Pack and Meta cards to different photo assets, and removed the generated AI graphic asset folder from the active branch.
+- Safety: Astro content/public-asset change only; live deployment pending verified build/QA.
+- Verification: pending build/QA.
