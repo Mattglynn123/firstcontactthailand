@@ -215,5 +215,8 @@ as the source change.
 
 - Request: reinstate the photo-style pictures on AI Next Steps and only change the pictures that were repeated.
 - Scope: restored the original photo-style image set, changed the repeated AI Business Start Up Pack and Meta cards to different photo assets, and removed the generated AI graphic asset folder from the active branch.
-- Safety: Astro content/public-asset change only; live deployment pending verified build/QA.
-- Verification: pending build/QA.
+- Deployed source SHA: `ef705179f362bb0764b3f45f51eac77d37bbeaf0`.
+- Build source: GitHub Actions run `30521791888`, artifact `standalone-site-production`, SHA-256 `159460bbf5ddd08de24fd67951a40951722b2e52826c00d9036bc9afd6e2e11e`.
+- Rollback: previous live root retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-rollback-production-20260730-1508-ef70517`.
+- Safety: Astro content/public-asset change only; DNS, SSL and email services were not changed.
+- Verification: GitHub Actions build/QA passed; live `/ai-next-steps/` returned HTTP 200, restored photo-style card images, included the two replacement photo assets, removed generated graphic references, and selected image assets returned HTTP 200.
