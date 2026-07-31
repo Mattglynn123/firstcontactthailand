@@ -225,16 +225,10 @@ const { area } = Astro.props;
         listing.bedrooms ? `${listing.bedrooms} bed${listing.bedrooms === 1 ? '' : 's'}` : '',
         listing.bathrooms ? `${listing.bathrooms} bath${listing.bathrooms === 1 ? '' : 's'}` : '',
       ].filter(Boolean);
-      const badges = [
-        isNewListing(listing) ? '<span class="property-card__new">New Listing</span>' : '',
-        listing.featured ? '<span>Featured</span>' : '',
-      ].join('');
       const title = clean(listing.title) || `${areaName} Property For Sale`;
       return `<article class="property-card" data-location="${escapeHtml(clean(listing.location))}" data-price="${Number(listing.price) || 0}" data-bedrooms="${Number(listing.bedrooms) || 0}" data-bathrooms="${Number(listing.bathrooms) || 0}">
         <button class="property-card__media" type="button" data-gallery-open="${index}" aria-label="View photos of ${escapeHtml(title)}">
           <img class="${imageClass(image)}" src="${escapeHtml(image)}" alt="${escapeHtml(title)}" loading="lazy" decoding="async">
-          ${badges ? `<span class="property-card__badges">${badges}</span>` : ''}
-          ${listing.images?.length > 1 ? `<span class="property-card__photos">${listing.images.length} photos</span>` : ''}
         </button>
         <div class="property-card__body">
           <h3>${escapeHtml(title)}</h3>

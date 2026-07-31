@@ -19,7 +19,13 @@ const { page } = Astro.props;
               <img src={event.image} alt={event.title} loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/assets/fct/hero-community.jpg';" />
             </a>
             <div class="event-card__body">
-              <p class="event-card__date">{event.date}</p>
+              <p
+                class="event-card__date"
+                data-weekly-day={event.weeklyDay}
+                data-weekly-prefix={event.weeklyPrefix}
+              >
+                {event.date}
+              </p>
               <h2>{event.title}</h2>
               <p>{event.text}</p>
             </div>
@@ -38,3 +44,47 @@ const { page } = Astro.props;
     </div>
   </div>
 </section>
+
+<script>
+  (() => {
+    const bangkokFormatter = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Asia/Bangkok',
+      year: 'numeric',
+      month: 'numeric',
+      day: 'numeric',
+    });
+    const weekdayFormatter = new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'UTC',
+      weekday: 'long',
+    });
+    const monthFormatter = new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'UTC',
+      month: 'long',
+    });
+    const suffix = (day) => {
+      const teen = day % 100;
+      if (teen >= 11 && teen <= 13) return 'th';
+      if (day % 10 === 1) return 'st';
+      if (day % 10 === 2) return 'nd';
+      if (day % 10 === 3) return 'rd';
+      return 'th';
+    };
+    const todayInBangkok = () => {
+      const parts = Object.fromEntries(
+        bangkokFormatter.formatToParts(new Date()).map((part) => [part.type, part.value])
+      );
+      return new Date(Date.UTC(Number(parts.year), Number(parts.month) - 1, Number(parts.day)));
+    };
+
+    document.querySelectorAll('[data-weekly-day]').forEach((element) => {
+      const day = Number(element.getAttribute('data-weekly-day'));
+      if (!Number.isInteger(day)) return;
+      const today = todayInBangkok();
+      const daysUntil = (day - today.getUTCDay() + 7) % 7;
+      const nextDate = new Date(today);
+      nextDate.setUTCDate(today.getUTCDate() + daysUntil);
+      const dateLabel = `${weekdayFormatter.format(nextDate)} ${nextDate.getUTCDate()}${suffix(nextDate.getUTCDate())} ${monthFormatter.format(nextDate)}`;
+      element.textContent = `${element.getAttribute('data-weekly-prefix') ?? ''}${dateLabel}`;
+    });
+  })();
+</script>

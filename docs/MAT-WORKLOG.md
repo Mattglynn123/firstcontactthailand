@@ -240,3 +240,10 @@ as the source change.
 - Rollback: previous live image files retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-asset-backup-20260730-1448991-ai-images`.
 - Safety: live asset-only update to two existing image filenames; no DNS, SSL, mail or unrelated server files were changed.
 - Verification: server SHA-256 matched local replacement files; public `/ai-next-steps/?v=1448991` returned HTTP 200 and referenced both image filenames; public asset hashes matched the uploaded replacement images.
+
+## 2026-07-31 - Logo asset, property cards and Samui event updates
+
+- Request: keep the existing homepage logo active, provide the new high-quality logo for Mat to reuse elsewhere, remove the green overlays from property sale images, change the duplicated Property Management overview picture, replace three reused Surf Club charity pictures with ocean/beach images, and update Samui weekly event dates so they roll forward automatically.
+- Scope: restored the active header/footer logo file and sizing, saved the new square logo as a separate high-quality asset, removed property card and gallery overlay labels/masks, changed the Property Management tile to a different property image, updated the Surf Club detail cards to use beach/ocean photos instead of Swim 4 Life photos, and added a small Samui event date updater that calculates the next weekly event date in Thailand time.
+- Safety: Astro source/public-asset change only; no domain, SSL, mail or unrelated server files were changed.
+- Verification: `git diff --check` passed locally. Local dependency install/build was skipped because the laptop has about 100 MB free and no local `node_modules`; full production build and QA will be performed by GitHub Actions before any live update.

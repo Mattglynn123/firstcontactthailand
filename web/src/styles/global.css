@@ -1150,58 +1150,6 @@ h3 {
   transform: scale(1.13);
 }
 
-.property-card__media::after,
-.property-gallery__image-frame::after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 1;
-  width: min(42%, 190px);
-  height: min(22%, 72px);
-  background: linear-gradient(135deg, rgb(5 39 49 / 88%), rgb(5 39 49 / 54%));
-  content: "";
-  opacity: 0;
-  pointer-events: none;
-}
-
-.property-card__media:has(img.property-image--sanitized)::after,
-.property-gallery__image-frame:has(img.property-image--sanitized)::after {
-  opacity: 1;
-}
-
-.property-card__badges,
-.property-card__photos {
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  gap: 6px;
-  color: var(--paper);
-  font-size: 0.73rem;
-  font-weight: 850;
-}
-
-.property-card__badges {
-  top: 12px;
-  left: 12px;
-}
-
-.property-card__badges span,
-.property-card__photos {
-  padding: 5px 8px;
-  border-radius: 4px;
-  background: rgb(6 44 55 / 88%);
-}
-
-.property-card__badges .property-card__new {
-  background: #d71920;
-  color: var(--paper);
-}
-
-.property-card__photos {
-  right: 12px;
-  bottom: 12px;
-}
-
 .property-card__body {
   display: flex;
   flex: 1;

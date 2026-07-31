@@ -4,6 +4,8 @@ export type RegionalEvent = {
   text: string;
   image: string;
   href?: string;
+  weeklyDay?: number;
+  weeklyPrefix?: string;
 };
 
 export type RegionalEventsPage = {
@@ -22,12 +24,12 @@ export const regionalEvents: Record<string, RegionalEventsPage> = {
     archiveSlug: 'samui',
     intro: 'Check out our community events on Samui.',
     events: [
-      { date: 'Every Wednesday - next session: Wednesday 22 July', title: 'Ai Meet Up', text: '4:00 pm - 6:00 pm. Weekly meetup at Nature Bar, Maenam.', image: '/assets/fct/ai-community-meeting.jpeg', href: '/contact-link/?topic=AI%20Meet%20Up' },
-      { date: 'Every Wednesday - next session: Wednesday 22 July', title: 'Crypto Community Gathering', text: '4:00 pm - 6:00 pm. Weekly community meetup at Nature Bar, Maenam.', image: '/assets/fct/past-event-crypto-community-gathering.jpeg', href: '/contact-link/?topic=Crypto%20Community%20Gathering' },
-      { date: 'Every Wednesday - next session: Wednesday 22 July', title: 'Morning Beach Walk Meetup', text: 'Wednesday mornings. A relaxed beach walk for locals, expats, and visitors who want to stay active and meet people.', image: '/assets/fct/beach-1-scaled.jpg', href: '/contact-link/?topic=Morning%20Beach%20Walk%20Meetup' },
-      { date: 'Every Thursday - next session: Thursday 23 July', title: 'Pub Quiz', text: '7:00 pm - 9:45 pm. Weekly Thursday quiz at Nature Bar, Maenam.', image: '/assets/fct/pub-quiz-nature-bar.jpeg', href: '/contact-link/?topic=Pub%20Quiz' },
-      { date: 'Every Friday - next session: Friday 24 July', title: 'Business Lunch', text: '3:00 pm - 5:00 pm. Weekly Friday business lunch at Nature Bar, Maenam.', image: '/assets/fct/friday-business-networking-lunch.png', href: '/contact-link/?topic=Business%20Lunch' },
-      { date: 'Every Saturday - next session: Saturday 25 July', title: 'Beach Walk', text: '4:00 pm - 6:00 pm. Weekly Saturday beach walk.', image: '/assets/fct/beach-walk-community.jpg', href: '/contact-link/?topic=Beach%20Walk' },
+      { date: 'Every Wednesday - next session: Wednesday 5th August', weeklyDay: 3, weeklyPrefix: 'Every Wednesday - next session: ', title: 'Ai Meet Up', text: '4:00 pm - 6:00 pm. Weekly meetup at Nature Bar, Maenam.', image: '/assets/fct/ai-community-meeting.jpeg', href: '/contact-link/?topic=AI%20Meet%20Up' },
+      { date: 'Every Wednesday - next session: Wednesday 5th August', weeklyDay: 3, weeklyPrefix: 'Every Wednesday - next session: ', title: 'Crypto Community Gathering', text: '4:00 pm - 6:00 pm. Weekly community meetup at Nature Bar, Maenam.', image: '/assets/fct/past-event-crypto-community-gathering.jpeg', href: '/contact-link/?topic=Crypto%20Community%20Gathering' },
+      { date: 'Every Wednesday - next session: Wednesday 5th August', weeklyDay: 3, weeklyPrefix: 'Every Wednesday - next session: ', title: 'Morning Beach Walk Meetup', text: 'Wednesday mornings. A relaxed beach walk for locals, expats, and visitors who want to stay active and meet people.', image: '/assets/fct/beach-1-scaled.jpg', href: '/contact-link/?topic=Morning%20Beach%20Walk%20Meetup' },
+      { date: 'Every Thursday - next session: Thursday 6th August', weeklyDay: 4, weeklyPrefix: 'Every Thursday - next session: ', title: 'Pub Quiz', text: '7:00 pm - 9:45 pm. Weekly Thursday quiz at Nature Bar, Maenam.', image: '/assets/fct/pub-quiz-nature-bar.jpeg', href: '/contact-link/?topic=Pub%20Quiz' },
+      { date: 'Every Friday - next session: Friday 31st July', weeklyDay: 5, weeklyPrefix: 'Every Friday - next session: ', title: 'Business Lunch', text: '3:00 pm - 5:00 pm. Weekly Friday business lunch at Nature Bar, Maenam.', image: '/assets/fct/friday-business-networking-lunch.png', href: '/contact-link/?topic=Business%20Lunch' },
+      { date: 'Every Saturday - next session: Saturday 1st August', weeklyDay: 6, weeklyPrefix: 'Every Saturday - next session: ', title: 'Beach Walk', text: '4:00 pm - 6:00 pm. Weekly Saturday beach walk.', image: '/assets/fct/beach-walk-community.jpg', href: '/contact-link/?topic=Beach%20Walk' },
       { date: 'Friday 31st July 2026', title: 'Full Moon Party VIP Trip', text: 'VIP Full Moon Party trip by speedboat to Koh Phangan, with welcome drink at Nature Bar, Maenam, hotel pick up and drop off, and return departure around 1:30 am.', image: '/assets/fct/full-moon-party-vip-trip-31-july-2026.png', href: '/assets/fct/full-moon-party-vip-trip-31-july-2026.png' },
     ],
   },
