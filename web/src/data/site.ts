@@ -129,7 +129,7 @@ export const priorityPages: Record<string, PriorityPage> = {
   },
   'ai-next-steps': {
     slug: 'ai-next-steps',
-    title: 'AI Next Steps',
+    title: 'Ai',
     seoTitle: 'AI Next Steps | First Contact Thailand',
     description: 'Practical AI tutorials, prompts, tools, safety and business planning topics for local businesses in Thailand.',
     heroText: 'Practical AI topics for local businesses that want simple, useful ways to get started, save time, improve marketing, and connect existing tools.',

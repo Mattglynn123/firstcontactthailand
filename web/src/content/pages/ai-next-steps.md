@@ -1,5 +1,5 @@
 ---
-title: "AI Next Steps"
+title: "Ai"
 slug: "ai-next-steps"
 date: 2026-07-30T00:00:00
 modified: 2026-07-30T00:00:00
@@ -7,7 +7,7 @@ menuOrder: 0
 draft: false
 ---
 
-# AI Next Steps
+# Ai
 
 Practical AI topics for local businesses that want simple, useful ways to get started, save time, improve marketing, and connect existing tools.
 

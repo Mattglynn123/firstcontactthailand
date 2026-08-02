@@ -251,3 +251,9 @@ as the source change.
 - Rollback: previous live root retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-rollback-production-20260731-0319-5470194`.
 - Deployment destination: `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand`.
 - Verification: `git diff --check` passed locally. GitHub Actions `npm ci`, production build, preview, route/responsive QA and artifact upload passed. Live homepage, `/property/`, `/property-sales/koh-samui/`, `/koh-samui-surf-lifesaving-club/`, `/community-events/`, the active logo asset and the high-quality logo asset returned HTTP 200. Live content checks confirmed the Property Management image uses `house-2-scaled.jpg`, property overlay markers are absent, Surf Club uses the three beach/ocean images, stale July event dates are absent, and weekly date data is present.
+
+## 2026-08-02 - AI page heading
+
+- Request: change the visible heading on the AI Next Steps page to `Ai`.
+- Scope: updated the visible priority-page title and matching markdown heading only; page cards, links, images and SEO title were left unchanged.
+- Verification: pending GitHub Actions QA after push.
