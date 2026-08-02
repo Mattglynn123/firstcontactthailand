@@ -1,41 +1,36 @@
 ---
-import { contact } from '../data/site';
-import { MessageCircle, Phone } from '@lucide/astro';
+import { Facebook, Instagram, Mail, MapPin, MessageCircle, Phone } from '@lucide/astro';
 
-const year = 2024;
+const year = new Date().getFullYear();
 ---
 
-<footer class="site-footer">
-  <div class="site-footer__inner">
-    <div class="site-footer__brand">
-      <img src="/assets/fct/cropped-firstcontact.png" alt="First Contact Thailand" width="94" height="116" />
-      <p>First Contact Thailand connects locals, expats, and visitors with trusted businesses, community events, helpful services, and local support across Thailand.</p>
+<footer class="ks-site-footer">
+  <div class="ks-site-footer__inner">
+    <div class="ks-site-footer__brand">
+      <img src="/assets/fct/S.LS_.C.K.S-Logo-copy-150x150.png" alt="Koh Samui Surf Lifesaving Club" width="86" height="86" />
+      <p>Koh Samui Surf Lifesaving Club is a community-led volunteer club building safer beaches, stronger youth programs and practical lifesaving skills on the island.</p>
     </div>
-    <nav class="site-footer__links" aria-label="Footer links">
-      <h2>Quick Links</h2>
-      <a href="/charity/">Charity Work</a>
-      <a href="/community-events/">Community Events</a>
-      <a href="/health-fitness/">Health &amp; Fitness</a>
-      <a href="/hire/">Hire</a>
-      <a href="/local-business-network/">Local Business Network</a>
-      <a href="/local-deals/">Local Deals</a>
-      <a href="/property/">Property</a>
-      <a href="/tours-2/">Tours</a>
+
+    <nav class="ks-site-footer__links" aria-label="Footer links">
+      <h2>Club</h2>
+      <a href="#life-saving">Life Saving</a>
+      <a href="#training">Training</a>
+      <a href="#nippers">Nippers</a>
+      <a href="#surf-sports">Surf Sports</a>
+      <a href="#supporters">Sponsors</a>
     </nav>
-    <div class="site-footer__contact">
-      <h2>Contact Us</h2>
-      <a href={`tel:${contact.phoneDisplay.replace(/\s/g, '')}`}><Phone aria-hidden="true" size={18} />+66803378707</a>
-      <a href={contact.facebook} target="_blank" rel="noreferrer">
-        <span class="site-footer__social-icon" aria-hidden="true">f</span>
-        Facebook
-      </a>
-      <a href={contact.whatsapp} target="_blank" rel="noreferrer">
-        <MessageCircle class="site-footer__lucide-icon" aria-hidden="true" size={18} />
-        WhatsApp
-      </a>
+
+    <div class="ks-site-footer__contact">
+      <h2>Stay Connected</h2>
+      <a href="/contact-link/?topic=Koh%20Samui%20Surf%20Lifesaving%20Club"><Mail aria-hidden="true" size={18} /> Club enquiries</a>
+      <a href="tel:+66803378707"><Phone aria-hidden="true" size={18} /> +66 80 337 8707</a>
+      <a href="https://wa.me/66803378707" target="_blank" rel="noreferrer"><MessageCircle aria-hidden="true" size={18} /> WhatsApp</a>
+      <a href="https://www.facebook.com/groups/321622170289599" target="_blank" rel="noreferrer"><Facebook aria-hidden="true" size={18} /> Facebook</a>
+      <a href="#top"><Instagram aria-hidden="true" size={18} /> Instagram coming soon</a>
+      <p><MapPin aria-hidden="true" size={18} /> Koh Samui, Thailand</p>
     </div>
   </div>
-  <div class="site-footer__legal">
-    <p>Copyright &copy; {year} First Contact Thailand</p>
+  <div class="ks-site-footer__legal">
+    <p>Copyright &copy; {year} Koh Samui Surf Lifesaving Club. All rights reserved.</p>
   </div>
 </footer>
