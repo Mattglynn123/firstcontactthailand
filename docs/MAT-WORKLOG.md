@@ -272,6 +272,12 @@ as the source change.
 - Deployment destination: `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand`.
 - Verification: `git diff --check` passed locally. GitHub Actions build/QA passed. Live `/local-business-network/`, `/ai-next-steps/`, `/community-events/`, and `/past-events/` returned HTTP 200; checked live HTML contains `Ai`, no standalone uppercase `AI`, and `/ai-next-steps/` contains `<h1>Ai</h1>` plus `Basic Ai Tutorials`.
 
+## 2026-08-02 - Ai card heading display fix
+
+- Request: on the Ai sub-page, make card headings visually read `Ai` instead of being displayed as uppercase `AI`.
+- Scope: added a scoped style override for `/ai-next-steps/` service-card headings only; source text, links, images and other pages were left unchanged.
+- Verification: pending GitHub Actions build/QA and live verification after deployment.
+
 ## 2026-08-02 - Koh Samui Surf Lifesaving Club rebuild
 
 - Request: restart the site as a brand new Koh Samui Surf Lifesaving Club website, using the BMD Northcliffe site as the base reference and upgrading it with selected Surfers Paradise Surf Lifesaving Club ideas.

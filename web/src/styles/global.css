@@ -760,6 +760,10 @@ h3 {
   text-transform: uppercase;
 }
 
+.reference-page--ai-next-steps .service-tile h2 {
+  text-transform: none;
+}
+
 .service-tile p {
   flex: 1;
   min-height: 120px;
