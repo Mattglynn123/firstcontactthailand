@@ -16,7 +16,7 @@ export const pastEvents: Record<string, PastEventsPage> = {
       { title: 'Beach Craft Market', date: '30 May 2026', text: 'Local makers, crafts and community connections at Nature Bar, Maenam Beach.', image: '/assets/fct/beach-craft-market-nature-bar-maenam-20260530.jpeg' },
       { title: 'Beach Party', date: '30 May 2026', text: 'A relaxed community afternoon by the sea at Nature Bar, Maenam Beach.', image: '/assets/fct/beach-party-may.jpeg' },
       { title: 'Business Networking Lunch', date: '29 May 2026', text: 'The weekly First Contact business lunch at Nature Bar, Maenam Beach.', image: '/assets/fct/friday-business-networking-lunch.png' },
-      { title: 'AI Community Meeting', date: '27 May 2026', text: 'Practical conversations about AI, local projects and business ideas.', image: '/assets/fct/ai-community-meeting.jpeg' },
+      { title: 'Ai Community Meeting', date: '27 May 2026', text: 'Practical conversations about Ai, local projects and business ideas.', image: '/assets/fct/ai-community-meeting.jpeg' },
       { title: 'Paint & Sip', date: '3 May 2026', text: 'A creative community afternoon at Nature Bar.', image: '/assets/fct/past-event-paint-and-sip-3-may-4.jpeg' },
       { title: 'Koh Samui ANZAC Day', date: '25 April 2026', text: 'A community beach commemoration at Nature Bar.', image: '/assets/fct/past-event-anzac-day-25-april.jpeg' },
       { title: 'Songkran Family Beach Party', date: '13 April 2026', text: 'A family Songkran celebration on Maenam Beach.', image: '/assets/fct/past-event-songkran-family-beach-party-13-april.jpeg' },

@@ -18,8 +18,8 @@ Our collective network includes over 500 businesses, bringing together locals an
     <p>Build trusted referral partnerships across Thailand and connect with businesses that can help your customers.</p>
   </article>
   <article class="service-card">
-    <img src="/assets/fct/ai-community-local-business-network-20260530.jpeg" alt="AI Community" />
-    <h2>AI Community</h2>
+    <img src="/assets/fct/ai-community-local-business-network-20260530.jpeg" alt="Ai Community" />
+    <h2>Ai Community</h2>
     <p>Connect with local founders, operators, and business owners using practical tools to work smarter.</p>
   </article>
   <article class="service-card">

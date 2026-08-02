@@ -13,7 +13,7 @@ Check out our community events on Samui.
 
 <section class="service-card-grid service-card-grid-three" aria-label="Koh Samui upcoming events">
   <article class="service-card">
-    <h2>AI Meet Up</h2>
+    <h2>Ai Meet Up</h2>
     <p>Wednesday 3 June, 4:00 pm to 6:00 pm at Nature Bar, Maenam.</p>
     <a href="/contact-link/?fct_event=ai-meet-up">Ask about this event</a>
   </article>

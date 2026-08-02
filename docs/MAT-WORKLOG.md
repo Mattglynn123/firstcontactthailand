@@ -261,3 +261,9 @@ as the source change.
 - Rollback: previous live root retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-rollback-production-20260802-0131-444bc6f`.
 - Deployment destination: `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand`.
 - Verification: GitHub Actions build/QA passed. Live `/` and `/ai-next-steps/` returned HTTP 200; `/ai-next-steps/` contains `<h1>Ai</h1>` and no longer contains `<h1>AI Next Steps</h1>`.
+
+## 2026-08-02 - Ai wording normalization
+
+- Request: make all visible Ai wording on the Local Business Network page and related Ai pages use `Ai` instead of uppercase `AI`.
+- Scope: normalized standalone `AI` wording to `Ai` across the Local Business Network source, Ai Next Steps source, related community event content, page metadata and contact topic links; lowercase URL slugs and filenames were left unchanged.
+- Verification: pending GitHub Actions build/QA and live verification after deployment.

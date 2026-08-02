@@ -21,7 +21,7 @@ Previous First Contact community events and poster archive.
 
 [![Business Networking Lunch past event poster](/assets/fct/friday-business-networking-lunch.png) **Business Networking Lunch** Friday 29 May 2026, 3:00 pm – 5:00 pm _Nature Bar, Maenam Beach_](/community-events/)
 
-[![AI Community Meeting past event poster](/assets/fct/ai-community-meeting.jpeg) **AI Community Meeting** Wednesday 27 May 2026, 4:00 pm – 6:00 pm _Nature Bar, Maenam Beach_](/community-events/)
+[![Ai Community Meeting past event poster](/assets/fct/ai-community-meeting.jpeg) **Ai Community Meeting** Wednesday 27 May 2026, 4:00 pm – 6:00 pm _Nature Bar, Maenam Beach_](/community-events/)
 
 [![Paint and Sip past event poster](/assets/fct/past-event-paint-and-sip-3-may-4.jpeg) **Paint & Sip** Sunday 3 May, 4:00 pm – 6:00 pm _Nature Bar_](/assets/fct/past-event-paint-and-sip-3-may-4.jpeg)
 

@@ -40,9 +40,9 @@ export const communityEvents: CommunityEvent[] = [
     dates: ['2026-07-22', '2026-07-29', '2026-08-05', '2026-08-12', '2026-08-19'],
     startTime: '16:00',
     endTime: '18:00',
-    title: 'AI Community Meeting',
+    title: 'Ai Community Meeting',
     venue: 'Nature Bar, Maenam Beach',
-    excerpt: 'A weekly AI community meeting for practical conversations, local projects, new tools and useful business ideas.',
+    excerpt: 'A weekly Ai community meeting for practical conversations, local projects, new tools and useful business ideas.',
     image: '/assets/fct/ai-community-meeting.jpeg',
   }),
   ...recurring({

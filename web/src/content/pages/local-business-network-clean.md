@@ -15,9 +15,9 @@ draft: false
 
 Our collective network includes over 500 businesses, bringing together locals and expats to connect people with trusted services throughout Thailand.
 
-![AI Community](/assets/fct/ai-community-local-business-network-20260530.jpeg)
+![Ai Community](/assets/fct/ai-community-local-business-network-20260530.jpeg)
 
-## AI Community
+## Ai Community
 
 Connect with local founders, operators, and business owners using practical tools to work smarter.
 
