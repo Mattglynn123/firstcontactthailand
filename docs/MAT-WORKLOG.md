@@ -266,4 +266,14 @@ as the source change.
 
 - Request: make all visible Ai wording on the Local Business Network page and related Ai pages use `Ai` instead of uppercase `AI`.
 - Scope: normalized standalone `AI` wording to `Ai` across the Local Business Network source, Ai Next Steps source, related community event content, page metadata and contact topic links; lowercase URL slugs and filenames were left unchanged.
-- Verification: pending GitHub Actions build/QA and live verification after deployment.
+- Deployed source SHA: `a6045a3692c3e6921f268592988db2dab8fc3e33`.
+- Build source: GitHub Actions run `30734535651`, artifact `standalone-site-production`, SHA-256 `465ead7de968f7d3a3f9efc12ef14bfe94462c4656e1e9c8357bfcdcd29b3704`.
+- Rollback: previous live root retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-rollback-production-20260802-0155-a6045a3`.
+- Deployment destination: `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand`.
+- Verification: `git diff --check` passed locally. GitHub Actions build/QA passed. Live `/local-business-network/`, `/ai-next-steps/`, `/community-events/`, and `/past-events/` returned HTTP 200; checked live HTML contains `Ai`, no standalone uppercase `AI`, and `/ai-next-steps/` contains `<h1>Ai</h1>` plus `Basic Ai Tutorials`.
+
+## 2026-08-02 - Koh Samui Surf Lifesaving Club rebuild
+
+- Request: restart the site as a brand new Koh Samui Surf Lifesaving Club website, using the BMD Northcliffe site as the base reference and upgrading it with selected Surfers Paradise Surf Lifesaving Club ideas.
+- Scope: replaced the homepage with a surf-club site structure, rebranded the shared header and footer, reused the existing Samui surf lifesaving logo, and added Northcliffe-inspired hero, club block navigation, lifesaving, training, Nippers, surf sports, events, supporter, FAQ and contact sections with Surfers Paradise-style get-involved polish.
+- Verification: `git diff --check` passed locally. `npm ci`, `npm run build`, local dev server and visual QA could not be completed because this Windows environment has no `npm` on PATH and the C: drive is reporting 0 bytes free, causing the bundled package manager install to fail with disk I/O/full-disk errors.
