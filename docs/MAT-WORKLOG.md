@@ -276,7 +276,11 @@ as the source change.
 
 - Request: on the Ai sub-page, make card headings visually read `Ai` instead of being displayed as uppercase `AI`.
 - Scope: added a scoped style override for `/ai-next-steps/` service-card headings only; source text, links, images and other pages were left unchanged.
-- Verification: pending GitHub Actions build/QA and live verification after deployment.
+- Deployed source SHA: `9e46beea9cecdde2ef440e9b12bfbc08a7703fd2`.
+- Build source: GitHub Actions run `30736600605`, artifact `standalone-site-production`, SHA-256 `b96f821c149f8b7c10f106d05a36dc9ce919bbb5c78085049462929c8d7ad93c`.
+- Rollback: previous live root retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-rollback-production-20260802-0302-9e46bee`.
+- Deployment destination: `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand`.
+- Verification: GitHub Actions build/QA passed. Live `/ai-next-steps/`, `/local-business-network/`, `/community-events/`, and `/past-events/` returned HTTP 200; live `/ai-next-steps/` contains `<h1>Ai</h1>`, `Basic Ai Tutorials`, no standalone uppercase `AI`, and the deployed CSS contains the scoped `text-transform:none` override for Ai Next Steps headings.
 
 ## 2026-08-02 - Koh Samui Surf Lifesaving Club rebuild
 
