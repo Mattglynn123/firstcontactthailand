@@ -6,24 +6,27 @@ const navItems = [
   { label: 'Nippers', href: '#nippers' },
   { label: 'Life Saving', href: '#life-saving' },
   { label: 'Surf Sports', href: '#surf-sports' },
-  { label: 'Training', href: '#training' },
-  { label: 'Get Involved', href: '#join' },
+  { label: 'Get Involved', href: '#support' },
+  { label: 'Functions & Events', href: '#functions' },
+  { label: 'Athletes', href: '#athletes' },
+  { label: 'Coaches', href: '#coaches' },
+  { label: 'Location', href: '#location' },
 ];
 ---
 
 <header class="ks-site-header" data-site-header>
   <a class="ks-skip-link" href="#main-content">Skip to content</a>
   <div class="ks-site-header__bar">
-    <a class="ks-brand" href="/" aria-label="Koh Samui Surf Lifesaving Club home">
-      <img src="/assets/fct/S.LS_.C.K.S-Logo-copy-150x150.png" alt="Koh Samui Surf Lifesaving Club" width="80" height="80" />
-      <span>Koh Samui<br />Surf Lifesaving Club</span>
+    <a class="ks-brand" href="/" aria-label="SLSC Koh Samui home">
+      <img src="/assets/fct/S.LS_.C.K.S-Logo-copy-150x150.png" alt="SLSC Koh Samui" width="80" height="80" />
+      <span>SLSC<br />Koh Samui</span>
     </a>
 
     <nav class="ks-desktop-nav" aria-label="Primary navigation">
       {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
     </nav>
 
-    <a class="ks-header-cta" href="/contact-link/?topic=Koh%20Samui%20Surf%20Lifesaving%20Club">Contact</a>
+    <a class="ks-header-cta" href="https://www.gofundme.com/f/build-a-safer-future-for-koh-samuis-children" target="_blank" rel="noreferrer">Donate</a>
 
     <button class="ks-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation" title="Open navigation">
       <Menu aria-hidden="true" size={28} stroke-width={2.2} />
@@ -41,7 +44,8 @@ const navItems = [
       </div>
       <nav class="ks-mobile-nav__links" aria-label="Mobile primary navigation">
         {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
-        <a href="/contact-link/?topic=Koh%20Samui%20Surf%20Lifesaving%20Club">Contact the club</a>
+        <a href="https://www.gofundme.com/f/build-a-safer-future-for-koh-samuis-children" target="_blank" rel="noreferrer">Donate</a>
+        <a href="https://wa.me/61434194524" target="_blank" rel="noreferrer">WhatsApp Matt</a>
       </nav>
     </aside>
   </div>
