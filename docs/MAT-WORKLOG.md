@@ -256,4 +256,8 @@ as the source change.
 
 - Request: change the visible heading on the AI Next Steps page to `Ai`.
 - Scope: updated the visible priority-page title and matching markdown heading only; page cards, links, images and SEO title were left unchanged.
-- Verification: pending GitHub Actions QA after push.
+- Deployed source SHA: `444bc6f21d4d7829d02813e0da56a6a385e34e93`.
+- Build source: GitHub Actions run `30729425938`, artifact `standalone-site-production`, SHA-256 `6395747be32d99d7ad29235570d11304c4745a258623608031f457da21752e2e`.
+- Rollback: previous live root retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-rollback-production-20260802-0131-444bc6f`.
+- Deployment destination: `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand`.
+- Verification: GitHub Actions build/QA passed. Live `/` and `/ai-next-steps/` returned HTTP 200; `/ai-next-steps/` contains `<h1>Ai</h1>` and no longer contains `<h1>AI Next Steps</h1>`.
