@@ -3,38 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Koh Samui Surf Lifesaving Club - Review v9</title>
-  <style>
-    body{margin:0;min-height:100vh;display:grid;place-items:center;background:#fff;color:#062a44;font-family:Arial,Helvetica,sans-serif;text-align:center;padding:2rem}a{color:#d71920;font-weight:900}
-  </style>
+  <meta http-equiv="refresh" content="0; url=samui-northcliffe-review-v10.html#top" />
+  <title>Koh Samui Surf Lifesaving Club Review</title>
+  <style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#fff;color:#062a44;font-family:Arial,Helvetica,sans-serif;text-align:center;padding:2rem}a{color:#d71920;font-weight:900}</style>
 </head>
 <body>
   <main>
     <h1>Koh Samui Surf Lifesaving Club Review</h1>
     <p>Opening the latest review page...</p>
-    <p><a href="samui-northcliffe-review-v8.html#top">Open backup review page</a></p>
+    <p><a href="samui-northcliffe-review-v10.html#top">Open latest review page</a></p>
   </main>
-  <script>
-    (async function(){
-      const response = await fetch('samui-northcliffe-review-v8.html', { cache: 'no-store' });
-      if (!response.ok) throw new Error('Could not load review page');
-      let html = await response.text();
-      const sponsorCss = `
-    .sponsor-logo-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
-    .sponsor-logo-card{min-height:168px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;padding:1.15rem;background:#fff;color:var(--navy);border-top:8px solid var(--yellow);font-weight:950;text-align:center;text-decoration:none;text-transform:uppercase;box-shadow:0 12px 28px rgb(0 0 0 / 10%)}
-    .sponsor-logo-card img{width:min(170px,100%);height:98px;object-fit:contain}.sponsor-logo-card span{font-size:.82rem;line-height:1.15}.sponsor-logo-card:hover{transform:translateY(-2px)}
-    @media(max-width:720px){.sponsor-logo-card{min-height:150px}.sponsor-logo-card img{height:88px}}`;
-      html = html.replace('</style>', sponsorCss + '\n  </style>');
-      html = html.replace('Sponsor logos, GoFundMe supporters, Rotary information and local partner links can be added here when ready.', 'Sponsor logos are starting to appear here now, with GoFundMe supporters, Rotary information and more local partner links ready to add as they are confirmed.');
-      html = html.replace('<div class="sponsor-grid"><div class="sponsor-card">Major Sponsor</div><div class="sponsor-card">Nature Bar Partner</div><div class="sponsor-card">Equipment Supporter</div><div class="sponsor-card">Community Partner</div></div>', '<div class="sponsor-grid sponsor-logo-grid"><a class="sponsor-logo-card" href="https://firstcontactthailand.com/"><img src="https://kohsamuislsc.com/sponsor-first-contact.png" alt="First Contact Thailand"><span>First Contact Thailand</span></a><a class="sponsor-logo-card" href="https://linktr.ee/lickkohsamui"><img src="https://kohsamuislsc.com/sponsor-lick-koh-samui.png" alt="Lick Koh Samui"><span>Lick Koh Samui</span></a><a class="sponsor-logo-card" href="https://shop.minairal.com/"><img src="https://kohsamuislsc.com/sponsor-minairal.png" alt="Minairal"><span>Minairal</span></a><div class="sponsor-logo-card"><span>Community Partner</span></div></div>');
-      html = html.replace('Koh Samui Surf Lifesaving Club - Review', 'Koh Samui Surf Lifesaving Club - Review v9');
-      document.open();
-      document.write(html);
-      document.close();
-    })().catch(function(error){
-      document.body.innerHTML = '<main><h1>Review page loading issue</h1><p>Please use the backup page while I fix this preview.</p><p><a href="samui-northcliffe-review-v8.html#top">Open backup review page</a></p></main>';
-      console.error(error);
-    });
-  </script>
 </body>
 </html>
