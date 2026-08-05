@@ -1,90 +1,644 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Koh Samui Surf Lifesaving Club - Northcliffe Style Review</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Koh Samui Surf Lifesaving Club | Review v17</title>
   <link rel="stylesheet" href="samui-review-v17.css" />
   <style>
-    .slideshow{position:relative;width:100%;height:min(40vw,565px);min-height:390px;overflow:hidden;background:var(--navy)}
-    .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.04);animation:show 32s infinite}
-    .slide:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgb(0 0 0 / 8%),rgb(0 0 0 / 0) 58%,rgb(0 0 0 / 10%))}
-    .slide:nth-child(1){background-image:url('assets/samui-v17/hero-tony-logo-board.png');animation-delay:0s;background-position:center 52%}
-    .slide:nth-child(2){background-image:url('assets/samui-v17/hero-sunset-board.jpg');animation-delay:8s;background-position:center 58%}
-    .slide:nth-child(3){background-image:url('assets/samui-v13/carousel-rescue.webp');animation-delay:16s;background-position:center 48%}
-    .slide:nth-child(4){background-image:url('assets/samui-v13/carousel-water.webp');animation-delay:24s;background-position:center 48%}
-    .arrows span{position:absolute;z-index:2;top:50%;width:48px;height:48px;border:2px solid rgb(255 255 255 / 88%);display:grid;place-items:center;color:#fff;font-size:1.9rem;font-weight:700;transform:translateY(-50%);background:rgb(0 0 0 / 16%)}
-    .arrows span:first-child{left:24px}.arrows span:last-child{right:24px}
-    .dots{position:absolute;z-index:2;left:50%;bottom:18px;display:flex;gap:.55rem;transform:translateX(-50%)}
-    .dots i{width:12px;height:12px;border:2px solid #fff;border-radius:50%;background:transparent;animation:dot 32s infinite}
-    .dots i:nth-child(2){animation-delay:8s}.dots i:nth-child(3){animation-delay:16s}.dots i:nth-child(4){animation-delay:24s}
-    .rescue-strip{height:12px;background:linear-gradient(90deg,var(--red) 0 42%,var(--yellow) 42% 58%,var(--red) 58% 100%)}
-    .statement{padding:2.1rem 1rem 2.2rem;text-align:center;background:#fff}
-    .statement p{margin:0;color:var(--red);font-size:.9rem;font-weight:950;text-transform:uppercase;letter-spacing:.08em}
-    .section{width:min(calc(100% - 2rem),1180px);margin:0 auto}
-    .blocks{padding:3.4rem 0;background:var(--navy)}
-    .block-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:.9rem}
-    .block{position:relative;min-height:205px;overflow:hidden;background:#12334d;color:#fff;text-decoration:none;border:1px solid rgb(255 255 255 / 12%)}
-    .block img{width:100%;height:100%;object-fit:cover;filter:saturate(1.15) contrast(1.04);transition:transform .22s ease}
-    .block:hover img{transform:scale(1.04)}
-    .block:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgb(0 0 0 / 0),rgb(0 0 0 / 76%))}
-    .block__copy{position:absolute;z-index:1;left:0;right:0;bottom:0;padding:.85rem}
-    .block strong{display:block;color:#fff;font-size:1.08rem;line-height:1.05;font-weight:950;text-transform:uppercase}
-    .block span{display:block;margin-top:.25rem;color:#e9f3f7;font-size:.78rem}
-    .content-section{padding:4.8rem 0;background:#fff}
-    .content-section.soft{background:var(--soft)}
-    .venue-strip{background:linear-gradient(135deg,var(--red),var(--red) 48%,var(--yellow) 48%,var(--yellow));color:#fff}
-    .venue-strip h2,.venue-strip .lead{color:#fff}.venue-strip .yellow-note{background:#fff;color:var(--red)}
-    .sponsor-strip{background:var(--navy);color:#fff}.sponsor-strip h2,.sponsor-strip .lead,.sponsor-strip h3{color:#fff}
-    @media(max-width:1180px){.block-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-    @media(max-width:720px){.block-grid{grid-template-columns:1fr}}
+    :root {
+      --club-red: #e4211c;
+      --club-yellow: #ffd21f;
+      --club-blue: #063b84;
+      --club-dark: #09213d;
+      --club-soft: #f6f7fb;
+      --shadow: 0 22px 46px rgba(7, 20, 43, 0.14);
+    }
+
+    body {
+      margin: 0;
+      color: var(--club-dark);
+      background: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid rgba(9, 33, 61, 0.12);
+      backdrop-filter: blur(14px);
+    }
+
+    .header__inner {
+      width: min(1180px, calc(100% - 32px));
+      min-height: 78px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 230px;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: 0;
+      color: var(--club-blue);
+      text-transform: uppercase;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+    }
+
+    .brand small {
+      display: block;
+      color: #56677c;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .nav {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--club-dark);
+      padding: 8px 0;
+      border-bottom: 3px solid transparent;
+    }
+
+    .nav a:hover,
+    .nav a:focus {
+      color: var(--club-red);
+      border-bottom-color: var(--club-yellow);
+    }
+
+    .support-button,
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 0;
+      background: var(--club-red);
+      color: #fff;
+      border-radius: 0;
+      font-size: 0.84rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      box-shadow: 0 12px 24px rgba(228, 33, 28, 0.22);
+    }
+
+    .button--yellow {
+      background: var(--club-yellow);
+      color: var(--club-dark);
+      box-shadow: 0 12px 24px rgba(255, 210, 31, 0.24);
+    }
+
+    .slideshow {
+      position: relative;
+      height: clamp(420px, 70vw, 760px);
+      min-height: 430px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      background-position: center;
+      background-size: cover;
+      animation: carouselFade 24s infinite;
+    }
+
+    .slide:nth-child(1) {
+      animation-delay: 0s;
+      background-image:
+        linear-gradient(90deg, rgba(5, 14, 30, 0.72), rgba(5, 14, 30, 0.18) 62%, rgba(5, 14, 30, 0.4)),
+        url("assets/samui-v17/hero-sunset-board.jpg");
+    }
+
+    .slide:nth-child(2) {
+      animation-delay: 6s;
+      background-image:
+        linear-gradient(90deg, rgba(5, 14, 30, 0.68), rgba(5, 14, 30, 0.1) 62%, rgba(5, 14, 30, 0.36)),
+        url("assets/samui-v17/helpers-large-group-water.jpg");
+    }
+
+    .slide:nth-child(3) {
+      animation-delay: 12s;
+      background-image:
+        linear-gradient(90deg, rgba(5, 14, 30, 0.7), rgba(5, 14, 30, 0.1) 62%, rgba(5, 14, 30, 0.36)),
+        url("assets/samui-v17/hero-tony-logo-board.png");
+    }
+
+    .slide:nth-child(4) {
+      animation-delay: 18s;
+      background-image:
+        linear-gradient(90deg, rgba(5, 14, 30, 0.7), rgba(5, 14, 30, 0.16) 62%, rgba(5, 14, 30, 0.4)),
+        url("assets/samui-v17/life-saving-family-board.jpg");
+    }
+
+    @keyframes carouselFade {
+      0%, 18% { opacity: 1; }
+      26%, 100% { opacity: 0; }
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      width: min(1180px, calc(100% - 32px));
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 0 80px;
+      color: #fff;
+    }
+
+    .hero-copy p {
+      max-width: 620px;
+      margin: 0 0 24px;
+      font-size: clamp(1rem, 1.6vw, 1.28rem);
+      font-weight: 700;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 18px;
+      padding: 8px 12px;
+      background: var(--club-yellow);
+      color: var(--club-dark);
+      font-size: 0.8rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .hero-copy h1 {
+      max-width: 760px;
+      margin: 0 0 18px;
+      font-size: clamp(2.5rem, 6.7vw, 6.8rem);
+      line-height: 0.95;
+      font-weight: 950;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .statement {
+      width: min(1000px, calc(100% - 32px));
+      margin: 56px auto 42px;
+      text-align: center;
+    }
+
+    .statement p {
+      margin: 0 0 8px;
+      color: var(--club-red);
+      font-size: 0.85rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .statement h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 4.2rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .blocks {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto 68px;
+    }
+
+    .block-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .block {
+      min-height: 250px;
+      display: flex;
+      align-items: flex-end;
+      padding: 18px;
+      color: #fff;
+      background-position: center;
+      background-size: cover;
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    .block span {
+      display: inline-flex;
+      padding: 9px 12px;
+      background: var(--club-red);
+      color: #fff;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .content-section {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 68px 0;
+      border-top: 1px solid rgba(9, 33, 61, 0.12);
+    }
+
+    .content-section h2 {
+      margin: 0 0 18px;
+      font-size: clamp(2rem, 4vw, 4.4rem);
+      line-height: 1;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .content-section p {
+      max-width: 720px;
+      margin: 0 0 20px;
+      color: #42536a;
+      font-size: 1.03rem;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    .split img,
+    .feature-image {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+
+    .feature-image {
+      aspect-ratio: 16 / 10;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .mini-card {
+      padding: 24px;
+      background: #fff;
+      border: 1px solid rgba(9, 33, 61, 0.12);
+      box-shadow: 0 16px 30px rgba(7, 20, 43, 0.08);
+    }
+
+    .mini-card h3 {
+      margin: 0 0 9px;
+      font-size: 1.02rem;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .mini-card p {
+      margin: 0;
+      font-size: 0.96rem;
+    }
+
+    .venue-note {
+      display: inline-flex;
+      margin-top: 8px;
+      padding: 14px 16px;
+      background: var(--club-red);
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .sponsor-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .sponsor-strip a {
+      min-height: 130px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border: 1px solid rgba(9, 33, 61, 0.12);
+      box-shadow: 0 16px 30px rgba(7, 20, 43, 0.08);
+    }
+
+    .sponsor-strip img {
+      max-width: 100%;
+      max-height: 84px;
+      object-fit: contain;
+      box-shadow: none;
+    }
+
+    .rescue-strip {
+      background: linear-gradient(90deg, var(--club-red), #b90000 52%, var(--club-yellow));
+      color: #fff;
+      margin-top: 32px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .rescue-strip h3 {
+      margin: 0 0 8px;
+      font-size: clamp(1.4rem, 3vw, 2.8rem);
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .rescue-strip p {
+      margin: 0;
+      color: #fff;
+    }
+
+    .rescue-strip .button {
+      background: #fff;
+      color: var(--club-red);
+      box-shadow: none;
+      justify-self: end;
+    }
+
+    @media (max-width: 980px) {
+      .header__inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 0 14px;
+      }
+
+      .brand {
+        min-width: 0;
+      }
+
+      .nav {
+        order: 3;
+        flex-basis: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 2px;
+      }
+
+      .block-grid,
+      .card-grid,
+      .sponsor-strip,
+      .split,
+      .rescue-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .rescue-strip .button {
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .slideshow {
+        height: 620px;
+      }
+
+      .hero-copy {
+        padding-bottom: 54px;
+      }
+
+      .block {
+        min-height: 210px;
+      }
+    }
   </style>
 </head>
-<body>
+<body id="top">
   <header class="header">
     <div class="header__inner">
-      <a class="brand" href="#top" aria-label="Koh Samui Surf Lifesaving Club home"><img src="https://kohsamuislsc.com/logo2_transparent.png" alt="Koh Samui Surf Lifesaving Club logo"><span>SLSC Koh Samui<small>Surf Life Saving Club</small></span></a>
-      <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="samui-northcliffe-review-v17.html#top" aria-label="Koh Samui Surf Lifesaving Club homepage">
+        <img src="assets/samui-v17/logo2_transparent.png" alt="Koh Samui Surf Lifesaving Club logo" />
+        <span>SLSC Koh Samui<small>Surf Life Saving Club</small></span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
         <a href="samui-whats-on-review-v17.html">What's On</a>
+        <a href="samui-events-review-v17.html">Events</a>
+        <a href="samui-life-saving-review-v17.html">Life Saving</a>
         <a href="samui-venue-review-v17.html">Venue</a>
         <a href="samui-get-involved-review-v17.html">Get Involved</a>
         <a href="samui-sponsors-review-v17.html">Sponsors</a>
-        <a href="samui-life-saving-review-v17.html">Life Saving</a>
         <a href="samui-clubhouse-review-v17.html">Clubhouse</a>
         <a href="samui-volunteers-review-v17.html">Our Volunteers</a>
       </nav>
       <a class="support-button" href="https://www.gofundme.com/f/build-a-safer-future-for-koh-samuis-children/donate?source=btn_donate_update">Support</a>
     </div>
   </header>
-  <main id="top">
-    <section class="slideshow" aria-label="Koh Samui Surf Lifesaving Club rolling photos"><div class="slide"></div><div class="slide"></div><div class="slide"></div><div class="slide"></div><div class="arrows"><span>&lt;</span><span>&gt;</span></div><div class="dots"><i></i><i></i><i></i><i></i></div></section>
-    <div class="rescue-strip" aria-hidden="true"></div>
-    <section class="statement"><p>Saving lives on Koh Samui</p></section>
-    <section class="blocks" aria-label="Club areas">
-      <div class="section block-grid">
-        <a class="block" href="samui-whats-on-review-v17.html"><img src="assets/samui-v17/sunday-session-flyer.jpg" alt=""><span class="block__copy"><strong>What's On</strong><span>Sessions and club events</span></span></a>
-        <a class="block" href="samui-venue-review-v17.html"><img src="assets/samui-v13/carousel-clubhouse.webp" alt=""><span class="block__copy"><strong>Venue</strong><span>Nature Bar beach base</span></span></a>
-        <a class="block" href="samui-get-involved-review-v17.html"><img src="assets/samui-v13/carousel-rescue.webp" alt=""><span class="block__copy"><strong>Get Involved</strong><span>Volunteer, donate or join</span></span></a>
-        <a class="block" href="samui-sponsors-review-v17.html"><img src="assets/samui-v13/sponsor-minairal.webp" alt=""><span class="block__copy"><strong>Sponsors</strong><span>Local partners and supporters</span></span></a>
-        <a class="block" href="samui-life-saving-review-v17.html"><img src="assets/samui-v17/life-saving-family-board.jpg" alt=""><span class="block__copy"><strong>Life Saving</strong><span>Ocean safety and rescue skills</span></span></a>
-        <a class="block" href="samui-volunteers-review-v17.html"><img src="assets/samui-v17/volunteer-tony-1.jpg" alt=""><span class="block__copy"><strong>Our Volunteers</strong><span>The people behind the club</span></span></a>
+
+  <main>
+    <section class="slideshow" aria-label="Koh Samui Surf Lifesaving Club rolling photos">
+      <div class="slide" aria-hidden="true"></div>
+      <div class="slide" aria-hidden="true"></div>
+      <div class="slide" aria-hidden="true"></div>
+      <div class="slide" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <span class="hero-kicker">Volunteer surf life saving on Mae Nam Beach</span>
+        <h1>Koh Samui Surf Lifesaving Club</h1>
+        <p>Bright Sunday beach sessions, ocean confidence, rescue skills and community support for local children and families.</p>
+        <div>
+          <a class="button button--yellow" href="samui-life-saving-review-v17.html">Life Saving</a>
+          <a class="button" href="samui-sponsors-review-v17.html">Sponsors</a>
+        </div>
       </div>
     </section>
-    <section class="content-section" id="whats-on"><div class="section split"><div><p class="kicker">What's On</p><h2>Club sessions and community events</h2><p class="lead">Sunday ocean-safety sessions, beach days, fundraisers and community activities for local children and families.</p><div class="card-grid"><article class="card"><h3>Sunday Beach Sessions</h3><p>Children and families build ocean confidence through practical beach and water-safety activities.</p></article><article class="card"><h3>Community Events</h3><p>Supporter nights, beach days and community fundraisers can be listed here as dates are confirmed.</p></article></div></div><img class="feature" src="assets/samui-v17/sunday-session-flyer.jpg" alt="Junior ocean swimming and lifesaving Sunday session flyer"></div></section>
-    <section class="content-section venue-strip" id="venue"><div class="section split"><div><p class="kicker">Venue</p><h2>Nature Bar beachfront venue</h2><p class="lead">Nature Bar is the club's beachside meeting and community venue for sessions, families, fundraisers, sponsors and post-training catchups.</p><span class="yellow-note">Nature Bar, Mae Nam Beach</span></div><img class="feature" src="assets/samui-v13/carousel-clubhouse.webp" alt="Children preparing for a beach session at Nature Bar"></div></section>
-    <section class="content-section" id="get-involved"><div class="section split"><img class="feature" src="assets/samui-v13/carousel-rescue.webp" alt="Koh Samui Surf Lifesaving Club group with rescue board"><div><p class="kicker">Get Involved</p><h2>Volunteer, donate or join</h2><p class="lead">Support can come through membership, volunteer time, water-safety help, rescue equipment, training resources or donations.</p><a class="yellow-note" href="https://www.gofundme.com/f/build-a-safer-future-for-koh-samuis-children/donate?source=btn_donate_update">Support the club</a></div></div></section>
-    <section class="content-section sponsor-strip" id="sponsors"><div class="section split"><div><p class="kicker">Sponsors</p><h2>Support our sponsors and local partners</h2><p class="lead">Sponsorship opportunities, current sponsor stories and sponsor logo boxes are on the Sponsors page.</p><a class="yellow-note" href="samui-sponsors-review-v17.html">Open sponsor page</a></div><img class="feature" src="assets/samui-v17/minairal-beach-group.jpg" alt="Minairal support for Koh Samui Surf Lifesaving Club"></div></section>
-    <section class="content-section" id="life-saving"><div class="section split"><div><p class="kicker">Life Saving</p><h2>Ocean skills for safer beaches</h2><p class="lead">The club helps local children build swimming confidence, beach awareness and practical rescue skills in a safe, encouraging environment.</p><a class="yellow-note" href="samui-life-saving-review-v17.html">Open life saving page</a></div><img class="feature" src="assets/samui-v17/life-saving-family-board.jpg" alt="Family with rescue board on Koh Samui"></div></section>
-    <section class="content-section soft" id="clubhouse"><div class="section split"><img class="feature" src="assets/samui-v13/clubhouse-base.webp" alt="Children gathering at the future clubhouse beach base"><div><p class="kicker">Clubhouse</p><h2>A future home base for members and supporters</h2><p class="lead">The Clubhouse page holds the Buy a Brick campaign and future home-base information for members, families and sponsors.</p><a class="yellow-note" href="samui-clubhouse-review-v17.html">Buy a brick program</a></div></div></section>
-    <section class="content-section" id="volunteers"><div class="section split"><div><p class="kicker">Our Volunteers</p><h2>The people helping local kids stay safe</h2><p class="lead">Volunteers help with beach sessions, equipment, event support, water safety and the practical work behind the club.</p><a class="yellow-note" href="samui-volunteers-review-v17.html">Meet the volunteers</a></div><img class="feature" src="assets/samui-v17/volunteer-tony-1.jpg" alt="Volunteer working with children at the club"></div></section>
+
+    <section class="statement">
+      <p>Building safer beaches for Koh Samui</p>
+      <h2>Community beach safety, confidence and ocean skills</h2>
+    </section>
+
+    <section class="blocks" aria-label="Quick links">
+      <div class="block-grid">
+        <a class="block" href="samui-whats-on-review-v17.html" style="background-image: linear-gradient(180deg, rgba(0,0,0,0), rgba(6,20,40,0.62)), url('assets/samui-v17/sunday-session-flyer.jpg');"><span>What's On</span></a>
+        <a class="block" href="samui-venue-review-v17.html" style="background-image: linear-gradient(180deg, rgba(0,0,0,0), rgba(6,20,40,0.62)), url('assets/samui-v17/venue-nature-bar-surfboard-sign.jpg');"><span>Venue</span></a>
+        <a class="block" href="samui-get-involved-review-v17.html" style="background-image: linear-gradient(180deg, rgba(0,0,0,0), rgba(6,20,40,0.62)), url('assets/samui-v17/life-saving-family-board.jpg');"><span>Get Involved</span></a>
+        <a class="block" href="samui-sponsors-review-v17.html" style="background-image: linear-gradient(180deg, rgba(0,0,0,0), rgba(6,20,40,0.62)), url('assets/samui-v17/sponsor-kids-sign-wide.jpg');"><span>Sponsors</span></a>
+        <a class="block" href="samui-life-saving-review-v17.html" style="background-image: linear-gradient(180deg, rgba(0,0,0,0), rgba(6,20,40,0.62)), url('assets/samui-v17/helpers-large-group-water.jpg');"><span>Life Saving</span></a>
+      </div>
+    </section>
+
+    <section class="content-section" id="whats-on">
+      <div class="split">
+        <div>
+          <h2>What's On</h2>
+          <p>Sunday junior ocean swimming and lifesaving skills at Nature Bar, plus local community events, fundraisers and special club gatherings.</p>
+          <a class="button" href="samui-whats-on-review-v17.html">Open What's On</a>
+          <div class="card-grid">
+            <div class="mini-card">
+              <h3>Sunday Sessions</h3>
+              <p>Every Sunday at 9.00am, children build confidence, swimming technique and ocean safety skills.</p>
+            </div>
+            <div class="mini-card">
+              <h3>Club Events</h3>
+              <p>Local events hosted at the club venue are copied into the surf club review pages for easy checking.</p>
+            </div>
+            <div class="mini-card">
+              <h3>Community Days</h3>
+              <p>Beach activities, supporters and fundraisers help keep the club moving forward.</p>
+            </div>
+          </div>
+        </div>
+        <img class="feature-image" src="assets/samui-v17/sunday-session-flyer.jpg" alt="Junior ocean swimming and lifesaving flyer" />
+      </div>
+    </section>
+
+    <section class="content-section" id="venue">
+      <div class="split">
+        <img class="feature-image" src="assets/samui-v17/venue-nature-bar-street-signs.jpg" alt="Koh Samui Surf Life Saving and Nature Bar signs" />
+        <div>
+          <h2>Venue</h2>
+          <p>Nature Bar provides the beachside home for club training, Sunday sessions, community gatherings and supporters who want to help local children learn ocean safety.</p>
+          <div class="venue-note">Nature Bar, Mae Nam Beach</div>
+          <p style="margin-top: 18px;">The Nature Bar page includes venue photos, staff acknowledgements and the beachside setting for the club.</p>
+          <a class="button" href="samui-venue-review-v17.html">Open Venue</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="life-saving">
+      <div class="split">
+        <div>
+          <h2>Life Saving</h2>
+          <p>The club helps local children and families build safer beach habits through swimming, rescue-board confidence, floating, buddy awareness and simple surf lifesaving routines.</p>
+          <a class="button" href="samui-life-saving-review-v17.html">Open Life Saving</a>
+        </div>
+        <img class="feature-image" src="assets/samui-v17/life-saving-family-board.jpg" alt="Children and helpers with a yellow rescue board on Mae Nam Beach" />
+      </div>
+    </section>
+
+    <section class="content-section" id="get-involved">
+      <div class="split">
+        <img class="feature-image" src="assets/samui-v17/hero-tony-logo-board.png" alt="Volunteers painting a club support board at Nature Bar" />
+        <div>
+          <h2>Get Involved</h2>
+          <p>Volunteer, sponsor equipment, support the Sunday sessions, or help fund the future clubhouse so more children can learn to swim and stay safe.</p>
+          <div>
+            <a class="button" href="https://www.gofundme.com/f/build-a-safer-future-for-koh-samuis-children/donate?source=btn_donate_update">Support The Club</a>
+            <a class="button button--yellow" href="samui-get-involved-review-v17.html">Ways To Help</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="sponsors">
+      <h2>Sponsors</h2>
+      <p>Our sponsors and partners help turn local goodwill into real water-safety equipment, training sessions, club clothing and community support.</p>
+      <div class="sponsor-strip">
+        <a href="samui-sponsor-minairal-review-v17.html" aria-label="Open Minairal sponsor page"><img src="assets/samui-v17/sponsor-minairal.png" alt="Minairal logo" /></a>
+        <a href="samui-sponsor-lick-review-v17.html" aria-label="Open Lick sponsor page"><img src="assets/samui-v17/sponsor-lick-koh-samui.png" alt="Lick Koh Samui logo" /></a>
+        <a href="samui-sponsor-beat-boat-review-v17.html" aria-label="Open Beat Boat sponsor page"><img src="assets/samui-v17/beat-boat-logo-wide.jpg" alt="The Beat Boat Koh Samui logo" /></a>
+        <a href="samui-sponsor-new-leaf-review-v17.html" aria-label="Open New Leaf Wellness sponsor page"><img src="assets/samui-v17/sponsor-new-leaf-wellness.jpg" alt="New Leaf Wellness logo" /></a>
+      </div>
+      <div class="split" style="margin-top: 34px;">
+        <img class="feature-image" src="assets/samui-v17/lick-shirts.jpg" alt="Lick Koh Samui supporter stall with club shirts" />
+        <div>
+          <h3 style="margin:0 0 12px;font-size:1.3rem;text-transform:uppercase;">Lick Koh Samui</h3>
+          <p>Maenam's local home made ice cream supplier kindly donated stubby holders and club t-shirts for volunteers and children.</p>
+          <a class="button" href="samui-sponsor-lick-review-v17.html">Open Lick Page</a>
+        </div>
+      </div>
+      <div class="rescue-strip">
+        <div>
+          <h3>Click below to see our amazing partnership relationships</h3>
+          <p>Each logo opens its own sponsor page with photos and partnership details.</p>
+        </div>
+        <a class="button" href="samui-sponsors-review-v17.html">Open Sponsors</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="clubhouse">
+      <div class="split">
+        <div>
+          <h2>Clubhouse</h2>
+          <p>A future home base for members and supporters where children can gather, celebrate achievements and display photos, awards and trophies.</p>
+          <p>Buy a personalised brick and become a permanent part of the club's history.</p>
+          <a class="button button--yellow" href="samui-clubhouse-review-v17.html">Buy a brick program</a>
+        </div>
+        <img class="feature-image" src="assets/samui-v17/venue-nature-bar-night.jpg" alt="Nature Bar beach setting at night" />
+      </div>
+    </section>
   </main>
+
   <footer class="footer">
-    <div class="footer-panel">
-      <div><strong>Koh Samui Surf Lifesaving Club</strong><p>Nature Bar - Mae Nam Beach - Koh Samui</p><p>Building safer beaches for local children and families.</p></div>
-      <div><h3>Explore</h3><nav class="footer-links" aria-label="Footer links"><a href="samui-whats-on-review-v17.html">What's On</a><a href="samui-venue-review-v17.html">Venue</a><a href="samui-get-involved-review-v17.html">Get Involved</a><a href="samui-sponsors-review-v17.html">Sponsors</a><a href="samui-life-saving-review-v17.html">Life Saving</a><a href="samui-clubhouse-review-v17.html">Clubhouse</a><a href="samui-volunteers-review-v17.html">Our Volunteers</a></nav></div>
-      <div><h3>Connect</h3><div class="social-row"><a class="social-icon" href="https://www.instagram.com/samui_surf_club/" aria-label="Instagram">IG</a><a class="social-icon" href="https://wa.me/61434194524" aria-label="WhatsApp">WA</a><a class="social-icon" href="https://www.facebook.com/profile.php?id=61577497285513" aria-label="Facebook">FB</a></div></div>
+    <div class="footer-grid">
+      <div>
+        <h3>Koh Samui Surf Lifesaving Club</h3>
+        <p>Building a safer future for the children of Koh Samui through swimming, ocean confidence and community lifesaving support.</p>
+        <div class="social-links" aria-label="Social links">
+          <a href="https://www.facebook.com/profile.php?id=61577497285513" aria-label="Facebook">f</a>
+          <a href="https://wa.me/" aria-label="WhatsApp">wa</a>
+          <a href="https://www.instagram.com/" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      <div>
+        <h4>Club</h4>
+        <a href="samui-whats-on-review-v17.html">What's On</a>
+        <a href="samui-events-review-v17.html">Events</a>
+        <a href="samui-life-saving-review-v17.html">Life Saving</a>
+        <a href="samui-venue-review-v17.html">Venue</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="samui-get-involved-review-v17.html">Get Involved</a>
+        <a href="samui-sponsors-review-v17.html">Sponsors</a>
+        <a href="samui-clubhouse-review-v17.html">Clubhouse</a>
+        <a href="samui-volunteers-review-v17.html">Our Volunteers</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="https://kohsamuislsc.com/">Current Live Site</a>
+        <a href="https://www.gofundme.com/f/build-a-safer-future-for-koh-samuis-children/donate?source=btn_donate_update">Donate</a>
+        <a href="samui-sponsor-rotary-review-v17.html">Partners</a>
+      </div>
     </div>
-    <div class="footer-legal"><span>&copy; 2025 Surf Life Saving Club Koh Samui</span></div>
+    <div class="footer-bottom">&copy; 2025 Surf Life Saving Club Koh Samui</div>
   </footer>
 </body>
 </html>
