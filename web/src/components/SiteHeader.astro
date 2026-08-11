@@ -75,7 +75,7 @@ import { ChevronDown, Menu, X } from '@lucide/astro';
 </header>
 
 <script is:inline>
-  (() => {
+  document.addEventListener('astro:page-load', () => {
     const header = document.querySelector('[data-site-header]');
     if (!header) return;
 
@@ -83,11 +83,27 @@ import { ChevronDown, Menu, X } from '@lucide/astro';
     const layer = header.querySelector('[data-mobile-nav-layer]');
     const closeButtons = header.querySelectorAll('[data-menu-close]');
 
+    let closeTimer;
+
     const setOpen = (open) => {
       toggle?.setAttribute('aria-expanded', String(open));
       toggle?.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
-      layer.hidden = !open;
       document.documentElement.classList.toggle('menu-is-open', open);
+
+      window.clearTimeout(closeTimer);
+
+      if (open) {
+        layer.hidden = false;
+        // Force layout so the following class change transitions instead of jumping.
+        layer.offsetHeight;
+        layer.classList.add('is-open');
+      } else {
+        layer.classList.remove('is-open');
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        closeTimer = window.setTimeout(() => {
+          layer.hidden = true;
+        }, prefersReduced ? 0 : 320);
+      }
     };
 
     toggle?.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
@@ -96,5 +112,5 @@ import { ChevronDown, Menu, X } from '@lucide/astro';
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') setOpen(false);
     });
-  })();
+  });
 </script>

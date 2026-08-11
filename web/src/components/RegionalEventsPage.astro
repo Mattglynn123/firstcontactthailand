@@ -46,7 +46,7 @@ const { page } = Astro.props;
 </section>
 
 <script>
-  (() => {
+  document.addEventListener('astro:page-load', () => {
     const bangkokFormatter = new Intl.DateTimeFormat('en-CA', {
       timeZone: 'Asia/Bangkok',
       year: 'numeric',
@@ -86,5 +86,5 @@ const { page } = Astro.props;
       const dateLabel = `${weekdayFormatter.format(nextDate)} ${nextDate.getUTCDate()}${suffix(nextDate.getUTCDate())} ${monthFormatter.format(nextDate)}`;
       element.textContent = `${element.getAttribute('data-weekly-prefix') ?? ''}${dateLabel}`;
     });
-  })();
+  });
 </script>
