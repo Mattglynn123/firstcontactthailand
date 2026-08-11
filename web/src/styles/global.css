@@ -1482,6 +1482,11 @@ h3 {
   height: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  transition: transform 180ms ease;
+}
+
+.event-card__media:hover img {
+  transform: scale(1.025);
 }
 
 .charity-card > img,
@@ -1558,6 +1563,19 @@ h3 {
   font-weight: 800;
   text-align: center;
   text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.charity-card__body > a:hover {
+  background: var(--mist);
+  color: var(--teal-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgb(9 47 59 / 14%);
+}
+
+.charity-card__body > a:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .empty-state {
