@@ -3,6 +3,7 @@ import '../styles/global.css';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { contact } from '../data/site';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title: string;
@@ -74,6 +75,7 @@ const jsonLdBlocks = [organizationSchema, ...(jsonLd ? (Array.isArray(jsonLd) ? 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
     {jsonLdBlocks.map((block) => <script type="application/ld+json" set:html={JSON.stringify(block)} />)}
+    <ClientRouter />
   </head>
   <body>
     <SiteHeader />
@@ -81,5 +83,52 @@ const jsonLdBlocks = [organizationSchema, ...(jsonLd ? (Array.isArray(jsonLd) ? 
       <slot />
     </main>
     <SiteFooter />
+    <script is:inline>
+      (() => {
+        const setUpReveal = () => {
+          const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          if (prefersReduced) {
+            document.documentElement.classList.remove('reveal-ready');
+            return;
+          }
+          document.documentElement.classList.add('reveal-ready');
+
+          const selectors = [
+            '.home-categories a',
+            '.home-testimonials__grid img',
+            '.support-points article',
+            '.service-tile',
+            '.property-card',
+            '.split-section__media',
+            '.split-section__copy',
+            '.charity-detail-card',
+          ];
+          const targets = document.querySelectorAll(selectors.join(','));
+          targets.forEach((el) => el.setAttribute('data-reveal', ''));
+
+          if (!('IntersectionObserver' in window) || targets.length === 0) {
+            targets.forEach((el) => el.classList.add('is-visible'));
+            return;
+          }
+
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('is-visible');
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
+          );
+
+          targets.forEach((el) => observer.observe(el));
+        };
+
+        setUpReveal();
+        document.addEventListener('astro:page-load', setUpReveal);
+      })();
+    </script>
   </body>
 </html>
