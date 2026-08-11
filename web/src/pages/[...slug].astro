@@ -214,8 +214,8 @@ const isDuplicatePage = Boolean(canonicalOverrideSlug);
         primaryHref={`/contact-link/?topic=${encodeURIComponent(cleanTitle)}`}
         secondaryLabel={isEventPage ? 'See previous events' : 'Explore the network'}
         secondaryHref={isEventPage ? '/past-events/' : '/local-business-network/'}
-        topActionLabel={isTourDetailPage ? 'Return to homepage' : undefined}
-        topActionHref={isTourDetailPage ? '/' : undefined}
+        topActionLabel={isTourDetailPage ? 'Return to Overview' : undefined}
+        topActionHref={isTourDetailPage ? '/tours-2/' : undefined}
       />
       <section class="section">
         <div class="section__inner support-layout">
@@ -253,7 +253,7 @@ const isDuplicatePage = Boolean(canonicalOverrideSlug);
     <article class={`content-page ${isEventPage ? 'event-page' : ''} prose prose-slate mx-auto max-w-3xl py-8`}>
       {isTourDetailPage && (
         <div class="archive-top-action">
-          <a class="page-cta archive-top-action__cta" href="/">Return to homepage</a>
+          <a class="page-cta archive-top-action__cta" href="/tours-2/">Return to Overview</a>
         </div>
       )}
       {!contentHasH1 && <h1>{cleanTitle}</h1>}
