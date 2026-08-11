@@ -1459,6 +1459,14 @@ h3 {
   border-radius: 8px;
   background: var(--paper);
   box-shadow: var(--shadow);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.event-card:hover,
+.charity-card:hover,
+.tour-guide-grid article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgb(9 47 59 / 16%);
 }
 
 .event-card__media {
@@ -1775,6 +1783,12 @@ h3 {
   border-radius: 8px;
   background: var(--paper);
   box-shadow: var(--shadow);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.moving-thailand-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgb(9 47 59 / 16%);
 }
 
 .moving-thailand-card img {

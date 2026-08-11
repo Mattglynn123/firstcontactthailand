@@ -94,6 +94,10 @@ const jsonLdBlocks = [organizationSchema, ...(jsonLd ? (Array.isArray(jsonLd) ? 
           '.split-section__media',
           '.split-section__copy',
           '.charity-detail-card',
+          '.charity-card',
+          '.event-card',
+          '.moving-thailand-card',
+          '.tour-guide-grid article',
         ];
         const GRID_SELECTORS = [
           '.home-categories a',
@@ -102,6 +106,10 @@ const jsonLdBlocks = [organizationSchema, ...(jsonLd ? (Array.isArray(jsonLd) ? 
           '.service-tile',
           '.property-card',
           '.charity-detail-card',
+          '.charity-card',
+          '.event-card',
+          '.moving-thailand-card',
+          '.tour-guide-grid article',
         ];
         // How many places later in its row/grid an item sits than its previous
         // sibling, expressed as a CSS custom property read by the transition-delay
@@ -129,11 +137,16 @@ const jsonLdBlocks = [organizationSchema, ...(jsonLd ? (Array.isArray(jsonLd) ? 
           if (el.hasAttribute('data-reveal')) return;
           el.setAttribute('data-reveal', '');
           applyStagger(el);
-          if (observer) {
-            observer.observe(el);
-          } else {
+          if (!observer) {
             el.classList.add('is-visible');
+            return;
           }
+          // Force the browser to register the hidden state on its own frame
+          // before we start observing, otherwise an element that's already
+          // in view can flip straight to visible with no animation to see.
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => observer.observe(el));
+          });
         };
 
         const scan = (root) => {
