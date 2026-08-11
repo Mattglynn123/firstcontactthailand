@@ -611,6 +611,12 @@ h3 {
   box-shadow: var(--shadow);
   color: var(--paper);
   text-decoration: none;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.home-categories a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgb(9 47 59 / 22%);
 }
 
 .home-categories img {
@@ -735,6 +741,12 @@ h3 {
   border-radius: 8px;
   background: var(--paper);
   box-shadow: var(--shadow);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.service-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgb(9 47 59 / 16%);
 }
 
 .service-tile__image {
@@ -1143,6 +1155,12 @@ h3 {
   border-radius: 8px;
   background: var(--paper);
   box-shadow: var(--shadow);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.property-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgb(9 47 59 / 16%);
 }
 
 .property-card__media {
@@ -1268,6 +1286,23 @@ h3 {
   text-align: center;
   text-decoration: none;
   overflow-wrap: anywhere;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.property-card__actions a:hover,
+.property-card__actions button:hover,
+.property-card__body > a:hover {
+  background: var(--mist);
+  color: var(--teal-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgb(9 47 59 / 14%);
+}
+
+.property-card__actions a:active,
+.property-card__actions button:active,
+.property-card__body > a:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .property-load-more {
@@ -1577,6 +1612,12 @@ h3 {
   border-radius: 8px;
   background: var(--paper);
   box-shadow: 0 12px 28px rgb(8 42 58 / 8%);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.charity-detail-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgb(9 47 59 / 16%);
 }
 
 .charity-detail-card > img {
@@ -2750,8 +2791,9 @@ h3 {
 /* ---------------------------------------------------------------------- */
 .reveal-ready [data-reveal] {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 620ms cubic-bezier(0.16, 1, 0.3, 1), transform 620ms cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(38px);
+  transition: opacity 900ms cubic-bezier(0.16, 1, 0.3, 1), transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
   will-change: opacity, transform;
 }
 
@@ -2760,32 +2802,8 @@ h3 {
   transform: translateY(0);
 }
 
-.reveal-ready .home-categories a:nth-child(2),
-.reveal-ready .home-testimonials__grid img:nth-child(2),
-.reveal-ready .support-points article:nth-child(2) {
-  transition-delay: 70ms;
-}
-
-.reveal-ready .home-categories a:nth-child(3),
-.reveal-ready .home-testimonials__grid img:nth-child(3),
-.reveal-ready .support-points article:nth-child(3) {
-  transition-delay: 140ms;
-}
-
-.reveal-ready .home-categories a:nth-child(4) {
-  transition-delay: 210ms;
-}
-
-.reveal-ready .home-categories a:nth-child(5) {
-  transition-delay: 280ms;
-}
-
-.reveal-ready .home-categories a:nth-child(n + 6) {
-  transition-delay: 350ms;
-}
-
 .reveal-ready .split-section__copy {
-  transition-delay: 90ms;
+  --reveal-delay: 140ms;
 }
 
 @media (prefers-reduced-motion: reduce) {
