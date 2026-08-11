@@ -61,7 +61,7 @@ const description = 'Contact First Contact Thailand for trusted local introducti
 </Layout>
 
 <script is:inline>
-  (() => {
+  document.addEventListener('astro:page-load', () => {
     const form = document.querySelector('[data-contact-form]');
     if (!form) return;
 
@@ -102,5 +102,5 @@ const description = 'Contact First Contact Thailand for trusted local introducti
       const whatsappNumber = form.dataset.whatsappNumber || '66803378707';
       window.location.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(body)}`;
     });
-  })();
+  });
 </script>

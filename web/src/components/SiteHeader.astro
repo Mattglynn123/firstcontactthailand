@@ -75,7 +75,7 @@ import { ChevronDown, Menu, X } from '@lucide/astro';
 </header>
 
 <script is:inline>
-  (() => {
+  document.addEventListener('astro:page-load', () => {
     const header = document.querySelector('[data-site-header]');
     if (!header) return;
 
@@ -112,5 +112,5 @@ import { ChevronDown, Menu, X } from '@lucide/astro';
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') setOpen(false);
     });
-  })();
+  });
 </script>
