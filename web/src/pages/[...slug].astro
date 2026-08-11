@@ -12,6 +12,7 @@ import OtherToursPage from '../components/OtherToursPage.astro';
 import TourGuidePage from '../components/TourGuidePage.astro';
 import { regionalEvents } from '../data/regional-events';
 import { charityPrograms, charityRegions, completedCharityPages } from '../data/charities';
+import { canonicalOverrides } from '../data/seo-overrides';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages', ({ data }) => !data.draft);
@@ -180,9 +181,12 @@ const charityRegion = charityRegions[currentSlug] ?? charityRegions[charityRegio
 const isMoveGuide = currentSlug === 'move-to-thailand-guide' || currentSlug === 'moving-to-samui';
 const isOtherTours = currentSlug === 'other-tours';
 const isTourGuide = currentSlug === 'become-a-better-tour-guide';
+const canonicalOverrideSlug = currentSlug ? canonicalOverrides[currentSlug] : undefined;
+const canonicalPath = canonicalOverrideSlug ? `/${canonicalOverrideSlug}/` : undefined;
+const isDuplicatePage = Boolean(canonicalOverrideSlug);
 ---
 
-<Layout title={`${cleanTitle} — First Contact Thailand`} description={fallbackDescription} image={fallbackHeroImage}>
+<Layout title={`${cleanTitle} — First Contact Thailand`} description={fallbackDescription} image={fallbackHeroImage} canonicalPath={canonicalPath} noindex={isDuplicatePage}>
   {charityProgram ? (
     <CharityProgramPage program={charityProgram} />
   ) : completedCharityPage ? (

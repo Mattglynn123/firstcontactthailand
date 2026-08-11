@@ -2,19 +2,54 @@
 import '../styles/global.css';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import { contact } from '../data/site';
 
 interface Props {
   title: string;
   description?: string;
   image?: string;
+  /** Overrides the canonical URL, e.g. to point a duplicate page at its primary version. */
+  canonicalPath?: string;
+  /** Adds a noindex,follow robots meta tag, e.g. for duplicate/legacy pages. */
+  noindex?: boolean;
+  /** Extra schema.org JSON-LD block(s) for this page, merged with the sitewide Organization schema. */
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
   title,
   description = 'First Contact Thailand connects locals, expats and visitors with trusted businesses, events and local support.',
   image = '/assets/fct/PHOTO-2025-10-11-09-28-41-2.jpg',
+  canonicalPath,
+  noindex = false,
+  jsonLd,
 } = Astro.props;
-const canonical = new URL(Astro.url.pathname, 'https://firstcontactthailand.com');
+
+const site = 'https://firstcontactthailand.com';
+const siteName = 'First Contact Thailand';
+const canonical = new URL(canonicalPath ?? Astro.url.pathname, site);
+const imageUrl = new URL(image, site).toString();
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: siteName,
+  url: site,
+  logo: new URL('/assets/fct/cropped-firstcontact.png', site).toString(),
+  ...(contact.facebook ? { sameAs: [contact.facebook] } : {}),
+  ...(contact.phoneDisplay
+    ? {
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: contact.phoneDisplay,
+          contactType: 'customer service',
+          areaServed: 'TH',
+        },
+      }
+    : {}),
+};
+
+const jsonLdBlocks = [organizationSchema, ...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [])];
 ---
 
 <!doctype html>
@@ -24,14 +59,21 @@ const canonical = new URL(Astro.url.pathname, 'https://firstcontactthailand.com'
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#092f3b" />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, canonical).toString()} />
+    <meta property="og:image" content={imageUrl} />
     <meta property="og:url" content={canonical.toString()} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
+    {jsonLdBlocks.map((block) => <script type="application/ld+json" set:html={JSON.stringify(block)} />)}
   </head>
   <body>
     <SiteHeader />
