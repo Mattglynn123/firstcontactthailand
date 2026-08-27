@@ -4,6 +4,7 @@ import { communityEvents } from '../data/events';
 import { pastEvents } from '../data/past-events';
 import { propertyAreas } from '../data/property-areas';
 import { regionalEvents } from '../data/regional-events';
+import { canonicalOverrides, redirectStubRoutes, duplicateStaticRoutes } from '../data/seo-overrides';
 
 const site = 'https://firstcontactthailand.com';
 const staticPageModules = import.meta.glob('./**/*.astro');
@@ -28,20 +29,32 @@ const xmlEscape = (value: string) =>
 
 export async function GET() {
   const contentPages = await getCollection('pages', ({ data }) => !data.draft);
+  const duplicateSlugs = new Set(Object.keys(canonicalOverrides));
+  const excludedRoutes = new Set([...redirectStubRoutes, ...duplicateStaticRoutes, ...[...duplicateSlugs].map((slug) => `/${slug}/`)]);
   const urls = new Set<string>();
 
   for (const path of Object.keys(staticPageModules)) {
     if (path.includes('[') || path.includes('404.astro')) continue;
-    urls.add(normalize(path));
+    const normalized = normalize(path);
+    if (excludedRoutes.has(normalized)) continue;
+    urls.add(normalized);
   }
 
-  for (const page of contentPages) urls.add(`/${page.data.slug}/`);
+  for (const page of contentPages) {
+    if (duplicateSlugs.has(page.data.slug)) continue;
+    urls.add(`/${page.data.slug}/`);
+  }
   for (const event of communityEvents) urls.add(`/event/${event.slug}/`);
   for (const page of Object.values(pastEvents)) urls.add(`/past-events/${page.slug}/`);
   for (const area of propertyAreas) urls.add(`/property-sales/${area.slug}/`);
   for (const slug of Object.keys(regionalEvents)) urls.add(`/${slug}/`);
   for (const program of charityPrograms) urls.add(`/${program.slug}/`);
   for (const page of completedCharityPages) urls.add(`/${page.slug}/`);
+
+  // Belt-and-braces: some duplicate slugs exist as both a markdown page and a
+  // static .astro route (the static route wins at build time), so make sure
+  // excluded routes never sneak back in from the content-collection loop.
+  for (const route of excludedRoutes) urls.delete(route);
 
   const lastmod = new Date().toISOString();
   const body = [

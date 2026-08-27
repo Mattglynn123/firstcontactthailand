@@ -8,7 +8,9 @@ const target = '/contact-link/?topic=Building%20Contractors';
     <meta http-equiv="refresh" content={`0;url=${target}`} />
     <title>Building Contractors | First Contact Thailand</title>
     <script is:inline define:vars={{ target }}>
-      window.location.replace(target);
+      document.addEventListener('astro:page-load', () => {
+        window.location.replace(target);
+      });
     </script>
   </head>
   <body>

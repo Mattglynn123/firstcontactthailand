@@ -8,7 +8,7 @@ originalUrl: "https://firstcontactthailand.com/password-recovery/"
 wpParent: 0
 menuOrder: 0
 sourceType: pages
-draft: false
+draft: true
 ---
 
 Your Email \*
