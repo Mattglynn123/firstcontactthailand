@@ -287,6 +287,8 @@ h3 {
   border: 0;
   background: rgb(0 23 31 / 62%);
   cursor: pointer;
+  opacity: 0;
+  transition: opacity 260ms ease;
 }
 
 .mobile-nav {
@@ -305,6 +307,23 @@ h3 {
   background-size: cover;
   color: var(--paper);
   box-shadow: -18px 0 40px rgb(0 0 0 / 24%);
+  transform: translateX(100%);
+  transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-nav-layer.is-open .mobile-nav-backdrop {
+  opacity: 1;
+}
+
+.mobile-nav-layer.is-open .mobile-nav {
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-nav-backdrop,
+  .mobile-nav {
+    transition: none;
+  }
 }
 
 .mobile-nav__top {
@@ -592,6 +611,12 @@ h3 {
   box-shadow: var(--shadow);
   color: var(--paper);
   text-decoration: none;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.home-categories a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgb(9 47 59 / 22%);
 }
 
 .home-categories img {
@@ -716,6 +741,12 @@ h3 {
   border-radius: 8px;
   background: var(--paper);
   box-shadow: var(--shadow);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.service-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgb(9 47 59 / 16%);
 }
 
 .service-tile__image {
@@ -785,6 +816,7 @@ h3 {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease, color 160ms ease;
 }
 
 .service-tile__cta:hover,
@@ -792,6 +824,13 @@ h3 {
 .property-group__links a:hover {
   background: var(--mist);
   color: var(--teal-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgb(9 47 59 / 14%);
+}
+
+.page-cta:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .reference-page__actions {
@@ -1116,6 +1155,12 @@ h3 {
   border-radius: 8px;
   background: var(--paper);
   box-shadow: var(--shadow);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.property-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgb(9 47 59 / 16%);
 }
 
 .property-card__media {
@@ -1241,6 +1286,23 @@ h3 {
   text-align: center;
   text-decoration: none;
   overflow-wrap: anywhere;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.property-card__actions a:hover,
+.property-card__actions button:hover,
+.property-card__body > a:hover {
+  background: var(--mist);
+  color: var(--teal-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgb(9 47 59 / 14%);
+}
+
+.property-card__actions a:active,
+.property-card__actions button:active,
+.property-card__body > a:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .property-load-more {
@@ -1397,6 +1459,14 @@ h3 {
   border-radius: 8px;
   background: var(--paper);
   box-shadow: var(--shadow);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.event-card:hover,
+.charity-card:hover,
+.tour-guide-grid article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgb(9 47 59 / 16%);
 }
 
 .event-card__media {
@@ -1412,6 +1482,11 @@ h3 {
   height: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  transition: transform 180ms ease;
+}
+
+.event-card__media:hover img {
+  transform: scale(1.025);
 }
 
 .charity-card > img,
@@ -1488,6 +1563,19 @@ h3 {
   font-weight: 800;
   text-align: center;
   text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.charity-card__body > a:hover {
+  background: var(--mist);
+  color: var(--teal-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgb(9 47 59 / 14%);
+}
+
+.charity-card__body > a:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .empty-state {
@@ -1550,6 +1638,12 @@ h3 {
   border-radius: 8px;
   background: var(--paper);
   box-shadow: 0 12px 28px rgb(8 42 58 / 8%);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.charity-detail-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgb(9 47 59 / 16%);
 }
 
 .charity-detail-card > img {
@@ -1707,6 +1801,12 @@ h3 {
   border-radius: 8px;
   background: var(--paper);
   box-shadow: var(--shadow);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.moving-thailand-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgb(9 47 59 / 16%);
 }
 
 .moving-thailand-card img {
@@ -1915,6 +2015,17 @@ h3 {
   line-height: 1.2;
   text-align: center;
   text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgb(9 47 59 / 18%);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .button--primary {
@@ -2700,5 +2811,37 @@ h3 {
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Scroll-reveal animations                                               */
+/* Elements are tagged with [data-reveal] by the script in Layout.astro,  */
+/* only once JS has confirmed prefers-reduced-motion is NOT set. Without  */
+/* that class on <html>, everything below is a no-op and content renders  */
+/* normally (important for no-JS visitors and crawlers).                  */
+/* ---------------------------------------------------------------------- */
+.reveal-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(38px);
+  transition: opacity 900ms cubic-bezier(0.16, 1, 0.3, 1), transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal-ready [data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-ready .split-section__copy {
+  --reveal-delay: 140ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

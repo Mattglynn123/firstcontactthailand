@@ -278,6 +278,7 @@
 .ks-site-footer__contact { display: grid; align-content: start; gap: 0.5rem; }
 .ks-site-footer a,
 .ks-site-footer__contact p { display: inline-flex; align-items: center; gap: 0.5rem; color: #dcecf4; text-decoration: none; }
+.ks-site-footer__social-mark { display: inline-flex; width: 18px; height: 18px; align-items: center; justify-content: center; border: 1px solid currentcolor; border-radius: 50%; font-size: 0.62rem; font-weight: 950; line-height: 1; text-transform: uppercase; }
 .ks-site-footer a:hover { color: var(--ks-yellow); }
 .ks-site-footer__legal { width: min(calc(100% - 2rem), 1180px); margin: 0 auto; padding: 1.2rem 0 1.5rem; border-top: 1px solid rgb(255 255 255 / 14%); font-size: 0.86rem; text-align: center; }
 

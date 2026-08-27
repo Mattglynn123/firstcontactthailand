@@ -33,9 +33,30 @@ const end = new Date(event.end);
 const dateLabel = dateFormatter.format(start);
 const timeLabel = event.allDay ? 'All day' : `${timeFormatter.format(start)} - ${timeFormatter.format(end)}`;
 const enquiryUrl = `/contact-link/?topic=${encodeURIComponent(`${event.title} - ${dateLabel}`)}`;
+
+const eventSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: event.title,
+  startDate: event.start,
+  endDate: event.end,
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  location: {
+    '@type': 'Place',
+    name: event.venue,
+  },
+  image: [new URL(event.image, 'https://firstcontactthailand.com').toString()],
+  description: event.excerpt,
+  organizer: {
+    '@type': 'Organization',
+    name: 'First Contact Thailand',
+    url: 'https://firstcontactthailand.com',
+  },
+};
 ---
 
-<Layout title={`${event.title} | First Contact Thailand`} description={event.excerpt} image={event.image}>
+<Layout title={`${event.title} | First Contact Thailand`} description={event.excerpt} image={event.image} jsonLd={eventSchema}>
   <PageHero
     eyebrow={`Community event | ${dateLabel}`}
     title={event.title}
