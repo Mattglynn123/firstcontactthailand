@@ -12,6 +12,7 @@ import OtherToursPage from '../components/OtherToursPage.astro';
 import TourGuidePage from '../components/TourGuidePage.astro';
 import { regionalEvents } from '../data/regional-events';
 import { charityPrograms, charityRegions, completedCharityPages } from '../data/charities';
+import { canonicalOverrides } from '../data/seo-overrides';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages', ({ data }) => !data.draft);
@@ -180,9 +181,12 @@ const charityRegion = charityRegions[currentSlug] ?? charityRegions[charityRegio
 const isMoveGuide = currentSlug === 'move-to-thailand-guide' || currentSlug === 'moving-to-samui';
 const isOtherTours = currentSlug === 'other-tours';
 const isTourGuide = currentSlug === 'become-a-better-tour-guide';
+const canonicalOverrideSlug = currentSlug ? canonicalOverrides[currentSlug] : undefined;
+const canonicalPath = canonicalOverrideSlug ? `/${canonicalOverrideSlug}/` : undefined;
+const isDuplicatePage = Boolean(canonicalOverrideSlug);
 ---
 
-<Layout title={`${cleanTitle} — First Contact Thailand`} description={fallbackDescription} image={fallbackHeroImage}>
+<Layout title={`${cleanTitle} — First Contact Thailand`} description={fallbackDescription} image={fallbackHeroImage} canonicalPath={canonicalPath} noindex={isDuplicatePage}>
   {charityProgram ? (
     <CharityProgramPage program={charityProgram} />
   ) : completedCharityPage ? (
@@ -210,8 +214,8 @@ const isTourGuide = currentSlug === 'become-a-better-tour-guide';
         primaryHref={`/contact-link/?topic=${encodeURIComponent(cleanTitle)}`}
         secondaryLabel={isEventPage ? 'See previous events' : 'Explore the network'}
         secondaryHref={isEventPage ? '/past-events/' : '/local-business-network/'}
-        topActionLabel={isTourDetailPage ? 'Return to homepage' : undefined}
-        topActionHref={isTourDetailPage ? '/' : undefined}
+        topActionLabel={isTourDetailPage ? 'Return to Overview' : undefined}
+        topActionHref={isTourDetailPage ? '/tours-2/' : undefined}
       />
       <section class="section">
         <div class="section__inner support-layout">
@@ -249,7 +253,7 @@ const isTourGuide = currentSlug === 'become-a-better-tour-guide';
     <article class={`content-page ${isEventPage ? 'event-page' : ''} prose prose-slate mx-auto max-w-3xl py-8`}>
       {isTourDetailPage && (
         <div class="archive-top-action">
-          <a class="page-cta archive-top-action__cta" href="/">Return to homepage</a>
+          <a class="page-cta archive-top-action__cta" href="/tours-2/">Return to Overview</a>
         </div>
       )}
       {!contentHasH1 && <h1>{cleanTitle}</h1>}

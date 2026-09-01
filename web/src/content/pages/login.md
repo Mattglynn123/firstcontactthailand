@@ -8,7 +8,7 @@ originalUrl: "https://firstcontactthailand.com/login/"
 wpParent: 0
 menuOrder: 0
 sourceType: pages
-draft: false
+draft: true
 ---
 
 Username \*

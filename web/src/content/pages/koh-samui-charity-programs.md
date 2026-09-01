@@ -17,12 +17,6 @@ We support several Koh Samui and Koh Phangan charities, primarily via the Rotary
 
 We also work with many other charity groups and would love to hear from others so we can support your charity.
 
-## Koh Samui Surf Lifesaving Club
-
-Supporting ocean safety, lifesaving skills, and swimming confidence for local children and families.
-
-[Learn about the Koh Samui Surf Lifesaving Club](/koh-samui-surf-lifesaving-club/)
-
 ## Think Pink Samui
 
 Supporting breast imaging services, screening days, awareness campaigns, and early detection for women on Koh Samui.

@@ -1,70 +1,108 @@
 ---
-import { Menu, X } from '@lucide/astro';
-
-const navItems = [
-  { label: "What's On", href: '#events' },
-  { label: 'Nippers', href: '#nippers' },
-  { label: 'Life Saving', href: '#life-saving' },
-  { label: 'Surf Sports', href: '#surf-sports' },
-  { label: 'Get Involved', href: '#support' },
-  { label: 'Functions & Events', href: '#functions' },
-  { label: 'Athletes', href: '#athletes' },
-  { label: 'Coaches', href: '#coaches' },
-  { label: 'Location', href: '#location' },
-];
+import { contact, navigation } from '../data/site';
+import { ChevronDown, Menu, X } from '@lucide/astro';
 ---
 
-<header class="ks-site-header" data-site-header>
-  <a class="ks-skip-link" href="#main-content">Skip to content</a>
-  <div class="ks-site-header__bar">
-    <a class="ks-brand" href="/" aria-label="SLSC Koh Samui home">
-      <img src="/assets/fct/S.LS_.C.K.S-Logo-copy-150x150.png" alt="SLSC Koh Samui" width="80" height="80" />
-      <span>SLSC<br />Koh Samui</span>
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
+    <a class="site-brand" href="/" aria-label="First Contact Thailand home">
+      <img src="/assets/fct/cropped-firstcontact.png" alt="First Contact Thailand" width="90" height="112" />
     </a>
 
-    <nav class="ks-desktop-nav" aria-label="Primary navigation">
-      {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      {navigation.map((item) => item.children ? (
+        <details class="nav-dropdown">
+          <summary>{item.label}<ChevronDown aria-hidden="true" size={14} stroke-width={2.5} /></summary>
+          <div class="nav-dropdown__menu">
+            {item.children.map((child) => child.children ? (
+              <details class="nav-submenu">
+                <summary>{child.label}<ChevronDown aria-hidden="true" size={14} stroke-width={2.5} /></summary>
+                <div class="nav-submenu__menu">
+                  <a href={child.href}>All property sales</a>
+                  {child.children.map((grandchild) => <a href={grandchild.href}>{grandchild.label}</a>)}
+                </div>
+              </details>
+            ) : <a href={child.href}>{child.label}</a>)}
+          </div>
+        </details>
+      ) : (
+        <a href={item.href}>{item.label}</a>
+      ))}
     </nav>
 
-    <a class="ks-header-cta" href="https://www.gofundme.com/f/build-a-safer-future-for-koh-samuis-children" target="_blank" rel="noreferrer">Donate</a>
-
-    <button class="ks-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation" title="Open navigation">
-      <Menu aria-hidden="true" size={28} stroke-width={2.2} />
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation" title="Open navigation">
+      <Menu aria-hidden="true" size={26} stroke-width={2.2} />
     </button>
   </div>
 
-  <div class="ks-mobile-nav-layer" data-mobile-nav-layer hidden>
-    <button class="ks-mobile-nav-backdrop" type="button" aria-label="Close navigation" data-menu-close></button>
-    <aside class="ks-mobile-nav" id="mobile-navigation" aria-label="Mobile navigation">
-      <div class="ks-mobile-nav__top">
-        <img src="/assets/fct/S.LS_.C.K.S-Logo-copy-150x150.png" alt="" width="64" height="64" />
-        <button class="ks-menu-close" type="button" aria-label="Close navigation" title="Close navigation" data-menu-close>
+  <div class="mobile-nav-layer" data-mobile-nav-layer hidden>
+    <button class="mobile-nav-backdrop" type="button" aria-label="Close navigation" data-menu-close></button>
+    <aside class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation">
+      <div class="mobile-nav__top">
+        <img src="/assets/fct/cropped-firstcontact.png" alt="" width="72" height="89" />
+        <button class="menu-close" type="button" aria-label="Close navigation" title="Close navigation" data-menu-close>
           <X aria-hidden="true" size={28} stroke-width={2} />
         </button>
       </div>
-      <nav class="ks-mobile-nav__links" aria-label="Mobile primary navigation">
-        {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
-        <a href="https://www.gofundme.com/f/build-a-safer-future-for-koh-samuis-children" target="_blank" rel="noreferrer">Donate</a>
-        <a href="https://wa.me/61434194524" target="_blank" rel="noreferrer">WhatsApp Matt</a>
+
+      <nav class="mobile-nav__links" aria-label="Mobile primary navigation">
+        {navigation.map((item) => item.children ? (
+          <details>
+            <summary>{item.label}<ChevronDown aria-hidden="true" size={16} stroke-width={2.5} /></summary>
+            <div>
+              {item.children.map((child) => child.children ? (
+                <details class="mobile-nav__nested">
+                  <summary>{child.label}<ChevronDown aria-hidden="true" size={15} stroke-width={2.5} /></summary>
+                  <div>
+                    <a href={child.href}>All property sales</a>
+                    {child.children.map((grandchild) => <a href={grandchild.href}>{grandchild.label}</a>)}
+                  </div>
+                </details>
+              ) : <a href={child.href}>{child.label}</a>)}
+            </div>
+          </details>
+        ) : (
+          <a href={item.href}>{item.label}</a>
+        ))}
       </nav>
+
+      <div class="mobile-nav__contact">
+        <p>For all enquiries</p>
+        <a href={contact.whatsapp} target="_blank" rel="noreferrer">WhatsApp {contact.phoneDisplay}</a>
+      </div>
     </aside>
   </div>
 </header>
 
 <script is:inline>
-  (() => {
+  document.addEventListener('astro:page-load', () => {
     const header = document.querySelector('[data-site-header]');
     if (!header) return;
 
-    const toggle = header.querySelector('.ks-menu-toggle');
+    const toggle = header.querySelector('.menu-toggle');
     const layer = header.querySelector('[data-mobile-nav-layer]');
     const closeButtons = header.querySelectorAll('[data-menu-close]');
+
+    let closeTimer;
 
     const setOpen = (open) => {
       toggle?.setAttribute('aria-expanded', String(open));
       toggle?.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
-      layer.hidden = !open;
       document.documentElement.classList.toggle('menu-is-open', open);
+
+      window.clearTimeout(closeTimer);
+
+      if (open) {
+        layer.hidden = false;
+        layer.offsetHeight;
+        layer.classList.add('is-open');
+      } else {
+        layer.classList.remove('is-open');
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        closeTimer = window.setTimeout(() => {
+          layer.hidden = true;
+        }, prefersReduced ? 0 : 320);
+      }
     };
 
     toggle?.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
@@ -73,5 +111,5 @@ const navItems = [
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') setOpen(false);
     });
-  })();
+  });
 </script>

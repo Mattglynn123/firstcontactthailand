@@ -111,12 +111,6 @@ export const charityRegions: Record<string, CharityRegion> = {
     sourceName: 'Rotary Club of Samui-Phangan',
     sourceUrl: 'https://rotarysamui-phangan.org/',
     programs: [
-      program('koh-samui', 'Koh Samui Surf Lifesaving Club', 'Supporting ocean safety, lifesaving skills, and swimming confidence for local children and families.', '/assets/fct/charity/koh-samui/koh-samui-surf-lifesaving-club.jpeg', 'koh-samui-surf-lifesaving-club', [
-        { title: 'Support The Program', text: 'Help the club keep practical ocean safety training available for local children and families. Every bit of support helps the program reach more kids.', image: '/assets/fct/charity/koh-samui/koh-samui-surf-lifesaving-club.jpeg' },
-        { title: 'Ocean Awareness', text: 'Beach awareness and lifesaving education give families more confidence around the water. The goal is safer days on Samui beaches.', image: '/assets/fct/home-rotator-beach.jpg' },
-        { title: 'Safety Skills', text: 'Children learn swimming confidence, ocean safety, and practical skills they can use. The program builds stronger swimmers and safer habits.', image: '/assets/fct/beach-1-scaled.jpg' },
-        { title: 'Get Involved', text: 'First Contact can connect volunteers, sponsors, and donors with the Surf Lifesaving Club team. Tell us how you would like to help.', image: '/assets/fct/beach-walk-community.jpg' },
-      ]),
       program('koh-samui', 'Think Pink Samui', 'Supporting breast imaging services, screening days, awareness campaigns, and early detection for women on Koh Samui.', '/assets/fct/charity/koh-samui/think-pink-samui.jpg', 'think-pink-samui', [
         { title: 'Program Overview', text: 'Think Pink Samui supports breast imaging services, screening days, awareness campaigns, and earlier detection for women on Koh Samui.', image: '/assets/fct/charity/koh-samui/think-pink-samui.jpg' },
         { title: 'Who It Helps', text: 'The program helps women and families access local breast-screening awareness and practical health information before problems are found too late.', image: '/assets/fct/charity/koh-samui/think-pink-samui-dr-kris.jpg' },

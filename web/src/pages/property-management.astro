@@ -8,7 +8,9 @@ const target = '/contact-link/?topic=Property%20Management';
     <meta http-equiv="refresh" content={`0;url=${target}`} />
     <title>Property Management | First Contact Thailand</title>
     <script is:inline define:vars={{ target }}>
-      window.location.replace(target);
+      document.addEventListener('astro:page-load', () => {
+        window.location.replace(target);
+      });
     </script>
   </head>
   <body>

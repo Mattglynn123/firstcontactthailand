@@ -1,242 +1,69 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import {
-  Award,
-  CalendarDays,
-  HeartHandshake,
-  LifeBuoy,
-  Medal,
-  ShieldCheck,
-  Waves,
-} from '@lucide/astro';
 
-const quickLinks = [
-  { title: 'Life Saving', image: '/assets/fct/beach-1-scaled.jpg', href: '#life-saving' },
-  { title: 'Training', image: '/assets/fct/chiang-mai-water-safety.jpg', href: '#training' },
-  { title: 'Nippers', image: '/assets/fct/beach-party-may.jpeg', href: '#nippers' },
-  { title: 'Surf Sports', image: '/assets/fct/tours-islands.jpg', href: '#surf-sports' },
-  { title: 'Community Events', image: '/assets/fct/beach-walk-community.jpg', href: '#events' },
-  { title: 'Supporters', image: '/assets/fct/hero-community.jpg', href: '#supporters' },
+const categories = [
+  { title: 'Food & Beverage', image: '/assets/fct/alexandra-tran-VW0bzb90oMA-unsplash-scaled.jpg', href: '/food-drinks/' },
+  { title: 'Tours & Entertainment', image: '/assets/fct/Hero-Images-copy-2-scaled.jpg', href: '/tours-2/' },
+  { title: 'Business Networking', image: '/assets/fct/PHOTO-2025-10-11-09-28-41-2.jpg', href: '/local-business-network/' },
+  { title: 'Marketing & Design', image: '/assets/fct/start-up-scaled.jpg', href: '/marketing/' },
+  { title: 'Property', image: '/assets/fct/property-home.jpg', href: '/property/' },
+  { title: 'Hire', image: '/assets/fct/scooter-scaled.jpg', href: '/hire/' },
+  { title: 'Legal Services', image: '/assets/fct/b.networking-scaled.jpg', href: '/legal-advice/' },
+  { title: 'Charities', image: '/assets/fct/charity/bangkok/youth.jpg', href: '/charity/' },
+  { title: 'Health & Fitness', image: '/assets/fct/gym-scaled.jpg', href: '/health-fitness/' },
 ];
 
-const training = [
-  'Surf Rescue Certificate pathway for confident swimmers aged 13+',
-  'Bronze Medallion preparation for active patrol members',
-  'First aid, CPR and resuscitation practice sessions',
-  'Board, tube and beach response skills for island conditions',
-  'Annual skills refreshers for returning volunteers',
-  'Water safety support for local charity and youth programs',
-];
-
-const faqs = [
-  {
-    question: 'Who can join the club?',
-    answer: 'Locals, expats, visitors and families are welcome. New members can help with patrols, training, fundraising, events, youth programs or practical club support.',
-  },
-  {
-    question: 'Do I need previous lifesaving experience?',
-    answer: 'No. Confident swimmers can start with entry-level training, while experienced lifesavers can help shape patrol systems, mentoring and emergency readiness.',
-  },
-  {
-    question: 'Is this connected to children and youth programs?',
-    answer: 'Yes. The club aims to build Nippers-style beach confidence, water awareness and teamwork for young people on Koh Samui.',
-  },
-  {
-    question: 'How can businesses support the club?',
-    answer: 'Businesses can sponsor equipment, support training days, host fundraisers, provide prizes, or help cover costs for safety gear and youth participation.',
-  },
+const testimonials = [
+  '/assets/fct/b94ca528-2a38-4526-8eab-e22f8b46daea.jpg',
+  '/assets/fct/8b1d32be-1e0e-4506-b3ec-c8cf96fb9cf6.jpg',
+  '/assets/fct/b624eb7c-d305-453f-8768-8ff4f94b09b3.jpg',
 ];
 ---
 
 <Layout
-  title="Koh Samui Surf Lifesaving Club"
-  description="Koh Samui Surf Lifesaving Club is a community-led beach safety, training, youth and volunteer lifesaving club for locals, families and visitors."
-  image="/assets/fct/beach-1-scaled.jpg"
+  title="First Contact Thailand | Trusted Local Connections"
+  description="First Contact Thailand connects locals, expats and visitors with trusted services and reliable local businesses."
+  image="/assets/fct/hero6-1024x542.jpg"
 >
-  <section class="ks-hero" id="top">
-    <div class="ks-hero__media" aria-hidden="true"></div>
-    <div class="ks-hero__inner">
-      <p class="ks-kicker">Surf Club Samui</p>
-      <h1>Koh Samui Surf Lifesaving Club</h1>
-      <p>The island club for beach safety, lifesaving skills, youth confidence and community connection. Locals, families, volunteers and visitors are welcome.</p>
-      <div class="ks-hero__actions">
-        <a class="ks-button ks-button--primary" href="#join">Join the club</a>
-        <a class="ks-button ks-button--light" href="#life-saving">Explore lifesaving</a>
-      </div>
-    </div>
-  </section>
+  <h1 class="visually-hidden">First Contact Thailand</h1>
 
-  <section class="ks-welcome" aria-labelledby="welcome-title">
-    <div class="ks-section">
-      <div class="ks-welcome__text">
-        <p class="ks-kicker">Everyone Is Welcome</p>
-        <h2 id="welcome-title">Building everyday lifesavers on Koh Samui</h2>
-        <p>Koh Samui Surf Lifesaving Club brings people together around a simple mission: safer beaches and stronger community. Inspired by Australian surf club traditions, the club is shaped for island life in Thailand.</p>
-        <p>Whether you want to patrol, learn first aid, support youth programs, sponsor equipment, or simply help create safer beach days, there is a place for you here.</p>
+  <section class="home-reference">
+    <div class="home-reference__inner">
+      <div class="home-reference__rotator" role="img" aria-label="Scenes from Thailand">
+        <span class="home-reference__slide home-reference__slide--beach"></span>
+        <span class="home-reference__slide home-reference__slide--bangkok"></span>
+        <span class="home-reference__slide home-reference__slide--temple"></span>
+        <span class="home-reference__slide home-reference__slide--island"></span>
+        <span class="home-reference__slide home-reference__slide--samui"></span>
       </div>
-      <div class="ks-welcome__stats" aria-label="Club focus areas">
-        <div>
-          <strong>4</strong>
-          <span>core programs</span>
+
+      <div class="home-reference__copy">
+        <h2>About Us</h2>
+        <p>First Contact was founded in Koh Samui in 2024 with a clear purpose: to bring locals, expats, and travellers together by connecting them with trusted services and reliable local businesses.</p>
+        <p>Supporting local charities, Rotary clubs, and community groups across Thailand is a major focus for First Contact and remains at the heart of everything we do.</p>
+        <p>Our collective network began with more than 500 businesses in Koh Samui and has since expanded on a large scale across Thailand.</p>
+
+        <h2>How It Works</h2>
+        <p>Membership with First Contact is free. Our members give back by donating a percentage of the revenue they generate through First Contact to charitable and community causes.</p>
+        <p>We can direct you to reliable providers across a wide range of sectors, including marketing and advertising, legal services, tours and entertainment, food and beverage deals, vehicle hire, accommodation, property development and management, and many more.</p>
+        <p>First Contact helps people find the right services while supporting the local communities we all care about.</p>
+      </div>
+
+      <section class="home-testimonials" aria-labelledby="testimonials-title">
+        <h2 id="testimonials-title">A few Testimonials from Our Previous Charity Events</h2>
+        <div class="home-testimonials__grid">
+          {testimonials.map((image, index) => <img src={image} alt={`First Contact charity event testimonial ${index + 1}`} loading="lazy" decoding="async" />)}
         </div>
-        <div>
-          <strong>13+</strong>
-          <span>training pathway age</span>
-        </div>
-        <div>
-          <strong>100%</strong>
-          <span>community driven</span>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <nav class="ks-tiles" aria-label="Explore club areas">
-    <div class="ks-section ks-tiles__grid">
-      {quickLinks.map((item) => (
-        <a href={item.href}>
-          <img src={item.image} alt="" loading="lazy" decoding="async" />
-          <span>{item.title}</span>
-        </a>
-      ))}
-    </div>
-  </nav>
-
-  <section class="ks-feature" id="life-saving" aria-labelledby="lifesaving-title">
-    <div class="ks-section ks-feature__layout">
-      <div>
-        <p class="ks-kicker">Life Saving</p>
-        <h2 id="lifesaving-title">Patrol skills, rescue confidence and practical beach safety</h2>
-        <p>Volunteer lifesavers are trained to observe conditions, provide safety advice, assist swimmers, respond to incidents and support first aid. The club's role is to grow those skills locally so Samui has more people ready to help when it matters.</p>
-        <p>The program is designed around accessible training, regular refreshers and a clear pathway from interested helper to confident patrol member.</p>
-      </div>
-      <img src="/assets/fct/S.LS_.C.K.S-Logo-copy-150x150.png" alt="Koh Samui Surf Lifesaving Club logo" loading="lazy" decoding="async" />
-    </div>
-  </section>
-
-  <section class="ks-programs" aria-labelledby="programs-title">
-    <div class="ks-section">
-      <div class="ks-heading">
-        <p class="ks-kicker">Club Programs</p>
-        <h2 id="programs-title">How members can get involved</h2>
-      </div>
-      <div class="ks-programs__grid">
-        <article>
-          <LifeBuoy aria-hidden="true" size={34} stroke-width={1.9} />
-          <h3>Beach Patrols</h3>
-          <p>Volunteer patrol teams support safer beach days with water safety, first aid awareness and practical local knowledge.</p>
-        </article>
-        <article>
-          <ShieldCheck aria-hidden="true" size={34} stroke-width={1.9} />
-          <h3>Rescue Readiness</h3>
-          <p>Club training builds confidence around rescue boards, tube rescues, radios, observation and emergency response.</p>
-        </article>
-        <article>
-          <HeartHandshake aria-hidden="true" size={34} stroke-width={1.9} />
-          <h3>Community Education</h3>
-          <p>Visitors, schools and families can learn simple surf safety habits before they step into unfamiliar water.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="ks-training" id="training" aria-labelledby="training-title">
-    <div class="ks-section ks-training__layout">
-      <img src="/assets/fct/chiang-mai-water-safety.jpg" alt="Water safety training" loading="lazy" decoding="async" />
-      <div>
-        <p class="ks-kicker">Training Pathways</p>
-        <h2 id="training-title">From first skills to active lifesaver</h2>
-        <p>Training follows the spirit of recognised surf lifesaving pathways, adapted for Koh Samui's community and available conditions.</p>
-        <ul>
-          {training.map((item) => <li>{item}</li>)}
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="ks-youth" id="nippers" aria-labelledby="nippers-title">
-    <div class="ks-section ks-youth__layout">
-      <div>
-        <p class="ks-kicker">Nippers & Youth</p>
-        <h2 id="nippers-title">Confident kids, safer families, stronger beaches</h2>
-        <p>Nippers-style sessions help children understand waves, flags, currents, boards, teamwork and beach respect in a fun, supportive environment.</p>
-        <p>Parents can help on the beach, assist with events, support water safety and become part of the wider club community.</p>
-      </div>
-      <div class="ks-youth__panel" id="surf-sports">
-        <Medal aria-hidden="true" size={42} stroke-width={1.8} />
-        <h3>Surf Sports</h3>
-        <p>Board paddling, beach sprints, swimming confidence and friendly club challenges give members goals to train for together.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="ks-events" id="events" aria-labelledby="events-title">
-    <div class="ks-section ks-events__layout">
-      <div>
-        <p class="ks-kicker">What's On</p>
-        <h2 id="events-title">Training days, beach meets and fundraisers</h2>
-      </div>
-      <div class="ks-events__items">
-        <article>
-          <CalendarDays aria-hidden="true" size={28} />
-          <h3>Beach safety sessions</h3>
-          <p>Open days for families, volunteers and local groups wanting practical water safety guidance.</p>
-        </article>
-        <article>
-          <Waves aria-hidden="true" size={28} />
-          <h3>Club training</h3>
-          <p>Regular skills practice for patrol members, youth helpers and new volunteers.</p>
-        </article>
-        <article>
-          <Award aria-hidden="true" size={28} />
-          <h3>Fundraising nights</h3>
-          <p>Community events that help fund boards, rescue tubes, radios, first aid gear and youth participation.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="ks-supporters" id="supporters" aria-labelledby="supporters-title">
-    <div class="ks-section">
-      <div class="ks-heading">
-        <p class="ks-kicker">Sponsors & Supporters</p>
-        <h2 id="supporters-title">Help keep Samui's beaches safer</h2>
-        <p>Local businesses, Rotary groups, hotels, restaurants, tour operators and community leaders can all help build a stronger lifesaving club.</p>
-      </div>
-      <div class="ks-supporters__grid">
-        <article>Equipment sponsorship</article>
-        <article>Training venue support</article>
-        <article>Fundraising prizes</article>
-        <article>Youth program support</article>
-      </div>
-    </div>
-  </section>
-
-  <section class="ks-faq" aria-labelledby="faq-title">
-    <div class="ks-section">
-      <div class="ks-heading">
-        <p class="ks-kicker">FAQ</p>
-        <h2 id="faq-title">Surf club questions</h2>
-      </div>
-      <div class="ks-faq__list">
-        {faqs.map((item) => (
-          <details>
-            <summary>{item.question}</summary>
-            <p>{item.answer}</p>
-          </details>
+      <nav class="home-categories" aria-label="Explore First Contact services">
+        {categories.map((item) => (
+          <a href={item.href}>
+            <img src={item.image} alt="" loading="lazy" decoding="async" />
+            <span>{item.title}</span>
+          </a>
         ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="ks-join" id="join" aria-labelledby="join-title">
-    <div class="ks-section ks-join__layout">
-      <div>
-        <p class="ks-kicker">Get Involved</p>
-        <h2 id="join-title">Join Koh Samui Surf Lifesaving Club</h2>
-        <p>Tell us whether you want to volunteer, train, sponsor, bring your child to youth sessions, or help with events. We will point you to the next practical step.</p>
-      </div>
-      <a class="ks-button ks-button--primary" href="/contact-link/?topic=Koh%20Samui%20Surf%20Lifesaving%20Club">Contact the club</a>
+      </nav>
     </div>
   </section>
 </Layout>

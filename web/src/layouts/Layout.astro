@@ -1,21 +1,56 @@
 ---
 import '../styles/global.css';
-import '../styles/koh-samui-surf.css';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import { contact } from '../data/site';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title: string;
   description?: string;
   image?: string;
+  /** Overrides the canonical URL, e.g. to point a duplicate page at its primary version. */
+  canonicalPath?: string;
+  /** Adds a noindex,follow robots meta tag, e.g. for duplicate/legacy pages. */
+  noindex?: boolean;
+  /** Extra schema.org JSON-LD block(s) for this page, merged with the sitewide Organization schema. */
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
   title,
   description = 'First Contact Thailand connects locals, expats and visitors with trusted businesses, events and local support.',
   image = '/assets/fct/PHOTO-2025-10-11-09-28-41-2.jpg',
+  canonicalPath,
+  noindex = false,
+  jsonLd,
 } = Astro.props;
-const canonical = new URL(Astro.url.pathname, 'https://firstcontactthailand.com');
+
+const site = 'https://firstcontactthailand.com';
+const siteName = 'First Contact Thailand';
+const canonical = new URL(canonicalPath ?? Astro.url.pathname, site);
+const imageUrl = new URL(image, site).toString();
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: siteName,
+  url: site,
+  logo: new URL('/assets/fct/cropped-firstcontact.png', site).toString(),
+  ...(contact.facebook ? { sameAs: [contact.facebook] } : {}),
+  ...(contact.phoneDisplay
+    ? {
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: contact.phoneDisplay,
+          contactType: 'customer service',
+          areaServed: 'TH',
+        },
+      }
+    : {}),
+};
+
+const jsonLdBlocks = [organizationSchema, ...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [])];
 ---
 
 <!doctype html>
@@ -25,14 +60,22 @@ const canonical = new URL(Astro.url.pathname, 'https://firstcontactthailand.com'
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#092f3b" />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, canonical).toString()} />
+    <meta property="og:image" content={imageUrl} />
     <meta property="og:url" content={canonical.toString()} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
+    {jsonLdBlocks.map((block) => <script type="application/ld+json" set:html={JSON.stringify(block)} />)}
+    <ClientRouter />
   </head>
   <body>
     <SiteHeader />
@@ -40,5 +83,123 @@ const canonical = new URL(Astro.url.pathname, 'https://firstcontactthailand.com'
       <slot />
     </main>
     <SiteFooter />
+    <script is:inline>
+      (() => {
+        const REVEAL_SELECTORS = [
+          '.home-categories a',
+          '.home-testimonials__grid img',
+          '.support-points article',
+          '.service-tile',
+          '.property-card',
+          '.split-section__media',
+          '.split-section__copy',
+          '.charity-detail-card',
+          '.charity-card',
+          '.event-card',
+          '.moving-thailand-card',
+          '.tour-guide-grid article',
+        ];
+        const GRID_SELECTORS = [
+          '.home-categories a',
+          '.home-testimonials__grid img',
+          '.support-points article',
+          '.service-tile',
+          '.property-card',
+          '.charity-detail-card',
+          '.charity-card',
+          '.event-card',
+          '.moving-thailand-card',
+          '.tour-guide-grid article',
+        ];
+        // How many places later in its row/grid an item sits than its previous
+        // sibling, expressed as a CSS custom property read by the transition-delay
+        // rule in global.css. Computed per-parent so each grid restarts its own
+        // left-to-right, row-by-row cascade instead of a single site-wide count.
+        const STEP_MS = 90;
+        const MAX_STEPS = 10;
+
+        let observer;
+        let mutationObserver;
+
+        const prefersReduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const applyStagger = (el) => {
+          const parent = el.parentElement;
+          if (!parent) return;
+          const siblings = Array.from(parent.children).filter((child) => child.matches(GRID_SELECTORS.join(',')));
+          const position = siblings.indexOf(el);
+          if (position < 0) return;
+          const step = Math.min(position, MAX_STEPS);
+          el.style.setProperty('--reveal-delay', `${step * STEP_MS}ms`);
+        };
+
+        const observeTarget = (el) => {
+          if (el.hasAttribute('data-reveal')) return;
+          el.setAttribute('data-reveal', '');
+          applyStagger(el);
+          if (!observer) {
+            el.classList.add('is-visible');
+            return;
+          }
+          // Force the browser to register the hidden state on its own frame
+          // before we start observing, otherwise an element that's already
+          // in view can flip straight to visible with no animation to see.
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => observer.observe(el));
+          });
+        };
+
+        const scan = (root) => {
+          root.querySelectorAll(REVEAL_SELECTORS.join(',')).forEach(observeTarget);
+        };
+
+        const setUpReveal = () => {
+          document.documentElement.classList.remove('reveal-ready');
+          if (observer) observer.disconnect();
+          if (mutationObserver) mutationObserver.disconnect();
+
+          if (prefersReduced()) return;
+
+          document.documentElement.classList.add('reveal-ready');
+
+          if ('IntersectionObserver' in window) {
+            observer = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                  }
+                });
+              },
+              { threshold: 0.12, rootMargin: '0px 0px -60px 0px' },
+            );
+          } else {
+            observer = null;
+          }
+
+          scan(document);
+
+          // Cards for things like the property listings are rendered client-side
+          // after this script runs, so keep watching for new matches.
+          const main = document.getElementById('main-content');
+          if (main && 'MutationObserver' in window) {
+            mutationObserver = new MutationObserver((mutations) => {
+              mutations.forEach((mutation) => {
+                mutation.addedNodes.forEach((node) => {
+                  if (node.nodeType !== 1) return;
+                  if (node.matches && node.matches(REVEAL_SELECTORS.join(','))) observeTarget(node);
+                  if (node.querySelectorAll) scan(node);
+                });
+              });
+            });
+            mutationObserver.observe(main, { childList: true, subtree: true });
+          }
+        };
+
+        setUpReveal();
+        document.addEventListener('astro:page-load', setUpReveal);
+      })();
+    </script>
   </body>
 </html>

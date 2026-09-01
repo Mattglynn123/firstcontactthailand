@@ -66,7 +66,7 @@ as the source change.
 - Request: fix irrelevant Phuket and Pattaya event photos, update the Tours Full Moon flyer to 31 July, remove Samui/island-specific wording from Moving to Thailand, keep charity more-info pages internal, remove `Rotary` from the Pattaya drinking water card, and standardise enquiry links.
 - Scope: added new local Pattaya Marathon, Phuket Community Market, and 31 July Full Moon flyer assets, wired current event and Tours cards to those assets, added event image fallbacks, expanded charity extra-info pages into a four-card internal summary layout, kept charity cards pointing to internal more-info pages, renamed Pattaya `Drinking Water`, changed Moving to Thailand wording to Thailand-wide language, and converted legacy contact links to the local standard enquiry form.
 - Safety: worked only in the standalone Astro website under `web/`; production WordPress, the live site, and the server staging directory were not modified.
-- Verification: Astro built 185 pages; generated-page audit found no stale contact anchors, no external charity source anchors, no old AI charity-source wording, no missing event-card images, and no Phuket Samui-flyer reuse; full-site link/first-party-asset audit passed across 185 pages; desktop and mobile browser checks passed for Phuket and Pattaya events, Tours, Moving to Thailand, Pattaya charity, Pattaya Drinking Water, Samui Surf Lifesaving Club, the duplicate Chiang Mai charity route, and the standard enquiry form.
+- Verification: Astro built 185 pages; generated-page audit found no stale contact anchors, no external charity source anchors, no old AI charity-source wording, no missing event-card images, and no Phuket Samui-flyer reuse; full-site link/first-party-asset audit passed across 185 pages; desktop and mobile browser checks passed for Phuket and Pattaya events, Tours, Moving to Thailand, Pattaya charity, Pattaya Drinking Water, the duplicate Chiang Mai charity route, and the standard enquiry form.
 - Status: complete.
 
 ## 2026-07-23 - All-page enquiry and charity rules review
@@ -176,7 +176,7 @@ as the source change.
 
 ## 2026-07-26 - Samui charity program image cleanup
 
-- Request: replace irrelevant images on Think Pink Samui, Koh Samui Surf Lifesaving Club, Support 4 Autism, and related Samui charity extra-info pages using more relevant Rotary Samui-Phangan references.
+- Request: replace irrelevant images on Think Pink Samui, Support 4 Autism, and related Samui charity extra-info pages using more relevant Rotary Samui-Phangan references.
 - Scope: added local Samui charity project images from the Rotary Samui-Phangan project pages and wired explicit detail-card image sets for the Samui charity programs so they no longer inherit unrelated regional fallback photos.
 - Safety: source and public asset changes only, included in the verified 2026-07-26 live update below.
 - Verification: GitHub Actions run `30187358218` passed; live Samui charity routes and new image assets returned HTTP 200.
@@ -188,7 +188,7 @@ as the source change.
 - Build source: GitHub Actions run `30187358218`, artifact `standalone-site-production`, SHA-256 `9f6feb84cdccb50315db31104b4f00c42dbd8fc92c90e7be2292df0273677786`.
 - Rollback: previous live root retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-rollback-production-20260726-1223-07f672b`.
 - Deployment destination: `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand`.
-- Verification: live homepage, `/contact-link/`, `/think-pink-samui/`, `/koh-samui-surf-lifesaving-club/`, `/support-4-autism-samui/`, `/swim-4-life-samui/`, `robots.txt` and `sitemap.xml` returned HTTP 200; new Samui image assets returned HTTP 200; checked no `/staging/` dependency in the unpacked deployment.
+- Verification: live homepage, `/contact-link/`, `/think-pink-samui/`, `/support-4-autism-samui/`, `/swim-4-life-samui/`, `robots.txt` and `sitemap.xml` returned HTTP 200; new Samui image assets returned HTTP 200; checked no `/staging/` dependency in the unpacked deployment.
 - Status: live update complete; DNS, SSL and email services were not changed.
 
 ## 2026-07-30 - Local Business Network AI next steps
@@ -243,14 +243,14 @@ as the source change.
 
 ## 2026-07-31 - Logo asset, property cards and Samui event updates
 
-- Request: keep the existing homepage logo active, provide the new high-quality logo for Mat to reuse elsewhere, remove the green overlays from property sale images, change the duplicated Property Management overview picture, replace three reused Surf Club charity pictures with ocean/beach images, and update Samui weekly event dates so they roll forward automatically.
-- Scope: restored the active header/footer logo file and sizing, saved the new square logo as a separate high-quality asset, removed property card and gallery overlay labels/masks, changed the Property Management tile to a different property image, updated the Surf Club detail cards to use beach/ocean photos instead of Swim 4 Life photos, and added a small Samui event date updater that calculates the next weekly event date in Thailand time.
+- Request: keep the existing homepage logo active, provide the new high-quality logo for Mat to reuse elsewhere, remove the green overlays from property sale images, change the duplicated Property Management overview picture, replace three reused Samui charity pictures with ocean/beach images, and update Samui weekly event dates so they roll forward automatically.
+- Scope: restored the active header/footer logo file and sizing, saved the new square logo as a separate high-quality asset, removed property card and gallery overlay labels/masks, changed the Property Management tile to a different property image, updated Samui charity detail cards to use beach/ocean photos instead of Swim 4 Life photos, and added a small Samui event date updater that calculates the next weekly event date in Thailand time.
 - Safety: Astro source/public-asset change only; no domain, SSL, mail or unrelated server files were changed.
 - Deployed source SHA: `5470194ef058b0c6486848cc9c30b120cc9e0662`.
 - Build source: GitHub Actions run `30610293171`, attempt `2`, artifact `standalone-site-production`, SHA-256 `2743bfc2563b6fcae4973944777c43d72eaac0a0325aeb59233aa30810af23a8`.
 - Rollback: previous live root retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-rollback-production-20260731-0319-5470194`.
 - Deployment destination: `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand`.
-- Verification: `git diff --check` passed locally. GitHub Actions `npm ci`, production build, preview, route/responsive QA and artifact upload passed. Live homepage, `/property/`, `/property-sales/koh-samui/`, `/koh-samui-surf-lifesaving-club/`, `/community-events/`, the active logo asset and the high-quality logo asset returned HTTP 200. Live content checks confirmed the Property Management image uses `house-2-scaled.jpg`, property overlay markers are absent, Surf Club uses the three beach/ocean images, stale July event dates are absent, and weekly date data is present.
+- Verification: `git diff --check` passed locally. GitHub Actions `npm ci`, production build, preview, route/responsive QA and artifact upload passed. Live homepage, `/property/`, `/property-sales/koh-samui/`, `/community-events/`, the active logo asset and the high-quality logo asset returned HTTP 200. Live content checks confirmed the Property Management image uses `house-2-scaled.jpg`, property overlay markers are absent, Samui charity image checks passed, stale July event dates are absent, and weekly date data is present.
 
 ## 2026-08-02 - AI page heading
 
@@ -272,8 +272,12 @@ as the source change.
 - Deployment destination: `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand`.
 - Verification: `git diff --check` passed locally. GitHub Actions build/QA passed. Live `/local-business-network/`, `/ai-next-steps/`, `/community-events/`, and `/past-events/` returned HTTP 200; checked live HTML contains `Ai`, no standalone uppercase `AI`, and `/ai-next-steps/` contains `<h1>Ai</h1>` plus `Basic Ai Tutorials`.
 
-## 2026-08-02 - Koh Samui Surf Lifesaving Club rebuild
+## 2026-08-02 - Ai card heading display fix
 
-- Request: restart the site as a brand new Koh Samui Surf Lifesaving Club website, using the BMD Northcliffe site as the base reference and upgrading it with selected Surfers Paradise Surf Lifesaving Club ideas.
-- Scope: replaced the homepage with a surf-club site structure, rebranded the shared header and footer, reused the existing Samui surf lifesaving logo, and added Northcliffe-inspired hero, club block navigation, lifesaving, training, Nippers, surf sports, events, supporter, FAQ and contact sections with Surfers Paradise-style get-involved polish.
-- Verification: `git diff --check` passed locally. `npm ci`, `npm run build`, local dev server and visual QA could not be completed because this Windows environment has no `npm` on PATH and the C: drive is reporting 0 bytes free, causing the bundled package manager install to fail with disk I/O/full-disk errors.
+- Request: on the Ai sub-page, make card headings visually read `Ai` instead of being displayed as uppercase `AI`.
+- Scope: added a scoped style override for `/ai-next-steps/` service-card headings only; source text, links, images and other pages were left unchanged.
+- Deployed source SHA: `9e46beea9cecdde2ef440e9b12bfbc08a7703fd2`.
+- Build source: GitHub Actions run `30736600605`, artifact `standalone-site-production`, SHA-256 `b96f821c149f8b7c10f106d05a36dc9ce919bbb5c78085049462929c8d7ad93c`.
+- Rollback: previous live root retained at `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand-rollback-production-20260802-0302-9e46bee`.
+- Deployment destination: `/homepages/31/d4299444035/htdocs/clickandbuilds/FirstContactThailand`.
+- Verification: GitHub Actions build/QA passed. Live `/ai-next-steps/`, `/local-business-network/`, `/community-events/`, and `/past-events/` returned HTTP 200; live `/ai-next-steps/` contains `<h1>Ai</h1>`, `Basic Ai Tutorials`, no standalone uppercase `AI`, and the deployed CSS contains the scoped `text-transform:none` override for Ai Next Steps headings.
