@@ -7,6 +7,12 @@ const outputDir = path.resolve(scriptDir, '../public/data/property-listings');
 const propertyAssetDir = path.resolve(scriptDir, '../public/assets/fct/properties');
 const remaxEndpoint = 'https://www.remax.co.th/search/listing-search/docs/search';
 const remaxBaseFilter = "content/TenantId eq 6 and content/MacroRegionId eq 92 and content/OnHoldListing eq false and content/IsRegionalOffice eq false and content/IsViewable eq true and content/TransactionTypeUID eq 261 and content/ListingStatusUID ne 167 and content/ListingStatusUID ne 169";
+const shouldRefresh = process.argv.includes('--refresh');
+
+if (!shouldRefresh) {
+  console.log('Property listings: using committed snapshots. Run npm run sync:properties to refresh them.');
+  process.exit(0);
+}
 
 const remaxAreas = {
   'koh-phangan': "content/Province eq 'Surat Thani' and content/City eq 'Koh Pha Ngan'",

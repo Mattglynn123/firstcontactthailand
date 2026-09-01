@@ -2,7 +2,8 @@
 import { contact } from '../data/site';
 import { MessageCircle, Phone } from '@lucide/astro';
 
-const year = 2024;
+const currentYear = new Date().getFullYear();
+const year = currentYear > 2024 ? `2024-${currentYear}` : '2024';
 ---
 
 <footer class="site-footer">
