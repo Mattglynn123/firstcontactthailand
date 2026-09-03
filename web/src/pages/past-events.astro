@@ -9,8 +9,8 @@ import { pastEvents } from '../data/past-events';
 </Layout>
 
 <script is:inline>
-  (() => {
+  document.addEventListener('astro:page-load', () => {
     const area = new URLSearchParams(window.location.search).get('area');
     if (area && area !== 'samui') window.location.replace(`/past-events/${encodeURIComponent(area)}/`);
-  })();
+  });
 </script>

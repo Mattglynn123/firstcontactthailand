@@ -7,6 +7,12 @@ const outputDir = path.resolve(scriptDir, '../public/data/property-listings');
 const propertyAssetDir = path.resolve(scriptDir, '../public/assets/fct/properties');
 const remaxEndpoint = 'https://www.remax.co.th/search/listing-search/docs/search';
 const remaxBaseFilter = "content/TenantId eq 6 and content/MacroRegionId eq 92 and content/OnHoldListing eq false and content/IsRegionalOffice eq false and content/IsViewable eq true and content/TransactionTypeUID eq 261 and content/ListingStatusUID ne 167 and content/ListingStatusUID ne 169";
+const shouldRefresh = process.argv.includes('--refresh');
+
+if (!shouldRefresh) {
+  console.log('Property listings: using committed snapshots. Run npm run sync:properties to refresh them.');
+  process.exit(0);
+}
 
 const remaxAreas = {
   'koh-phangan': "content/Province eq 'Surat Thani' and content/City eq 'Koh Pha Ngan'",
@@ -133,8 +139,8 @@ async function fetchRemax(areaSlug, filter) {
 }
 
 async function fetchSamui() {
-  const key = process.env.PROPERTY_SUPABASE_KEY
-    || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBmaHp1ZWV6eXBicGZldmFncGJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ0NzUxMTgsImV4cCI6MjA3MDA1MTExOH0.zU46jdoobbbT7tN-SIICAXviOcipMNN2qzyP7oiDBvk';
+  const key = process.env.PROPERTY_SUPABASE_KEY;
+  if (!key) throw new Error('PROPERTY_SUPABASE_KEY is not configured');
   const endpoint = 'https://pfhzueezypbpfevagpbg.supabase.co/rest/v1/properties?select=id,title,description,price,type,bedrooms,bathrooms,city,country,area,active,sold,price_on_application,property_ref,url_slug,new_property,reduced,featured,created_at,updated_at,property_images(image_url,display_order)&active=eq.true&order=created_at.desc&limit=1000';
   const response = await fetch(endpoint, { headers: { apikey: key, Authorization: `Bearer ${key}` } });
   if (!response.ok) throw new Error(`Koh Samui property feed: HTTP ${response.status}`);

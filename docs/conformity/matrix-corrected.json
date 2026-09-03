@@ -3409,47 +3409,6 @@
       "decision": ""
     },
     {
-      "route": "/koh-samui-surf-lifesaving-club/",
-      "priority": "low",
-      "state": "clean",
-      "live": {
-        "status": 200,
-        "height": 900,
-        "textLength": 813,
-        "images": 2,
-        "missingImages": 0,
-        "overflowItems": 13,
-        "duplicateSignals": 0,
-        "consoleErrors": 2,
-        "failedRequests": 1
-      },
-      "staging": {
-        "status": 200,
-        "height": 1478,
-        "textLength": 813,
-        "images": 2,
-        "missingImages": 0,
-        "overflowItems": 0,
-        "duplicateSignals": 0,
-        "consoleErrors": 0,
-        "failedRequests": 0
-      },
-      "contentRatio": 1,
-      "headingsOnlyInWordPress": [
-        "quick links",
-        "contact us"
-      ],
-      "headingsOnlyInAstro": [
-        "explore",
-        "contact"
-      ],
-      "recoveredHistorySources": [],
-      "issues": [
-        "WordPress runtime/network errors"
-      ],
-      "decision": ""
-    },
-    {
       "route": "/koh-samui/",
       "priority": "low",
       "state": "clean",

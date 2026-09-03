@@ -8,7 +8,7 @@ originalUrl: "https://firstcontactthailand.com/submissions/"
 wpParent: 0
 menuOrder: 0
 sourceType: pages
-draft: false
+draft: true
 ---
 
 You must be logged in to view contents of this page.

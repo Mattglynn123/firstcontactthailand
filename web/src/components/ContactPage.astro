@@ -2,11 +2,17 @@
 import Layout from '../layouts/Layout.astro';
 import { contact } from '../data/site';
 
+interface Props {
+  canonicalPath?: string;
+  noindex?: boolean;
+}
+
+const { canonicalPath, noindex = false } = Astro.props;
 const pageTitle = 'Contact Us';
 const description = 'Contact First Contact Thailand for trusted local introductions, events, tours, property, hire and deals.';
 ---
 
-<Layout title={`${pageTitle} | First Contact Thailand`} description={description} image="/assets/fct/contact-community.jpg">
+<Layout title={`${pageTitle} | First Contact Thailand`} description={description} image="/assets/fct/contact-community.jpg" canonicalPath={canonicalPath} noindex={noindex}>
   <section class="section contact-section contact-section--plain">
     <div class="section__inner contact-layout">
       <div class="contact-copy">
@@ -55,7 +61,7 @@ const description = 'Contact First Contact Thailand for trusted local introducti
 </Layout>
 
 <script is:inline>
-  (() => {
+  document.addEventListener('astro:page-load', () => {
     const form = document.querySelector('[data-contact-form]');
     if (!form) return;
 
@@ -96,5 +102,5 @@ const description = 'Contact First Contact Thailand for trusted local introducti
       const whatsappNumber = form.dataset.whatsappNumber || '66803378707';
       window.location.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(body)}`;
     });
-  })();
+  });
 </script>
